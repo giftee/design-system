@@ -1,0 +1,28 @@
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    .ab#{$variant}-top-0 {
+      top: 0;
+    }
+    .ab#{$variant}-right-0 {
+      right: 0;
+    }
+    .ab#{$variant}-bottom-0 {
+      bottom: 0;
+    }
+    .ab#{$variant}-left-0 {
+      left: 0;
+    }
+    .ab#{$variant}-top-auto {
+      top: auto;
+    }
+    .ab#{$variant}-right-auto {
+      right: auto;
+    }
+    .ab#{$variant}-bottom-auto {
+      bottom: auto;
+    }
+    .ab#{$variant}-left-auto {
+      left: auto;
+    }
+  }
+}

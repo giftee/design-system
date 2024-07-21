@@ -1,0 +1,191 @@
+$size: 0.125rem;
+$size-0: 0;
+$size-1: $size; // 2px
+$size-2: $size * 2;
+$size-3: $size * 3;
+$size-4: $size * 4;
+$size-5: $size * 5;
+$size-6: $size * 6;
+$size-7: $size * 7;
+$size-8: $size * 8; // 16px
+$size-10: $size * 10;
+$size-12: $size * 12;
+$size-14: $size * 14;
+$size-16: $size * 16;
+$size-18: $size * 18;
+$size-20: $size * 20;
+$size-22: $size * 22;
+$size-24: $size * 24; // 48px
+$size-28: $size * 28;
+$size-32: $size * 32;
+$size-36: $size * 36;
+$size-40: $size * 40; // 80px
+$size-48: $size * 48;
+$size-56: $size * 56;
+$size-64: $size * 64;
+$size-72: $size * 72;
+$size-80: $size * 80;
+$size-88: $size * 88;
+$size-96: $size * 96;
+$size-104: $size * 104;
+$size-112: $size * 112;
+$size-120: $size * 120;
+$size-128: $size * 128; // 256px
+$size-144: $size * 144;
+$size-160: $size * 160;
+$size-176: $size * 176;
+$size-192: $size * 192; // 384px
+
+$sizes: (
+  0: $size-0,
+  1: $size-1,
+  2: $size-2,
+  3: $size-3,
+  4: $size-4,
+  5: $size-5,
+  6: $size-6,
+  7: $size-7,
+  8: $size-8,
+  10: $size-10,
+  12: $size-12,
+  14: $size-14,
+  16: $size-16,
+  18: $size-18,
+  20: $size-20,
+  22: $size-22,
+  24: $size-24,
+  28: $size-28,
+  32: $size-32,
+  36: $size-36,
+  40: $size-40,
+  48: $size-48,
+  56: $size-56,
+  64: $size-64,
+  72: $size-72,
+  80: $size-80,
+  88: $size-88,
+  96: $size-96,
+  104: $size-104,
+  112: $size-112,
+  120: $size-120,
+  128: $size-128,
+  144: $size-144,
+  160: $size-160,
+  176: $size-176,
+  192: $size-192,
+);
+
+// Width/Hight
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    @each $sizeKey, $sizeValue in $sizes {
+      .ab#{$variant}-w-#{$sizeKey} {
+        width: $sizeValue;
+      }
+      .ab#{$variant}-h-#{$sizeKey} {
+        height: $sizeValue;
+      }
+    }
+
+    .ab#{$variant}-w-full {
+      width: 100%;
+    }
+    .ab#{$variant}-h-full {
+      height: 100%;
+    }
+
+    .ab#{$variant}-w-screen {
+      width: 100vw;
+    }
+    .ab#{$variant}-h-screen {
+      height: 100vh;
+    }
+
+    .ab#{$variant}-w-min {
+      width: min-content;
+    }
+    .ab#{$variant}-h-min {
+      height: min-content;
+    }
+
+    .ab#{$variant}-w-max {
+      width: max-content;
+    }
+    .ab#{$variant}-h-max {
+      height: max-content;
+    }
+  }
+}
+
+// Min
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    .ab#{$variant}-min-w-full {
+      min-width: 100%;
+    }
+    .ab#{$variant}-min-h-full {
+      min-height: 100%;
+    }
+
+    .ab#{$variant}-min-w-screen {
+      min-width: 100vw;
+    }
+    .ab#{$variant}-min-h-screen {
+      min-height: 100vh;
+    }
+
+    .ab#{$variant}-min-w-min {
+      min-width: min-content;
+    }
+    .ab#{$variant}-min-h-min {
+      min-height: min-content;
+    }
+
+    .ab#{$variant}-min-w-max {
+      width: max-content;
+    }
+    .ab#{$variant}-min-h-max {
+      min-height: max-content;
+    }
+
+    .ab#{$variant}-min-w-fit {
+      min-width: fit-content;
+    }
+    .ab#{$variant}-min-h-fit {
+      min-height: fit-content;
+    }
+  }
+}
+
+// Max
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    .ab#{$variant}-max-w-full {
+      max-width: 100%;
+    }
+    .ab#{$variant}-max-h-full {
+      max-height: 100%;
+    }
+
+    .ab#{$variant}-max-w-min {
+      max-width: min-content;
+    }
+    .ab#{$variant}-max-h-min {
+      max-height: min-content;
+    }
+
+    .ab#{$variant}-max-w-max {
+      max-width: max-content;
+    }
+    .ab#{$variant}-max-h-max {
+      max-height: max-content;
+    }
+
+    .ab#{$variant}-max-w-fit {
+      width: fit-content;
+    }
+    .ab#{$variant}-max-h-fit {
+      max-height: fit-content;
+    }
+  }
+}

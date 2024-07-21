@@ -1,0 +1,53 @@
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    .ab#{$variant}-flex-row {
+      flex-direction: row;
+    }
+    .ab#{$variant}-flex-row-reverse {
+      flex-direction: row-reverse;
+    }
+    .ab#{$variant}-flex-column {
+      flex-direction: column;
+    }
+    .ab#{$variant}-flex-column-reverse {
+      flex-direction: column-reverse;
+    }
+
+    .ab#{$variant}-flex-wrap {
+      flex-wrap: wrap;
+    }
+    .ab#{$variant}-flex-nowrap {
+      flex-wrap: nowrap;
+    }
+    .ab#{$variant}-flex-wrap-reverse {
+      flex-wrap: wrap-reverse;
+    }
+
+    // Item
+    .ab#{$variant}-flex-1 {
+      flex: 1;
+    }
+    .ab#{$variant}-flex-auto {
+      flex: auto;
+    }
+    .ab#{$variant}-flex-none {
+      flex: none;
+    }
+    .ab#{$variant}-flex-grow-0 {
+      flex-grow: 0;
+    }
+    .ab#{$variant}-flex-shrink-0 {
+      flex-shrink: 0;
+    }
+
+    .ab#{$variant}-flex-order-1 {
+      order: 1;
+    }
+    .ab#{$variant}-flex-order-2 {
+      order: 2;
+    }
+    .ab#{$variant}-flex-order-none {
+      order: inherit;
+    }
+  }
+}

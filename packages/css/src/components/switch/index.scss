@@ -1,0 +1,207 @@
+$checkmark-url: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMS4yNSAxLjVDMTEuMjUgMS42OTE5MSAxMS4xNzY4IDEuODgzOTEgMTEuMDMwMyAyLjAzMDE2TDUuMDMwMjcgOC4wMzAxNkM0Ljg4NDM4IDguMTc3MzQgNC42OTIxOSA4LjI1IDQuNSA4LjI1QzQuMzA3ODEgOC4yNSA0LjExNjA5IDguMTc2NzYgMy45Njk4NCA4LjAzMDI3TDAuOTY5ODQ0IDUuMDMwMjdDMC44MjMzNTkgNC44ODQzOCAwLjc1IDQuNjkyMTkgMC43NSA0LjVDMC43NSA0LjA3MTU2IDEuMTAwMzkgMy43NSAxLjUgMy43NUMxLjY5MTkxIDMuNzUgMS44ODM5MSAzLjgyMzI0IDIuMDMwMTYgMy45Njk3M0w0LjUgNi40NDA2Mkw5Ljk3MDMxIDAuOTcwMzEzQzEwLjExNTYgMC44MjMzNTkgMTAuMzA3OCAwLjc1IDEwLjUgMC43NUMxMC45MDA4IDAuNzUgMTEuMjUgMS4wNzEwOSAxMS4yNSAxLjVaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K';
+
+.ab-Switch {
+  --switch-button-circle-size: 24px;
+  --switch-button-circle-background-color: var(
+    --ab-semantic-color-text-secondary
+  );
+  --switch-button-circle-disabled-background-color: var(
+    --ab-semantic-color-text-disable
+  );
+  --switch-button-circle-checked-background-color: var(
+    --ab-semantic-color-text-contrast
+  );
+  --switch-mark-size: 16px;
+  --switch-mark-color: var(--ab-semantic-color-background-brand-primary);
+  --switch-mark-disabled-color: var(--ab-semantic-color-text-contrast);
+  --switch-slider-border-color: var(--ab-semantic-color-border-light);
+  --switch-slider-border-size: var(--ab-semantic-border-width-2);
+  --switch-slider-background-color: var(
+    --ab-semantic-color-background-rest-primary
+  );
+  --switch-slider-disabled-background-color: var(
+    --ab-semantic-color-background-disabled
+  );
+  --switch-slider-hover-background-color: var(
+    --ab-semantic-color-background-hover-on-neutral
+  );
+  --switch-slider-focus-background-color: var(
+    --ab-semantic-color-background-focus-on-neutral
+  );
+  --switch-slider-active-background-color: var(
+    --ab-semantic-color-background-pressed-on-neutral
+  );
+  --switch-slider-checked-background-color: var(
+    --ab-semantic-color-background-brand-primary
+  );
+  --switch-slider-checked-hover-background-color: var(
+    --ab-semantic-color-background-hover-on-brand
+  );
+  --switch-slider-checked-focus-background-color: var(
+    --ab-semantic-color-background-focus-on-brand
+  );
+  --switch-slider-checked-active-background-color: var(
+    --ab-semantic-color-background-pressed-on-brand
+  );
+  --switch-border-radius-full: var(--ab-semantic-border-radius-full);
+}
+
+.ab-Switch-label {
+  --switch-label-font-size: #{$font-size-body-s};
+  --switch-label-color: var(--ab-semantic-color-text-default);
+  --switch-label-disabled-color: var(--ab-semantic-color-text-secondary);
+}
+
+.position-top {
+  --switch-position-top-flex-direction: column;
+}
+
+.position-right {
+  --switch-position-top-flex-direction: row-reverse;
+}
+
+.position-bottom {
+  --switch-position-top-flex-direction: column-reverse;
+}
+
+.position-left {
+  --switch-position-top-flex-direction: row;
+}
+
+.ab-Switch {
+  height: 32px;
+  width: 52px;
+  position: relative;
+  display: inline-block;
+  border-radius: var(--switch-border-radius-full);
+  cursor: pointer;
+
+  &:has(&-input:disabled) {
+    pointer-events: none;
+  }
+
+  &-label {
+    display: inline-block;
+    font-size: var(--switch-label-font-size);
+    color: var(--switch-label-color);
+  }
+
+  &-slider {
+    display: inline-block;
+    position: absolute;
+    inset: 0;
+    background-color: var(--switch-slider-background-color);
+    border-radius: var(--switch-button-circle-size);
+    border: solid var(--switch-slider-border-color)
+      var(--switch-slider-border-size);
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: var(--switch-button-circle-size);
+      height: var(--switch-button-circle-size);
+      inset: 2px;
+      background-color: var(--switch-button-circle-background-color);
+      border-radius: var(--switch-border-radius-full);
+    }
+  }
+
+  &-mark {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  &-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:disabled ~ .ab-Switch-slider,
+    &:checked:disabled ~ .ab-Switch-slider {
+      background-color: var(--switch-slider-disabled-background-color);
+
+      &::before {
+        background-color: var(--switch-button-circle-disabled-background-color);
+      }
+    }
+
+    &:not(:disabled) {
+      @include hover {
+        & ~ .ab-Switch-slider {
+          background-color: var(--switch-slider-hover-background-color);
+        }
+      }
+    }
+
+    &:focus-visible ~ .ab-Switch-slider {
+      background-color: var(--switch-slider-focus-background-color);
+    }
+
+    &:active ~ .ab-Switch-slider {
+      background-color: var(--switch-slider-active-background-color);
+    }
+
+    &:checked ~ .ab-Switch-slider {
+      background-color: var(--switch-slider-checked-background-color);
+      border: none;
+
+      &::before {
+        left: 24px;
+        top: 4px;
+        background-color: var(--switch-button-circle-checked-background-color);
+      }
+    }
+
+    &:checked {
+      &:not(:disabled) {
+        @include hover {
+          & ~ .ab-Switch-slider {
+            background-color: var(
+              --switch-slider-checked-hover-background-color
+            );
+          }
+        }
+      }
+
+      &:focus-visible ~ .ab-Switch-slider {
+        background-color: var(--switch-slider-checked-focus-background-color);
+      }
+
+      &:active ~ .ab-Switch-slider {
+        background-color: var(--switch-slider-checked-active-background-color);
+      }
+
+      & ~ .ab-Switch-mark {
+        position: absolute;
+        display: inline-block;
+        width: var(--switch-mark-size);
+        height: var(--switch-mark-size);
+        right: 8px;
+        top: 8px;
+        background-color: var(--switch-mark-color);
+        mask-image: url($checkmark-url);
+        mask-repeat: no-repeat;
+        mask-position: center;
+      }
+
+      &:disabled ~ .ab-Switch-mark {
+        background-color: var(--switch-mark-disabled-color);
+      }
+    }
+  }
+}
+
+.ab-Switch-wrapper {
+  display: inline-flex;
+  gap: var(--ab-semantic-spacing-2);
+  align-items: center;
+  justify-content: center;
+
+  &.position-top,
+  &.position-right,
+  &.position-bottom,
+  &.position-bottom {
+    flex-direction: var(--switch-position-top-flex-direction);
+  }
+}

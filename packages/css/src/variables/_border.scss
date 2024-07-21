@@ -1,0 +1,14 @@
+$border-widths: (
+  0: var(--ab-semantic-border-width-0),
+  1: var(--ab-semantic-border-width-1),
+  2: var(--ab-semantic-border-width-2),
+  3: var(--ab-semantic-border-width-3),
+  4: var(--ab-semantic-border-width-4),
+);
+$border-radii-semantics: (
+  none: var(--ab-semantic-border-radius-none),
+  xs: var(--ab-semantic-border-radius-xs),
+  sm: var(--ab-semantic-border-radius-sm),
+  md: var(--ab-semantic-border-radius-md),
+  lg: var(--ab-semantic-border-radius-lg),
+);

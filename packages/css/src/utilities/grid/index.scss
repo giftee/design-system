@@ -1,0 +1,201 @@
+@use 'sass:map';
+
+// Columns
+.ab-col-1 {
+  width: (1 * 0.0833 * 100%);
+}
+
+.ab-col-2 {
+  width: (2 * 0.0833 * 100%);
+}
+
+.ab-col-3 {
+  width: (3 * 0.0833 * 100%);
+}
+
+.ab-col-4 {
+  width: (4 * 0.0833 * 100%);
+}
+
+.ab-col-5 {
+  width: (5 * 0.0833 * 100%);
+}
+
+.ab-col-6 {
+  width: (6 * 0.0833 * 100%);
+}
+
+.ab-col-7 {
+  width: (7 * 0.0833 * 100%);
+}
+
+.ab-col-8 {
+  width: (8 * 0.0833 * 100%);
+}
+
+.ab-col-9 {
+  width: (9 * 0.0833 * 100%);
+}
+
+.ab-col-10 {
+  width: (10 * 0.0833 * 100%);
+}
+
+.ab-col-11 {
+  width: (11 * 0.0833 * 100%);
+}
+
+.ab-col-12 {
+  width: 100%;
+}
+
+@each $breakpoint in map.keys($breakpoints) {
+  @include breakpoint($breakpoint) {
+    .ab-col-#{$breakpoint}-1 {
+      width: (1 * 0.0833 * 100%);
+    }
+    .ab-col-#{$breakpoint}-2 {
+      width: (2 * 0.0833 * 100%);
+    }
+    .ab-col-#{$breakpoint}-3 {
+      width: (3 * 0.0833 * 100%);
+    }
+    .ab-col-#{$breakpoint}-4 {
+      width: (4 * 0.0833 * 100%);
+    }
+    .ab-col-#{$breakpoint}-5 {
+      width: (5 * 0.0833 * 100%);
+    }
+    .ab-col-#{$breakpoint}-6 {
+      width: (6 * 0.0833 * 100%);
+    }
+    .ab-col-#{$breakpoint}-7 {
+      width: (7 * 0.0833 * 100%);
+    }
+    .ab-col-#{$breakpoint}-8 {
+      width: (8 * 0.0833 * 100%);
+    }
+    .ab-col-#{$breakpoint}-9 {
+      width: (9 * 0.0833 * 100%);
+    }
+    .ab-col-#{$breakpoint}-10 {
+      width: (10 * 0.0833 * 100%);
+    }
+    .ab-col-#{$breakpoint}-11 {
+      width: (11 * 0.0833 * 100%);
+    }
+    .ab-col-#{$breakpoint}-12 {
+      width: 100%;
+    }
+  }
+}
+
+// Grid
+$grid-directions: (
+  column: col,
+  row: row,
+);
+$grid-fractions: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+$grid-lines: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
+
+// grid-template-columns/rows
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    @each $direction-long, $direction-short in $grid-directions {
+      @each $grid-fraction in $grid-fractions {
+        .ab#{$variant}-grid-#{$direction-short}s-#{$grid-fraction} {
+          grid-template-#{$direction-long}s: repeat(
+            $grid-fraction,
+            minmax(0, 1fr)
+          );
+        }
+      }
+
+      .ab#{$variant}-grid-#{$direction-short}s-none {
+        grid-template-#{$direction-long}s: none;
+      }
+    }
+  }
+}
+
+// grid-auto-columns/rows
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    @each $direction-long, $direction-short in $grid-directions {
+      .ab#{$variant}-grid-#{$direction-short}s-auto {
+        grid-auto-#{$direction-long}s: auto;
+      }
+      .ab#{$variant}-grid-#{$direction-short}s-min {
+        grid-auto-#{$direction-long}s: min-content;
+      }
+      .ab#{$variant}-grid-#{$direction-short}s-max {
+        grid-auto-#{$direction-long}s: max-content;
+      }
+      .ab#{$variant}-grid-#{$direction-short}s-fr {
+        grid-auto-#{$direction-long}s: minmax(0, 1fr);
+      }
+    }
+  }
+}
+
+// grid-auto-flow
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    .ab#{$variant}-grid-flow-row {
+      grid-auto-flow: row;
+    }
+    .ab#{$variant}-grid-flow-col {
+      grid-auto-flow: column;
+    }
+    .ab#{$variant}-grid-flow-dense {
+      grid-auto-flow: dense;
+    }
+    .ab#{$variant}-grid-flow-row-dense {
+      grid-auto-flow: row dense;
+    }
+    .ab#{$variant}-grid-flow-col-dense {
+      grid-auto-flow: column dense;
+    }
+  }
+}
+
+// grid-column/row
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    @each $direction-long, $direction-short in $grid-directions {
+      .ab#{$variant}-#{$direction-short}-auto {
+        grid-#{$direction-long}: auto;
+      }
+
+      @each $grid-fraction in $grid-fractions {
+        .ab#{$variant}-#{$direction-short}-span-#{$grid-fraction} {
+          grid-#{$direction-long}: span $grid-fraction / span $grid-fraction;
+        }
+      }
+
+      .ab#{$variant}-#{$direction-short}-span-full {
+        grid-#{$direction-long}: 1 / -1;
+      }
+
+      // start
+      @each $grid-line in $grid-lines {
+        .ab#{$variant}-#{$direction-short}-start-#{$grid-line} {
+          grid-#{$direction-long}-start: #{$grid-line};
+        }
+      }
+      .ab#{$variant}-#{$direction-short}-start-auto {
+        grid-#{$direction-long}-start: auto;
+      }
+
+      // end
+      @each $grid-line in $grid-lines {
+        .ab#{$variant}-#{$direction-short}-end-#{$grid-line} {
+          grid-#{$direction-long}-end: #{$grid-line};
+        }
+      }
+      .ab#{$variant}-#{$direction-short}-end-auto {
+        grid-#{$direction-long}-end: auto;
+      }
+    }
+  }
+}

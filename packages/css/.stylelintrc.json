@@ -1,0 +1,24 @@
+{
+  "plugins": ["stylelint-prettier"],
+  "extends": ["stylelint-config-standard-scss"],
+  "rules": {
+    "prettier/prettier": true,
+    "import-notation": "string",
+    "selector-class-pattern": null,
+    "no-duplicate-selectors": null,
+    "scss/at-extend-no-missing-placeholder": null,
+    "no-descending-specificity": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["modal"]
+      }
+    ],
+    "value-keyword-case": [
+      "lower",
+      {
+        "camelCaseSvgKeywords": true
+      }
+    ]
+  }
+}

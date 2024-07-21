@@ -1,0 +1,58 @@
+.ab-Table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: $font-size-body-s;
+
+  &-head {
+    background-color: var(--ab-semantic-color-background-rest-primary);
+
+    &-cell {
+      height: 48px;
+      padding-right: var(--ab-semantic-spacing-4);
+      padding-left: var(--ab-semantic-spacing-4);
+      text-align: left;
+      font-weight: var(--ab-semantic-typography-font-weight-bold);
+      border-bottom: $border;
+      border-color: var(--ab-semantic-color-border-bold);
+      vertical-align: middle;
+    }
+  }
+
+  &-body {
+    &-row {
+      border-bottom: none;
+    }
+  }
+
+  &-cell {
+    padding: var(--ab-semantic-spacing-4);
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: $border;
+  }
+}
+
+.ab-Table-stripe {
+  & .ab-Table-body {
+    &-row {
+      &:nth-child(odd) {
+        background-color: var(--ab-semantic-color-background-rest-primary);
+      }
+
+      &:nth-child(even) {
+        background-color: var(--ab-semantic-color-background-rest-secondary);
+      }
+    }
+  }
+}
+
+.ab-Table-select {
+  & .ab-Table-body {
+    &-row {
+      @include hover {
+        background-color: var(--ab-semantic-color-background-brand-secondary);
+        cursor: pointer;
+      }
+    }
+  }
+}

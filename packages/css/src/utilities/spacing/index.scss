@@ -1,0 +1,55 @@
+$sides: (
+  top: 't',
+  right: 'r',
+  bottom: 'b',
+  left: 'l',
+);
+
+@each $spaceKey, $spaceValue in $spacers {
+  .ab-p-#{$spaceKey} {
+    padding: #{$spaceValue};
+  }
+  .ab-px-#{$spaceKey} {
+    padding-left: #{$spaceValue};
+    padding-right: #{$spaceValue};
+  }
+  .ab-py-#{$spaceKey} {
+    padding-top: #{$spaceValue};
+    padding-bottom: #{$spaceValue};
+  }
+  .ab-m-#{$spaceKey} {
+    margin: #{$spaceValue};
+  }
+  .ab-mx-#{$spaceKey} {
+    margin-left: #{$spaceValue};
+    margin-right: #{$spaceValue};
+  }
+  .ab-my-#{$spaceKey} {
+    margin-top: #{$spaceValue};
+    margin-bottom: #{$spaceValue};
+  }
+
+  @each $sideKey, $sideShorthand in $sides {
+    .ab-p#{$sideShorthand}-#{$spaceKey} {
+      padding-#{$sideKey}: #{$spaceValue};
+    }
+    .ab-m#{$sideShorthand}-#{$spaceKey} {
+      margin-#{$sideKey}: #{$spaceValue};
+    }
+  }
+}
+
+.ab-m-auto {
+  margin: auto;
+}
+
+.ab-mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@each $sideKey, $sideShorthand in $sides {
+  .ab-m#{$sideShorthand}-auto {
+    margin-#{$sideKey}: auto;
+  }
+}

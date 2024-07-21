@@ -1,0 +1,76 @@
+.ab-InlineAlert-neutral {
+  --inlinealert-header-color: var(--ab-semantic-color-text-default);
+  --inlinealert-body-color: var(--ab-semantic-color-text-default);
+  --inlinealert-border-color: var(--ab-semantic-color-border-neutral);
+  --inlinealert-background-color: var(
+    --ab-semantic-color-background-neutral-secondary
+  );
+}
+
+.ab-InlineAlert-info {
+  --inlinealert-header-color: var(--ab-semantic-color-text-default);
+  --inlinealert-body-color: var(--ab-semantic-color-text-default);
+  --inlinealert-border-color: var(--ab-semantic-color-border-info);
+  --inlinealert-background-color: var(
+    --ab-semantic-color-background-info-secondary
+  );
+}
+
+.ab-InlineAlert-notice {
+  --inlinealert-header-color: var(--ab-semantic-color-text-default);
+  --inlinealert-body-color: var(--ab-semantic-color-text-default);
+  --inlinealert-border-color: var(--ab-semantic-color-border-notice);
+  --inlinealert-background-color: var(
+    --ab-semantic-color-background-notice-secondary
+  );
+}
+
+.ab-InlineAlert-positive {
+  --inlinealert-header-color: var(--ab-semantic-color-text-default);
+  --inlinealert-body-color: var(--ab-semantic-color-text-default);
+  --inlinealert-border-color: var(--ab-semantic-color-border-positive);
+  --inlinealert-background-color: var(
+    --ab-semantic-color-background-positive-secondary
+  );
+}
+
+.ab-InlineAlert-negative {
+  --inlinealert-header-color: var(--ab-semantic-color-text-negative);
+  --inlinealert-body-color: var(--ab-semantic-color-text-default);
+  --inlinealert-border-color: var(--ab-semantic-color-border-negative);
+  --inlinealert-background-color: var(
+    --ab-semantic-color-background-negative-secondary
+  );
+}
+
+.ab-InlineAlert {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ab-semantic-spacing-2);
+  padding: var(--ab-semantic-spacing-6);
+  border-radius: var(--ab-semantic-border-radius-sm);
+
+  &-neutral,
+  &-info,
+  &-notice,
+  &-positive,
+  &-negative {
+    border: 1px solid var(--inlinealert-border-color);
+    background-color: var(--inlinealert-background-color);
+  }
+
+  &-title {
+    display: inline-flex;
+    align-items: center;
+    column-gap: var(--ab-semantic-spacing-2);
+    color: var(--inlinealert-header-color);
+    font-size: $font-size-body-s;
+    font-weight: var(--ab-semantic-typography-font-weight-bold);
+  }
+
+  &-description {
+    color: var(--inlinealert-body-color);
+    font-size: $font-size-body-s;
+    font-weight: var(--ab-semantic-typography-font-weight-regular);
+  }
+}

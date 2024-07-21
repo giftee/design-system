@@ -1,0 +1,35 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", "schedule:daily", ":disableRateLimiting"],
+  "timezone": "Japan",
+  "labels": ["dependencies"],
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "matchPackagePrefixes": [
+        "@changesets",
+        "stylelint",
+        "typescript",
+        "vite",
+        "@vitejs/plugin-react",
+        "vite-plugin-dts",
+        "rollup-plugin-visualizer",
+        "remark-gfm",
+        "react-syntax-highlighter",
+        "eslint",
+        "prettier",
+        "postcss",
+        "babel-loader",
+        "@babel/core",
+        "style-dictionary",
+        "@typescript-eslint",
+        "sass"
+      ],
+      "automerge": true
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  }
+}

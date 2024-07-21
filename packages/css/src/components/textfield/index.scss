@@ -1,0 +1,116 @@
+.ab-Textfield {
+  --textfield-font-size: $font-size-body-m;
+}
+
+.ab-Textfield-input {
+  --textfield-input-height: 48px;
+  --textfield-input-background-color: var(
+    --ab-semantic-color-background-rest-primary
+  );
+  --textfield-input-color: var(--ab-semantic-color-text-default);
+  --textfield-input-border: 1px solid var(--ab-semantic-color-border-light);
+  --textfield-input-border-raidus: #{var(--ab-semantic-spacing-2)};
+  --textfield-input-padding: #{var(--ab-semantic-spacing-2)};
+  --textfield-input-placeholder-color: var(--ab-semantic-color-text-secondary);
+  --textfield-input-hover-border-color: var(--ab-semantic-color-border-bold);
+  --textfield-input-focus-border-color: var(--ab-semantic-color-border-bold);
+  --textfield-input-active-border-color: var(--ab-semantic-color-border-bold);
+  --textfield-input-disabled-color: var(--ab-semantic-color-text-secondary);
+  --textfield-input-disabled-background-color: var(
+    --ab-semantic-color-background-disabled
+  );
+}
+
+.ab-Textfield {
+  position: relative;
+  font-size: var(--textfield-font-size);
+
+  &-label {
+    display: flex;
+    align-items: center;
+    gap: var(--ab-semantic-spacing-2);
+    margin-bottom: var(--ab-semantic-spacing-4);
+    font-size: $font-size-body-m;
+    color: var(--ab-semantic-color-text-default);
+  }
+
+  &-input {
+    background-color: var(--textfield-input-background-color);
+    box-sizing: border-box;
+    height: var(--textfield-input-height);
+    padding: var(--textfield-input-padding);
+    color: var(--textfield-input-color);
+    border: var(--textfield-input-border);
+    border-radius: var(--textfield-input-border-raidus);
+    outline: none;
+    transition: border-color 0.1s ease-in-out;
+    width: 100%;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    &::placeholder {
+      color: var(--textfield-input-placeholder-color);
+    }
+
+    @include hover {
+      border-color: var(--textfield-input-hover-border-color);
+    }
+
+    &:focus {
+      border-color: var(--textfield-input-focus-border-color);
+    }
+
+    &:active {
+      border-color: var(--textfield-input-active-border-color);
+    }
+  }
+
+  &-helptext {
+    padding-top: var(--ab-semantic-spacing-1);
+    font-size: $font-size-body-xs;
+    color: var(--ab-semantic-color-text-default);
+  }
+}
+
+.ab-Textfield-label {
+  .is-disabled & {
+    color: var(--ab-semantic-color-text-secondary);
+    pointer-events: none;
+  }
+}
+
+.ab-Textfield-input {
+  .is-disabled & {
+    color: var(--textfield-input-disabled-color);
+    pointer-events: none;
+    background-color: var(--textfield-input-disabled-background-color);
+    border-color: none;
+  }
+
+  .is-error & {
+    background-color: var(--ab-semantic-color-background-negative-secondary);
+    border-color: var(--ab-semantic-color-border-negative);
+  }
+
+  .resize-both & {
+    resize: both;
+  }
+
+  .resize-vertical & {
+    resize: vertical;
+  }
+
+  .resize-horizontal & {
+    resize: horizontal;
+  }
+}
+
+.ab-Textfield-helptext {
+  .is-disabled & {
+    color: var(--ab-semantic-color-text-secondary);
+  }
+
+  .is-error & {
+    color: var(--ab-semantic-color-text-negative);
+  }
+}

@@ -1,0 +1,115 @@
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    .ab#{$variant}-items-start {
+      align-items: flex-start;
+    }
+    .ab#{$variant}-items-end {
+      align-items: flex-end;
+    }
+    .ab#{$variant}-items-center {
+      align-items: center;
+    }
+    .ab#{$variant}-items-baseline {
+      align-items: baseline;
+    }
+    .ab#{$variant}-items-stretch {
+      align-items: stretch;
+    }
+
+    .ab#{$variant}-content-start {
+      align-content: flex-start;
+    }
+    .ab#{$variant}-content-end {
+      align-content: flex-end;
+    }
+    .ab#{$variant}-content-center {
+      align-content: center;
+    }
+    .ab#{$variant}-content-between {
+      align-content: space-between;
+    }
+    .ab#{$variant}-content-around {
+      align-content: space-around;
+    }
+    .ab#{$variant}-content-stretch {
+      align-content: stretch;
+    }
+
+    .ab#{$variant}-self-auto {
+      align-self: auto;
+    }
+    .ab#{$variant}-self-start {
+      align-self: flex-start;
+    }
+    .ab#{$variant}-self-end {
+      align-self: flex-end;
+    }
+    .ab#{$variant}-self-center {
+      align-self: center;
+    }
+    .ab#{$variant}-self-baseline {
+      align-self: baseline;
+    }
+    .ab#{$variant}-self-stretch {
+      align-self: stretch;
+    }
+  }
+}
+
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    .ab#{$variant}-flex-items-start {
+      align-items: flex-start;
+    }
+    .ab#{$variant}-flex-items-end {
+      align-items: flex-end;
+    }
+    .ab#{$variant}-flex-items-center {
+      align-items: center;
+    }
+    .ab#{$variant}-flex-items-baseline {
+      align-items: baseline;
+    }
+    .ab#{$variant}-flex-items-stretch {
+      align-items: stretch;
+    }
+
+    .ab#{$variant}-flex-content-start {
+      align-content: flex-start;
+    }
+    .ab#{$variant}-flex-content-end {
+      align-content: flex-end;
+    }
+    .ab#{$variant}-flex-content-center {
+      align-content: center;
+    }
+    .ab#{$variant}-flex-content-between {
+      align-content: space-between;
+    }
+    .ab#{$variant}-flex-content-around {
+      align-content: space-around;
+    }
+    .ab#{$variant}-flex-content-stretch {
+      align-content: stretch;
+    }
+
+    .ab#{$variant}-flex-self-auto {
+      align-self: auto;
+    }
+    .ab#{$variant}-flex-self-start {
+      align-self: flex-start;
+    }
+    .ab#{$variant}-flex-self-end {
+      align-self: flex-end;
+    }
+    .ab#{$variant}-flex-self-center {
+      align-self: center;
+    }
+    .ab#{$variant}-flex-self-baseline {
+      align-self: baseline;
+    }
+    .ab#{$variant}-flex-self-stretch {
+      align-self: stretch;
+    }
+  }
+}

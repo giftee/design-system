@@ -1,0 +1,39 @@
+.ab-Skeleton {
+  --skeleton-background-color: var(--ab-semantic-color-text-default);
+
+  background-color: var(--skeleton-background-color);
+  animation: pulse 2.5s ease-in-out infinite;
+
+  &-text {
+    border-radius: var(--ab-semantic-border-radius-xs);
+
+    /* 擬似要素で半角スペース（\00a0）を入れて height を確保し、transform で 文字の余白を除いた高さに調整(line-height: 1で上書きすると、2行のときくっつくのでscaleを使用している) */
+    transform: scale(1, 0.6);
+
+    &::before {
+      content: '\00a0';
+    }
+  }
+
+  &-circular {
+    border-radius: var(--ab-semantic-border-radius-full);
+  }
+
+  &-rectangular {
+    border-radius: var(--ab-semantic-border-radius-md);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}

@@ -1,0 +1,24 @@
+.ab-Textfield-picker-label {
+  --textfield-picker-label-color: var(--ab-semantic-color-text-secondary);
+}
+
+.ab-Textfield-picker-icon {
+  --textfield-picker-icon-color: var(--ab-semantic-color-text-brand);
+}
+
+.ab-Textfield-picker {
+  @extend .ab-Textfield-input;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-label {
+    color: var(--textfield-picker-label-color);
+  }
+
+  &-icon {
+    color: var(--textfield-picker-icon-color);
+    padding-top: var(--ab-semantic-spacing-1);
+  }
+}

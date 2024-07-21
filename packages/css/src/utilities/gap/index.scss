@@ -1,0 +1,18 @@
+// Gap
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    @each $spaceKey, $spaceValue in $spacers {
+      .ab#{$variant}-gap-#{$spaceKey} {
+        gap: #{$spaceValue};
+      }
+
+      .ab#{$variant}-gap-y-#{$spaceKey} {
+        row-gap: #{$spaceValue};
+      }
+
+      .ab#{$variant}-gap-x-#{$spaceKey} {
+        column-gap: #{$spaceValue};
+      }
+    }
+  }
+}

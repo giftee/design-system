@@ -1,0 +1,21 @@
+$display-values: (
+  block,
+  inline,
+  inline-block,
+  inline-flex,
+  flex,
+  grid,
+  none,
+  table,
+  table-cell
+) !default;
+
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    @each $display in $display-values {
+      .ab#{$variant}-#{$display} {
+        display: $display;
+      }
+    }
+  }
+}

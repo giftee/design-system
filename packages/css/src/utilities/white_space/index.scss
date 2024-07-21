@@ -1,0 +1,7 @@
+$white-spaces: (normal, nowrap, pre, pre-wrap);
+
+@each $white-space in $white-spaces {
+  .ab-white-space-#{$white-space} {
+    white-space: $white-space;
+  }
+}

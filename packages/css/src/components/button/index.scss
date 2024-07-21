@@ -1,0 +1,190 @@
+.ab-Button {
+  --button-color: var(--ab-semantic-color-text-contrast);
+  --button-font-size: #{$font-size-body-s};
+  --button-font-weight: var(--ab-semantic-typography-font-weight-bold);
+  --button-background-color: var(--ab-semantic-color-background-brand-primary);
+  --button-border-color: var(--ab-semantic-color-border-brand);
+  --button-border-radius: var(--ab-semantic-border-radius-full);
+  --button-height: 42px;
+  --button-padding: #{var(--ab-semantic-spacing-0)} #{var(
+      --ab-semantic-spacing-4
+    )};
+  --button-hover-color: var(--ab-semantic-color-text-contrast);
+  --button-hover-background-color: var(
+    --ab-semantic-color-background-hover-on-brand
+  );
+  --button-hover-border-color: var(
+    --ab-semantic-color-background-hover-on-brand
+  );
+  --button-focus-visible-color: var(--ab-semantic-color-text-contrast);
+  --button-focus-visible-background-color: var(
+    --ab-semantic-color-background-focus-on-brand
+  );
+  --button-focus-visible-border-color: var(
+    --ab-semantic-color-background-focus-on-brand
+  );
+  --button-active-color: var(--ab-semantic-color-text-contrast);
+  --button-active-background-color: var(
+    --ab-semantic-color-background-pressed-on-brand
+  );
+  --button-active-border-color: var(
+    --ab-semantic-color-background-pressed-on-brand
+  );
+  --button-disabled-background-color: var(
+    --ab-semantic-color-background-disabled
+  );
+  --button-disabled-border-color: var(--ab-semantic-color-background-disabled);
+  --button-disabled-color: var(--ab-semantic-color-text-disable);
+}
+
+.ab-Button-outlined {
+  --button-color: var(--ab-semantic-color-text-brand);
+  --button-background-color: var(--ab-semantic-color-background-rest-primary);
+  --button-border-color: var(--ab-semantic-color-border-brand);
+  --button-hover-color: var(--ab-semantic-color-text-brand);
+  --button-hover-background-color: var(
+    --ab-semantic-color-background-hover-on-neutral
+  );
+  --button-hover-border-color: var(--ab-semantic-color-border-brand);
+  --button-focus-visible-color: var(--ab-semantic-color-text-brand);
+  --button-focus-visible-background-color: var(
+    --ab-semantic-color-background-focus-on-neutral
+  );
+  --button-focus-visible-border-color: var(--ab-semantic-color-border-brand);
+  --button-active-color: var(--ab-semantic-color-text-brand);
+  --button-active-background-color: var(
+    --ab-semantic-color-background-pressed-on-neutral
+  );
+  --button-active-border-color: var(--ab-semantic-color-border-brand);
+}
+
+.ab-Button-negative {
+  --button-color: var(--ab-semantic-color-text-default);
+  --button-background-color: var(--ab-semantic-color-background-rest-primary);
+  --button-border-color: var(--ab-semantic-color-border-light);
+  --button-hover-color: var(--ab-semantic-color-text-default);
+  --button-hover-background-color: var(
+    --ab-semantic-color-background-hover-on-neutral
+  );
+  --button-hover-border-color: var(--ab-semantic-color-border-light);
+  --button-focus-visible-color: var(--ab-semantic-color-text-default);
+  --button-focus-visible-background-color: var(
+    --ab-semantic-color-background-focus-on-neutral
+  );
+  --button-focus-visible-border-color: var(--ab-semantic-color-border-light);
+  --button-active-color: var(--ab-semantic-color-text-default);
+  --button-active-background-color: var(
+    --ab-semantic-color-background-pressed-on-neutral
+  );
+  --button-active-border-color: var(--ab-semantic-color-border-light);
+  --button-disabled-background-color: var(
+    --ab-semantic-color-background-disabled
+  );
+  --button-disabled-color: var(--ab-semantic-color-text-disable);
+}
+
+.ab-Button-text {
+  --button-color: var(--ab-semantic-color-text-brand);
+  --button-background-color: transparent;
+  --button-border-color: none;
+  --button-hover-color: var(--ab-semantic-color-text-brand);
+  --button-hover-background-color: var(
+    --ab-semantic-color-background-hover-on-neutral
+  );
+  --button-hover-border-color: none;
+  --button-focus-visible-color: var(--ab-semantic-color-text-brand);
+  --button-focus-visible-background-color: var(
+    --ab-semantic-color-background-focus-on-neutral
+  );
+  --button-focus-visible-border-color: none;
+  --button-active-color: var(--ab-semantic-color-text-brand);
+  --button-active-background-color: var(
+    --ab-semantic-color-background-pressed-on-neutral
+  );
+  --button-active-border-color: none;
+  --button-disabled-background-color: var(
+    --ab-semantic-color-background-rest-primary
+  );
+  --button-disabled-color: var(--ab-semantic-color-text-disable);
+}
+
+.ab-Button-xsmall {
+  --button-font-size: #{$font-size-body-xs};
+  --button-height: 36px;
+}
+
+.ab-Button-small {
+  --button-font-size: #{$font-size-body-s};
+  --button-height: 42px;
+}
+
+.ab-Button-large {
+  --button-font-size: #{$font-size-body-m};
+  --button-height: 56px;
+}
+
+.ab-Button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--button-padding);
+  height: var(--button-height);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  color: var(--button-color);
+  cursor: pointer;
+  background-color: var(--button-background-color);
+  border: 2px solid var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  transition: all 0.3s ease;
+
+  @include hover {
+    color: var(--button-hover-color);
+    background-color: var(--button-hover-background-color);
+    border-color: var(--button-hover-border-color);
+  }
+
+  &:focus-visible {
+    color: var(--button-focus-visible-color);
+    background-color: var(--button-focus-visible-background-color);
+    border-color: var(--button-focus-visible-border-color);
+  }
+
+  &:active {
+    color: var(--button-active-color);
+    background-color: var(--button-active-background-color);
+    border-color: var(--button-active-border-color);
+    transform: translateY(1px);
+  }
+
+  &:disabled {
+    color: var(--button-disabled-color);
+    cursor: not-allowed;
+    background-color: var(--button-disabled-background-color);
+    border-color: var(--button-disabled-border-color);
+  }
+
+  // size
+  &-xsmall,
+  &-small,
+  &-large {
+    padding: var(--button-padding);
+    font-size: var(--button-font-size);
+    height: var(--button-height);
+  }
+}
+
+// Outlined button styles
+.ab-Button-outlined {
+  @extend .ab-Button;
+}
+
+// Negative button styles
+.ab-Button-negative {
+  @extend .ab-Button;
+}
+
+// Text button styles
+.ab-Button-text {
+  @extend .ab-Button;
+}

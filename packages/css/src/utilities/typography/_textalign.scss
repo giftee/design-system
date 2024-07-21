@@ -1,0 +1,13 @@
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    .ab#{$variant}-text-right {
+      text-align: right;
+    }
+    .ab#{$variant}-text-left {
+      text-align: left;
+    }
+    .ab#{$variant}-text-center {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@giftee/abukuma-design-tokens",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Design Tokens of Giftee Design System",
+  "style": "dist/css/index.css",
+  "main": "dist/cjs/index.js",
+  "typings": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/cjs/index.js"
+    },
+    "./css/*": "./dist/css/*",
+    "./scss/*": "./dist/scss/*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giftee/design-system"
+  },
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "bash build.sh",
+    "node-build": "node build"
+  },
+  "devDependencies": {
+    "style-dictionary": "^3.9.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

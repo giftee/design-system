@@ -1,0 +1,6 @@
+// TODO: デザイントークン package に border-style を定義してそちらを利用する
+$border-style: solid;
+
+// 複数の値を持つ composite token をデザイントークン package で扱えないので、composite token は独自定義
+$border: var(--ab-semantic-border-width-1) $border-style
+  var(--ab-semantic-color-border-light);

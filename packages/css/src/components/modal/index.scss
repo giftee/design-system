@@ -1,0 +1,27 @@
+.ab-Modal {
+  border: none;
+  padding: var(--ab-semantic-spacing-0);
+  border-radius: var(--ab-semantic-border-radius-md);
+  background-color: var(--ab-semantic-color-background-rest-primary);
+  max-height: 100%;
+  width: 100%;
+  overflow-y: auto;
+
+  &::backdrop {
+    background-color: rgba(35 35 35 / 70%);
+
+    // background-color: var(--ab-semantic-color-background-overlay); Chrome で backdrop に css variables が使えないバグがある: https://stackoverflow.com/questions/58818299/css-variables-not-working-in-dialogbackdrop
+  }
+}
+
+.ab-Modal-header {
+  padding: var(--ab-semantic-spacing-6);
+}
+
+.ab-Modal-body {
+  padding: var(--ab-semantic-spacing-6);
+}
+
+.ab-Modal-footer {
+  padding: var(--ab-semantic-spacing-6);
+}

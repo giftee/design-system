@@ -1,0 +1,28 @@
+$sides: (
+  top: 't',
+  right: 'r',
+  bottom: 'b',
+  left: 'l',
+);
+
+.ab-border {
+  border: $border;
+}
+
+@each $sideKey, $sideValue in $sides {
+  .ab-border-#{$sideValue} {
+    border-#{$sideKey}: #{$border};
+  }
+}
+
+@each $widthKey, $widthValue in $border-widths {
+  .ab-border-#{$widthKey} {
+    border-width: #{$widthValue};
+  }
+}
+
+@each $radiusKey, $radiusValue in $border-radii-semantics {
+  .ab-rounded-#{$radiusKey} {
+    border-radius: #{$radiusValue};
+  }
+}

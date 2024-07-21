@@ -1,0 +1,114 @@
+.ab-Dropzone {
+  --droptzone-height: 250px;
+}
+
+.ab-Dropzone-large {
+  --droptzone-height: 250px;
+}
+
+.ab-Dropzone-small {
+  --droptzone-height: 112px;
+}
+
+.ab-Dropzone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  border: 1px dashed var(--ab-semantic-color-border-light);
+  border-radius: var(--ab-semantic-border-radius-md);
+  background-color: var(--ab-semantic-color-background-rest-primary);
+  position: relative;
+  transition: background-color 0.3s;
+
+  &-input,
+  &-dragging,
+  &-uploading {
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: var(--ab-semantic-spacing-4);
+  }
+
+  &-large,
+  &-small {
+    height: var(--droptzone-height);
+  }
+}
+
+// デフォルト
+.ab-Dropzone-input {
+  display: flex;
+
+  .ab-Dropzone-success,
+  .ab-Dropzone-error {
+    display: none;
+  }
+}
+
+// Drag
+.ab-Dropzone.is-dragging {
+  padding: var(--ab-semantic-spacing-4);
+
+  .ab-Dropzone-input,
+  .ab-Dropzone-uploading {
+    display: none;
+  }
+
+  .ab-Dropzone-dragging {
+    display: flex;
+    background-color: var(--ab-semantic-color-background-brand-secondary);
+    border-radius: var(--ab-semantic-border-radius-md);
+  }
+}
+
+// Upload
+.ab-Dropzone.is-uploading {
+  .ab-Dropzone-input,
+  .ab-Dropzone-dragging {
+    display: none;
+  }
+
+  .ab-Dropzone-uploading {
+    display: flex;
+  }
+}
+
+.ab-Dropzone.ab-Dropzone-small {
+  .ab-Dropzone-uploading {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+// Success
+.ab-Dropzone.is-success {
+  .ab-Dropzone-success {
+    display: block;
+  }
+}
+
+// Error
+.ab-Dropzone.is-error {
+  border-color: var(--ab-semantic-color-border-negative);
+  background-color: var(--ab-semantic-color-background-notice-secondary);
+
+  .ab-Dropzone-error {
+    display: block;
+  }
+}
+
+// Size
+.ab-Dropzone.ab-Dropzone-small {
+  .ab-Dropzone-input,
+  .ab-Dropzone-dragging,
+  .ab-Dropzone-uploading {
+    flex-direction: row;
+    text-align: left;
+  }
+}

@@ -1,0 +1,73 @@
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    // justify-content
+    .ab#{$variant}-justify-start {
+      justify-content: flex-start;
+    }
+    .ab#{$variant}-justify-end {
+      justify-content: flex-end;
+    }
+    .ab#{$variant}-justify-center {
+      justify-content: center;
+    }
+    .ab#{$variant}-justify-between {
+      justify-content: space-between;
+    }
+    .ab#{$variant}-justify-around {
+      justify-content: space-around;
+    }
+
+    // justify-items
+    .ab#{$variant}-justify-items-start {
+      justify-items: start;
+    }
+    .ab#{$variant}-justify-items-end {
+      justify-items: end;
+    }
+    .ab#{$variant}-justify-items-center {
+      justify-items: center;
+    }
+    .ab#{$variant}-justify-items-stretch {
+      justify-items: stretch;
+    }
+
+    // justify-items
+    .ab#{$variant}-justify-self-auto {
+      justify-self: auto;
+    }
+    .ab#{$variant}-justify-self-start {
+      justify-self: start;
+    }
+    .ab#{$variant}-justify-self-end {
+      justify-self: end;
+    }
+    .ab#{$variant}-justify-self-center {
+      justify-self: center;
+    }
+    .ab#{$variant}-justify-self-stretch {
+      justify-self: stretch;
+    }
+  }
+}
+
+// deprecated: migrate to ab-justify-x
+// TODO: ab-justify-x に統合したら削除
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    .ab#{$variant}-flex-justify-start {
+      justify-content: flex-start;
+    }
+    .ab#{$variant}-flex-justify-end {
+      justify-content: flex-end;
+    }
+    .ab#{$variant}-flex-justify-center {
+      justify-content: center;
+    }
+    .ab#{$variant}-flex-justify-between {
+      justify-content: space-between;
+    }
+    .ab#{$variant}-flex-justify-around {
+      justify-content: space-around;
+    }
+  }
+}

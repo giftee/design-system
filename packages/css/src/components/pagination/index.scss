@@ -1,0 +1,14 @@
+.ab-Pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--ab-semantic-spacing-2);
+
+  .ab-Pagination-prevButton {
+    margin: 0 var(--ab-semantic-spacing-8) 0 0;
+  }
+
+  .ab-Pagination-nextButton {
+    margin: 0 0 0 var(--ab-semantic-spacing-8);
+  }
+}

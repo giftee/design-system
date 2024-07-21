@@ -1,0 +1,36 @@
+$colors: (
+  'default',
+  'secondary',
+  'brand',
+  'brand-secondary',
+  'contrast',
+  'info',
+  'notice',
+  'positive',
+  'negative'
+);
+
+// Text
+@each $color in $colors {
+  .ab-text-#{$color} {
+    color: var(--ab-semantic-color-text-#{$color});
+  }
+}
+
+// Background
+$background-colors: (
+  'base-primary',
+  'base-secondary',
+  'disabled',
+  'base-accent',
+  'base',
+  'rest-primary',
+  'rest-secondary',
+  'rest-accent'
+);
+
+@each $background-color in $background-colors {
+  .ab-bg-#{$background-color} {
+    background-color: var(--ab-semantic-color-background-#{$background-color});
+  }
+}

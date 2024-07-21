@@ -1,0 +1,11 @@
+// Break by word
+.ab-wb-break-word {
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+// Break by character
+.ab-wb-break-all {
+  word-break: break-all;
+}

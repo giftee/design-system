@@ -1,0 +1,7 @@
+$text-overflows: (clip, ellipsis);
+
+@each $text-overflow in $text-overflows {
+  .ab-text-overflow-#{$text-overflow} {
+    text-overflow: $text-overflow;
+  }
+}

@@ -1,0 +1,29 @@
+.ab-Badge {
+  --badge-height: 19px;
+  --badge-width: auto;
+  --badge-padding: 0 6px;
+}
+
+.ab-Badge-dot {
+  --badge-height: 8px;
+  --badge-width: 8px;
+  --badge-padding: 0;
+}
+
+.ab-Badge {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ab-semantic-color-text-contrast);
+  background-color: var(--ab-semantic-color-background-notice-primary);
+  border-radius: var(--ab-semantic-border-radius-md);
+  height: var(--badge-height);
+  width: var(--badge-width);
+  font-size: $font-size-body-xs;
+  padding: var(--badge-padding);
+
+  &-dot {
+    height: var(--badge-height);
+    width: var(--badge-width);
+    padding: var(--badge-padding);
+  }
+}

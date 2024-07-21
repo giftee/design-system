@@ -1,0 +1,7 @@
+$cursors: (auto, default, pointer);
+
+@each $cursor in $cursors {
+  .ab-cursor-#{$cursor} {
+    cursor: $cursor;
+  }
+}

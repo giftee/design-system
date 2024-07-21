@@ -1,0 +1,50 @@
+.ab-IconButton {
+  --iconbutton-size: 42px;
+}
+
+.ab-IconButton-small {
+  --iconbutton-size: 36px;
+}
+
+.ab-IconButton-medium {
+  --iconbutton-size: 42px;
+}
+
+.ab-IconButton-large {
+  --iconbutton-size: 48px;
+}
+
+.ab-IconButton {
+  @extend .ab-Button;
+
+  width: var(--iconbutton-size);
+  height: var(--iconbutton-size);
+  border-radius: 50%;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  &-small,
+  &-medium,
+  &-large {
+    width: var(--iconbutton-size);
+    height: var(--iconbutton-size);
+  }
+}
+
+.ab-IconButton-outlined {
+  @extend .ab-Button-outlined;
+  @extend .ab-IconButton;
+}
+
+.ab-IconButton-negative {
+  @extend .ab-Button-negative;
+  @extend .ab-IconButton;
+}
+
+.ab-IconButton-text {
+  @extend .ab-Button-text;
+  @extend .ab-IconButton;
+}

@@ -1,0 +1,97 @@
+.ab-Menu {
+  --menu-font-size: #{$font-size-body-s};
+}
+
+.ab-Menu-item {
+  --menu-item-height: 56px;
+  --menu-item-background-color: var(
+    --ab-semantic-color-background-rest-primary
+  );
+  --menu-item-selected-background-color: var(
+    --ab-semantic-color-background-brand-secondary
+  );
+  --menu-item-active-background-color: var(
+    --ab-semantic-color-background-pressed-on-neutral
+  );
+  --menu-item-disabled-background-color: var(
+    --ab-semantic-color-background-disabled
+  );
+  --menu-item-disabled-color: var(--ab-semantic-color-text-secondary);
+}
+
+.ab-Menu-medium {
+  --menu-font-size: #{$font-size-body-s};
+
+  .ab-Menu-item {
+    --menu-item-height: 56px;
+  }
+}
+
+.ab-Menu-small {
+  --menu-font-size: #{$font-size-body-xs};
+
+  .ab-Menu-item {
+    --menu-item-height: 42px;
+  }
+}
+
+.ab-Menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: var(--menu-font-size);
+
+  &-item {
+    display: flex;
+    align-items: center;
+    height: var(--menu-item-height);
+    background-color: var(--menu-item-background-color);
+    padding: 0 var(--ab-semantic-spacing-4);
+    cursor: pointer;
+
+    &:active {
+      background-color: var(--menu-item-active-background-color);
+    }
+
+    // 必要になれば追加する
+    // &-label {}
+
+    &-sublabel {
+      color: var(--ab-semantic-color-text-secondary);
+      margin-top: var(--ab-semantic-spacing-1);
+    }
+
+    &-right-icon {
+      color: var(--ab-semantic-color-text-brand);
+      margin-left: auto;
+    }
+  }
+
+  &.ab-Menu-Medium,
+  &.ab-Menu-small {
+    font-size: var(--menu-font-size);
+
+    .ab-Menu-item {
+      height: var(--menu-item-height);
+    }
+  }
+}
+
+.ab-Menu {
+  &-item {
+    &.is-selected {
+      background-color: var(--menu-item-selected-background-color);
+      font-weight: var(--ab-semantic-typography-font-weight-bold);
+    }
+
+    &.is-disabled {
+      background-color: var(--menu-item-disabled-background-color);
+      color: var(--menu-item-disabled-color);
+      cursor: not-allowed;
+
+      &:active {
+        background-color: var(--menu-item-disabled-background-color);
+      }
+    }
+  }
+}

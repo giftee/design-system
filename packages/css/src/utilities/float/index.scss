@@ -1,0 +1,13 @@
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    .ab#{$variant}-float-left {
+      float: left;
+    }
+    .ab#{$variant}-float-right {
+      float: right;
+    }
+    .ab#{$variant}-float-none {
+      float: none;
+    }
+  }
+}

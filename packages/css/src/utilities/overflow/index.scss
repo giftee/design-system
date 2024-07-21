@@ -1,0 +1,15 @@
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    @each $overflow in (visible, hidden, auto, scroll) {
+      .ab#{$variant}-overflow-#{$overflow} {
+        overflow: $overflow;
+      }
+      .ab#{$variant}-overflow-x-#{$overflow} {
+        overflow-x: $overflow;
+      }
+      .ab#{$variant}-overflow-y-#{$overflow} {
+        overflow-y: $overflow;
+      }
+    }
+  }
+}

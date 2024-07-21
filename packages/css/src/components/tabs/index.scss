@@ -1,0 +1,163 @@
+.ab-Tabs {
+  --tabs-border-bottom: 1px solid var(--ab-semantic-color-border-light);
+  --tabs-background-color: var(--ab-semantic-color-background-rest-primary);
+}
+
+.ab-Tabs-item {
+  --tabs-item-font-size: #{$font-size-body-s};
+  --tabs-item-color: var(--ab-semantic-color-text-default);
+  --tabs-item-border-bottom-color: transparent;
+  --tabs-item-hover-background-color: var(
+    --ab-semantic-color-background-hover-on-neutral
+  );
+  --tabs-item-focus-visible-background-color: var(
+    --ab-semantic-color-background-focus-on-neutral
+  );
+  --tabs-item-active-color: var(--ab-semantic-color-text-brand);
+  --tabs-item-active-background-color: var(
+    --ab-semantic-color-background-pressed-on-neutral
+  );
+  --tabs-item-selected-color: var(--ab-semantic-color-text-brand);
+  --tabs-item-selected-border-bottom-color: var(
+    --ab-semantic-color-border-brand
+  );
+  --tabs-item-padding: #{var(--ab-semantic-spacing-2)} #{var(
+      --ab-semantic-spacing-8
+    )};
+  --tabs-item-disabled-color: var(--ab-semantic-color-text-secondary);
+}
+
+.ab-Tabs-small {
+  .ab-Tabs-item {
+    --tabs-item-font-size: #{$font-size-body-xs};
+    --tabs-item-padding: #{var(--ab-semantic-spacing-1)} #{var(
+        --ab-semantic-spacing-4
+      )};
+  }
+}
+
+.ab-Tabs-medium {
+  .ab-Tabs-item {
+    --tabs-item-font-size: #{$font-size-body-s};
+    --tabs-item-padding: #{var(--ab-semantic-spacing-2)} #{var(
+        --ab-semantic-spacing-8
+      )};
+  }
+}
+
+.ab-Tabs {
+  background-color: var(--tabs-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  border-bottom: var(--tabs-border-bottom);
+
+  &-item {
+    flex-grow: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tabs-item-color);
+    font-size: var(--tabs-item-font-size);
+    font-weight: var(--ab-semantic-typography-font-weight-bold);
+    padding: var(--tabs-item-padding);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: var(--tabs-item-border-bottom-color);
+      transition: background-color 0.3s;
+    }
+
+    @include hover {
+      background-color: var(--tabs-item-hover-background-color);
+
+      &::before {
+        background-color: var(--tabs-item-border-bottom-color);
+      }
+    }
+
+    &:focus-visible {
+      background-color: var(--tabs-item-focus-visible-background-color);
+
+      &::before {
+        background-color: var(--tabs-item-border-bottom-color);
+      }
+    }
+
+    &:active {
+      color: var(--tabs-item-active-color);
+      background-color: var(--tabs-item-active-background-color);
+
+      &::before {
+        background-color: var(--tabs-item-border-bottom-color);
+      }
+    }
+  }
+
+  &-item-label {
+    margin: 0;
+  }
+
+  &-small,
+  &-medium {
+    .ab-Tabs-item {
+      font-size: var(--tabs-item-font-size);
+      padding: var(--tabs-item-padding);
+    }
+  }
+}
+
+.ab-Tabs {
+  &.is-left {
+    justify-content: flex-start;
+  }
+
+  &.is-center {
+    justify-content: center;
+  }
+}
+
+.ab-Tabs-item {
+  .is-fullwidth & {
+    flex-grow: 1;
+  }
+
+  &.is-selected {
+    color: var(--tabs-item-selected-color);
+
+    &::before {
+      background-color: var(--tabs-item-selected-border-bottom-color);
+    }
+
+    @include hover {
+      &::before {
+        background-color: var(--tabs-item-selected-border-bottom-color);
+      }
+    }
+
+    &:active {
+      background-color: var(--tabs-item-active-background-color);
+
+      &::before {
+        background-color: var(--tabs-item-selected-border-bottom-color);
+      }
+    }
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    color: var(--tabs-item-disabled-color);
+
+    @include hover {
+      background-color: inherit;
+    }
+  }
+}

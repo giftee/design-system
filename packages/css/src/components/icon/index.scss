@@ -1,0 +1,40 @@
+.ab-Icon {
+  --icon-size: var(--ab-semantic-icon-size-small);
+}
+
+.ab-Icon-xxsmall {
+  --icon-size: var(--ab-semantic-icon-size-xxsmall);
+}
+
+.ab-Icon-xsmall {
+  --icon-size: var(--ab-semantic-icon-size-xsmall);
+}
+
+.ab-Icon-small {
+  --icon-size: var(--ab-semantic-icon-size-small);
+}
+
+.ab-Icon-medium {
+  --icon-size: var(--ab-semantic-icon-size-medium);
+}
+
+.ab-Icon {
+  font-size: var(--icon-size);
+  height: var(--icon-size);
+  width: var(--icon-size);
+  color: inherit;
+  fill: currentColor;
+  line-height: $line-height-none;
+
+  &-small,
+  &-medium {
+    font-size: var(--icon-size);
+    height: var(--icon-size);
+    width: var(--icon-size);
+  }
+
+  &-primary {
+    color: var(--ab-semantic-color-text-brand);
+    fill: var(--ab-semantic-color-text-brand);
+  }
+}

@@ -1,0 +1,77 @@
+.ab-CircularProgress {
+  --circularprogress-size: 36px;
+  --circularprogress-border-color: var(--ab-semantic-color-border-brand);
+  --circularprogress-border-top-color: var(--ab-semantic-color-brand-lightest);
+}
+
+.ab-CircularProgress-brand {
+  --circularprogress-border-color: var(--ab-semantic-color-border-brand);
+  --circularprogress-border-top-color: var(--ab-semantic-color-brand-lightest);
+}
+
+.ab-CircularProgress-disabled {
+  --circularprogress-border-color: var(--ab-semantic-color-text-contrast);
+  --circularprogress-border-top-color: transparent;
+}
+
+.ab-CircularProgress-xsmall {
+  --circularprogress-size: 19px;
+}
+
+.ab-CircularProgress-small {
+  --circularprogress-size: 27px;
+}
+
+.ab-CircularProgress-large {
+  --circularprogress-size: 36px;
+}
+
+.ab-CircularProgress-xlarge {
+  --circularprogress-size: 52px;
+}
+
+.ab-CircularProgress {
+  position: relative;
+  width: var(--circularprogress-size);
+  height: var(--circularprogress-size);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--ab-semantic-border-radius-full);
+    border: var(--ab-semantic-border-width-3) solid
+      var(--circularprogress-border-color);
+    border-top-color: var(--circularprogress-border-top-color);
+    animation: rotate 1.4s linear infinite; // 回転アニメーションの設定
+  }
+
+  // type
+  &-brand,
+  &-disabled {
+    border-color: var(--circularprogress-border-color);
+    border-top-color: var(--circularprogress-border-top-color);
+  }
+
+  // size
+  &-xsmall,
+  &-small,
+  &-large,
+  &-xlarge {
+    width: var(--circularprogress-size);
+    height: var(--circularprogress-size);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

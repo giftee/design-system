@@ -1,0 +1,63 @@
+.ab-LinkText {
+  --linktext-color: var(--ab-semantic-color-text-default);
+  --linktext-text-decoration: underline;
+  --linktext-focus-color: var(--ab-semantic-color-text-default);
+  --linktext-focus-text-decoration: underline;
+  --linktext-hover-color: var(--ab-semantic-color-text-default);
+  --linktext-hover-text-decoration: none;
+  --linktext-active-color: var(--ab-semantic-color-text-default);
+  --linktext-active-text-decoration: none;
+  --linktext-disabled-color: var(--ab-semantic-color-text-disable);
+  --linktext-disabled-text-decoration: none;
+}
+
+.ab-LinkText-brand {
+  --linktext-color: var(--ab-semantic-color-text-brand);
+  --linktext-text-decoration: underline;
+  --linktext-focus-color: var(--ab-semantic-color-text-brand);
+  --linktext-focus-text-decoration: underline;
+  --linktext-hover-color: var(--ab-semantic-color-text-brand-secondary);
+  --linktext-hover-text-decoration: none;
+  --linktext-active-color: var(--ab-semantic-color-text-brand-secondary);
+  --linktext-active-text-decoration: none;
+  --linktext-disabled-color: var(--ab-semantic-color-text-disable);
+  --linktext-disabled-text-decoration: none;
+}
+
+.ab-LinkText {
+  color: var(--linktext-color);
+  text-decoration: var(--linktext-text-decoration);
+  text-decoration-color: var(--linktext-color);
+  transition:
+    color 0.3s,
+    text-decoration 0.3s;
+  cursor: pointer;
+
+  &:focus {
+    color: var(--linktext-focus-color);
+    text-decoration: var(--linktext-focus-text-decoration);
+  }
+
+  @include hover {
+    color: var(--linktext-hover-color);
+    text-decoration: var(--linktext-hover-text-decoration);
+  }
+
+  &:active {
+    color: var(--linktext-active-color);
+    text-decoration: none;
+  }
+}
+
+.ab-LinkText {
+  &.is-disabled {
+    pointer-events: none;
+    color: var(--linktext-disabled-color);
+    text-decoration: var(--linktext-disabled-text-decoration);
+  }
+}
+
+// Brand styles
+.ab-LinkText-brand {
+  @extend .ab-LinkText;
+}

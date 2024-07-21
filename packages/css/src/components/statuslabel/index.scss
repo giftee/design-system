@@ -1,0 +1,133 @@
+.ab-StatusLabel {
+  --status-label-padding: #{var(--ab-semantic-spacing-0)} #{var(
+      --ab-semantic-spacing-2
+    )};
+  --status-label-font-size: #{$font-size-body-xs};
+  --status-label-height: 19px;
+  --status-label-line-height: #{$line-height-s};
+  --status-label-background: var(--ab-semantic-color-background-brand-primary);
+  --status-label-color: var(--ab-semantic-color-text-contrast);
+  --status-label-border-color: transparent;
+}
+
+.ab-StatusLabel-small {
+  --status-label-padding: #{var(--ab-semantic-spacing-0)} #{var(
+      --ab-semantic-spacing-2
+    )};
+  --status-label-font-size: #{$font-size-body-xs};
+  --status-label-height: 19px;
+  --status-label-line-height: #{$line-height-s};
+}
+
+.ab-StatusLabel-medium {
+  --status-label-padding: #{var(--ab-semantic-spacing-0)} #{var(
+      --ab-semantic-spacing-2
+    )};
+  --status-label-font-size: #{$font-size-body-s};
+  --status-label-height: 23px;
+  --status-label-line-height: #{$line-height-m};
+}
+
+.ab-StatusLabel-large {
+  --status-label-padding: #{var(--ab-semantic-spacing-0)} #{var(
+      --ab-semantic-spacing-4
+    )};
+  --status-label-font-size: #{$font-size-body-m};
+  --status-label-height: 29px;
+  --status-label-line-height: #{$line-height-l};
+}
+
+.ab-StatusLabel-primary {
+  --status-label-background: var(--ab-semantic-color-background-brand-primary);
+  --status-label-color: var(--ab-semantic-color-text-contrast);
+  --status-label-border-color: transparent;
+}
+
+.ab-StatusLabel-outlined {
+  --status-label-background: var(--ab-semantic-color-background-rest-primary);
+  --status-label-color: var(--ab-semantic-color-text-brand);
+  --status-label-border-color: var(--ab-semantic-color-border-brand);
+}
+
+.ab-StatusLabel-neutral {
+  --status-label-background: var(
+    --ab-semantic-color-background-neutral-primary
+  );
+  --status-label-color: var(--ab-semantic-color-text-defaul);
+  --status-label-border-color: var(--ab-semantic-color-border-bold);
+}
+
+.ab-StatusLabel-info {
+  --status-label-background: var(--ab-semantic-color-background-info-primary);
+  --status-label-color: var(--ab-semantic-color-text-contrast);
+  --status-label-border-color: transparent;
+}
+
+.ab-StatusLabel-notice {
+  --status-label-background: var(--ab-semantic-color-background-notice-primary);
+  --status-label-color: var(--ab-semantic-color-text-contrast);
+  --status-label-border-color: var(--ab-semantic-color-border-notice);
+}
+
+.ab-StatusLabel-positive {
+  --status-label-background: var(
+    --ab-semantic-color-background-positive-primary
+  );
+  --status-label-color: var(--ab-semantic-color-text-contrast);
+  --status-label-border-color: transparent;
+}
+
+.ab-StatusLabel-negative {
+  --status-label-background: var(
+    --ab-semantic-color-background-negative-primary
+  );
+  --status-label-color: var(--ab-semantic-color-text-contrast);
+  --status-label-border-color: transparent;
+}
+
+.ab-StatusLabel-disabled {
+  --status-label-background: var(--ab-semantic-color-background-disabled);
+  --status-label-color: var(--ab-semantic-color-text-disable);
+  --status-label-border-color: var(--ab-semantic-color-border-light);
+}
+
+.ab-StatusLabel {
+  display: inline-flex;
+  align-items: center;
+  height: var(--status-label-height);
+  padding: var(--status-label-padding);
+  font-size: var(--status-label-font-size);
+  font-weight: var(--ab-semantic-typography-font-weight-bold);
+  color: var(--status-label-color);
+  white-space: nowrap;
+  cursor: default;
+  background: var(--status-label-background);
+  border-color: var(--status-label-border-color);
+  border-style: $border-style;
+  border-width: var(--ab-semantic-border-width-1);
+  border-radius: var(--ab-semantic-border-radius-xs);
+
+  /* Size */
+  &-small,
+  &-medium,
+  &-large {
+    padding: var(--status-label-padding);
+    font-size: var(--status-label-font-size);
+    font-weight: var(--ab-semantic-typography-font-weight-bold);
+    height: var(--status-label-height);
+    line-height: var(--status-label-line-height);
+  }
+
+  /* Color */
+  &-primary,
+  &-outlined,
+  &-waiting,
+  &-action,
+  &-completed,
+  &-alert,
+  &-disabled {
+    color: var(--status-label-color);
+    background: var(--status-label-background);
+    border-color: var(--status-label-border-color);
+  }
+}

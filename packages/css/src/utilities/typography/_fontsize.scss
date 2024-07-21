@@ -1,0 +1,53 @@
+.ab-text-headline-l {
+  font-size: calc(var(--ab-semantic-typography-font-size-headline-l) * 1px);
+  line-height: $line-height-m;
+
+  @include breakpoint(md) {
+    font-size: calc(var(--ab-semantic-typography-font-size-headline-l) * 1px);
+  }
+}
+
+.ab-text-headline-m {
+  font-size: calc(var(--ab-semantic-typography-font-size-headline-m) * 1px);
+  line-height: $line-height-m;
+
+  @include breakpoint(md) {
+    font-size: calc(var(--ab-semantic-typography-font-size-headline-m) * 1px);
+  }
+}
+
+.ab-text-headline-s {
+  font-size: calc(var(--ab-semantic-typography-font-size-headline-s) * 1px);
+  line-height: $line-height-m;
+
+  @include breakpoint(md) {
+    font-size: calc(var(--ab-semantic-typography-font-size-headline-s) * 1px);
+  }
+}
+
+.ab-text-body-m {
+  font-size: calc(var(--ab-semantic-typography-font-size-body-m) * 1px);
+  line-height: $line-height-l;
+
+  @include breakpoint(md) {
+    font-size: calc(var(--ab-semantic-typography-font-size-body-m) * 1px);
+  }
+}
+
+.ab-text-body-s {
+  font-size: calc(var(--ab-semantic-typography-font-size-body-s) * 1px);
+  line-height: $line-height-l;
+
+  @include breakpoint(md) {
+    font-size: calc(var(--ab-semantic-typography-font-size-body-s) * 1px);
+  }
+}
+
+.ab-text-body-xs {
+  font-size: calc(var(--ab-semantic-typography-font-size-body-xs) * 1px);
+  line-height: $line-height-m;
+
+  @include breakpoint(md) {
+    font-size: calc(var(--ab-semantic-typography-font-size-body-xs) * 1px);
+  }
+}

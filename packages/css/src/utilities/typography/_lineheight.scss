@@ -1,0 +1,12 @@
+$line-heights: (
+  none: $line-height-none,
+  s: $line-height-s,
+  m: $line-height-m,
+  l: $line-height-l,
+);
+
+@each $key, $value in $line-heights {
+  .ab-leading-#{$key} {
+    line-height: $value;
+  }
+}
