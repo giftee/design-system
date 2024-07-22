@@ -14,7 +14,7 @@ export const Base: Story = {
   <dialog id="modal" class="ab-Modal" style="width: 800px">
     <form method="dialog">
       <div class="ab-Modal-header">
-        <button class="ab-IconButton-negative ab-IconButton-small ab-mr-2">
+        <button class="ab-IconButton-text ab-IconButton-small ab-mr-2">
           X
         </button>
         <span class="ab-font-bold">モーダル Header</span>
