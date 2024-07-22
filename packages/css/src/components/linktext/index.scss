@@ -32,6 +32,9 @@
     color 0.3s,
     text-decoration 0.3s;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--ab-semantic-spacing-2);
 
   &:focus {
     color: var(--linktext-focus-color);
