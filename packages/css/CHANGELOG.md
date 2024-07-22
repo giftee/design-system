@@ -1,5 +1,19 @@
 # @giftee/abukuma-css
 
+## 0.1.2
+
+### Patch Changes
+
+- [#9](https://github.com/giftee/design-system/pull/9) [`7420262`](https://github.com/giftee/design-system/commit/74202623aff9ee0f349f11b895c3570fc910e8f2) Thanks [@egurinko](https://github.com/egurinko)! - [change] Modal の bg-color に bg-base を付与
+
+- [#11](https://github.com/giftee/design-system/pull/11) [`9d948bf`](https://github.com/giftee/design-system/commit/9d948bff6bdee49fc0d0ab6e36001c1f10355425) Thanks [@egurinko](https://github.com/egurinko)! - [remove] Snackbar を削除
+
+- [#7](https://github.com/giftee/design-system/pull/7) [`e179102`](https://github.com/giftee/design-system/commit/e179102e096ebcb56acff748a012a5df1506b02e) Thanks [@egurinko](https://github.com/egurinko)! - [add] LinkText に Icon を付与可能にした
+
+- [#6](https://github.com/giftee/design-system/pull/6) [`a46b326`](https://github.com/giftee/design-system/commit/a46b3265b1a108a704981e6cd73a7de23fed2917) Thanks [@egurinko](https://github.com/egurinko)! - [chore] InlineAlert の border-radius を 8px から 16px に変更
+
+- [#10](https://github.com/giftee/design-system/pull/10) [`4573dbc`](https://github.com/giftee/design-system/commit/4573dbcde9e0b749871038c051074d0d36a2eea1) Thanks [@egurinko](https://github.com/egurinko)! - [chore] Popover の box-shadow を変更
+
 ## 0.1.1
 
 ### Patch Changes
