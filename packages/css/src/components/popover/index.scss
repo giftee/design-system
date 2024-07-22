@@ -1,7 +1,7 @@
 .ab-Popover {
   background-color: var(--ab-semantic-color-background-rest-primary);
-  border-radius: var(--ab-semantic-border-radius-xs);
-  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  border-radius: var(--ab-semantic-border-radius-md);
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
   transition:
     opacity 0.15s ease-in-out,
     visibility 0.15s ease-in-out;
