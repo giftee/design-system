@@ -17,12 +17,12 @@ export const meta: Meta<Args> = {
 export type Story = StoryObj<Args>;
 
 type ComponentArgs = Args & {
-  label?: string;
+  children?: React.ReactNode;
   id?: 'default' | 'hover' | 'active' | 'focus' | 'disabled';
 };
 
 export const createComponent = ({
-  label = 'label',
+  children,
   type = 'default',
   id = 'default',
 }: ComponentArgs): string => {
@@ -30,5 +30,5 @@ export const createComponent = ({
 
   return `<a id="${id}" class="ab-LinkText ${
     id === 'disabled' ? 'is-disabled' : ''
-  } ${typeClass}">${label}</a>`;
+  } ${typeClass}">${children}</a>`;
 };
