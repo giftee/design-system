@@ -3,6 +3,12 @@ import { Canvas } from '@storybook/blocks';
 import { Preview, Parameters } from '@storybook/html';
 
 const preview: Preview = {
+  beforeEach: () => {
+    const stories = document.getElementsByClassName('docs-story');
+    for (const story of stories) {
+      story?.setAttribute('class', 'ab-bg-base');
+    }
+  },
   parameters: {
     docs: {
       toc: true,
@@ -49,6 +55,15 @@ const preview: Preview = {
           </>
         );
       },
+    },
+    backgrounds: {
+      default: 'light',
+      values: [
+        {
+          name: 'light',
+          value: '#f6f7f8',
+        },
+      ],
     },
   },
 };
