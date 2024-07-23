@@ -46,7 +46,7 @@
         },
         "rest-secondary": {
           "$type": "color",
-          "$value": "{global.color.slate.100}"
+          "$value": "{global.color.steel.100}"
         },
         "rest-accent": {
           "$type": "color",
