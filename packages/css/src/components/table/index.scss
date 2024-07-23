@@ -1,26 +1,34 @@
 .ab-Table {
   width: 100%;
-  border-collapse: collapse;
   font-size: $font-size-body-s;
+  border-collapse: separate;
+  border-spacing: 0 var(--ab-semantic-spacing-2);
 
   &-head {
-    background-color: var(--ab-semantic-color-background-rest-primary);
-
     &-cell {
-      height: 48px;
+      height: 50px;
       padding-right: var(--ab-semantic-spacing-4);
       padding-left: var(--ab-semantic-spacing-4);
       text-align: left;
       font-weight: var(--ab-semantic-typography-font-weight-bold);
-      border-bottom: $border;
-      border-color: var(--ab-semantic-color-border-bold);
       vertical-align: middle;
     }
   }
 
   &-body {
     &-row {
+      background-color: var(--ab-semantic-color-background-rest-primary);
       border-bottom: none;
+
+      & td:first-child {
+        border-radius: var(--ab-semantic-border-radius-md) 0 0
+          var(--ab-semantic-border-radius-md);
+      }
+
+      & td:last-child {
+        border-radius: 0 var(--ab-semantic-border-radius-md)
+          var(--ab-semantic-border-radius-md) 0;
+      }
     }
   }
 
@@ -28,19 +36,24 @@
     padding: var(--ab-semantic-spacing-4);
     text-align: left;
     vertical-align: middle;
-    border-bottom: $border;
+    overflow: hidden;
   }
 }
 
-.ab-Table-stripe {
+.ab-Table-bordered {
   & .ab-Table-body {
     &-row {
-      &:nth-child(odd) {
-        background-color: var(--ab-semantic-color-background-rest-primary);
+      & td {
+        border-top: $border;
+        border-bottom: $border;
       }
 
-      &:nth-child(even) {
-        background-color: var(--ab-semantic-color-background-rest-secondary);
+      & td:first-child {
+        border-left: $border;
+      }
+
+      & td:last-child {
+        border-right: $border;
       }
     }
   }
