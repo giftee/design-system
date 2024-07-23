@@ -4,13 +4,13 @@ import GifteeBox from '../../../../story_assets/giftee-box.svg';
 
 export default {
   ...meta,
-  title: 'Component/Table/Stripe',
+  title: 'Component/Table/Bordered',
 };
 
-export const Stripe: Story = {
+export const Bordered: Story = {
   render: (_args) => {
     return `
-<table class="ab-Table ab-Table-stripe">
+<table class="ab-Table ab-Table-bordered">
   <thead class="ab-Table-head">
     <tr>
       <th class="ab-Table-head-cell" aria-sort="descending" tabindex="0">
