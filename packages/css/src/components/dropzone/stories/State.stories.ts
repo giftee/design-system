@@ -41,7 +41,7 @@ export const State: Story = {
         >アップロードの完了までそのままお待ちください。</span
       >
     </div>
-    <button class="ab-Button-negative ab-Button-small">
+    <button class="ab-Button-neutral ab-Button-small">
       アップロードのキャンセル
     </button>
   </div>
@@ -78,7 +78,7 @@ export const State: Story = {
         >アップロードの完了までそのままお待ちください。</span
       >
     </div>
-    <button class="ab-Button-negative ab-Button-small">
+    <button class="ab-Button-neutral ab-Button-small">
       アップロードのキャンセル
     </button>
   </div>
@@ -115,7 +115,7 @@ export const State: Story = {
         >アップロードの完了までそのままお待ちください。</span
       >
     </div>
-    <button class="ab-Button-negative ab-Button-small">
+    <button class="ab-Button-neutral ab-Button-small">
       アップロードのキャンセル
     </button>
   </div>
@@ -152,7 +152,7 @@ export const State: Story = {
         >アップロードの完了までそのままお待ちください。</span
       >
     </div>
-    <button class="ab-Button-negative ab-Button-small">
+    <button class="ab-Button-neutral ab-Button-small">
       アップロードのキャンセル
     </button>
   </div>
@@ -189,7 +189,7 @@ export const State: Story = {
         >アップロードの完了までそのままお待ちください。</span
       >
     </div>
-    <button class="ab-Button-negative ab-Button-small">
+    <button class="ab-Button-neutral ab-Button-small">
       アップロードのキャンセル
     </button>
   </div>

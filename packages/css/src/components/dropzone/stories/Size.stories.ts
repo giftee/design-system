@@ -39,7 +39,7 @@ export const Size: Story = {
           <p class="ab-text-body-s ab-font-bold">ファイルをアップロード中</p>
           <span class="ab-text-body-xs">アップロードの完了までそのままお待ちください。</span>
         </div>
-        <button class="ab-Button-negative ab-Button-small">
+        <button class="ab-Button-neutral ab-Button-small">
           アップロードのキャンセル
         </button>
       </div>
@@ -74,7 +74,7 @@ export const Size: Story = {
           <p class="ab-text-body-s ab-font-bold">ファイルをアップロード中</p>
           <span class="ab-text-body-xs">アップロードの完了までそのままお待ちください。</span>
         </div>
-        <button class="ab-Button-negative ab-Button-small">
+        <button class="ab-Button-neutral ab-Button-small">
           アップロードのキャンセル
         </button>
       </div>
@@ -109,7 +109,7 @@ export const Size: Story = {
           <p class="ab-text-body-s ab-font-bold">ファイルをアップロード中</p>
           <span class="ab-text-body-xs">アップロードの完了までそのままお待ちください。</span>
         </div>
-        <button class="ab-Button-negative ab-Button-small">
+        <button class="ab-Button-neutral ab-Button-small">
           アップロードのキャンセル
         </button>
       </div>
@@ -144,7 +144,7 @@ export const Size: Story = {
           <p class="ab-text-body-s ab-font-bold">ファイルをアップロード中</p>
           <span class="ab-text-body-xs">アップロードの完了までそのままお待ちください。</span>
         </div>
-        <button class="ab-Button-negative ab-Button-small">
+        <button class="ab-Button-neutral ab-Button-small">
           アップロードのキャンセル
         </button>
       </div>
@@ -179,7 +179,7 @@ export const Size: Story = {
           <p class="ab-text-body-s ab-font-bold">ファイルをアップロード中</p>
           <span class="ab-text-body-xs">アップロードの完了までそのままお待ちください。</span>
         </div>
-        <button class="ab-Button-negative ab-Button-small">
+        <button class="ab-Button-neutral ab-Button-small">
           アップロードのキャンセル
         </button>
       </div>
