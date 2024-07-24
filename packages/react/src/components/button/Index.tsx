@@ -7,7 +7,7 @@ export type ButtonProps = Omit<
   'onClick'
 > &
   Omit<ComponentPropsWithoutRef<'a'>, 'onClick'> & {
-    variant?: 'default' | 'outlined' | 'negative' | 'text';
+    variant?: 'default' | 'outlined' | 'neutral' | 'negative' | 'text';
     size?: 'xsmall' | 'small' | 'large';
     component?: React.ElementType;
     onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;

@@ -65,7 +65,7 @@ export const Base: Story = {
           <Modal.Body>モーダル Body</Modal.Body>
           <Divider />
           <Modal.Footer>
-            <Button variant="negative">Cancel</Button>
+            <Button variant="neutral">Cancel</Button>
             <Button>OK</Button>
           </Modal.Footer>
         </Modal.Root>
@@ -112,7 +112,7 @@ export const Form: Story = {
           </Modal.Body>
           <Divider />
           <Modal.Footer>
-            <Button variant="negative">Cancel</Button>
+            <Button variant="neutral">Cancel</Button>
             <Button type="submit" onClick={handleSubmit}>
               OK
             </Button>
