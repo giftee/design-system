@@ -3,7 +3,7 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type IconButtonProps = ComponentPropsWithoutRef<'button'> & {
-  variant?: 'default' | 'outlined' | 'negative' | 'text';
+  variant?: 'default' | 'outlined' | 'neutral' | 'text';
   size?: 'small' | 'large';
 };
 
