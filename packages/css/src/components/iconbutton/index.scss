@@ -39,11 +39,6 @@
   @extend .ab-IconButton;
 }
 
-.ab-IconButton-negative {
-  @extend .ab-Button-negative;
-  @extend .ab-IconButton;
-}
-
 .ab-IconButton-neutral {
   @extend .ab-Button-neutral;
   @extend .ab-IconButton;
