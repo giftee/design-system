@@ -1,6 +1,6 @@
 {
   "name": "@giftee/abukuma-design-tokens",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "description": "Design Tokens of Giftee Design System",
   "style": "dist/css/index.css",
