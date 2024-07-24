@@ -46,6 +46,15 @@ $ asdf reshim nodejs # asdf
 
 リリースには [changesets](https://github.com/changesets/changesets) を利用しています。そのため、commit と一緒に changeset コマンドで作成されたファイルも commit してください。changeset からリリースノートが自動で作成されます。
 
+changeset のメッセージはなるべく `[変更種別：変更対象] 何をしたか？` に合わせてください。
+
+変更の種別は主に以下です。
+
+- breaking change: 破壊的変更
+- feature: 機能追加
+- fix: バグ修正
+- enhancement: リファクタなど
+
 ```bash
 # repo root
 ❯ pnpm changeset
@@ -54,7 +63,7 @@ $ npx changeset
 🦋  What kind of change is this for @giftee/abukuma-css? (current version is 0.14.0) · minor
 🦋  Please enter a summary for this change (this will be in the changelogs).
 🦋    (submit empty line to open external editor)
-🦋  Summary · work-break utility class を追加
+🦋  Summary · [feat:utility]work-break utility class を追加
 🦋
 🦋  === Summary of changesets ===
 🦋  minor:  @giftee/abukuma-css
