@@ -11,6 +11,7 @@ export const Type: Story = {
     return `
 ${createComponent({ ...args, type: 'default', children: 'Default' })}
 ${createComponent({ ...args, type: 'outlined', children: 'Outlined' })}
+${createComponent({ ...args, type: 'neutral', children: 'Neutral' })}
 ${createComponent({ ...args, type: 'negative', children: 'Negative' })}
 ${createComponent({ ...args, type: 'text', children: 'Text' })}
   `;

@@ -25,7 +25,7 @@ export const Base: Story = {
       </div>
       <hr class="ab-Divider" />
       <div class="ab-Modal-footer">
-        <button class="ab-Button-negative">Cancel</button>
+        <button class="ab-Button-neutral">Cancel</button>
         <button class="ab-Button">OK</button>
       </div>
     </form>

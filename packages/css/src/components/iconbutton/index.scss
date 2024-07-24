@@ -44,6 +44,11 @@
   @extend .ab-IconButton;
 }
 
+.ab-IconButton-neutral {
+  @extend .ab-Button-neutral;
+  @extend .ab-IconButton;
+}
+
 .ab-IconButton-text {
   @extend .ab-Button-text;
   @extend .ab-IconButton;

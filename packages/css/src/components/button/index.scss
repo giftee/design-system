@@ -59,6 +59,31 @@
 }
 
 .ab-Button-negative {
+  --button-color: var(--ab-semantic-color-text-negative);
+  --button-background-color: var(--ab-semantic-color-background-rest-primary);
+  --button-border-color: var(--ab-semantic-color-border-negative);
+  --button-hover-color: var(--ab-semantic-color-text-negative);
+  --button-hover-background-color: var(
+    --ab-semantic-color-background-hover-on-negative
+  );
+  --button-hover-border-color: var(--ab-semantic-color-border-negative);
+  --button-focus-visible-color: var(--ab-semantic-color-text-negative);
+  --button-focus-visible-background-color: var(
+    --ab-semantic-color-background-focus-on-negative
+  );
+  --button-focus-visible-border-color: var(--ab-semantic-color-border-negative);
+  --button-active-color: var(--ab-semantic-color-text-negative);
+  --button-active-background-color: var(
+    --ab-semantic-color-background-pressed-on-negative
+  );
+  --button-active-border-color: var(--ab-semantic-color-border-negative);
+  --button-disabled-background-color: var(
+    --ab-semantic-color-background-disabled
+  );
+  --button-disabled-color: var(--ab-semantic-color-text-disable);
+}
+
+.ab-Button-neutral {
   --button-color: var(--ab-semantic-color-text-default);
   --button-background-color: var(--ab-semantic-color-background-rest-primary);
   --button-border-color: var(--ab-semantic-color-border-light);
@@ -181,6 +206,11 @@
 
 // Negative button styles
 .ab-Button-negative {
+  @extend .ab-Button;
+}
+
+// Neutral button styles
+.ab-Button-neutral {
   @extend .ab-Button;
 }
 

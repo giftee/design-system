@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html';
 
 export type Args = {
-  type: 'default' | 'outlined' | 'negative' | 'text';
+  type: 'default' | 'outlined' | 'negative' | 'neutral' | 'text';
   size: 'xsmall' | 'small' | 'large';
 };
 
@@ -10,7 +10,7 @@ export const meta: Meta<Args> = {
   argTypes: {
     type: {
       control: { type: 'select' },
-      options: ['default', 'outlined', 'negative', 'text'],
+      options: ['default', 'outlined', 'negative', 'neutral', 'text'],
     },
     size: {
       control: { type: 'select' },
