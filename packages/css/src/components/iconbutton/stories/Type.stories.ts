@@ -11,7 +11,7 @@ export const Type: Story = {
     return `
 ${createComponent({ ...args, type: 'default' })}
 ${createComponent({ ...args, type: 'outlined' })}
-${createComponent({ ...args, type: 'negative' })}
+${createComponent({ ...args, type: 'neutral' })}
 ${createComponent({ ...args, type: 'text' })}
   `;
   },
