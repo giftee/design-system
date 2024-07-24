@@ -14,7 +14,7 @@ const meta = {
   argTypes: {
     variant: {
       control: { type: 'select' },
-      options: ['default', 'outlined', 'negative', 'text'],
+      options: ['default', 'outlined', 'neutral', 'negative', 'text'],
       table: {
         defaultValue: {
           summary: 'default',
@@ -45,6 +45,9 @@ export const Variant: Story = {
         {children}
       </Button>
       <Button {...args} variant="outlined">
+        {children}
+      </Button>
+      <Button {...args} variant="neutral">
         {children}
       </Button>
       <Button {...args} variant="negative">
