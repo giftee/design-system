@@ -50,7 +50,7 @@ export const Base: Story = {
           open={open}
         >
           <Modal.Header>
-            <IconButton variant="negative" size="small" className="ab-mr-2">
+            <IconButton variant="neutral" size="small" className="ab-mr-2">
               X
             </IconButton>
             <Typography
@@ -91,7 +91,7 @@ export const Form: Story = {
         <Button onClick={handleOpen}>Open Modal{open}</Button>
         <Modal.Root onClose={handleClose} onCancel={handleCancel} open={open}>
           <Modal.Header>
-            <IconButton variant="negative" size="small" className="ab-mr-2">
+            <IconButton variant="neutral" size="small" className="ab-mr-2">
               X
             </IconButton>
             <Typography
