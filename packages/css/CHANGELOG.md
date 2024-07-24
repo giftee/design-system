@@ -1,5 +1,18 @@
 # @giftee/abukuma-css
 
+## 0.1.3
+
+### Patch Changes
+
+- [#22](https://github.com/giftee/design-system/pull/22) [`40ddc07`](https://github.com/giftee/design-system/commit/40ddc0773da814af28bc5b437b60a99041e18f9b) Thanks [@egurinko](https://github.com/egurinko)! - [breaking change] IconButton の negative を neutral に rename
+
+- [#22](https://github.com/giftee/design-system/pull/22) [`40ddc07`](https://github.com/giftee/design-system/commit/40ddc0773da814af28bc5b437b60a99041e18f9b) Thanks [@egurinko](https://github.com/egurinko)! - [breaking change] Button の negative を negative color に変更し、旧 negative デザインは neutral に改名
+
+- [#22](https://github.com/giftee/design-system/pull/22) [`40ddc07`](https://github.com/giftee/design-system/commit/40ddc0773da814af28bc5b437b60a99041e18f9b) Thanks [@egurinko](https://github.com/egurinko)! - [change] Table の見た目を新しい見た目に変更
+
+- Updated dependencies [[`40ddc07`](https://github.com/giftee/design-system/commit/40ddc0773da814af28bc5b437b60a99041e18f9b), [`40ddc07`](https://github.com/giftee/design-system/commit/40ddc0773da814af28bc5b437b60a99041e18f9b)]:
+  - @giftee/abukuma-design-tokens@0.1.2
+
 ## 0.1.2
 
 ### Patch Changes
