@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 0.1.4
+
+### Patch Changes
+
+- [#24](https://github.com/giftee/design-system/pull/24) [`eb12084`](https://github.com/giftee/design-system/commit/eb12084c54c9221a34b1f061e075f0f505d36d52) Thanks [@egurinko](https://github.com/egurinko)! - [enhancement] Tab のデザインを v1 に変更
+
 ## 0.1.3
 
 ### Patch Changes
