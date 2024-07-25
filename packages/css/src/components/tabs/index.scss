@@ -1,12 +1,12 @@
 .ab-Tabs {
-  --tabs-border-bottom: 1px solid var(--ab-semantic-color-border-light);
-  --tabs-background-color: var(--ab-semantic-color-background-rest-primary);
+  --tabs-background-color: var(--ab-semantic-color-background-rest-secondary);
+  --tabs-height: 48px;
 }
 
 .ab-Tabs-item {
   --tabs-item-font-size: #{$font-size-body-s};
   --tabs-item-color: var(--ab-semantic-color-text-default);
-  --tabs-item-border-bottom-color: transparent;
+  --tabs-item-background-color: transparent;
   --tabs-item-hover-background-color: var(
     --ab-semantic-color-background-hover-on-neutral
   );
@@ -18,30 +18,31 @@
     --ab-semantic-color-background-pressed-on-neutral
   );
   --tabs-item-selected-color: var(--ab-semantic-color-text-brand);
-  --tabs-item-selected-border-bottom-color: var(
-    --ab-semantic-color-border-brand
+  --tabs-item-selected-background-color: var(
+    --ab-semantic-color-background-rest-primary
   );
-  --tabs-item-padding: #{var(--ab-semantic-spacing-2)} #{var(
-      --ab-semantic-spacing-8
-    )};
-  --tabs-item-disabled-color: var(--ab-semantic-color-text-secondary);
+  --tabs-item-padding: 0 #{var(--ab-semantic-spacing-8)};
+  --tabs-item-disabled-color: var(--ab-semantic-color-text-disable);
+  --tabs-item-disabled-background-color: var(
+    --ab-semantic-color-background-disabled
+  );
 }
 
 .ab-Tabs-small {
+  --tabs-height: 40px;
+
   .ab-Tabs-item {
     --tabs-item-font-size: #{$font-size-body-xs};
-    --tabs-item-padding: #{var(--ab-semantic-spacing-1)} #{var(
-        --ab-semantic-spacing-4
-      )};
+    --tabs-item-padding: 0 #{var(--ab-semantic-spacing-4)};
   }
 }
 
 .ab-Tabs-medium {
+  --tabs-height: 48px;
+
   .ab-Tabs-item {
     --tabs-item-font-size: #{$font-size-body-s};
-    --tabs-item-padding: #{var(--ab-semantic-spacing-2)} #{var(
-        --ab-semantic-spacing-8
-      )};
+    --tabs-item-padding: 0 #{var(--ab-semantic-spacing-8)};
   }
 }
 
@@ -50,9 +51,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0;
+  padding: var(--ab-semantic-spacing-1);
   margin: 0;
-  border-bottom: var(--tabs-border-bottom);
+  border-radius: var(--ab-semantic-border-radius-full);
+  height: var(--tabs-height);
 
   &-item {
     flex-grow: 0;
@@ -64,41 +66,20 @@
     font-weight: var(--ab-semantic-typography-font-weight-bold);
     padding: var(--tabs-item-padding);
     position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background-color: var(--tabs-item-border-bottom-color);
-      transition: background-color 0.3s;
-    }
+    border-radius: var(--ab-semantic-border-radius-full);
+    height: 100%;
 
     @include hover {
       background-color: var(--tabs-item-hover-background-color);
-
-      &::before {
-        background-color: var(--tabs-item-border-bottom-color);
-      }
     }
 
     &:focus-visible {
       background-color: var(--tabs-item-focus-visible-background-color);
-
-      &::before {
-        background-color: var(--tabs-item-border-bottom-color);
-      }
     }
 
     &:active {
       color: var(--tabs-item-active-color);
       background-color: var(--tabs-item-active-background-color);
-
-      &::before {
-        background-color: var(--tabs-item-border-bottom-color);
-      }
     }
   }
 
@@ -132,32 +113,32 @@
 
   &.is-selected {
     color: var(--tabs-item-selected-color);
-
-    &::before {
-      background-color: var(--tabs-item-selected-border-bottom-color);
-    }
+    background-color: var(--tabs-item-selected-background-color);
 
     @include hover {
-      &::before {
-        background-color: var(--tabs-item-selected-border-bottom-color);
-      }
+      background-color: var(--tabs-item-hover-background-color);
+    }
+
+    &:focus-visible {
+      background-color: var(--tabs-item-focus-visible-background-color);
     }
 
     &:active {
       background-color: var(--tabs-item-active-background-color);
-
-      &::before {
-        background-color: var(--tabs-item-selected-border-bottom-color);
-      }
     }
   }
 
   &.is-disabled {
     cursor: not-allowed;
     color: var(--tabs-item-disabled-color);
+    background-color: var(--tabs-item-disabled-background-color);
 
     @include hover {
-      background-color: inherit;
+      background-color: var(--tabs-item-disabled-background-color);
+    }
+
+    &:focus-visible {
+      background-color: var(--tabs-item-disabled-background-color);
     }
   }
 }
