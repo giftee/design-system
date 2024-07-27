@@ -1,6 +1,6 @@
 # @giftee/abukuma-css
 
-Abukuma の CSS framework です。
+@giftee/abukuma-css は株式会社ギフティのデザインシステム Abukuma の CSS framework です。
 
 ## インストール
 

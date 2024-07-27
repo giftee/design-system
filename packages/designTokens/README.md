@@ -1,6 +1,6 @@
 # @giftee/abukuma-design-tokens
 
-Abukuma のデザイントークンを提供しています。デザイントークンの Single Source of Truth になります。
+@giftee/abukuma-design-tokens は株式会社ギフティのデザインシステム Abukuma のデザイントークンです。
 
 ## インストール
 
