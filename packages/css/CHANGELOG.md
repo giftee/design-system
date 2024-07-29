@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 0.1.5
+
+### Patch Changes
+
+- [#26](https://github.com/giftee/design-system/pull/26) [`92740f7`](https://github.com/giftee/design-system/commit/92740f76f90d6ceeb26ae87cf7b419d965c156ee) Thanks [@egurinko](https://github.com/egurinko)! - [enhancement:LinkText] LinkText が block 要素にならないように display: flex を inline-flex に変更
+
 ## 0.1.4
 
 ### Patch Changes
