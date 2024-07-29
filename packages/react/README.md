@@ -1,6 +1,6 @@
 # @giftee/abukuma-react
 
-Abukuma の React component library です。
+@giftee/abukuma-react は株式会社ギフティのデザインシステム Abukuma の React component library です。
 
 ## インストール
 
