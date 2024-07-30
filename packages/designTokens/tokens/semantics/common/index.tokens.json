@@ -131,11 +131,11 @@
       },
       "font-weight": {
         "regular": {
-          "$type": "string",
+          "$type": "number",
           "$value": "{global.font.weight.400}"
         },
         "bold": {
-          "$type": "string",
+          "$type": "number",
           "$value": "{global.font.weight.700}"
         }
       },
