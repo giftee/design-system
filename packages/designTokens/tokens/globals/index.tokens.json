@@ -13,12 +13,12 @@
       },
       "weight": {
         "400": {
-          "$type": "string",
-          "$value": "regular"
+          "$type": "number",
+          "$value": 400
         },
         "700": {
-          "$type": "string",
-          "$value": "bold"
+          "$type": "number",
+          "$value": 700
         }
       },
       "size": {
