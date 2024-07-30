@@ -1,5 +1,11 @@
 # @giftee/abukuma-design-tokens
 
+## 0.1.3
+
+### Patch Changes
+
+- [#30](https://github.com/giftee/design-system/pull/30) [`fa12615`](https://github.com/giftee/design-system/commit/fa12615ed178b000295dd270b1713df1d3a86980) Thanks [@egurinko](https://github.com/egurinko)! - [fix:font-weight] font-weight: 400 のデザイントークンを regular から 400 に修正
+
 ## 0.1.2
 
 ### Patch Changes
