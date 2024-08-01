@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 0.1.7
+
+### Patch Changes
+
+- [#32](https://github.com/giftee/design-system/pull/32) [`b555a68`](https://github.com/giftee/design-system/commit/b555a680cc3c81db8a64969cbe856e20fdcd7de2) Thanks [@egurinko](https://github.com/egurinko)! - [breaking change: Divider] size をなくし 1px のみにする
+
 ## 0.1.6
 
 ### Patch Changes
