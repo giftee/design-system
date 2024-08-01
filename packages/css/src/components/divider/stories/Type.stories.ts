@@ -22,7 +22,6 @@ export const Type: Story = {
   },
   args: {
     type: 'horizontal',
-    size: 'small',
   },
   parameters: {
     pseudo: {
