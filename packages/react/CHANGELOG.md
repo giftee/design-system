@@ -1,5 +1,14 @@
 # @giftee/abukuma-react
 
+## 0.1.7
+
+### Patch Changes
+
+- [#34](https://github.com/giftee/design-system/pull/34) [`1a0b870`](https://github.com/giftee/design-system/commit/1a0b870b4a830bed70be0dad1634871c163515f4) Thanks [@egurinko](https://github.com/egurinko)! - [breakingchange:Divider] size props を削除
+
+- Updated dependencies [[`b555a68`](https://github.com/giftee/design-system/commit/b555a680cc3c81db8a64969cbe856e20fdcd7de2)]:
+  - @giftee/abukuma-css@0.1.7
+
 ## 0.1.6
 
 ### Patch Changes
