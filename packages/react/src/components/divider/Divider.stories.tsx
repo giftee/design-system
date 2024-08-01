@@ -8,7 +8,6 @@ const meta = {
   component: Divider,
   args: {
     direction: 'horizontal',
-    size: 'small',
   },
   argTypes: {
     direction: {
@@ -20,16 +19,6 @@ const meta = {
         },
       },
       description: '方向',
-    },
-    size: {
-      control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
-      table: {
-        defaultValue: {
-          summary: 'small',
-        },
-      },
-      description: 'サイズ',
     },
   },
 } satisfies Meta<typeof Divider>;
@@ -50,16 +39,6 @@ export const Direction: Story = {
       <div className="ab-flex ab-gap-8">
         X<Divider {...args} direction="vertical"></Divider>X
       </div>
-    </div>
-  ),
-};
-
-export const Size: Story = {
-  render: ({ ...args }: DividerProps) => (
-    <div className="ab-flex ab-flex-column ab-gap-8">
-      <Divider {...args} size="small"></Divider>
-      <Divider {...args} size="medium"></Divider>
-      <Divider {...args} size="large"></Divider>
     </div>
   ),
 };
