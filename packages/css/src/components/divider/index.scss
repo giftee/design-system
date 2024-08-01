@@ -3,28 +3,10 @@
   --divider-width: 1px;
 }
 
-.ab-Divider-small {
-  --divider-width: 1px;
-}
-
-.ab-Divider-medium {
-  --divider-width: 2px;
-}
-
-.ab-Divider-large {
-  --divider-width: 3px;
-}
-
 .ab-Divider {
   border-width: var(--divider-width);
   border-top-style: solid;
   border-top-color: var(--ab-semantic-color-border-light);
-
-  &-small,
-  &-medium,
-  &-large {
-    border-width: var(--divider-width);
-  }
 }
 
 .ab-Divider-vertical {
