@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 0.1.8
+
+### Patch Changes
+
+- [#35](https://github.com/giftee/design-system/pull/35) [`48dac6c`](https://github.com/giftee/design-system/commit/48dac6c7db69eab31e83a98fbdb50eca8b854139) Thanks [@egurinko](https://github.com/egurinko)! - [add:border-radius] border-radius に方向指定ができるようにした
+
 ## 0.1.7
 
 ### Patch Changes
