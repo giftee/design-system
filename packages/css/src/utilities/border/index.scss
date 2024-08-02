@@ -25,4 +25,44 @@ $sides: (
   .ab-rounded-#{$radiusKey} {
     border-radius: #{$radiusValue};
   }
+
+  .ab-rounded-t-#{$radiusKey} {
+    border-top-left-radius: #{$radiusValue};
+    border-top-right-radius: #{$radiusValue};
+  }
+
+  .ab-rounded-r-#{$radiusKey} {
+    border-top-right-radius: #{$radiusValue};
+    border-bottom-right-radius: #{$radiusValue};
+  }
+
+  .ab-rounded-b-#{$radiusKey} {
+    border-bottom-right-radius: #{$radiusValue};
+    border-bottom-left-radius: #{$radiusValue};
+  }
+
+  .ab-rounded-l-#{$radiusKey} {
+    border-top-left-radius: #{$radiusValue};
+    border-bottom-left-radius: #{$radiusValue};
+  }
+
+  .ab-rounded-tl-#{$radiusKey} {
+    border-top-left-radius: #{$radiusValue};
+  }
+
+  .ab-rounded-tl-#{$radiusKey} {
+    border-top-left-radius: #{$radiusValue};
+  }
+
+  .ab-rounded-tr-#{$radiusKey} {
+    border-top-right-radius: #{$radiusValue};
+  }
+
+  .ab-rounded-br-#{$radiusKey} {
+    border-bottom-right-radius: #{$radiusValue};
+  }
+
+  .ab-rounded-bl-#{$radiusKey} {
+    border-bottom-left-radius: #{$radiusValue};
+  }
 }
