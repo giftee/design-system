@@ -181,7 +181,7 @@ importers:
         specifier: ^0.8.0
         version: 0.8.0(eslint@9.9.0)(typescript@5.5.4)
       globals:
-        specifier: ^15.8.0
+        specifier: ^15.9.0
         version: 15.9.0
       prettier:
         specifier: ^3.3.3
