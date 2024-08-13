@@ -20,14 +20,18 @@ export const ModalRoot = forwardRef<ElementRef<'dialog'>, ModalRootProps>(
     const dialogElement = useRef<HTMLDialogElement>(null);
     const mergeRefs = useMergeRefs(dialogElement, forwardedRef);
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      onClose && onClose(e);
+    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      if (onClose) {
+        onClose(event);
+      }
     };
 
     const handleDialogClick = (event: MouseEvent<HTMLDialogElement>) => {
       if (event.target === dialogElement.current) {
-        onClose && onClose(event);
+        if (onClose) {
+          onClose(event);
+        }
       }
     };
 
@@ -35,9 +39,13 @@ export const ModalRoot = forwardRef<ElementRef<'dialog'>, ModalRootProps>(
       const dialog = dialogElement.current;
       if (dialog) {
         if (open) {
-          !dialog.open && dialog.showModal();
+          if (!dialog.open) {
+            dialog.showModal();
+          }
         } else {
-          dialog.open && dialog.close();
+          if (dialog.open) {
+            dialog.close();
+          }
         }
       }
     }, [open]);
