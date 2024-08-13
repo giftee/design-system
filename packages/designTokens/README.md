@@ -43,3 +43,7 @@ import { g4bLight, saasLight } from "@giftee/abukuma-design-tokens";
 ## ライセンス
 
 このプロダクトは[MIT](../../LICENSE)の条件に従ってライセンスされています。
+
+## 当社 OSS の利用にあたっての注意事項
+
+[当社 OSS の利用にあたっての注意事項](https://docs.google.com/document/d/1PXmZr5g1I5VxAsLNAmgvLDu0Yxzc4wHVlCusKmPtR4o/edit#heading=h.hezrzkxytrbw) をご参照ください。
