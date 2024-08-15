@@ -208,8 +208,8 @@ importers:
         specifier: ^5.4.1
         version: 5.4.1(@types/node@22.2.0)(sass@1.77.8)(terser@5.31.5)
       vite-plugin-dts:
-        specifier: ^4.0.2
-        version: 4.0.2(@types/node@22.2.0)(rollup@4.20.0)(typescript@5.5.4)(vite@5.4.1(@types/node@22.2.0)(sass@1.77.8)(terser@5.31.5))
+        specifier: ^4.0.3
+        version: 4.0.3(@types/node@22.2.0)(rollup@4.20.0)(typescript@5.5.4)(vite@5.4.1(@types/node@22.2.0)(sass@1.77.8)(terser@5.31.5))
 
 packages:
 
@@ -4931,8 +4931,8 @@ packages:
   vfile@6.0.2:
     resolution: {integrity: sha512-zND7NlS8rJYb/sPqkb13ZvbbUoExdbi4w3SfRrMq6R3FvnLQmmfpajJNITuuYm6AZ5uao9vy4BAos3EXBPf2rg==}
 
-  vite-plugin-dts@4.0.2:
-    resolution: {integrity: sha512-Ni3EPG8yeLc5ivEzT4szreJ0rXpEQgvdYq3PaZ7OMoHc8uET4/HRUfzVPejJaUAojbxsKgaZbp6Zgm41sxb86Q==}
+  vite-plugin-dts@4.0.3:
+    resolution: {integrity: sha512-+xnTsaONwU2kV6zhRjtbRJSGN41uFR/whqmcb4k4fftLFDJElxthp0PP5Fq8gMeM9ytWMt1yk5gGgekLREWYQQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       typescript: '*'
@@ -10867,7 +10867,7 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite-plugin-dts@4.0.2(@types/node@22.2.0)(rollup@4.20.0)(typescript@5.5.4)(vite@5.4.1(@types/node@22.2.0)(sass@1.77.8)(terser@5.31.5)):
+  vite-plugin-dts@4.0.3(@types/node@22.2.0)(rollup@4.20.0)(typescript@5.5.4)(vite@5.4.1(@types/node@22.2.0)(sass@1.77.8)(terser@5.31.5)):
     dependencies:
       '@microsoft/api-extractor': 7.47.4(@types/node@22.2.0)
       '@rollup/pluginutils': 5.1.0(rollup@4.20.0)
