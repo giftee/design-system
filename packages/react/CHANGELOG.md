@@ -1,5 +1,12 @@
 # @giftee/abukuma-react
 
+## 0.1.9
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @giftee/abukuma-css@0.1.9
+
 ## 0.1.8
 
 ### Patch Changes

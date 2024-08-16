@@ -1,5 +1,11 @@
 # @giftee/abukuma-design-tokens
 
+## 0.1.4
+
+### Patch Changes
+
+- [#65](https://github.com/giftee/design-system/pull/65) [`b6bad3b`](https://github.com/giftee/design-system/commit/b6bad3b592f489a1199c13da7bcaa510e0909994) Thanks [@egurinko](https://github.com/egurinko)! - [add:theme] g4b-dark を theme に追加
+
 ## 0.1.3
 
 ### Patch Changes
