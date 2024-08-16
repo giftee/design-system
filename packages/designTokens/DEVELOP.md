@@ -32,6 +32,7 @@ Generate した JSON は以下のようになっています。それらを以�
 
 - global.base.tokens.json → `tokens/globals/index.tokens.json`
 - semantic-theme.g4b-light.tokens.json → `tokens/semantics/brands/g4b-light/index.tokens.json`
+- semantic-theme.g4b-dark.tokens.json → `tokens/semantics/brands/g4b-dark/index.tokens.json`
 - semantic-theme.skeleton-light.tokens.json → `tokens/semantics/brands/skeleton-light/index.tokens.json`
 - semantic-common.base.tokens.json → `tokens/semantics/common/index.tokens.json`
 
@@ -53,9 +54,22 @@ Generate した JSON は以下のようになっています。それらを以�
   "semantic": {
     "color": {
       "text": {
-        "disable": {
+        "default": {
           "$type": "color",
           "$value": "{global.color.steel.600}"
+        }
+      }
+    }
+  }
+}
+/* semantic-theme.g4b-dark.tokens.json */
+{
+  "semantic": {
+    "color": {
+      "text": {
+        "default": {
+          "$type": "color",
+          "$value": "{global.color.white.800}"
         }
       }
     }
@@ -66,9 +80,9 @@ Generate した JSON は以下のようになっています。それらを以�
   "semantic": {
     "color": {
       "text": {
-        "disable": {
+        "default": {
           "$type": "color",
-          "$value": "{global.color.white.800}"
+          "$value": "{global.color.slate.600}"
         }
       }
     }

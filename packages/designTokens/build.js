@@ -163,7 +163,7 @@ ${dictionary.allTokens
 console.log("Build started...");
 
 const DEFAULT_BRAND = "g4b-light";
-const NOT_DEFAULT_BRANDS = ["skeleton-light"];
+const NOT_DEFAULT_BRANDS = ["g4b-dark", "skeleton-light"];
 const BRANDS = [DEFAULT_BRAND, ...NOT_DEFAULT_BRANDS];
 
 BRANDS.map((brand) => {
