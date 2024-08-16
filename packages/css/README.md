@@ -30,10 +30,10 @@ package のインストール後は適切な箇所にインポートして使っ
 <body>
   <div>
     <button class="ab-Button">g4b-light Button</button>
-    <div data-theme="skeleton-light">
-      <button class="ab-Button">skeleton-light Button</button>
-      <div data-theme="g4b-light">
-        <button class="ab-Button">g4b-light Button</button>
+    <div data-theme="g4b-dark">
+      <button class="ab-Button">g4b-dark Button</button>
+      <div data-theme="skeleton-light">
+        <button class="ab-Button">skeleton-light Button</button>
       </div>
     </div>
   </div>

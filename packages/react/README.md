@@ -22,16 +22,16 @@ package のインストール後は適切な箇所にインポートして使っ
 
 ### テーマ
 
-デフォルトで g4b-light テーマになっています。テーマをスイッチしたい場合は、任意の箇所に `data-theme='g4b-light/skeleton-light'` を追加してください。
+デフォルトで g4b-light テーマになっています。テーマをスイッチしたい場合は、任意の箇所に `data-theme='g4b-light/g4b-dark/skeleton-light'` を追加してください。
 
 ```tsx
 <body>
   <div>
     <Button>g4b-light Button</Button>
-    <div data-theme="skeleton-light">
-      <Button>skeleton-light Button</Button>
-      <div data-theme="g4b-light">
-        <Button>g4b-light Button</Button>
+    <div data-theme="g4b-dark">
+      <Button>g4b-dark Button</Button>
+      <div data-theme="skeleton-light">
+        <Button>skeleton-light Button</Button>
       </div>
     </div>
   </div>

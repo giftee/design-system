@@ -46,6 +46,7 @@ const preview: Preview = {
               >
                 <option value="">テーマを選択</option>
                 <option value="g4b-light">g4b-light </option>
+                <option value="g4b-dark">g4b-dark</option>
                 <option value="skeleton-light">skeleton-light</option>
               </select>
               <div id="canvas-root">
