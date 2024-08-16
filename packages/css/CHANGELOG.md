@@ -1,5 +1,12 @@
 # @giftee/abukuma-css
 
+## 0.1.9
+
+### Patch Changes
+
+- Updated dependencies [[`b6bad3b`](https://github.com/giftee/design-system/commit/b6bad3b592f489a1199c13da7bcaa510e0909994)]:
+  - @giftee/abukuma-design-tokens@0.1.4
+
 ## 0.1.8
 
 ### Patch Changes
