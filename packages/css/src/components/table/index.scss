@@ -21,13 +21,13 @@
       border-bottom: none;
 
       & td:first-child {
-        border-radius: var(--ab-semantic-border-radius-md) 0 0
-          var(--ab-semantic-border-radius-md);
+        border-top-left-radius: var(--ab-semantic-border-radius-md);
+        border-bottom-left-radius: var(--ab-semantic-border-radius-md);
       }
 
       & td:last-child {
-        border-radius: 0 var(--ab-semantic-border-radius-md)
-          var(--ab-semantic-border-radius-md) 0;
+        border-top-right-radius: var(--ab-semantic-border-radius-md);
+        border-bottom-right-radius: var(--ab-semantic-border-radius-md);
       }
     }
   }
