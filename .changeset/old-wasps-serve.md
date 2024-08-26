@@ -1,5 +1,5 @@
 ---
-"@giftee/abukuma-css": minor
+"@giftee/abukuma-css": patch
 ---
 
-[fix:tabel]1セルのみ表示するとき、左側のborder-radiusが適用されない問題の修正
+[fix:table]1 セルのみ表示するとき、左側の border-radius が適用されない問題の修正
