@@ -1,5 +1,12 @@
 # @giftee/abukuma-react
 
+## 0.1.10
+
+### Patch Changes
+
+- Updated dependencies [[`3ba3586`](https://github.com/giftee/design-system/commit/3ba3586cb71b05f7dc173bbd2db56efb52a69d3a)]:
+  - @giftee/abukuma-css@0.1.10
+
 ## 0.1.9
 
 ### Patch Changes

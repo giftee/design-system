@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 0.1.10
+
+### Patch Changes
+
+- [#76](https://github.com/giftee/design-system/pull/76) [`3ba3586`](https://github.com/giftee/design-system/commit/3ba3586cb71b05f7dc173bbd2db56efb52a69d3a) Thanks [@r-matsuura](https://github.com/r-matsuura)! - [fix:table]1 セルのみ表示するとき、左側の border-radius が適用されない問題の修正
+
 ## 0.1.9
 
 ### Patch Changes
