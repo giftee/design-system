@@ -1,0 +1,84 @@
+.ab-Gridtable {
+  width: 100%;
+  font-size: $font-size-body-s;
+  display: grid;
+  grid-template-columns: repeat(var(--ab-gridtable-columns-count), auto);
+  gap: var(--ab-semantic-spacing-1) 0;
+
+  &-head {
+    display: contents;
+
+    &-cell {
+      height: 50px;
+      padding-right: var(--ab-semantic-spacing-4);
+      padding-left: var(--ab-semantic-spacing-4);
+      text-align: left;
+      font-weight: var(--ab-semantic-typography-font-weight-bold);
+      place-content: end;
+    }
+  }
+
+  &-body {
+    display: contents;
+  }
+
+  &-row-group {
+    --ab-gridtable-column-start: 1; // default
+    --ab-gridtable-column-end: -1; // default
+
+    display: grid;
+    grid-template-columns: subgrid;
+
+    /* prettier-ignore */
+    grid-column: var(--ab-gridtable-column-start) / var(--ab-gridtable-column-end);
+    background-color: var(--ab-semantic-color-background-rest-primary);
+    border-bottom: none;
+    border-radius: var(--ab-semantic-border-radius-md);
+    padding: 0 var(--ab-semantic-spacing-4);
+    margin-top: var(--ab-semantic-spacing-2);
+  }
+
+  &-row-group:first-child {
+    margin-top: 0;
+  }
+
+  &-row {
+    display: contents;
+  }
+
+  &-cell {
+    padding: var(--ab-semantic-spacing-4);
+    text-align: left;
+    overflow: hidden;
+    place-content: center;
+
+    --ab-gridtable-cell-colspan: 1; // default
+    --ab-gridtable-cell-rowspan: 1; // default
+
+    grid-column: span var(--ab-gridtable-cell-colspan);
+    grid-row: span var(--ab-gridtable-cell-rowspan);
+  }
+
+  &-cell-border {
+    border-top: $border;
+  }
+
+  &-row:first-child &-cell-border {
+    border-top: none;
+  }
+}
+
+.ab-Gridtable-bordered {
+  & .ab-Gridtable-row-group {
+    border: $border;
+  }
+}
+
+.ab-Gridtable-select {
+  & .ab-Gridtable-row-group {
+    @include hover {
+      background-color: var(--ab-semantic-color-background-brand-secondary);
+      cursor: pointer;
+    }
+  }
+}
