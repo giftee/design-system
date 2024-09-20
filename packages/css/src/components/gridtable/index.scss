@@ -22,7 +22,7 @@
     display: contents;
   }
 
-  &-row-group {
+  &-rowgroup {
     --ab-gridtable-column-start: 1; // default
     --ab-gridtable-column-end: -1; // default
 
@@ -38,7 +38,7 @@
     margin-top: var(--ab-semantic-spacing-2);
   }
 
-  &-row-group:first-child {
+  &-rowgroup:first-child {
     margin-top: 0;
   }
 
@@ -69,13 +69,13 @@
 }
 
 .ab-Gridtable-bordered {
-  & .ab-Gridtable-row-group {
+  & .ab-Gridtable-rowgroup {
     border: $border;
   }
 }
 
 .ab-Gridtable-select {
-  & .ab-Gridtable-row-group {
+  & .ab-Gridtable-rowgroup {
     @include hover {
       background-color: var(--ab-semantic-color-background-brand-secondary);
       cursor: pointer;
