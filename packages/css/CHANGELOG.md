@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 0.1.11
+
+### Patch Changes
+
+- [#81](https://github.com/giftee/design-system/pull/81) [`00a33ab`](https://github.com/giftee/design-system/commit/00a33ab02cd5f4a5253fbe92572ff4c6b5036515) Thanks [@conayw](https://github.com/conayw)! - [add:Gridtable] Gridtable を追加
+
 ## 0.1.10
 
 ### Patch Changes
