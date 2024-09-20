@@ -11,7 +11,7 @@ export const Select: Story = {
   render: (_args) => {
     return `
 <!-- 「class="ab-Gridtable-select"」を追加している -->
-<div class="ab-Gridtable ab-Gridtable-select" role="table" style="--ab-gridtable-columns-count: 5;">
+<div class="ab-Gridtable ab-Gridtable-select" role="table" aria-label="商品一覧" style="--ab-gridtable-columns-count: 5;">
   <div class="ab-Gridtable-head" role="rowgroup">
     <div class="ab-Gridtable-head-cell" role="columnheader">商品情報</div>
     <div class="ab-Gridtable-head-cell" role="columnheader">価格</div>

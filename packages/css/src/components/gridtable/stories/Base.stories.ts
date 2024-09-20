@@ -12,7 +12,7 @@ export const Base: Story = {
     return `
 <div>
   <!-- 「style="--ab-gridtable-columns-count: 5;"」のように、テーブルの列数を指定する必要がある -->
-  <div class="ab-Gridtable" role="table" style="--ab-gridtable-columns-count: 5;">
+  <div class="ab-Gridtable" role="table" aria-label="商品一覧" style="--ab-gridtable-columns-count: 5;">
     <div class="ab-Gridtable-head" role="rowgroup">
       <div class="ab-Gridtable-head-cell" role="columnheader">商品情報</div>
       <div class="ab-Gridtable-head-cell" role="columnheader">価格</div>
@@ -82,7 +82,7 @@ export const Base: Story = {
   </div>
 
 
-  <div class="ab-Gridtable" role="table" style="--ab-gridtable-columns-count: 4;">
+  <div class="ab-Gridtable" role="table" aria-label="ギフトのお申し込み内容" style="--ab-gridtable-columns-count: 4;">
     <div class="ab-Gridtable-head" role="rowgroup">
       <div class="ab-Gridtable-head-cell" role="columnheader">商品情報</div>
       <div class="ab-Gridtable-head-cell" role="columnheader">価格</div>
