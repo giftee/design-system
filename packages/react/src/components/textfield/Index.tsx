@@ -3,13 +3,19 @@ import { StatusLabel } from '@/index';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-export type TextfieldProps = ComponentPropsWithoutRef<'input'> & {
-  label?: string;
-  helptext?: string;
-  error?: boolean;
-};
+export type TextfieldProps = ComponentPropsWithoutRef<'input'> &
+  ComponentPropsWithoutRef<'textarea'> & {
+    label?: string;
+    helptext?: string;
+    error?: boolean;
+    multiline?: number;
+    resize?: 'vertical' | 'horizontal' | 'both' | 'none';
+  };
 
-export const Textfield = forwardRef<ElementRef<'input'>, TextfieldProps>(
+export const Textfield = forwardRef<
+  ElementRef<'input'> & ElementRef<'textarea'>,
+  TextfieldProps
+>(
   (
     {
       label,
@@ -18,6 +24,8 @@ export const Textfield = forwardRef<ElementRef<'input'>, TextfieldProps>(
       name,
       required,
       disabled,
+      multiline,
+      resize = 'none',
       children,
       className,
       ...rest
@@ -28,6 +36,13 @@ export const Textfield = forwardRef<ElementRef<'input'>, TextfieldProps>(
       'ab-Textfield',
       error && 'is-error',
       disabled && 'is-disabled',
+      resize === 'both'
+        ? 'resize-both'
+        : resize === 'horizontal'
+          ? 'resize-horizontal'
+          : resize === 'vertical'
+            ? 'resize-vertical'
+            : '',
       className,
     );
 
@@ -39,14 +54,26 @@ export const Textfield = forwardRef<ElementRef<'input'>, TextfieldProps>(
             {required && <StatusLabel variant="primary">必須</StatusLabel>}
           </label>
         )}
-        <input
-          id={name}
-          name={name}
-          className="ab-Textfield-input"
-          ref={forwardedRef}
-          required={required}
-          {...rest}
-        />
+        {!multiline ? (
+          <input
+            id={name}
+            name={name}
+            className="ab-Textfield-input"
+            ref={forwardedRef}
+            required={required}
+            {...rest}
+          />
+        ) : (
+          <textarea
+            id={name}
+            name={name}
+            className="ab-Textfield-textarea"
+            ref={forwardedRef}
+            required={required}
+            rows={multiline}
+            {...rest}
+          />
+        )}
         {!!helptext && <div className="ab-Textfield-helptext">{helptext}</div>}
       </div>
     );
