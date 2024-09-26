@@ -65,6 +65,13 @@
     }
   }
 
+  &-textarea {
+    @extend .ab-Textfield-input;
+
+    height: auto;
+    min-height: var(--textfield-input-height);
+  }
+
   &-helptext {
     padding-top: var(--ab-semantic-spacing-1);
     font-size: $font-size-body-xs;
