@@ -110,15 +110,15 @@
         },
         "hover-on-negative": {
           "$type": "color",
-          "$value": "{global.color.red.900}"
+          "$value": "{global.color.red.50}"
         },
         "focus-on-negative": {
           "$type": "color",
-          "$value": "{global.color.red.900}"
+          "$value": "{global.color.red.50}"
         },
         "pressed-on-negative": {
           "$type": "color",
-          "$value": "{global.color.red.900}"
+          "$value": "{global.color.red.200}"
         },
         "neutral-primary": {
           "$type": "color",
