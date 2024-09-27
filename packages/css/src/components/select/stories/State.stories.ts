@@ -15,14 +15,18 @@ export const State: Story = {
     Default
     ${args.required ? `<div class="ab-StatusLabel">必須</div>` : ''}
   </label>
-  <button
-    id="default"
-    name="field"
-    class="ab-Textfield-picker ab-w-128"
-  >
-    <span class="ab-Textfield-picker-label">select</span>
-    ${angleDown('ab-Textfield-picker-icon ab-Icon ab-Icon-small')}
-  </button>
+  <span class="ab-Select">
+    <select
+      id="default"
+      name="field"
+      class="ab-Select-input ab-w-128"
+    >
+      <option value="option1" selected="">Option1</option>
+      <option value="option2" selected="">Option2</option>
+      <option value="option3" selected="">Option3</option>
+    </select>
+    ${angleDown('ab-Select-icon')}
+  </span>
   <div class="ab-Textfield-helptext">default</div>
 </div>
 <div id="hover" class="ab-Textfield ab-mb-8">
@@ -30,14 +34,18 @@ export const State: Story = {
     Hover
     ${args.required ? `<div class="ab-StatusLabel">必須</div>` : ''}
   </label>
-  <button
-    id="hover"
-    name="field"
-    class="ab-Textfield-picker ab-w-128"
-  >
-    <span class="ab-Textfield-picker-label">select</span>
-    ${angleDown('ab-Textfield-picker-icon ab-Icon ab-Icon-small')}
-  </button>
+  <span class="ab-Select">
+    <select
+      id="hover"
+      name="field"
+      class="ab-Select-input ab-w-128"
+    >
+      <option value="option1" selected="">Option1</option>
+      <option value="option2" selected="">Option2</option>
+      <option value="option3" selected="">Option3</option>
+    </select>
+    ${angleDown('ab-Select-icon')}
+  </span>
   <div class="ab-Textfield-helptext">hover</div>
 </div>
 <div id="active" class="ab-Textfield ab-mb-8">
@@ -45,14 +53,18 @@ export const State: Story = {
     Active
     ${args.required ? `<div class="ab-StatusLabel">必須</div>` : ''}
   </label>
-  <button
-    id="active"
-    name="field"
-    class="ab-Textfield-picker ab-w-128"
-  >
-    <span class="ab-Textfield-picker-label">select</span>
-    ${angleDown('ab-Textfield-picker-icon ab-Icon ab-Icon-small')}
-  </button>
+  <span class="ab-Select">
+    <select
+      id="active"
+      name="field"
+      class="ab-Select-input ab-w-128"
+    >
+      <option value="option1" selected="">Option1</option>
+      <option value="option2" selected="">Option2</option>
+      <option value="option3" selected="">Option3</option>
+    </select>
+    ${angleDown('ab-Select-icon')}
+  </span>
   <div class="ab-Textfield-helptext">active</div>
 </div>
 <div id="focus" class="ab-Textfield ab-mb-8">
@@ -60,14 +72,18 @@ export const State: Story = {
     Focus
     ${args.required ? `<div class="ab-StatusLabel">必須</div>` : ''}
   </label>
-  <button
-    id="focus"
-    name="field"
-    class="ab-Textfield-picker ab-w-128"
-  >
-    <span class="ab-Textfield-picker-label">select</span>
-    ${angleDown('ab-Textfield-picker-icon ab-Icon ab-Icon-small')}
-  </button>
+  <span class="ab-Select">
+    <select
+      id="focus"
+      name="field"
+      class="ab-Select-input ab-w-128"
+    >
+      <option value="option1" selected="">Option1</option>
+      <option value="option2" selected="">Option2</option>
+      <option value="option3" selected="">Option3</option>
+    </select>
+    ${angleDown('ab-Select-icon')}
+  </span>
   <div class="ab-Textfield-helptext">focus</div>
 </div>
 <div id="disabled" class="ab-Textfield is-disabled ab-mb-8">
@@ -75,14 +91,18 @@ export const State: Story = {
     Disabled
     ${args.required ? `<div class="ab-StatusLabel">必須</div>` : ''}
   </label>
-  <button
-    id="disabled"
-    name="field"
-    class="ab-Textfield-picker ab-w-128"
-  >
-    <span class="ab-Textfield-picker-label">select</span>
-    ${angleDown('ab-Textfield-picker-icon ab-Icon ab-Icon-small')}
-  </button>
+  <span class="ab-Select">
+    <select
+      id="disabled"
+      name="field"
+      class="ab-Select-input ab-w-128"
+    >
+      <option value="option1" selected="">Option1</option>
+      <option value="option2" selected="">Option2</option>
+      <option value="option3" selected="">Option3</option>
+    </select>
+    ${angleDown('ab-Select-icon')}
+  </span>
   <div class="ab-Textfield-helptext">disabled</div>
 </div>
 <div id="error" class="ab-Textfield is-error ab-mb-8">
@@ -90,14 +110,18 @@ export const State: Story = {
     Error
     ${args.required ? `<div class="ab-StatusLabel">必須</div>` : ''}
   </label>
-  <button
-    id="error"
-    name="field"
-    class="ab-Textfield-picker ab-w-128"
-  >
-    <span class="ab-Textfield-picker-label">select</span>
-    ${angleDown('ab-Textfield-picker-icon ab-Icon ab-Icon-small')}
-  </button>
+  <span class="ab-Select">
+    <select
+      id="error"
+      name="field"
+      class="ab-Select-input ab-w-128"
+    >
+      <option value="option1" selected="">Option1</option>
+      <option value="option2" selected="">Option2</option>
+      <option value="option3" selected="">Option3</option>
+    </select>
+    ${angleDown('ab-Select-icon')}
+  </span>
   <div class="ab-Textfield-helptext">error</div>
 </div>
   `;

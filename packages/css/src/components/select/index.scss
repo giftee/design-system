@@ -1,24 +1,34 @@
-.ab-Textfield-picker-label {
-  --textfield-picker-label-color: var(--ab-semantic-color-text-secondary);
+.ab-Select-icon {
+  --select-icon-color: var(--ab-semantic-color-text-brand);
 }
 
-.ab-Textfield-picker-icon {
-  --textfield-picker-icon-color: var(--ab-semantic-color-text-brand);
-}
+.ab-Select {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 
-.ab-Textfield-picker {
-  @extend .ab-Textfield-input;
+  &-input {
+    @extend .ab-Textfield-input;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  &-label {
-    color: var(--textfield-picker-label-color);
+    align-items: center;
   }
 
   &-icon {
-    color: var(--textfield-picker-icon-color);
-    padding-top: var(--ab-semantic-spacing-1);
+    @extend .ab-Icon;
+    @extend .ab-Icon-xsmall;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: var(--ab-semantic-spacing-2);
+    color: var(--select-icon-color);
+    pointer-events: none;
+  }
+}
+
+.ab-Select {
+  .is-disabled & {
+    pointer-events: none;
   }
 }
