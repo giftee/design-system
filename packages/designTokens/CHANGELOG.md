@@ -1,5 +1,11 @@
 # @giftee/abukuma-design-tokens
 
+## 0.1.5
+
+### Patch Changes
+
+- [#118](https://github.com/giftee/design-system/pull/118) [`c234e43`](https://github.com/giftee/design-system/commit/c234e43b900592f3e684d43cb3f8b041952bcea2) Thanks [@egurinko](https://github.com/egurinko)! - [change:red] g4b-dark テーマ時の視認性を上げるために red を微調整
+
 ## 0.1.4
 
 ### Patch Changes

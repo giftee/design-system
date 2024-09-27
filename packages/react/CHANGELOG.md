@@ -1,5 +1,14 @@
 # @giftee/abukuma-react
 
+## 0.1.12
+
+### Patch Changes
+
+- [#120](https://github.com/giftee/design-system/pull/120) [`568d000`](https://github.com/giftee/design-system/commit/568d000b281e0bbb6061e1a26909ddc1efa35e53) Thanks [@egurinko](https://github.com/egurinko)! - [add:Textfield] textarea を指定可能とした
+
+- Updated dependencies [[`f43678f`](https://github.com/giftee/design-system/commit/f43678fa9b36797810b496f5c5432ecbdcf14949)]:
+  - @giftee/abukuma-css@0.1.12
+
 ## 0.1.11
 
 ### Patch Changes

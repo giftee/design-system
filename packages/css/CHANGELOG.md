@@ -1,5 +1,14 @@
 # @giftee/abukuma-css
 
+## 0.1.12
+
+### Patch Changes
+
+- [#119](https://github.com/giftee/design-system/pull/119) [`f43678f`](https://github.com/giftee/design-system/commit/f43678fa9b36797810b496f5c5432ecbdcf14949) Thanks [@egurinko](https://github.com/egurinko)! - [change:Textfield] textarea 利用時に rows, cols 指定を可能とした
+
+- Updated dependencies [[`c234e43`](https://github.com/giftee/design-system/commit/c234e43b900592f3e684d43cb3f8b041952bcea2)]:
+  - @giftee/abukuma-design-tokens@0.1.5
+
 ## 0.1.11
 
 ### Patch Changes
