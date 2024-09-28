@@ -6,11 +6,13 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
+  width: 100%;
 
   &-input {
     @extend .ab-Textfield-input;
 
     align-items: center;
+    width: 100%;
   }
 
   &-icon {
