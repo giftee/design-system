@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 0.1.13
+
+### Patch Changes
+
+- [#122](https://github.com/giftee/design-system/pull/122) [`8389b5c`](https://github.com/giftee/design-system/commit/8389b5c02c2a32b879928e12f13f548550bf7106) Thanks [@egurinko](https://github.com/egurinko)! - [change:Select] option は OS 標準を利用するように変更
+
 ## 0.1.12
 
 ### Patch Changes
