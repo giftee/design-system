@@ -19,7 +19,7 @@ export const State: Story = {
     <select
       id="default"
       name="field"
-      class="ab-Select-input ab-w-128"
+      class="ab-Select-input"
     >
       <option value="option1" selected="">Option1</option>
       <option value="option2" selected="">Option2</option>
@@ -38,7 +38,7 @@ export const State: Story = {
     <select
       id="hover"
       name="field"
-      class="ab-Select-input ab-w-128"
+      class="ab-Select-input"
     >
       <option value="option1" selected="">Option1</option>
       <option value="option2" selected="">Option2</option>
@@ -57,7 +57,7 @@ export const State: Story = {
     <select
       id="active"
       name="field"
-      class="ab-Select-input ab-w-128"
+      class="ab-Select-input"
     >
       <option value="option1" selected="">Option1</option>
       <option value="option2" selected="">Option2</option>
@@ -76,7 +76,7 @@ export const State: Story = {
     <select
       id="focus"
       name="field"
-      class="ab-Select-input ab-w-128"
+      class="ab-Select-input"
     >
       <option value="option1" selected="">Option1</option>
       <option value="option2" selected="">Option2</option>
@@ -95,7 +95,7 @@ export const State: Story = {
     <select
       id="disabled"
       name="field"
-      class="ab-Select-input ab-w-128"
+      class="ab-Select-input"
     >
       <option value="option1" selected="">Option1</option>
       <option value="option2" selected="">Option2</option>
@@ -114,7 +114,7 @@ export const State: Story = {
     <select
       id="error"
       name="field"
-      class="ab-Select-input ab-w-128"
+      class="ab-Select-input"
     >
       <option value="option1" selected="">Option1</option>
       <option value="option2" selected="">Option2</option>
