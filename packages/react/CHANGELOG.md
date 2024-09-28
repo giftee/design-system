@@ -1,5 +1,14 @@
 # @giftee/abukuma-react
 
+## 0.1.13
+
+### Patch Changes
+
+- [#126](https://github.com/giftee/design-system/pull/126) [`c659000`](https://github.com/giftee/design-system/commit/c65900002ce7568b0e51a647920125b5280eac56) Thanks [@egurinko](https://github.com/egurinko)! - [add:Select] Select コンポーネントを追加
+
+- Updated dependencies [[`8389b5c`](https://github.com/giftee/design-system/commit/8389b5c02c2a32b879928e12f13f548550bf7106)]:
+  - @giftee/abukuma-css@0.1.13
+
 ## 0.1.12
 
 ### Patch Changes
