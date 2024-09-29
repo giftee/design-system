@@ -3,18 +3,25 @@
   font-size: $font-size-body-s;
   display: grid;
   grid-template-columns: repeat(var(--ab-gridtable-columns-count), auto);
-  gap: var(--ab-semantic-spacing-1) 0;
 
   &-head {
     display: contents;
 
     &-cell {
       height: 50px;
-      padding-right: var(--ab-semantic-spacing-4);
-      padding-left: var(--ab-semantic-spacing-4);
+      padding: var(--ab-semantic-spacing-4);
       text-align: left;
       font-weight: var(--ab-semantic-typography-font-weight-bold);
       place-content: end;
+    }
+  }
+
+  &-row {
+    .ab-GridTable-head-cell:first-child {
+      padding-left: var(--ab-semantic-spacing-8);
+    }
+    .ab-GridTable-head-cell:last-child {
+      padding-right: var(--ab-semantic-spacing-8);
     }
   }
 

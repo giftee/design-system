@@ -14,11 +14,13 @@ export const Base: Story = {
   <!-- 「style="--ab-gridtable-columns-count: 5;"」のように、テーブルの列数を指定する必要がある -->
   <div class="ab-GridTable" role="table" aria-label="商品一覧" style="--ab-gridtable-columns-count: 5;">
     <div class="ab-GridTable-head" role="rowgroup">
-      <div class="ab-GridTable-head-cell" role="columnheader">商品情報</div>
-      <div class="ab-GridTable-head-cell" role="columnheader">価格</div>
-      <div class="ab-GridTable-head-cell" role="columnheader">ギフト利用審査</div>
-      <div class="ab-GridTable-head-cell" role="columnheader">最低発注数有無</div>
-      <div class="ab-GridTable-head-cell" role="columnheader">有効期限</div>
+      <div class="ab-GridTable-row" role="row">
+        <div class="ab-GridTable-head-cell" role="columnheader">商品情報</div>
+        <div class="ab-GridTable-head-cell" role="columnheader">価格</div>
+        <div class="ab-GridTable-head-cell" role="columnheader">ギフト利用審査</div>
+        <div class="ab-GridTable-head-cell" role="columnheader">最低発注数有無</div>
+        <div class="ab-GridTable-head-cell" role="columnheader">有効期限</div>
+      </div>
     </div>
 
     <div class="ab-GridTable-body" role="rowgroup">
@@ -84,10 +86,12 @@ export const Base: Story = {
 
   <div class="ab-GridTable" role="table" aria-label="ギフトのお申し込み内容" style="--ab-gridtable-columns-count: 4;">
     <div class="ab-GridTable-head" role="rowgroup">
-      <div class="ab-GridTable-head-cell" role="columnheader">商品情報</div>
-      <div class="ab-GridTable-head-cell" role="columnheader">価格</div>
-      <div class="ab-GridTable-head-cell" role="columnheader">数量</div>
-      <div class="ab-GridTable-head-cell" role="columnheader">小計</div>
+      <div class="ab-GridTable-row" role="row">
+        <div class="ab-GridTable-head-cell" role="columnheader">商品情報</div>
+        <div class="ab-GridTable-head-cell ab-text-right" role="columnheader">価格</div>
+        <div class="ab-GridTable-head-cell ab-text-right" role="columnheader">数量</div>
+        <div class="ab-GridTable-head-cell ab-text-right" role="columnheader">小計</div>
+      </div>
     </div>
 
     <div class="ab-GridTable-body" role="rowgroup">
@@ -100,15 +104,15 @@ export const Base: Story = {
               <span class="ab-text-body-s">giftee Box</span>
             </div>
           </div>
-          <div class="ab-GridTable-cell ab-GridTable-cell-border" role="cell">¥100</div>
-          <div class="ab-GridTable-cell ab-GridTable-cell-border" role="cell">10</div>
-          <div class="ab-GridTable-cell ab-GridTable-cell-border" role="cell">¥1,000</div>
+          <div class="ab-GridTable-cell ab-GridTable-cell-border ab-text-right" role="cell">¥100</div>
+          <div class="ab-GridTable-cell ab-GridTable-cell-border ab-text-right" role="cell">10</div>
+          <div class="ab-GridTable-cell ab-GridTable-cell-border ab-text-right" role="cell">¥1,000</div>
         </div>
 
         <div class="ab-GridTable-row" role="row">
-          <div class="ab-GridTable-cell ab-GridTable-cell-border" role="cell">¥200</div>
-          <div class="ab-GridTable-cell ab-GridTable-cell-border" role="cell">30</div>
-          <div class="ab-GridTable-cell ab-GridTable-cell-border" role="cell">¥6,000</div>
+          <div class="ab-GridTable-cell ab-GridTable-cell-border ab-text-right" role="cell">¥200</div>
+          <div class="ab-GridTable-cell ab-GridTable-cell-border ab-text-right" role="cell">30</div>
+          <div class="ab-GridTable-cell ab-GridTable-cell-border ab-text-right" role="cell">¥6,000</div>
         </div>
       </div>
 
@@ -123,9 +127,9 @@ export const Base: Story = {
               </div>
             </div>
           </div>
-          <div class="ab-GridTable-cell" role="cell">¥500</div>
-          <div class="ab-GridTable-cell" role="cell">50</div>
-          <div class="ab-GridTable-cell" role="cell">¥25,000</div>
+          <div class="ab-GridTable-cell ab-text-right" role="cell">¥500</div>
+          <div class="ab-GridTable-cell ab-text-right" role="cell">50</div>
+          <div class="ab-GridTable-cell ab-text-right" role="cell">¥25,000</div>
         </div>
       </div>
 
@@ -134,17 +138,17 @@ export const Base: Story = {
       <div class="ab-GridTable-rowgroup" role="rowgroup" style="--ab-gridtable-column-start: 3; --ab-gridtable-column-end: 5;">
         <div class="ab-GridTable-row" role="row">
           <div class="ab-GridTable-cell" role="cell">商品代合計</div>
-          <div class="ab-GridTable-cell" role="cell">¥32,000</div>
+          <div class="ab-GridTable-cell ab-text-right" role="cell">¥32,000</div>
         </div>
 
         <div class="ab-GridTable-row" role="row">
           <div class="ab-GridTable-cell" role="cell">消費税</div>
-          <div class="ab-GridTable-cell" role="cell">¥3,200</div>
+          <div class="ab-GridTable-cell ab-text-right" role="cell">¥3,200</div>
         </div>
 
         <div class="ab-GridTable-row ab-font-bold" role="row">
           <div class="ab-GridTable-cell" role="cell">お支払い合計</div>
-          <div class="ab-GridTable-cell" role="cell">¥35,200</div>
+          <div class="ab-GridTable-cell ab-text-right" role="cell">¥35,200</div>
         </div>
 
       </div>
