@@ -1,4 +1,4 @@
-.ab-Gridtable {
+.ab-GridTable {
   width: 100%;
   font-size: $font-size-body-s;
   display: grid;
@@ -68,14 +68,14 @@
   }
 }
 
-.ab-Gridtable-bordered {
-  & .ab-Gridtable-rowgroup {
+.ab-GridTable-bordered {
+  & .ab-GridTable-rowgroup {
     border: $border;
   }
 }
 
-.ab-Gridtable-select {
-  & .ab-Gridtable-rowgroup {
+.ab-GridTable-select {
+  & .ab-GridTable-rowgroup {
     @include hover {
       background-color: var(--ab-semantic-color-background-brand-secondary);
       cursor: pointer;

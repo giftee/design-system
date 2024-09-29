@@ -10,35 +10,35 @@ export default {
 export const Bordered: Story = {
   render: (_args) => {
     return `
-<!-- 「class="ab-Gridtable-bordered"」を追加している -->
-<div class="ab-Gridtable ab-Gridtable-bordered" role="table" aria-label="商品一覧" style="--ab-gridtable-columns-count: 5;">
-  <div class="ab-Gridtable-head" role="rowgroup">
-    <div class="ab-Gridtable-head-cell" role="columnheader">商品情報</div>
-    <div class="ab-Gridtable-head-cell" role="columnheader">価格</div>
-    <div class="ab-Gridtable-head-cell" role="columnheader">ギフト利用審査</div>
-    <div class="ab-Gridtable-head-cell" role="columnheader">最低発注数有無</div>
-    <div class="ab-Gridtable-head-cell" role="columnheader">有効期限</div>
+<!-- 「class="ab-GridTable-bordered"」を追加している -->
+<div class="ab-GridTable ab-GridTable-bordered" role="table" aria-label="商品一覧" style="--ab-gridtable-columns-count: 5;">
+  <div class="ab-GridTable-head" role="rowgroup">
+    <div class="ab-GridTable-head-cell" role="columnheader">商品情報</div>
+    <div class="ab-GridTable-head-cell" role="columnheader">価格</div>
+    <div class="ab-GridTable-head-cell" role="columnheader">ギフト利用審査</div>
+    <div class="ab-GridTable-head-cell" role="columnheader">最低発注数有無</div>
+    <div class="ab-GridTable-head-cell" role="columnheader">有効期限</div>
   </div>
 
-  <div class="ab-Gridtable-body" role="rowgroup">
-    <div class="ab-Gridtable-rowgroup" role="rowgroup">
-      <div class="ab-Gridtable-row" role="row">
-        <div class="ab-Gridtable-cell" role="cell">
+  <div class="ab-GridTable-body" role="rowgroup">
+    <div class="ab-GridTable-rowgroup" role="rowgroup">
+      <div class="ab-GridTable-row" role="row">
+        <div class="ab-GridTable-cell" role="cell">
           <div class="ab-flex ab-flex-column">
             <span class="ab-text-body-xs ab-text-secondary">ギフティ</span>
             <span class="ab-text-body-s">giftee Box</span>
           </div>
         </div>
-        <div class="ab-Gridtable-cell" role="cell">¥500</div>
-        <div class="ab-Gridtable-cell" role="cell">1〜2営業日</div>
-        <div class="ab-Gridtable-cell" role="cell">あり</div>
-        <div class="ab-Gridtable-cell" role="cell">１ヶ月後の月末</div>
+        <div class="ab-GridTable-cell" role="cell">¥500</div>
+        <div class="ab-GridTable-cell" role="cell">1〜2営業日</div>
+        <div class="ab-GridTable-cell" role="cell">あり</div>
+        <div class="ab-GridTable-cell" role="cell">１ヶ月後の月末</div>
       </div>
     </div>
 
-    <div class="ab-Gridtable-rowgroup" role="rowgroup">
-      <div class="ab-Gridtable-row" role="row">
-        <div class="ab-Gridtable-cell" role="cell">
+    <div class="ab-GridTable-rowgroup" role="rowgroup">
+      <div class="ab-GridTable-row" role="row">
+        <div class="ab-GridTable-cell" role="cell">
           <div class=" ab-flex ab-flex-items-center">
             <img src="${GifteeBox}" class="ab-mr-2" style="height: 56px;" />
             <div class="ab-flex ab-flex-column">
@@ -47,16 +47,16 @@ export const Bordered: Story = {
             </div>
           </div>
         </div>
-        <div class="ab-Gridtable-cell" role="cell">¥500</div>
-        <div class="ab-Gridtable-cell" role="cell">1〜2営業日</div>
-        <div class="ab-Gridtable-cell" role="cell">あり</div>
-        <div class="ab-Gridtable-cell" role="cell">１ヶ月後の月末</div>
+        <div class="ab-GridTable-cell" role="cell">¥500</div>
+        <div class="ab-GridTable-cell" role="cell">1〜2営業日</div>
+        <div class="ab-GridTable-cell" role="cell">あり</div>
+        <div class="ab-GridTable-cell" role="cell">１ヶ月後の月末</div>
       </div>
     </div>
 
-    <div class="ab-Gridtable-rowgroup" role="rowgroup">
-      <div class="ab-Gridtable-row" role="row">
-        <div class="ab-Gridtable-cell" role="cell">
+    <div class="ab-GridTable-rowgroup" role="rowgroup">
+      <div class="ab-GridTable-row" role="row">
+        <div class="ab-GridTable-cell" role="cell">
           <div class="ab-flex ab-flex-items-center">
             <div class="ab-Checkbox-wrapper ab-mr-2">
               <div class="ab-Checkbox">
@@ -71,10 +71,10 @@ export const Bordered: Story = {
             </div>
           </div>
         </div>
-        <div class="ab-Gridtable-cell" role="cell">¥500</div>
-        <div class="ab-Gridtable-cell" role="cell">1〜2営業日</div>
-        <div class="ab-Gridtable-cell" role="cell">あり</div>
-        <div class="ab-Gridtable-cell" role="cell">１ヶ月後の月末</div>
+        <div class="ab-GridTable-cell" role="cell">¥500</div>
+        <div class="ab-GridTable-cell" role="cell">1〜2営業日</div>
+        <div class="ab-GridTable-cell" role="cell">あり</div>
+        <div class="ab-GridTable-cell" role="cell">１ヶ月後の月末</div>
       </div>
     </div>
   </div>
