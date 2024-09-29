@@ -9,7 +9,7 @@
 
     &-cell {
       height: 50px;
-      padding: var(--ab-semantic-spacing-4);
+      padding: var(--ab-semantic-spacing-4) var(--ab-semantic-spacing-2);
       text-align: left;
       font-weight: var(--ab-semantic-typography-font-weight-bold);
       place-content: end;
@@ -20,6 +20,7 @@
     .ab-GridTable-head-cell:first-child {
       padding-left: var(--ab-semantic-spacing-8);
     }
+
     .ab-GridTable-head-cell:last-child {
       padding-right: var(--ab-semantic-spacing-8);
     }
@@ -54,7 +55,7 @@
   }
 
   &-cell {
-    padding: var(--ab-semantic-spacing-4);
+    padding: var(--ab-semantic-spacing-4) var(--ab-semantic-spacing-2);
     text-align: left;
     overflow: hidden;
     place-content: center;
@@ -64,6 +65,16 @@
 
     grid-column: span var(--ab-gridtable-cell-colspan);
     grid-row: span var(--ab-gridtable-cell-rowspan);
+  }
+
+  &-row {
+    .ab-GridTable-cell:first-child {
+      padding-left: var(--ab-semantic-spacing-4);
+    }
+
+    .ab-GridTable-cell:last-child {
+      padding-right: var(--ab-semantic-spacing-4);
+    }
   }
 
   &-cell-border {
