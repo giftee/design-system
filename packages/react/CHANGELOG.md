@@ -1,5 +1,14 @@
 # @giftee/abukuma-react
 
+## 0.1.14
+
+### Patch Changes
+
+- [#134](https://github.com/giftee/design-system/pull/134) [`520299f`](https://github.com/giftee/design-system/commit/520299f2f403fa10a0dbcdd6ce2d53ed830ecb08) Thanks [@egurinko](https://github.com/egurinko)! - [add:GridTable] コンポーネントを追加
+
+- Updated dependencies [[`00087dc`](https://github.com/giftee/design-system/commit/00087dccd83d62da233be714aaeb4d9e3e3c9275), [`042d4ba`](https://github.com/giftee/design-system/commit/042d4ba1a5738768f18211e0762c5309b9f3d180)]:
+  - @giftee/abukuma-css@0.1.14
+
 ## 0.1.13
 
 ### Patch Changes
