@@ -1,5 +1,13 @@
 # @giftee/abukuma-css
 
+## 0.1.14
+
+### Patch Changes
+
+- [#132](https://github.com/giftee/design-system/pull/132) [`00087dc`](https://github.com/giftee/design-system/commit/00087dccd83d62da233be714aaeb4d9e3e3c9275) Thanks [@egurinko](https://github.com/egurinko)! - [fix:GridTable] align right, left をすると head と body のセルが揃わない問題を修正
+
+- [#130](https://github.com/giftee/design-system/pull/130) [`042d4ba`](https://github.com/giftee/design-system/commit/042d4ba1a5738768f18211e0762c5309b9f3d180) Thanks [@egurinko](https://github.com/egurinko)! - [change:Gridtable] クラス名を Gridtable から GridTable に変更
+
 ## 0.1.13
 
 ### Patch Changes
