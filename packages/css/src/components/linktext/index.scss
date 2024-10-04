@@ -24,6 +24,10 @@
   --linktext-disabled-text-decoration: none;
 }
 
+.ab-LinkText-quiet {
+  --linktext-text-decoration: none;
+}
+
 .ab-LinkText {
   color: var(--linktext-color);
   text-decoration: var(--linktext-text-decoration);
