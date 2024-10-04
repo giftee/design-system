@@ -1,5 +1,13 @@
 # @giftee/abukuma-css
 
+## 0.1.15
+
+### Patch Changes
+
+- [#142](https://github.com/giftee/design-system/pull/142) [`684de8d`](https://github.com/giftee/design-system/commit/684de8dcac499fab1b782c0f20136f11d30984c4) Thanks [@egurinko](https://github.com/egurinko)! - [change:LinkText] Focus 時は underline なしにした
+
+- [#145](https://github.com/giftee/design-system/pull/145) [`6026690`](https://github.com/giftee/design-system/commit/6026690c7a3f904d65bcaeee882aa7ddd81cb5d4) Thanks [@egurinko](https://github.com/egurinko)! - [add:LinkText] optional で underline なしの LinkText を追加
+
 ## 0.1.14
 
 ### Patch Changes

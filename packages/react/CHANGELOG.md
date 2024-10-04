@@ -1,5 +1,14 @@
 # @giftee/abukuma-react
 
+## 0.1.15
+
+### Patch Changes
+
+- [#146](https://github.com/giftee/design-system/pull/146) [`0c60809`](https://github.com/giftee/design-system/commit/0c6080993bcdcea313aa5a3b676d0cd2f55c4a53) Thanks [@egurinko](https://github.com/egurinko)! - [add:LinkText] optional で underline なしを指定可能とした
+
+- Updated dependencies [[`684de8d`](https://github.com/giftee/design-system/commit/684de8dcac499fab1b782c0f20136f11d30984c4), [`6026690`](https://github.com/giftee/design-system/commit/6026690c7a3f904d65bcaeee882aa7ddd81cb5d4)]:
+  - @giftee/abukuma-css@0.1.15
+
 ## 0.1.14
 
 ### Patch Changes
