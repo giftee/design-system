@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/html';
 
 export type Args = {
   type: 'default' | 'brand';
+  quiet: boolean;
 };
 
 export const meta: Meta<Args> = {
@@ -9,6 +10,9 @@ export const meta: Meta<Args> = {
     type: {
       control: { type: 'select' },
       options: ['default', 'brand'],
+    },
+    quiet: {
+      type: 'boolean',
     },
   },
   parameters: {},
@@ -24,11 +28,13 @@ type ComponentArgs = Args & {
 export const createComponent = ({
   children,
   type = 'default',
+  quiet = false,
   id = 'default',
 }: ComponentArgs): string => {
   const typeClass = type === 'default' ? '' : `ab-LinkText-${type}`;
+  const quietClass = quiet && 'ab-LinkText-quiet';
 
   return `<a id="${id}" class="ab-LinkText ${
     id === 'disabled' ? 'is-disabled' : ''
-  } ${typeClass}">${children}</a>`;
+  } ${typeClass} ${quietClass}">${children}</a>`;
 };
