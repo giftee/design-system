@@ -10,6 +10,7 @@ export * as GridTable from '@/components/gridTable/Index';
 export * from '@/components/iconButton/Index';
 export * as InlineAlert from '@/components/inlineAlert/Index';
 export * from '@/components/linkText/Index';
+export * as Menu from '@/components/menu/Index';
 export * as Modal from '@/components/modal/Index';
 export * from '@/components/radio/Index';
 export * from '@/components/select/Index';
