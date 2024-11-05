@@ -129,16 +129,6 @@
           "$value": "{global.font.family.en}"
         }
       },
-      "font-weight": {
-        "regular": {
-          "$type": "number",
-          "$value": "{global.font.weight.400}"
-        },
-        "bold": {
-          "$type": "number",
-          "$value": "{global.font.weight.700}"
-        }
-      },
       "font-size": {
         "headline-l": {
           "$type": "number",
@@ -163,6 +153,16 @@
         "body-xs": {
           "$type": "number",
           "$value": "{global.font.size.12}"
+        }
+      },
+      "font-weight": {
+        "regular": {
+          "$type": "number",
+          "$value": "{global.font.weight.400}"
+        },
+        "bold": {
+          "$type": "number",
+          "$value": "{global.font.weight.700}"
         }
       }
     }
