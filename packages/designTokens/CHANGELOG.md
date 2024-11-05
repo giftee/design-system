@@ -1,5 +1,11 @@
 # @giftee/abukuma-design-tokens
 
+## 0.1.6
+
+### Patch Changes
+
+- [#194](https://github.com/giftee/design-system/pull/194) [`931370e`](https://github.com/giftee/design-system/commit/931370edfc2a3fa3708b6a860d26712ed60e5ef9) Thanks [@egurinko](https://github.com/egurinko)! - [change:light-bg-color] bg-rest-secondary と border color が薄くなった
+
 ## 0.1.5
 
 ### Patch Changes
