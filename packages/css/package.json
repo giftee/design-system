@@ -1,6 +1,6 @@
 {
   "name": "@giftee/abukuma-css",
-  "version": "0.1.16",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "CSS Framework of Giftee Design System",
   "main": "dist/style.css",

@@ -1,5 +1,16 @@
 # @giftee/abukuma-css
 
+## 1.0.0
+
+### Major Changes
+
+- [#196](https://github.com/giftee/design-system/pull/196) [`3e60770`](https://github.com/giftee/design-system/commit/3e60770fd691c0cba7ce7c19a27be67624f02d23) Thanks [@egurinko](https://github.com/egurinko)! - [breaking-change: Menu] Menu のスタイルを新しい Abukuma に合わせました
+
+### Patch Changes
+
+- Updated dependencies [[`c900704`](https://github.com/giftee/design-system/commit/c900704b838af6abcc8a8fe6c843326dc4f5c19b)]:
+  - @giftee/abukuma-design-tokens@1.0.0
+
 ## 0.1.16
 
 ### Patch Changes

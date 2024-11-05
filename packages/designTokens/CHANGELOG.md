@@ -1,5 +1,11 @@
 # @giftee/abukuma-design-tokens
 
+## 1.0.0
+
+### Major Changes
+
+- [#199](https://github.com/giftee/design-system/pull/199) [`c900704`](https://github.com/giftee/design-system/commit/c900704b838af6abcc8a8fe6c843326dc4f5c19b) Thanks [@egurinko](https://github.com/egurinko)! - [chore]デザイントークンの並び替え
+
 ## 0.1.6
 
 ### Patch Changes
