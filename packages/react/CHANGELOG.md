@@ -1,5 +1,16 @@
 # @giftee/abukuma-react
 
+## 1.0.0
+
+### Major Changes
+
+- [#198](https://github.com/giftee/design-system/pull/198) [`459a671`](https://github.com/giftee/design-system/commit/459a671fa76aae16ffdb98bea40322e818a70b9c) Thanks [@egurinko](https://github.com/egurinko)! - [add:Menu] Menu component を追加
+
+### Patch Changes
+
+- Updated dependencies [[`3e60770`](https://github.com/giftee/design-system/commit/3e60770fd691c0cba7ce7c19a27be67624f02d23)]:
+  - @giftee/abukuma-css@1.0.0
+
 ## 0.1.16
 
 ### Patch Changes
