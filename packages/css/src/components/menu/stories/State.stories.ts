@@ -1,6 +1,6 @@
 import { meta } from './shared';
 import type { Story } from './shared';
-import { angleRight } from '../../../../story_assets/inlines';
+import { angleRight, user } from '../../../../story_assets/inlines';
 
 export default {
   ...meta,
@@ -8,55 +8,77 @@ export default {
 };
 
 export const State: Story = {
-  render: (args) => {
-    const sizeClass = `ab-Menu-${args.size}`;
-
+  render: (_args) => {
     return `
-<div class="ab-border ab-mb-4">
-  <ul class="ab-Menu ${sizeClass}" role="menu">
-    <li id="default" class="ab-Menu-item" role="menuitem" tabindex="0">
-      <div class="ab-flex ab-flex-column">
-        <span class="ab-Menu-item-label">Default</span>
-        <span class="ab-Menu-item-sublabel">Default</span>
-      </div>
-      ${angleRight('ab-Menu-item-right-icon ab-Icon')}
-    </li>
-    <li id="hover" class="ab-Menu-item" role="menuitem" tabindex="0">
-      <div class="ab-flex ab-flex-column">
-        <span class="ab-Menu-item-label">Hover</span>
-        <span class="ab-Menu-item-sublabel">Hover</span>
-      </div>
-      ${angleRight('ab-Menu-item-right-icon ab-Icon')}
-    </li>
-    <li id="focus" class="ab-Menu-item" role="menuitem" tabindex="0">
-      <div class="ab-flex ab-flex-column">
-        <span class="ab-Menu-item-label">Focus</span>
-        <span class="ab-Menu-item-sublabel">Focus</span>
-      </div>
-      ${angleRight('ab-Menu-item-right-icon ab-Icon')}
-    </li>
-    <li id="active" class="ab-Menu-item" role="menuitem" tabindex="0">
-      <div class="ab-flex ab-flex-column">
-        <span class="ab-Menu-item-label">Active</span>
-        <span class="ab-Menu-item-sublabel">Active</span>
-      </div>
-      ${angleRight('ab-Menu-item-right-icon ab-Icon')}
-    </li>
-    <li id="disabled" class="ab-Menu-item is-disabled" role="menuitem" tabindex="0">
-      <div class="ab-flex ab-flex-column">
-        <span class="ab-Menu-item-label">Disabled</span>
-        <span class="ab-Menu-item-sublabel">Disabled</span>
-      </div>
-      ${angleRight('ab-Menu-item-right-icon ab-Icon')}
-    </li>
-    <li id="selected" class="ab-Menu-item is-selected" role="menuitem" tabindex="0">
-      <div class="ab-flex ab-flex-column">
-        <span class="ab-Menu-item-label">Selected</span>
-        <span class="ab-Menu-item-sublabel">Selected</span>
-      </div>
-      ${angleRight('ab-Menu-item-right-icon ab-Icon')}
-    </li>
-  </ul>
+<div class="ab-flex ab-gap-4">
+  <div class="ab-p-2" style="width: 250px;">
+    <ul class="ab-Menu" role="menu">
+      <li class="ab-Menu-item" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">Default</a>
+      </li>
+      <li id="hover" class="ab-Menu-item" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">Hover</a>
+      </li>
+      <li class="ab-Menu-item" role="menuitem">
+        <a id="active" href="#" class="ab-Menu-item-link">Active</a>
+      </li>
+      <li id="focus" class="ab-Menu-item" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">Focus</a>
+      </li>
+      <li class="ab-Menu-item is-selected" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">Selected</a>
+      </li>
+      <li class="ab-Menu-item is-disabled" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">Disabled</a>
+      </li>
+    </ul>
+  </div>
+  <div class="ab-p-2" style="width: 250px;">
+    <ul class="ab-Menu" role="menu">
+      <li class="ab-Menu-item" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">
+          ${user('ab-Icon ab-mr-2')}
+          Default
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </a>
+      </li>
+      <li id="hover" class="ab-Menu-item" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">
+          ${user('ab-Icon ab-mr-2')}
+          Hover
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </a>
+      </li>
+      <li class="ab-Menu-item" role="menuitem">
+        <a id="active" href="#" class="ab-Menu-item-link">
+          ${user('ab-Icon ab-mr-2')}
+          Active
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </a>
+      </li>
+      <li id="focus" class="ab-Menu-item" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">
+          ${user('ab-Icon ab-mr-2')}
+          Focus
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </a>
+      </li>
+      <li class="ab-Menu-item is-selected" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">
+          ${user('ab-Icon ab-mr-2')}
+          Selected
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </a>
+      </li>
+      <li class="ab-Menu-item is-disabled" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">
+          ${user('ab-Icon ab-mr-2')}
+          Disabled
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
   `;
   },
@@ -64,7 +86,7 @@ export const State: Story = {
     pseudo: {
       hover: '#hover',
       active: '#active',
-      focus: '#focus',
+      focusVisible: '#focus',
     },
   },
 };

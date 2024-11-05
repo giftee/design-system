@@ -10,6 +10,9 @@
   --menu-item-selected-background-color: var(
     --ab-semantic-color-background-brand-secondary
   );
+  --menu-item-hover-background-color: var(
+    --ab-semantic-color-background-hover-on-neutral
+  );
   --menu-item-active-background-color: var(
     --ab-semantic-color-background-pressed-on-neutral
   );
@@ -36,35 +39,114 @@
 }
 
 .ab-Menu {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ab-semantic-spacing-2);
   padding: 0;
   margin: 0;
   font-size: var(--menu-font-size);
+  background-color: transparent;
 
   &-item {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     height: var(--menu-item-height);
     background-color: var(--menu-item-background-color);
-    padding: 0 var(--ab-semantic-spacing-4);
     cursor: pointer;
+    border-radius: var(--ab-semantic-border-radius-lg);
+    position: relative;
 
-    &:active {
-      background-color: var(--menu-item-active-background-color);
+    &:hover,
+    &:focus-visible {
+      background-color: var(--menu-item-hover-background-color);
     }
 
-    // 必要になれば追加する
-    // &-label {}
+    &-label,
+    &-link {
+      display: flex;
+      align-items: center;
+      width: inherit;
+      height: inherit;
+      padding: var(--ab-semantic-spacing-2) var(--ab-semantic-spacing-4);
+      border-radius: var(--ab-semantic-border-radius-lg);
 
-    &-sublabel {
-      color: var(--ab-semantic-color-text-secondary);
-      margin-top: var(--ab-semantic-spacing-1);
+      .ab-Menu-sub-menu & {
+        padding: var(--ab-semantic-spacing-2);
+      }
+
+      svg {
+        color: var(--ab-semantic-color-text-brand);
+      }
     }
 
-    &-right-icon {
-      color: var(--ab-semantic-color-text-brand);
-      margin-left: auto;
+    &-link {
+      &:active {
+        background-color: var(--menu-item-active-background-color);
+      }
     }
+
+    & .ab-Menu-button {
+      height: var(--menu-item-height);
+      width: 100%;
+      padding: var(--ab-semantic-spacing-2) var(--ab-semantic-spacing-4);
+      cursor: pointer;
+      border-radius: var(--ab-semantic-border-radius-lg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      svg {
+        color: var(--ab-semantic-color-text-brand);
+      }
+
+      &:active {
+        background-color: var(--menu-item-active-background-color);
+      }
+
+      &:hover,
+      &:focus-visible {
+        background-color: var(--menu-item-hover-background-color);
+      }
+    }
+
+    &.is-open {
+      height: inherit;
+
+      &:active {
+        background-color: var(--menu-item-background-color);
+      }
+
+      &:hover,
+      &:focus-visible {
+        background-color: var(--menu-item-background-color);
+      }
+
+      & .ab-Menu-button {
+        &:active {
+          background-color: var(--menu-item-active-background-color);
+        }
+
+        &:hover,
+        &:focus-visible {
+          background-color: var(--menu-item-hover-background-color);
+        }
+      }
+
+      & .ab-Menu-sub-menu {
+        display: flex;
+        flex-direction: column;
+        gap: var(--ab-semantic-spacing-2);
+      }
+    }
+  }
+
+  &-sub-menu {
+    list-style: none;
+    padding: var(--ab-semantic-spacing-2);
+    margin: 0;
+    display: none;
   }
 
   &.ab-Menu-Medium,
@@ -89,8 +171,23 @@
       color: var(--menu-item-disabled-color);
       cursor: not-allowed;
 
-      &:active {
-        background-color: var(--menu-item-disabled-background-color);
+      .ab-Menu-item-label,
+      .ab-Menu-item-link {
+        pointer-events: none;
+
+        &:active {
+          background-color: var(--menu-item-disabled-background-color);
+        }
+
+        svg {
+          color: var(--menu-item-disabled-color);
+        }
+      }
+
+      & .ab-Menu-button {
+        svg {
+          color: var(--menu-item-disabled-color);
+        }
       }
     }
   }
