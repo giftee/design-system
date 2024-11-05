@@ -72,6 +72,10 @@
           "$type": "color",
           "$value": "#f6f7f8"
         },
+        "70": {
+          "$type": "color",
+          "$value": "#eaeef0"
+        },
         "100": {
           "$type": "color",
           "$value": "#e1e7ea"
@@ -161,6 +165,10 @@
         "50": {
           "$type": "color",
           "$value": "#f2f2f2"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#e5e5e5"
         },
         "100": {
           "$type": "color",
