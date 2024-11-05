@@ -59,7 +59,7 @@ importers:
         version: 10.4.20(postcss@8.4.47)
       babel-loader:
         specifier: ^9.2.1
-        version: 9.2.1(@babel/core@7.26.0)(webpack@5.96.1(esbuild@0.23.1))
+        version: 9.2.1(@babel/core@7.26.0)(webpack@5.96.1)
       postcss:
         specifier: ^8.4.47
         version: 8.4.47
@@ -121,7 +121,7 @@ importers:
         specifier: ^3.1.0
         version: 3.1.0
       '@eslint/js':
-        specifier: ^9.13.0
+        specifier: ^9.14.0
         version: 9.14.0
       '@giftee/abukuma-css':
         specifier: workspace:^
@@ -172,7 +172,7 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
       eslint:
-        specifier: ^9.13.0
+        specifier: ^9.14.0
         version: 9.14.0
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -5882,12 +5882,12 @@ snapshots:
 
   axe-core@4.10.2: {}
 
-  babel-loader@9.2.1(@babel/core@7.26.0)(webpack@5.96.1(esbuild@0.23.1)):
+  babel-loader@9.2.1(@babel/core@7.26.0)(webpack@5.96.1):
     dependencies:
       '@babel/core': 7.26.0
       find-cache-dir: 4.0.0
       schema-utils: 4.2.0
-      webpack: 5.96.1(esbuild@0.23.1)
+      webpack: 5.96.1
 
   bail@2.0.2: {}
 
@@ -8482,16 +8482,14 @@ snapshots:
 
   term-size@2.2.1: {}
 
-  terser-webpack-plugin@5.3.10(esbuild@0.23.1)(webpack@5.96.1(esbuild@0.23.1)):
+  terser-webpack-plugin@5.3.10(webpack@5.96.1):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.2
       terser: 5.36.0
-      webpack: 5.96.1(esbuild@0.23.1)
-    optionalDependencies:
-      esbuild: 0.23.1
+      webpack: 5.96.1
 
   terser@5.36.0:
     dependencies:
@@ -8734,7 +8732,7 @@ snapshots:
 
   webpack-virtual-modules@0.6.2: {}
 
-  webpack@5.96.1(esbuild@0.23.1):
+  webpack@5.96.1:
     dependencies:
       '@types/eslint-scope': 3.7.7
       '@types/estree': 1.0.6
@@ -8756,7 +8754,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(esbuild@0.23.1)(webpack@5.96.1(esbuild@0.23.1))
+      terser-webpack-plugin: 5.3.10(webpack@5.96.1)
       watchpack: 2.4.2
       webpack-sources: 3.2.3
     transitivePeerDependencies:
