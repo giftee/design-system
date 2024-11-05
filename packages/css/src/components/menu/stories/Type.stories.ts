@@ -1,6 +1,6 @@
 import { meta } from './shared';
 import type { Story } from './shared';
-import { angleRight } from '../../../../story_assets/inlines';
+import { angleRight, user } from '../../../../story_assets/inlines';
 
 export default {
   ...meta,
@@ -8,52 +8,57 @@ export default {
 };
 
 export const Type: Story = {
-  render: (args) => {
-    const sizeClass = `ab-Menu-${args.size}`;
-
+  render: (_args) => {
     return `
-<div class="ab-border ab-mb-4">
-  <h2 class="ab-text-headline-m">デフォルト</h2>
-  <ul class="ab-Menu ${sizeClass}" role="menu">
-    <li class="ab-Menu-item" role="menuitem" tabindex="0">
-      MenuItem1
-    </li>
-    <li class="ab-Menu-item" role="menuitem" tabindex="0">
-      MenuItem2
-    </li>
-  </ul>
-</div>
-<div class="ab-border ab-mb-4">
-  <h2 class="ab-text-headline-m">右アイコン</h2>
-  <ul class="ab-Menu ${sizeClass}" role="menu">
-    <li class="ab-Menu-item" role="menuitem" tabindex="0">
-      MenuItem1
-      ${angleRight('ab-Menu-item-right-icon ab-Icon')}
-    </li>
-    <li class="ab-Menu-item" role="menuitem" tabindex="0">
-      MenuItem2
-      ${angleRight('ab-Menu-item-right-icon ab-Icon')}
-    </li>
-  </ul>
-</div>
-<div class="ab-border ab-mb-4">
-  <h2 class="ab-text-headline-m">サブラベル</h2>
-  <ul class="ab-Menu ${sizeClass}" role="menu">
-    <li class="ab-Menu-item" role="menuitem" tabindex="0">
-      <div class="ab-flex ab-flex-column">
-        <span class="ab-Menu-item-label">MenuItem1</span>
-        <span class="ab-Menu-item-sublabel">MenuItem1</span>
-      </div>
-      ${angleRight('ab-Menu-item-right-icon ab-Icon')}
-    </li>
-    <li class="ab-Menu-item" role="menuitem" tabindex="0">
-      <div class="ab-flex ab-flex-column">
-        <span class="ab-Menu-item-label">MenuItem2</span>
-        <span class="ab-Menu-item-sublabel">MenuItem2</span>
-      </div>
-      ${angleRight('ab-Menu-item-right-icon ab-Icon')}
-    </li>
-  </ul>
+<div class="ab-flex ab-gap-4">
+  <div class="ab-p-2" style="width: 250px;">
+    <ul class="ab-Menu" role="menu">
+      <li class="ab-Menu-item" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">Link</a>
+      </li>
+      <li class="ab-Menu-item" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">
+          Link with Right Icon
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </a>
+      </li>
+      <li class="ab-Menu-item" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">
+          ${user('ab-Icon ab-mr-2 ab-text-brand')}
+          Link with Left Icon
+        </a>
+      </li>
+      <li class="ab-Menu-item" role="menuitem">
+        <a href="#" class="ab-Menu-item-link">
+          ${user('ab-Icon ab-mr-2 ab-text-brand')}
+          Link with Both Icons
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </a>
+      </li>
+      <li class="ab-Menu-item" role="menuitem">
+        <span class="ab-Menu-item-label">Label</span>
+      </li>
+      <li class="ab-Menu-item" role="menuitem">
+        <span class="ab-Menu-item-label">
+          Label with Right Icon
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </span>
+      </li>
+      <li class="ab-Menu-item" role="menuitem">
+        <span class="ab-Menu-item-label">
+          ${user('ab-Icon ab-mr-2 ab-text-brand')}
+          Label with Left Icon
+        </span>
+      </li>
+      <li class="ab-Menu-item" role="menuitem">
+        <span class="ab-Menu-item-label">
+          ${user('ab-Icon ab-mr-2 ab-text-brand')}
+          Label with Both Icons
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </span>
+      </li>
+    </ul>
+  </div>
 </div>
   `;
   },
