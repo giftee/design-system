@@ -1,5 +1,11 @@
 # @giftee/abukuma-react
 
+## 1.1.0
+
+### Minor Changes
+
+- [#201](https://github.com/giftee/design-system/pull/201) [`69ea034`](https://github.com/giftee/design-system/commit/69ea03462e86df066e2fe8607e46690a89c66454) Thanks [@egurinko](https://github.com/egurinko)! - [add:GridTable] Cell に colSpan を設定可能とした
+
 ## 1.0.0
 
 ### Major Changes
