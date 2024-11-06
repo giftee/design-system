@@ -5,6 +5,7 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 export type GridTableBodyCellProps = ComponentPropsWithoutRef<'div'> & {
   align?: 'center' | 'left' | 'right';
   rowSpan?: number;
+  colSpan?: number;
   isBordered?: boolean;
 };
 
@@ -13,7 +14,16 @@ export const GridTableBodyCell = forwardRef<
   GridTableBodyCellProps
 >(
   (
-    { align, rowSpan, isBordered = false, children, className, style, ...rest },
+    {
+      align,
+      rowSpan,
+      colSpan,
+      isBordered = false,
+      children,
+      className,
+      style,
+      ...rest
+    },
     forwardedRef,
   ) => {
     const classes = classNames(
@@ -25,13 +35,16 @@ export const GridTableBodyCell = forwardRef<
     const rowSpanStyle = rowSpan
       ? { '--ab-gridtable-cell-rowspan': rowSpan }
       : {};
+    const colSpanStyle = colSpan
+      ? { '--ab-gridtable-cell-colspan': colSpan }
+      : {};
 
     return (
       <div
         ref={forwardedRef}
         className={classes}
         role="cell"
-        style={{ ...rowSpanStyle, ...style }}
+        style={{ ...rowSpanStyle, ...colSpanStyle, ...style }}
         {...rest}
       >
         {children}
