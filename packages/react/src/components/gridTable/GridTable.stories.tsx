@@ -351,6 +351,88 @@ export const RowSpan: Story = {
   ),
 };
 
+export const ColSpan: Story = {
+  render: ({ ...args }: GridTable.RootProps) => (
+    <>
+      <Typography>GridTable.BodyCell に colSpan を設定できます。</Typography>
+      <GridTable.Root {...args}>
+        <GridTable.Header>
+          <GridTable.Row>
+            <GridTable.HeaderCell>商品情報</GridTable.HeaderCell>
+            <GridTable.HeaderCell align="right">価格</GridTable.HeaderCell>
+            <GridTable.HeaderCell align="right">数量</GridTable.HeaderCell>
+            <GridTable.HeaderCell align="right">小計</GridTable.HeaderCell>
+          </GridTable.Row>
+        </GridTable.Header>
+        <GridTable.Body>
+          <GridTable.RowGroup>
+            <GridTable.Row>
+              <GridTable.BodyCell rowSpan={4}>
+                <Typography variant="body-xs" className="ab-text-secondary">
+                  ギフティ
+                </Typography>
+                <Typography variant="body-s" className="ab-block">
+                  giftee Box
+                </Typography>
+              </GridTable.BodyCell>
+              <GridTable.BodyCell align="right">¥100</GridTable.BodyCell>
+              <GridTable.BodyCell align="right">¥10</GridTable.BodyCell>
+              <GridTable.BodyCell align="right">¥1,000</GridTable.BodyCell>
+            </GridTable.Row>
+            <GridTable.Row>
+              <GridTable.BodyCell colSpan={3} align="right">
+                長めのエラーメッセージがここに来たりするかも知れない
+              </GridTable.BodyCell>
+            </GridTable.Row>
+            <GridTable.Row>
+              <GridTable.BodyCell align="right">¥200</GridTable.BodyCell>
+              <GridTable.BodyCell align="right">¥30</GridTable.BodyCell>
+              <GridTable.BodyCell align="right">¥6,000</GridTable.BodyCell>
+            </GridTable.Row>
+            <GridTable.Row>
+              <GridTable.BodyCell colSpan={3} align="right">
+                長めのエラーメッセージがここに来たりするかも知れない
+              </GridTable.BodyCell>
+            </GridTable.Row>
+          </GridTable.RowGroup>
+          <GridTable.RowGroup>
+            <GridTable.Row>
+              <GridTable.BodyCell rowSpan={3}>
+                <div className="ab-flex ab-items-center">
+                  <img
+                    src="https://abukuma-css-storybook.netlify.app/assets/giftee-box-Bjg1pmYW.svg"
+                    className="ab-mr-2 ab-inline"
+                    style={{ height: '56px' }}
+                  />
+                  <div className="ab-flex ab-flex-column">
+                    <Typography variant="body-xs" className="ab-text-secondary">
+                      ギフティ
+                    </Typography>
+                    <Typography variant="body-s">giftee Box</Typography>
+                  </div>
+                </div>
+              </GridTable.BodyCell>
+              <GridTable.BodyCell align="right">¥100</GridTable.BodyCell>
+              <GridTable.BodyCell align="right">¥10</GridTable.BodyCell>
+              <GridTable.BodyCell align="right">¥1,000</GridTable.BodyCell>
+            </GridTable.Row>
+            <GridTable.Row>
+              <GridTable.BodyCell align="right">¥200</GridTable.BodyCell>
+              <GridTable.BodyCell align="right">¥30</GridTable.BodyCell>
+              <GridTable.BodyCell align="right">¥6,000</GridTable.BodyCell>
+            </GridTable.Row>
+            <GridTable.Row>
+              <GridTable.BodyCell align="right">¥300</GridTable.BodyCell>
+              <GridTable.BodyCell align="right">¥50</GridTable.BodyCell>
+              <GridTable.BodyCell align="right">¥10,000</GridTable.BodyCell>
+            </GridTable.Row>
+          </GridTable.RowGroup>
+        </GridTable.Body>
+      </GridTable.Root>
+    </>
+  ),
+};
+
 export const GridColumn: Story = {
   render: ({ ...args }: GridTable.RootProps) => (
     <>
