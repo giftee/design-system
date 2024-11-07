@@ -1,5 +1,13 @@
 # @giftee/abukuma-css
 
+## 1.0.1
+
+### Patch Changes
+
+- [#204](https://github.com/giftee/design-system/pull/204) [`3d3928b`](https://github.com/giftee/design-system/commit/3d3928bf1d4102ca36bdb7b05365a42eca28636b) Thanks [@egurinko](https://github.com/egurinko)! - [enhance:Menu]ネストした MenuItem の左 padding が狭い問題を修正
+
+- [#203](https://github.com/giftee/design-system/pull/203) [`b5593a5`](https://github.com/giftee/design-system/commit/b5593a5b8b53b2ee456441c125eb593632fbb76d) Thanks [@egurinko](https://github.com/egurinko)! - [enhancement:Accordion] boreder-radius を設定し丸い印象に変更
+
 ## 1.0.0
 
 ### Major Changes
