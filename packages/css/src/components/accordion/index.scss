@@ -48,6 +48,7 @@ $minus-url: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvM
   font-size: var(--accordion-font-size);
   color: var(--accordion-color);
   list-style: none;
+  border-radius: var(--ab-semantic-border-radius-lg);
 
   &-summary {
     overflow: hidden;
@@ -145,6 +146,7 @@ $minus-url: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvM
 .ab-Accordion-summary {
   .is-disabled & {
     background-color: var(--accordion-disabled-summary-background-color);
+    border-radius: var(--ab-semantic-border-radius-lg);
 
     &::before {
       color: var(--accordion-disabled-summary-icon-color);
