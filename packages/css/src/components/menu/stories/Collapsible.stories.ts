@@ -37,10 +37,16 @@ export const Collapsible: Story = {
     </button>
     <ul class="ab-Menu-sub-menu" role="menu">
       <li class="ab-Menu-item" role="menuitem">
-        <a ref="#" class="ab-Menu-item-link"> サブメニュ− 1</a>
+        <a ref="#" class="ab-Menu-item-link">
+          サブメニュ− 1
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </a>
       </li>
       <li class="ab-Menu-item" role="menuitem">
-        <a ref="#" class="ab-Menu-item-link"> サブメニュ− 2</a>
+        <a ref="#" class="ab-Menu-item-link">
+          サブメニュ− 2
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </a>
       </li>
     </ul>
   </li>
@@ -52,10 +58,16 @@ export const Collapsible: Story = {
     </button>
     <ul class="ab-Menu-sub-menu" role="menu">
       <li class="ab-Menu-item" role="menuitem">
-        <a ref="#" class="ab-Menu-item-link"> サブメニュ− 3</a>
+        <a ref="#" class="ab-Menu-item-link">
+          サブメニュ− 3
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </a>
       </li>
       <li class="ab-Menu-item" role="menuitem">
-        <a ref="#" class="ab-Menu-item-link"> サブメニュ− 4</a>
+        <a ref="#" class="ab-Menu-item-link">
+          サブメニュ− 4
+          ${angleRight('ab-Icon ab-ml-auto')}
+        </a>
       </li>
     </ul>
   </li>
