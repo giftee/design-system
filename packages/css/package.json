@@ -29,7 +29,7 @@
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.20",
     "babel-loader": "^9.2.1",
-    "postcss": "^8.4.47",
+    "postcss": "^8.4.48",
     "prettier": "^3.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
