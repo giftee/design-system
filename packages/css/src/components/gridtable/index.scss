@@ -9,7 +9,7 @@
 
     &-cell {
       height: 50px;
-      padding: var(--ab-semantic-spacing-4);
+      padding: var(--ab-semantic-spacing-4) var(--ab-semantic-spacing-2);
       text-align: left;
       font-weight: var(--ab-semantic-typography-font-weight-bold);
       place-content: end;
@@ -18,10 +18,11 @@
 
   &-row {
     .ab-GridTable-head-cell:first-child {
-      padding-left: var(--ab-semantic-spacing-8);
+      padding-left: var(--ab-semantic-spacing-6);
     }
+
     .ab-GridTable-head-cell:last-child {
-      padding-right: var(--ab-semantic-spacing-8);
+      padding-right: var(--ab-semantic-spacing-6);
     }
   }
 
@@ -54,7 +55,7 @@
   }
 
   &-cell {
-    padding: var(--ab-semantic-spacing-4);
+    padding: var(--ab-semantic-spacing-4) var(--ab-semantic-spacing-2);
     text-align: left;
     overflow: hidden;
     place-content: center;
