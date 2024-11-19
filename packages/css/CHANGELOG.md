@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 1.0.2
+
+### Patch Changes
+
+- [#220](https://github.com/giftee/design-system/pull/220) [`123f7c3`](https://github.com/giftee/design-system/commit/123f7c30523061cfdb59de41a16cb9add0a65ed4) Thanks [@Usk0930](https://github.com/Usk0930)! - [fix:GridTable] 端の cell に rowspan が設定されている時、隣の cell の padding が 2 行目以降でずれてしまう問題を修正
+
 ## 1.0.1
 
 ### Patch Changes
