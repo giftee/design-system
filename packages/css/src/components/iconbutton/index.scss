@@ -48,3 +48,8 @@
   @extend .ab-Button-text;
   @extend .ab-IconButton;
 }
+
+.ab-IconButton-negative {
+  @extend .ab-Button-negative;
+  @extend .ab-IconButton;
+}
