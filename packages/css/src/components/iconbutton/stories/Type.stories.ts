@@ -13,6 +13,7 @@ ${createComponent({ ...args, type: 'default' })}
 ${createComponent({ ...args, type: 'outlined' })}
 ${createComponent({ ...args, type: 'neutral' })}
 ${createComponent({ ...args, type: 'text' })}
+${createComponent({ ...args, type: 'negative' })}
   `;
   },
   args: {
