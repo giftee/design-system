@@ -6,9 +6,8 @@
   --button-border-color: var(--ab-semantic-color-border-brand);
   --button-border-radius: var(--ab-semantic-border-radius-full);
   --button-height: 42px;
-  --button-padding: #{var(--ab-semantic-spacing-0)} #{var(
-      --ab-semantic-spacing-4
-    )};
+  --button-padding: #{var(--ab-semantic-spacing-0)}
+    #{var(--ab-semantic-spacing-4)};
   --button-hover-color: var(--ab-semantic-color-text-contrast);
   --button-hover-background-color: var(
     --ab-semantic-color-background-hover-on-brand

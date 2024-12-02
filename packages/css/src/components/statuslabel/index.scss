@@ -1,7 +1,6 @@
 .ab-StatusLabel {
-  --status-label-padding: #{var(--ab-semantic-spacing-0)} #{var(
-      --ab-semantic-spacing-2
-    )};
+  --status-label-padding: #{var(--ab-semantic-spacing-0)}
+    #{var(--ab-semantic-spacing-2)};
   --status-label-font-size: #{$font-size-body-xs};
   --status-label-height: 19px;
   --status-label-line-height: #{$line-height-s};
@@ -11,27 +10,24 @@
 }
 
 .ab-StatusLabel-small {
-  --status-label-padding: #{var(--ab-semantic-spacing-0)} #{var(
-      --ab-semantic-spacing-2
-    )};
+  --status-label-padding: #{var(--ab-semantic-spacing-0)}
+    #{var(--ab-semantic-spacing-2)};
   --status-label-font-size: #{$font-size-body-xs};
   --status-label-height: 19px;
   --status-label-line-height: #{$line-height-s};
 }
 
 .ab-StatusLabel-medium {
-  --status-label-padding: #{var(--ab-semantic-spacing-0)} #{var(
-      --ab-semantic-spacing-2
-    )};
+  --status-label-padding: #{var(--ab-semantic-spacing-0)}
+    #{var(--ab-semantic-spacing-2)};
   --status-label-font-size: #{$font-size-body-s};
   --status-label-height: 23px;
   --status-label-line-height: #{$line-height-m};
 }
 
 .ab-StatusLabel-large {
-  --status-label-padding: #{var(--ab-semantic-spacing-0)} #{var(
-      --ab-semantic-spacing-4
-    )};
+  --status-label-padding: #{var(--ab-semantic-spacing-0)}
+    #{var(--ab-semantic-spacing-4)};
   --status-label-font-size: #{$font-size-body-m};
   --status-label-height: 29px;
   --status-label-line-height: #{$line-height-l};
