@@ -22,7 +22,13 @@ export default defineConfig({
       fileName: 'index',
     },
     rollupOptions: {
-      external: ['react', 'react-dom', '@giftee/abukuma-css'],
+      external: [
+        'react',
+        /^react\/.*/,
+        'react-dom',
+        /react-dom\/.*/,
+        '@giftee/abukuma-css',
+      ],
       output: {
         globals: {
           react: 'React',
