@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 1.1.0
+
+### Minor Changes
+
+- [#227](https://github.com/giftee/design-system/pull/227) [`33dacb7`](https://github.com/giftee/design-system/commit/33dacb7090e533a96c309a6088e9d45457f52f63) Thanks [@egurinko](https://github.com/egurinko)! - [add:IconButton] negative color を追加
+
 ## 1.0.2
 
 ### Patch Changes

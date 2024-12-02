@@ -1,5 +1,18 @@
 # @giftee/abukuma-react
 
+## 2.0.0
+
+### Minor Changes
+
+- [#229](https://github.com/giftee/design-system/pull/229) [`3421f07`](https://github.com/giftee/design-system/commit/3421f077bb6ae5e5d988f46a01d8dbcde6881711) Thanks [@egurinko](https://github.com/egurinko)! - [add:IconButton] negative color を追加
+
+### Patch Changes
+
+- [#242](https://github.com/giftee/design-system/pull/242) [`5e70039`](https://github.com/giftee/design-system/commit/5e700392f284e58952be6c6cbf0a43055cb5f6be) Thanks [@k-masaki](https://github.com/k-masaki)! - [enhancement] React 19 に対応
+
+- Updated dependencies [[`33dacb7`](https://github.com/giftee/design-system/commit/33dacb7090e533a96c309a6088e9d45457f52f63)]:
+  - @giftee/abukuma-css@1.1.0
+
 ## 1.1.2
 
 ### Patch Changes
