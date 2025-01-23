@@ -17,7 +17,7 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
-    "@eslint/compat": "^1.2.4",
+    "@eslint/compat": "^1.2.5",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.17.0",
     "@giftee/abukuma-css": "workspace:^",
