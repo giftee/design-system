@@ -1,5 +1,11 @@
 # @giftee/abukuma-react
 
+## 2.0.1
+
+### Patch Changes
+
+- [#306](https://github.com/giftee/design-system/pull/306) [`dd6ae01`](https://github.com/giftee/design-system/commit/dd6ae0190ba7b6ccf71616fe535f8b0f9266be83) Thanks [@egurinko](https://github.com/egurinko)! - [内部改善] eslint-plugin-jsx-a11y を追加
+
 ## 2.0.0
 
 ### Minor Changes
