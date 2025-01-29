@@ -14,7 +14,6 @@ function assignRef<T = any>(ref: ReactRef<T> | undefined, value: T) {
   }
 
   try {
-    // @ts-expect-error こちらは MutableRefObject なので代入可能
     ref.current = value;
   } catch {
     throw new Error(`Cannot assign value '${value}' to ref '${ref}'`);
