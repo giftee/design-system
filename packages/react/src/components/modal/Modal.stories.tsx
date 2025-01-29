@@ -104,11 +104,7 @@ export const Form: Story = {
           </Modal.Header>
           <Divider />
           <Modal.Body>
-            <Textfield
-              autoFocus={true}
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
+            <Textfield value={name} onChange={(e) => setName(e.target.value)} />
           </Modal.Body>
           <Divider />
           <Modal.Footer>
