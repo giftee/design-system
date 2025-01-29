@@ -5,6 +5,7 @@ import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
 import globals from 'globals';
 
@@ -30,6 +31,7 @@ export default [
       'plugin:storybook/recommended',
     ),
   ),
+  jsxA11y.flatConfigs.recommended,
   {
     plugins: {
       '@typescript-eslint': fixupPluginRules(typescriptEslint),
@@ -128,6 +130,8 @@ export default [
 
       'react/prop-types': 'off',
       'import/no-unresolved': 'off',
+      'jsx-a11y/click-events-have-key-events': 'warn',
+      'jsx-a11y/no-noninteractive-element-interactions': 'warn',
     },
   },
 ];
