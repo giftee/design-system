@@ -76,6 +76,7 @@ export const Icon: Story = {
           src="https://abukuma-css-storybook.netlify.app/assets/giftee-box-Bjg1pmYW.svg"
           className="ab-mr-1"
           style={{ height: '30px' }}
+          alt="giftee Box"
         />
         Icon
       </div>

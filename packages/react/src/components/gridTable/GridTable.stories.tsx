@@ -85,6 +85,7 @@ export const Base: Story = {
                     src="https://abukuma-css-storybook.netlify.app/assets/giftee-box-Bjg1pmYW.svg"
                     className="ab-mr-2 ab-inline"
                     style={{ height: '56px' }}
+                    alt="giftee Box"
                   />
                   <div className="ab-flex ab-flex-column">
                     <Typography variant="body-xs" className="ab-text-secondary">
@@ -107,6 +108,7 @@ export const Base: Story = {
                     src="https://abukuma-css-storybook.netlify.app/assets/giftee-box-Bjg1pmYW.svg"
                     className="ab-mr-2 ab-inline"
                     style={{ height: '56px' }}
+                    alt="giftee Box"
                   />
                   <div className="ab-flex ab-flex-column">
                     <Typography variant="body-xs" className="ab-text-secondary">
@@ -162,6 +164,7 @@ export const Select: Story = {
                   src="https://abukuma-css-storybook.netlify.app/assets/giftee-box-Bjg1pmYW.svg"
                   className="ab-mr-2 ab-inline"
                   style={{ height: '56px' }}
+                  alt="giftee Box"
                 />
                 <div className="ab-flex ab-flex-column">
                   <Typography variant="body-xs" className="ab-text-secondary">
@@ -184,6 +187,7 @@ export const Select: Story = {
                   src="https://abukuma-css-storybook.netlify.app/assets/giftee-box-Bjg1pmYW.svg"
                   className="ab-mr-2 ab-inline"
                   style={{ height: '56px' }}
+                  alt="giftee Box"
                 />
                 <div className="ab-flex ab-flex-column">
                   <Typography variant="body-xs" className="ab-text-secondary">
@@ -238,6 +242,7 @@ export const BorderedRow: Story = {
                   src="https://abukuma-css-storybook.netlify.app/assets/giftee-box-Bjg1pmYW.svg"
                   className="ab-mr-2 ab-inline"
                   style={{ height: '56px' }}
+                  alt="giftee Box"
                 />
                 <div className="ab-flex ab-flex-column">
                   <Typography variant="body-xs" className="ab-text-secondary">
@@ -260,6 +265,7 @@ export const BorderedRow: Story = {
                   src="https://abukuma-css-storybook.netlify.app/assets/giftee-box-Bjg1pmYW.svg"
                   className="ab-mr-2 ab-inline"
                   style={{ height: '56px' }}
+                  alt="giftee Box"
                 />
                 <div className="ab-flex ab-flex-column">
                   <Typography variant="body-xs" className="ab-text-secondary">
@@ -321,6 +327,7 @@ export const RowSpan: Story = {
                     src="https://abukuma-css-storybook.netlify.app/assets/giftee-box-Bjg1pmYW.svg"
                     className="ab-mr-2 ab-inline"
                     style={{ height: '56px' }}
+                    alt="giftee Box"
                   />
                   <div className="ab-flex ab-flex-column">
                     <Typography variant="body-xs" className="ab-text-secondary">
@@ -403,6 +410,7 @@ export const ColSpan: Story = {
                     src="https://abukuma-css-storybook.netlify.app/assets/giftee-box-Bjg1pmYW.svg"
                     className="ab-mr-2 ab-inline"
                     style={{ height: '56px' }}
+                    alt="giftee Box"
                   />
                   <div className="ab-flex ab-flex-column">
                     <Typography variant="body-xs" className="ab-text-secondary">
@@ -477,6 +485,7 @@ export const GridColumn: Story = {
                     src="https://abukuma-css-storybook.netlify.app/assets/giftee-box-Bjg1pmYW.svg"
                     className="ab-mr-2 ab-inline"
                     style={{ height: '56px' }}
+                    alt="giftee Box"
                   />
                   <div className="ab-flex ab-flex-column">
                     <Typography variant="body-xs" className="ab-text-secondary">
@@ -572,6 +581,7 @@ export const BorderedCell: Story = {
                     src="https://abukuma-css-storybook.netlify.app/assets/giftee-box-Bjg1pmYW.svg"
                     className="ab-mr-2 ab-inline"
                     style={{ height: '56px' }}
+                    alt="giftee Box"
                   />
                   <div className="ab-flex ab-flex-column">
                     <Typography variant="body-xs" className="ab-text-secondary">
