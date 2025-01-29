@@ -12,7 +12,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import type { MouseEvent } from 'react';
 import 'dialog-polyfill/dist/dialog-polyfill.css';
 
-function useDialogpolyfill(ref: React.RefObject<HTMLDialogElement>) {
+function useDialogpolyfill(ref: React.RefObject<HTMLDialogElement | null>) {
   useEffect(() => {
     if (ref.current) {
       dialogPolyfill.registerDialog(ref.current);
