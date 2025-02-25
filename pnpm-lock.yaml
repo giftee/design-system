@@ -115,7 +115,7 @@ importers:
   packages/react:
     devDependencies:
       '@eslint/compat':
-        specifier: ^1.2.6
+        specifier: ^1.2.7
         version: 1.2.7(eslint@9.21.0)
       '@eslint/eslintrc':
         specifier: ^3.2.0
