@@ -10,6 +10,8 @@ $ npm install @giftee/abukuma-css
 
 アイコンは [figma](https://www.figma.com/file/LegilW7nsLAzyYDgokO8PX) からダウンロードして使ってください。
 
+Ruby on Rails で利用する場合は、[abukumacss-rails](https://github.com/giftee/abukumacss-rails) でのインストールがスムーズです。
+
 ## 使い方
 
 package のインストール後は適切な箇所にインポートして使ってください。

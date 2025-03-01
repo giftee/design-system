@@ -1,7 +1,8 @@
 @import 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap';
 
 body {
-  font-family: var(--ab-semantic-typography-font-family-ja),
+  font-family:
+    var(--ab-semantic-typography-font-family-ja),
     var(--ab-semantic-typography-font-family-en), 'Hiragino Sans', sans-serif;
   color: var(--ab-semantic-color-text-default);
   font-size: calc(var(--ab-semantic-typography-font-size-body-m) * 1px);
