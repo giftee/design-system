@@ -1,0 +1,12 @@
+.ab-Fieldset {
+  &-legend {
+    margin-bottom: var(--ab-semantic-spacing-4);
+    font-size: $font-size-body-m;
+    color: var(--ab-semantic-color-text-default);
+  }
+
+  &-content {
+    display: flex;
+    gap: var(--ab-semantic-spacing-6);
+  }
+}
