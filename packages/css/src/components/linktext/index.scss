@@ -1,3 +1,5 @@
+@use '../../mixins/hover' as hover;
+
 .ab-LinkText {
   --linktext-color: var(--ab-semantic-color-text-default);
   --linktext-text-decoration: underline;
@@ -45,7 +47,7 @@
     text-decoration: var(--linktext-focus-text-decoration);
   }
 
-  @include hover {
+  @include hover.hover {
     color: var(--linktext-hover-color);
     text-decoration: var(--linktext-hover-text-decoration);
   }

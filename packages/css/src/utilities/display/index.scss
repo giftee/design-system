@@ -1,3 +1,5 @@
+@use '../../designTokens/breakpoint' as breakpoint;
+
 $display-values: (
   block,
   inline,
@@ -10,8 +12,8 @@ $display-values: (
   table-cell
 ) !default;
 
-@each $breakpoint, $variant in $responsive-variants {
-  @include breakpoint($breakpoint) {
+@each $breakpoint, $variant in breakpoint.$responsive-variants {
+  @include breakpoint.breakpoint($breakpoint) {
     @each $display in $display-values {
       .ab#{$variant}-#{$display} {
         display: $display;

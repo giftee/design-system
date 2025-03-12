@@ -1,3 +1,5 @@
+@use '../../designTokens/breakpoint' as breakpoint;
+
 // Break by word
 .ab-wb-break-word {
   word-break: break-word;

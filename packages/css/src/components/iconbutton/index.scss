@@ -15,7 +15,7 @@
 }
 
 .ab-IconButton {
-  @extend .ab-Button;
+  @extend .ab-Button !optional;
 
   width: var(--iconbutton-size);
   height: var(--iconbutton-size);
@@ -35,21 +35,21 @@
 }
 
 .ab-IconButton-outlined {
-  @extend .ab-Button-outlined;
-  @extend .ab-IconButton;
+  @extend .ab-Button-outlined !optional;
+  @extend .ab-IconButton !optional;
 }
 
 .ab-IconButton-neutral {
-  @extend .ab-Button-neutral;
-  @extend .ab-IconButton;
+  @extend .ab-Button-neutral !optional;
+  @extend .ab-IconButton !optional;
 }
 
 .ab-IconButton-text {
-  @extend .ab-Button-text;
-  @extend .ab-IconButton;
+  @extend .ab-Button-text !optional;
+  @extend .ab-IconButton !optional;
 }
 
 .ab-IconButton-negative {
-  @extend .ab-Button-negative;
-  @extend .ab-IconButton;
+  @extend .ab-Button-negative !optional;
+  @extend .ab-IconButton !optional;
 }
