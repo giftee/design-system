@@ -1,3 +1,7 @@
+@use '../../designTokens/typography/fontsize' as *;
+@use '../../mixins/hover' as mixins;
+@use '../../designTokens/_border' as *;
+
 .ab-GridTable {
   width: 100%;
   font-size: $font-size-body-s;
@@ -84,7 +88,7 @@
 
 .ab-GridTable-select {
   & .ab-GridTable-rowgroup {
-    @include hover {
+    @include mixins.hover {
       background-color: var(--ab-semantic-color-background-brand-secondary);
       cursor: pointer;
     }

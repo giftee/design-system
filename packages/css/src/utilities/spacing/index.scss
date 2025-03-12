@@ -1,3 +1,6 @@
+@use '../../designTokens/_breakpoint' as *;
+@use '../../variables/_spacer' as *;
+
 $sides: (
   top: 't',
   right: 'r',

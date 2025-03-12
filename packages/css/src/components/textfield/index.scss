@@ -1,5 +1,8 @@
+@use '../../designTokens/typography/fontsize' as *;
+@use '../../mixins/hover' as mixins;
+
 .ab-Textfield {
-  --textfield-font-size: $font-size-body-m;
+  --textfield-font-size: #{$font-size-body-m};
 }
 
 .ab-Textfield-input {
@@ -30,7 +33,7 @@
     align-items: center;
     gap: var(--ab-semantic-spacing-2);
     margin-bottom: var(--ab-semantic-spacing-4);
-    font-size: $font-size-body-m;
+    font-size: #{$font-size-body-m};
     color: var(--ab-semantic-color-text-default);
   }
 
@@ -52,7 +55,7 @@
       color: var(--textfield-input-placeholder-color);
     }
 
-    @include hover {
+    @include mixins.hover {
       border-color: var(--textfield-input-hover-border-color);
     }
 
@@ -74,7 +77,7 @@
 
   &-helptext {
     padding-top: var(--ab-semantic-spacing-1);
-    font-size: $font-size-body-xs;
+    font-size: #{$font-size-body-xs};
     color: var(--ab-semantic-color-text-default);
   }
 }

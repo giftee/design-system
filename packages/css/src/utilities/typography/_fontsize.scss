@@ -1,3 +1,6 @@
+@use '../../designTokens/typography/_lineheight' as *;
+@use '../../designTokens/_breakpoint' as *;
+
 .ab-text-headline-l {
   font-size: calc(var(--ab-semantic-typography-font-size-headline-l) * 1px);
   line-height: $line-height-m;

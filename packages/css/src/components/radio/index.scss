@@ -1,3 +1,6 @@
+@use '../../designTokens/typography/fontsize' as *;
+@use '../../mixins/hover' as mixins;
+
 .ab-Radio-radio {
   --radio-radio-size: 18px;
   --radio-radio-circle-size: 8px;
@@ -107,7 +110,7 @@
     }
   }
 
-  @include hover {
+  @include mixins.hover {
     .ab-Radio-radio,
     .ab-Radio-input:checked ~ .ab-Radio-radio {
       background-color: var(--radio-radio-hover-background-color);

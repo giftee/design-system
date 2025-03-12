@@ -1,3 +1,5 @@
+@use '../../designTokens/_breakpoint' as *;
+
 $white-spaces: (normal, nowrap, pre, pre-wrap);
 
 @each $white-space in $white-spaces {

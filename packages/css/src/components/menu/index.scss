@@ -1,3 +1,5 @@
+@use '../../designTokens/typography/fontsize' as *;
+
 .ab-Menu {
   --menu-font-size: #{$font-size-body-s};
 }

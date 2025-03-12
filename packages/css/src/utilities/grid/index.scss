@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use '../../designTokens/_breakpoint' as *;
 
 // Columns
 .ab-col-1 {

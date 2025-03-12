@@ -1,3 +1,5 @@
+@use '../../designTokens/_breakpoint' as *;
+
 $cursors: (auto, default, pointer);
 
 @each $cursor in $cursors {

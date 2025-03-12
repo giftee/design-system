@@ -1,3 +1,5 @@
+@use '../../designTokens/_breakpoint' as *;
+
 $responsive-positions: (static, relative, absolute, fixed, sticky) !default;
 
 @each $breakpoint, $variant in $responsive-variants {

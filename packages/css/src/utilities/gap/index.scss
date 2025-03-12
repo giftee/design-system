@@ -1,4 +1,8 @@
 // Gap
+@use '../../designTokens/_breakpoint' as *;
+@use '../../variables/_spacer' as *;
+@use 'sass:map';
+
 @each $breakpoint, $variant in $responsive-variants {
   @include breakpoint($breakpoint) {
     @each $spaceKey, $spaceValue in $spacers {

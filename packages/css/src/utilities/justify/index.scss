@@ -1,3 +1,5 @@
+@use '../../designTokens/_breakpoint' as *;
+
 @each $breakpoint, $variant in $responsive-variants {
   @include breakpoint($breakpoint) {
     // justify-content
@@ -52,6 +54,7 @@
 
 // deprecated: migrate to ab-justify-x
 // TODO: ab-justify-x に統合したら削除
+
 @each $breakpoint, $variant in $responsive-variants {
   @include breakpoint($breakpoint) {
     .ab#{$variant}-flex-justify-start {

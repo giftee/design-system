@@ -1,3 +1,5 @@
+@use '../../designTokens/_breakpoint' as *;
+
 $font-weights: (
   normal: var(--ab-semantic-typography-font-weight-regular),
   bold: var(--ab-semantic-typography-font-weight-bold),

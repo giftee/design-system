@@ -1,3 +1,5 @@
+@use '../../designTokens/_breakpoint' as *;
+
 $size: 0.125rem;
 $size-0: 0;
 $size-1: $size; // 2px

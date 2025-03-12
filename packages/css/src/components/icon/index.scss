@@ -1,3 +1,5 @@
+@use '../../designTokens/typography/_lineheight' as *;
+
 .ab-Icon {
   --icon-size: var(--ab-semantic-icon-size-small);
 }

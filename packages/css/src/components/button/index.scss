@@ -1,3 +1,6 @@
+@use '../../designTokens/typography/fontsize' as *;
+@use '../../mixins/hover' as mixins;
+
 .ab-Button {
   --button-color: var(--ab-semantic-color-text-contrast);
   --button-font-size: #{$font-size-body-s};
@@ -162,7 +165,7 @@
   border-radius: var(--button-border-radius);
   transition: all 0.3s ease;
 
-  @include hover {
+  @include mixins.hover {
     color: var(--button-hover-color);
     background-color: var(--button-hover-background-color);
     border-color: var(--button-hover-border-color);

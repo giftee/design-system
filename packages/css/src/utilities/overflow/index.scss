@@ -1,3 +1,5 @@
+@use '../../designTokens/_breakpoint' as *;
+
 @each $breakpoint, $variant in $responsive-variants {
   @include breakpoint($breakpoint) {
     @each $overflow in (visible, hidden, auto, scroll) {

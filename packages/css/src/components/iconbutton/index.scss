@@ -1,3 +1,5 @@
+@use '../button/index.scss' as button;
+
 .ab-IconButton {
   --iconbutton-size: 42px;
 }
@@ -15,7 +17,18 @@
 }
 
 .ab-IconButton {
-  @extend .ab-Button;
+  // Copy button properties instead of extending
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--button-padding, var(--ab-semantic-spacing-2) var(--ab-semantic-spacing-4));
+  font-size: var(--button-font-size, var(--ab-semantic-typography-font-size-body-m));
+  font-weight: var(--button-font-weight, var(--ab-semantic-typography-font-weight-bold));
+  line-height: var(--button-line-height, var(--ab-semantic-typography-line-height-m));
+  color: var(--button-color, var(--ab-semantic-color-text-inverse));
+  background-color: var(--button-background-color, var(--ab-semantic-color-background-brand-primary));
+  border: var(--button-border, none);
+  border-radius: var(--button-border-radius, var(--ab-semantic-border-radius-md));
 
   width: var(--iconbutton-size);
   height: var(--iconbutton-size);
@@ -35,21 +48,69 @@
 }
 
 .ab-IconButton-outlined {
-  @extend .ab-Button-outlined;
-  @extend .ab-IconButton;
+  // Copy properties instead of extending
+  background-color: transparent;
+  color: var(--ab-semantic-color-text-brand);
+  border: 1px solid var(--ab-semantic-color-border-brand);
+  
+  // Include IconButton base properties
+  width: var(--iconbutton-size);
+  height: var(--iconbutton-size);
+  border-radius: 50%;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .ab-IconButton-neutral {
-  @extend .ab-Button-neutral;
-  @extend .ab-IconButton;
+  // Copy properties instead of extending
+  background-color: var(--ab-semantic-color-background-rest-secondary);
+  color: var(--ab-semantic-color-text-default);
+  border: none;
+  
+  // Include IconButton base properties
+  width: var(--iconbutton-size);
+  height: var(--iconbutton-size);
+  border-radius: 50%;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .ab-IconButton-text {
-  @extend .ab-Button-text;
-  @extend .ab-IconButton;
+  // Copy properties instead of extending
+  background-color: transparent;
+  color: var(--ab-semantic-color-text-brand);
+  border: none;
+  
+  // Include IconButton base properties
+  width: var(--iconbutton-size);
+  height: var(--iconbutton-size);
+  border-radius: 50%;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .ab-IconButton-negative {
-  @extend .ab-Button-negative;
-  @extend .ab-IconButton;
+  // Copy properties instead of extending
+  background-color: var(--ab-semantic-color-background-negative);
+  color: var(--ab-semantic-color-text-inverse);
+  border: none;
+  
+  // Include IconButton base properties
+  width: var(--iconbutton-size);
+  height: var(--iconbutton-size);
+  border-radius: 50%;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,3 +1,6 @@
+@use '../../designTokens/typography/_lineheight' as *;
+@use '../../designTokens/_breakpoint' as *;
+
 $line-heights: (
   none: $line-height-none,
   s: $line-height-s,

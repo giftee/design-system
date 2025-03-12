@@ -1,3 +1,6 @@
+@use '../textfield/index.scss' as textfield;
+@use '../icon/index.scss' as icon;
+
 .ab-Select-icon {
   --select-icon-color: var(--ab-semantic-color-text-brand);
 }
@@ -9,15 +12,27 @@
   width: 100%;
 
   &-input {
-    @extend .ab-Textfield-input;
-
+    // Copy properties instead of extending
+    display: flex;
+    width: 100%;
+    height: var(--textfield-input-height, 40px);
+    padding: var(--textfield-input-padding, 0 var(--ab-semantic-spacing-2));
+    font-size: var(--textfield-font-size, inherit);
+    color: var(--textfield-input-color, var(--ab-semantic-color-text-default));
+    background-color: var(--textfield-input-background-color, var(--ab-semantic-color-background-rest-primary));
+    border: var(--textfield-input-border, 1px solid var(--ab-semantic-color-border-light));
+    border-radius: var(--textfield-input-border-radius, var(--ab-semantic-border-radius-md));
     align-items: center;
     width: 100%;
   }
 
   &-icon {
-    @extend .ab-Icon;
-    @extend .ab-Icon-xsmall;
+    // Copy properties instead of extending
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--icon-size, 16px);
+    height: var(--icon-size, 16px);
 
     position: absolute;
     top: 0;

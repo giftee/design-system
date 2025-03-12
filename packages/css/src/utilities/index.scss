@@ -1,24 +1,24 @@
-@import './color';
+@use './color';
 
 // Layout
-@import './display';
-@import './position';
-@import './top_right_bottom_left';
-@import './overflow';
-@import './float';
+@use './display';
+@use './position';
+@use './top_right_bottom_left';
+@use './overflow';
+@use './float';
 
 // Flexbox/Grid
-@import './flexbox';
-@import './grid';
-@import './gap';
-@import './align';
-@import './justify';
+@use './flexbox';
+@use './grid';
+@use './gap';
+@use './align';
+@use './justify';
 
 // Misc
-@import './cursor';
-@import './spacing';
-@import './border';
-@import './typography';
-@import './size';
-@import './white_space';
-@import './text_overflow';
+@use './cursor';
+@use './spacing';
+@use './border';
+@use './typography';
+@use './size';
+@use './white_space';
+@use './text_overflow';

@@ -1,3 +1,5 @@
+@use '../../designTokens/_breakpoint' as *;
+
 $text-overflows: (clip, ellipsis);
 
 @each $text-overflow in $text-overflows {

@@ -1,3 +1,7 @@
+@use '../../designTokens/typography/fontsize' as *;
+@use '../../mixins/hover' as mixins;
+@use '../../designTokens/_border' as *;
+
 .ab-Table {
   width: 100%;
   font-size: $font-size-body-s;
@@ -62,7 +66,7 @@
 .ab-Table-select {
   & .ab-Table-body {
     &-row {
-      @include hover {
+      @include mixins.hover {
         background-color: var(--ab-semantic-color-background-brand-secondary);
         cursor: pointer;
       }
