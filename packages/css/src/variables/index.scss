@@ -1,2 +1,3 @@
-@import './border';
-@import './spacer';
+@forward './border';
+@forward './spacer';
+@forward './zindex';

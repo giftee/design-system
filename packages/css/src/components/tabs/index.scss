@@ -1,10 +1,13 @@
+@use '../../mixins/hover' as hover;
+@use '../../designTokens/typography/fontsize' as fontsize;
+
 .ab-Tabs {
   --tabs-background-color: var(--ab-semantic-color-background-rest-secondary);
   --tabs-height: 48px;
 }
 
 .ab-Tabs-item {
-  --tabs-item-font-size: #{$font-size-body-s};
+  --tabs-item-font-size: #{fontsize.$font-size-body-s};
   --tabs-item-color: var(--ab-semantic-color-text-default);
   --tabs-item-background-color: transparent;
   --tabs-item-hover-background-color: var(
@@ -32,7 +35,7 @@
   --tabs-height: 40px;
 
   .ab-Tabs-item {
-    --tabs-item-font-size: #{$font-size-body-xs};
+    --tabs-item-font-size: #{fontsize.$font-size-body-xs};
     --tabs-item-padding: 0 #{var(--ab-semantic-spacing-4)};
   }
 }
@@ -41,7 +44,7 @@
   --tabs-height: 48px;
 
   .ab-Tabs-item {
-    --tabs-item-font-size: #{$font-size-body-s};
+    --tabs-item-font-size: #{fontsize.$font-size-body-s};
     --tabs-item-padding: 0 #{var(--ab-semantic-spacing-8)};
   }
 }
@@ -69,7 +72,7 @@
     border-radius: var(--ab-semantic-border-radius-full);
     height: 100%;
 
-    @include hover {
+    @include hover.hover {
       background-color: var(--tabs-item-hover-background-color);
     }
 
@@ -115,7 +118,7 @@
     color: var(--tabs-item-selected-color);
     background-color: var(--tabs-item-selected-background-color);
 
-    @include hover {
+    @include hover.hover {
       background-color: var(--tabs-item-hover-background-color);
     }
 
@@ -133,7 +136,7 @@
     color: var(--tabs-item-disabled-color);
     background-color: var(--tabs-item-disabled-background-color);
 
-    @include hover {
+    @include hover.hover {
       background-color: var(--tabs-item-disabled-background-color);
     }
 

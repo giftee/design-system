@@ -1,3 +1,6 @@
+@use '../../components/icon/index.scss' as icon;
+@use '../../components/textfield/index.scss' as textfield;
+
 .ab-Select-icon {
   --select-icon-color: var(--ab-semantic-color-text-brand);
 }
@@ -9,15 +12,15 @@
   width: 100%;
 
   &-input {
-    @extend .ab-Textfield-input;
+    @extend .ab-Textfield-input !optional;
 
     align-items: center;
     width: 100%;
   }
 
   &-icon {
-    @extend .ab-Icon;
-    @extend .ab-Icon-xsmall;
+    @extend .ab-Icon !optional;
+    @extend .ab-Icon-xsmall !optional;
 
     position: absolute;
     top: 0;

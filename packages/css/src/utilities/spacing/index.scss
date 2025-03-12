@@ -1,11 +1,14 @@
-$sides: (
+@use '../../variables/spacer' as spacer;
+@use '../../designTokens/breakpoint' as breakpoint;
+
+$spacing-sides: (
   top: 't',
   right: 'r',
   bottom: 'b',
   left: 'l',
 );
 
-@each $spaceKey, $spaceValue in $spacers {
+@each $spaceKey, $spaceValue in spacer.$spacers {
   .ab-p-#{$spaceKey} {
     padding: #{$spaceValue};
   }
@@ -29,7 +32,7 @@ $sides: (
     margin-bottom: #{$spaceValue};
   }
 
-  @each $sideKey, $sideShorthand in $sides {
+  @each $sideKey, $sideShorthand in $spacing-sides {
     .ab-p#{$sideShorthand}-#{$spaceKey} {
       padding-#{$sideKey}: #{$spaceValue};
     }
@@ -48,7 +51,7 @@ $sides: (
   margin-left: auto;
 }
 
-@each $sideKey, $sideShorthand in $sides {
+@each $sideKey, $sideShorthand in $spacing-sides {
   .ab-m#{$sideShorthand}-auto {
     margin-#{$sideKey}: auto;
   }

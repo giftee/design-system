@@ -1,6 +1,10 @@
+@use '../../mixins/hover' as hover;
+@use '../../designTokens/typography/fontsize' as fontsize;
+@use '../../variables/border' as border;
+
 .ab-GridTable {
   width: 100%;
-  font-size: $font-size-body-s;
+  font-size: fontsize.$font-size-body-s;
   display: grid;
   grid-template-columns: repeat(var(--ab-gridtable-columns-count), auto);
 
@@ -68,7 +72,7 @@
   }
 
   &-cell-border {
-    border-top: $border;
+    border-top: border.$border;
   }
 
   &-row:first-child &-cell-border {
@@ -78,13 +82,13 @@
 
 .ab-GridTable-bordered {
   & .ab-GridTable-rowgroup {
-    border: $border;
+    border: border.$border;
   }
 }
 
 .ab-GridTable-select {
   & .ab-GridTable-rowgroup {
-    @include hover {
+    @include hover.hover {
       background-color: var(--ab-semantic-color-background-brand-secondary);
       cursor: pointer;
     }

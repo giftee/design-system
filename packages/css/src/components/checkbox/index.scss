@@ -1,4 +1,8 @@
-$checkmark-url: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMS4yNSAxLjVDMTEuMjUgMS42OTE5MSAxMS4xNzY4IDEuODgzOTEgMTEuMDMwMyAyLjAzMDE2TDUuMDMwMjcgOC4wMzAxNkM0Ljg4NDM4IDguMTc3MzQgNC42OTIxOSA4LjI1IDQuNSA4LjI1QzQuMzA3ODEgOC4yNSA0LjExNjA5IDguMTc2NzYgMy45Njk4NCA4LjAzMDI3TDAuOTY5ODQ0IDUuMDMwMjdDMC44MjMzNTkgNC44ODQzOCAwLjc1IDQuNjkyMTkgMC43NSA0LjVDMC43NSA0LjA3MTU2IDEuMTAwMzkgMy43NSAxLjUgMy43NUMxLjY5MTkxIDMuNzUgMS44ODM5MSAzLjgyMzI0IDIuMDMwMTYgMy45Njk3M0w0LjUgNi40NDA2Mkw5Ljk3MDMxIDAuOTcwMzEzQzEwLjExNTYgMC44MjMzNTkgMTAuMzA3OCAwLjc1IDEwLjUgMC43NUMxMC45MDA4IDAuNzUgMTEuMjUgMS4wNzEwOSAxMS4yNSAxLjVaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K';
+@use '../../mixins/hover' as hover;
+@use '../../designTokens/typography/fontsize' as fontsize;
+
+// Checkbox-specific checkmark URL
+$checkmark-url-checkbox: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMS4yNSAxLjVDMTEuMjUgMS42OTE5MSAxMS4xNzY4IDEuODgzOTEgMTEuMDMwMyAyLjAzMDE2TDUuMDMwMjcgOC4wMzAxNkM0Ljg4NDM4IDguMTc3MzQgNC42OTIxOSA4LjI1IDQuNSA4LjI1QzQuMzA3ODEgOC4yNSA0LjExNjA5IDguMTc2NzYgMy45Njk4NCA4LjAzMDI3TDAuOTY5ODQ0IDUuMDMwMjdDMC44MjMzNTkgNC44ODQzOCAwLjc1IDQuNjkyMTkgMC43NSA0LjVDMC43NSA0LjA3MTU2IDEuMTAwMzkgMy43NSAxLjUgMy43NUMxLjY5MTkxIDMuNzUgMS44ODM5MSAzLjgyMzI0IDIuMDMwMTYgMy45Njk3M0w0LjUgNi40NDA2Mkw5Ljk3MDMxIDAuOTcwMzEzQzEwLjExNTYgMC44MjMzNTkgMTAuMzA3OCAwLjc1IDEwLjUgMC43NUMxMC45MDA4IDAuNzUgMTEuMjUgMS4wNzEwOSAxMS4yNSAxLjVaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K';
 
 .ab-Checkbox-box {
   --checkbox-box-size: 18px;
@@ -36,7 +40,7 @@ $checkmark-url: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgd
 }
 
 .ab-Checkbox-label {
-  --checkbox-label-font-size: #{$font-size-body-s};
+  --checkbox-label-font-size: #{fontsize.$font-size-body-s};
   --checkbox-label-color: var(--ab-semantic-color-text-default);
   --checkbox-label-disabled-color: var(--ab-semantic-color-text-secondary);
 }
@@ -85,7 +89,7 @@ $checkmark-url: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgd
 
         &::before {
           content: '';
-          background-image: url($checkmark-url);
+          background-image: url($checkmark-url-checkbox);
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
@@ -122,7 +126,7 @@ $checkmark-url: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgd
     }
   }
 
-  @include hover {
+  @include hover.hover {
     .ab-Checkbox-box {
       background-color: var(--checkbox-box-hover-background-color);
     }

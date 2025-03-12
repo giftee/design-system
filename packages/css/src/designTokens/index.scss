@@ -1,4 +1,4 @@
-@import './breakpoint';
-@import './typography';
-@import './border';
-@import './zindex';
+@forward './breakpoint';
+@forward './typography';
+@forward './border';
+@forward './zindex';

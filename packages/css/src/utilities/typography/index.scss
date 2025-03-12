@@ -1,5 +1,5 @@
-@import './fontsize';
-@import './fontweight';
-@import './lineheight';
-@import './textalign';
-@import './wordbreak';
+@forward './fontsize';
+@forward './fontweight';
+@forward './lineheight';
+@forward './textalign';
+@forward './wordbreak';

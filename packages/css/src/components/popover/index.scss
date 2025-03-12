@@ -1,3 +1,5 @@
+@use '../../variables/zindex' as zindex;
+
 .ab-Popover {
   background-color: var(--ab-semantic-color-background-rest-primary);
   border-radius: var(--ab-semantic-border-radius-md);
@@ -7,7 +9,7 @@
     visibility 0.15s ease-in-out;
   padding: 0;
   position: absolute;
-  z-index: $zindex-overlap;
+  z-index: zindex.$zindex-overlap;
   display: none;
   overflow: auto;
 

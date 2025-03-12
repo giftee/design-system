@@ -1,5 +1,7 @@
-@each $breakpoint, $variant in $responsive-variants {
-  @include breakpoint($breakpoint) {
+@use '../../designTokens/breakpoint' as breakpoint;
+
+@each $breakpoint, $variant in breakpoint.$responsive-variants {
+  @include breakpoint.breakpoint($breakpoint) {
     .ab#{$variant}-text-right {
       text-align: right;
     }

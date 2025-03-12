@@ -1,3 +1,9 @@
+@use '../../designTokens/breakpoint' as breakpoint;
+
+$line-height-none: 1;
+$line-height-s: 1.2;
+$line-height-m: 1.5;
+$line-height-l: 1.8;
 $line-heights: (
   none: $line-height-none,
   s: $line-height-s,

@@ -1,3 +1,4 @@
+@use '../designTokens/breakpoint' as breakpoint;
 @import 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap';
 
 body {
@@ -8,7 +9,7 @@ body {
   font-size: calc(var(--ab-semantic-typography-font-size-body-m) * 1px);
   -webkit-font-smoothing: antialiased;
 
-  @include breakpoint(md) {
+  @include breakpoint.breakpoint(md) {
     font-size: calc(var(--ab-semantic-typography-font-size-body-m) * 1px);
   }
 }
