@@ -1,4 +1,7 @@
-$sides: (
+@use '../../variables/border' as border;
+@use '../../designTokens/breakpoint' as breakpoint;
+
+$border-sides: (
   top: 't',
   right: 'r',
   bottom: 'b',
@@ -6,22 +9,22 @@ $sides: (
 );
 
 .ab-border {
-  border: $border;
+  border: border.$border;
 }
 
-@each $sideKey, $sideValue in $sides {
+@each $sideKey, $sideValue in $border-sides {
   .ab-border-#{$sideValue} {
-    border-#{$sideKey}: #{$border};
+    border-#{$sideKey}: #{border.$border};
   }
 }
 
-@each $widthKey, $widthValue in $border-widths {
+@each $widthKey, $widthValue in border.$border-widths {
   .ab-border-#{$widthKey} {
     border-width: #{$widthValue};
   }
 }
 
-@each $radiusKey, $radiusValue in $border-radii-semantics {
+@each $radiusKey, $radiusValue in border.$border-radii-semantics {
   .ab-rounded-#{$radiusKey} {
     border-radius: #{$radiusValue};
   }
