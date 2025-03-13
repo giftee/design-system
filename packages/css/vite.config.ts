@@ -24,11 +24,7 @@ export default defineConfig(({ mode }) => ({
   css: {
     preprocessorOptions: {
       sass: {
-        implementation: 'sass',
-        sassOptions: {
-          legacyImporter: true,
-          loadPaths: ['node_modules'],
-        },
+        api: 'legacy',
       },
     },
   },
