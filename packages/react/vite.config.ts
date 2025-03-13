@@ -20,6 +20,7 @@ export default defineConfig({
       name: '@giftee/abukuma-react',
       formats: ['es', 'umd'],
       fileName: 'index',
+      cssFileName: 'style',
     },
     rollupOptions: {
       external: [
