@@ -9,6 +9,14 @@
 
   &-content {
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: var(--ab-semantic-spacing-6);
+  }
+}
+
+.ab-Fieldset-vertical {
+  .ab-Fieldset-content {
+    flex-direction: column;
   }
 }
