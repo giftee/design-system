@@ -7,6 +7,7 @@ export default defineConfig(({ mode }) => ({
     lib: {
       entry: path.resolve(__dirname, 'src/main.ts'),
       name: '@giftee/abukuma-css',
+      cssFileName: 'style',
     },
     rollupOptions: {
       plugins: [
@@ -23,7 +24,7 @@ export default defineConfig(({ mode }) => ({
   css: {
     preprocessorOptions: {
       sass: {
-        implementation: 'sass',
+        api: 'legacy',
       },
     },
   },
