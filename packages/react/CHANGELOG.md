@@ -1,5 +1,14 @@
 # @giftee/abukuma-react
 
+## 2.0.2
+
+### Patch Changes
+
+- [#368](https://github.com/giftee/design-system/pull/368) [`f017b74`](https://github.com/giftee/design-system/commit/f017b74594101e8454b74713d482ea92985a3839) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [enhancement] vite を v6 に upgrade
+
+- Updated dependencies [[`f875add`](https://github.com/giftee/design-system/commit/f875addd331a4bfc003a45c90d0c1c5762b18622), [`e0cf236`](https://github.com/giftee/design-system/commit/e0cf2368255363f927fa9b098fc9f1f868df4561)]:
+  - @giftee/abukuma-css@1.1.1
+
 ## 2.0.1
 
 ### Patch Changes

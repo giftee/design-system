@@ -1,5 +1,13 @@
 # @giftee/abukuma-css
 
+## 1.1.1
+
+### Patch Changes
+
+- [#366](https://github.com/giftee/design-system/pull/366) [`f875add`](https://github.com/giftee/design-system/commit/f875addd331a4bfc003a45c90d0c1c5762b18622) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [enhancement] vite を v6 に upgrade
+
+- [#360](https://github.com/giftee/design-system/pull/360) [`e0cf236`](https://github.com/giftee/design-system/commit/e0cf2368255363f927fa9b098fc9f1f868df4561) Thanks [@egurinko](https://github.com/egurinko)! - [fix:InlineAlert] 親要素が centering すると inline-alert も centering される問題を修正
+
 ## 1.1.0
 
 ### Minor Changes
