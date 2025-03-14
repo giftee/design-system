@@ -1,12 +1,24 @@
+.ab-Fieldset-legend {
+  --fieldset-legend-font-size: $font-size-body-m;
+}
+
 .ab-Fieldset {
   &-legend {
     margin-bottom: var(--ab-semantic-spacing-4);
-    font-size: $font-size-body-m;
+    font-size: var(--fieldset-legend-font-size);
     color: var(--ab-semantic-color-text-default);
   }
 
   &-content {
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: var(--ab-semantic-spacing-6);
+  }
+}
+
+.ab-Fieldset-vertical {
+  .ab-Fieldset-content {
+    flex-direction: column;
   }
 }

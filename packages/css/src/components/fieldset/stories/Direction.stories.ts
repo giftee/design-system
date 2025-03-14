@@ -1,19 +1,17 @@
-import type { StoryObj } from '@storybook/html';
-import { meta } from './shared';
+import { meta, createComponent, Story } from './shared';
 
 export default {
   ...meta,
-  title: 'Component/Fieldset/Base',
+  title: 'Component/Fieldset/Direction',
 };
 
-type Story = StoryObj;
-
-export const Default: Story = {
-  render: () => `
+export const Direction: Story = {
+  render: (args) => `
 <div class="ab-m-4">
-  <fieldset class="ab-Fieldset">
-    <legend class="ab-Fieldset-legend">RadioGroup</legend>
-    <div class="ab-Fieldset-content">
+  ${createComponent({
+    ...args,
+    legend: 'RadioGroup',
+    children: `
       <div class="ab-Radio-wrapper position-right">
         <label for="yes" class="ab-Radio-label">Yes</label>
         <div class="ab-Radio">
@@ -41,13 +39,14 @@ export const Default: Story = {
           <span class="ab-Radio-radio"></span>
         </div>
       </div>
-    </div>
-  </fieldset>
+    `,
+  })}
 </div>
 <div class="ab-m-4">
-  <fieldset class="ab-Fieldset">
-    <legend class="ab-Fieldset-legend">CheckboxGroup</legend>
-    <div class="ab-Fieldset-content">
+  ${createComponent({
+    ...args,
+    legend: 'CheckboxGroup',
+    children: `
       <div class="ab-Checkbox-wrapper position-right">
         <label for="hoge" class="ab-Checkbox-label">Hoge</label>
         <div class="ab-Checkbox">
@@ -74,8 +73,8 @@ export const Default: Story = {
           <span class="ab-Checkbox-box"></span>
         </div>
       </div>
-    </div>
-  </fieldset>
+    `,
+  })}
 </div>
   `,
 };
