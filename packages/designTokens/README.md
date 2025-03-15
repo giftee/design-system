@@ -21,7 +21,7 @@ $ npm install @giftee/abukuma-design-tokens
 CSS variables の形で提供しています。テーマ設定は HTML に `[data-theme=g4b-light]` とすることで可能です。
 
 ```css
-@import "@giftee/abukuma-design-tokens";
+@import '@giftee/abukuma-design-tokens';
 ```
 
 ### JS/TS
@@ -29,7 +29,7 @@ CSS variables の形で提供しています。テーマ設定は HTML に `[dat
 JavaScript の object とそれに対応した型定義を提供しています。テーマごとにデザイントークンが import できるので、好きに使ってください。
 
 ```ts
-import { g4bLight, saasLight } from "@giftee/abukuma-design-tokens";
+import { g4bLight, saasLight } from '@giftee/abukuma-design-tokens';
 ```
 
 ## 開発

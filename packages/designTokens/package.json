@@ -27,9 +27,12 @@
   ],
   "scripts": {
     "build": "bash build.sh",
-    "node-build": "node build"
+    "node-build": "node build",
+    "format": "pnpm prettier --check .",
+    "format:fix": "pnpm prettier --write ."
   },
   "devDependencies": {
+    "prettier": "^3.5.3",
     "style-dictionary": "^3.9.2"
   },
   "engines": {

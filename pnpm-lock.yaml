@@ -108,6 +108,9 @@ importers:
 
   packages/designTokens:
     devDependencies:
+      prettier:
+        specifier: ^3.5.3
+        version: 3.5.3
       style-dictionary:
         specifier: ^3.9.2
         version: 3.9.2
