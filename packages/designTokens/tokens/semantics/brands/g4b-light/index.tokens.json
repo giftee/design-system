@@ -2,26 +2,11 @@
   "semantic": {
     "color": {
       "brand": {
-        "dark": {
-          "$type": "color",
-          "$value": "{global.color.marine.800}"
-        },
-        "default": {
-          "$type": "color",
-          "$value": "{global.color.marine.600}"
-        },
-        "light": {
-          "$type": "color",
-          "$value": "{global.color.marine.400}"
-        },
-        "lighter": {
-          "$type": "color",
-          "$value": "{global.color.marine.200}"
-        },
-        "lightest": {
-          "$type": "color",
-          "$value": "{global.color.marine.50}"
-        }
+        "dark": { "$type": "color", "$value": "{global.color.marine.800}" },
+        "default": { "$type": "color", "$value": "{global.color.marine.600}" },
+        "light": { "$type": "color", "$value": "{global.color.marine.400}" },
+        "lighter": { "$type": "color", "$value": "{global.color.marine.200}" },
+        "lightest": { "$type": "color", "$value": "{global.color.marine.50}" }
       },
       "background": {
         "brand-primary": {
@@ -32,13 +17,11 @@
           "$type": "color",
           "$value": "{semantic.color.brand.lightest}"
         },
-        "disabled": {
+        "disabled": { "$type": "color", "$value": "{global.color.slate.100}" },
+        "base": { "$type": "color", "$value": "{global.color.steel.50}" },
+        "base-secondary（廃止予定）": {
           "$type": "color",
-          "$value": "{global.color.slate.100}"
-        },
-        "base": {
-          "$type": "color",
-          "$value": "{global.color.steel.50}"
+          "$value": "{global.color.white.800}"
         },
         "rest-primary": {
           "$type": "color",
@@ -59,6 +42,10 @@
         "positive-secondary": {
           "$type": "color",
           "$value": "{global.color.green.50}"
+        },
+        "warning-primary": {
+          "$type": "color",
+          "$value": "{global.color.green.800}"
         },
         "negative-primary": {
           "$type": "color",
@@ -138,48 +125,18 @@
           "$type": "color",
           "$value": "{semantic.color.brand.default}"
         },
-        "bold": {
-          "$type": "color",
-          "$value": "{global.color.steel.400}"
-        },
-        "light": {
-          "$type": "color",
-          "$value": "{global.color.steel.100}"
-        },
-        "info": {
-          "$type": "color",
-          "$value": "{global.color.blue.600}"
-        },
-        "notice": {
-          "$type": "color",
-          "$value": "{global.color.red.600}"
-        },
-        "positive": {
-          "$type": "color",
-          "$value": "{global.color.green.600}"
-        },
-        "negative": {
-          "$type": "color",
-          "$value": "{global.color.red.800}"
-        },
-        "neutral": {
-          "$type": "color",
-          "$value": "{global.color.slate.200}"
-        },
-        "disable": {
-          "$type": "color",
-          "$value": "{global.color.slate.200}"
-        }
+        "bold": { "$type": "color", "$value": "{global.color.steel.400}" },
+        "light": { "$type": "color", "$value": "{global.color.steel.100}" },
+        "info": { "$type": "color", "$value": "{global.color.blue.600}" },
+        "notice": { "$type": "color", "$value": "{global.color.red.600}" },
+        "positive": { "$type": "color", "$value": "{global.color.green.600}" },
+        "negative": { "$type": "color", "$value": "{global.color.red.800}" },
+        "neutral": { "$type": "color", "$value": "{global.color.slate.200}" },
+        "disable": { "$type": "color", "$value": "{global.color.slate.200}" }
       },
       "text": {
-        "default": {
-          "$type": "color",
-          "$value": "{global.color.steel.600}"
-        },
-        "secondary": {
-          "$type": "color",
-          "$value": "{global.color.steel.400}"
-        },
+        "default": { "$type": "color", "$value": "{global.color.steel.600}" },
+        "secondary": { "$type": "color", "$value": "{global.color.steel.400}" },
         "brand": {
           "$type": "color",
           "$value": "{semantic.color.brand.default}"
@@ -188,30 +145,12 @@
           "$type": "color",
           "$value": "{semantic.color.brand.light}"
         },
-        "info": {
-          "$type": "color",
-          "$value": "{global.color.blue.600}"
-        },
-        "notice": {
-          "$type": "color",
-          "$value": "{global.color.red.600}"
-        },
-        "positive": {
-          "$type": "color",
-          "$value": "{global.color.green.600}"
-        },
-        "negative": {
-          "$type": "color",
-          "$value": "{global.color.red.800}"
-        },
-        "contrast": {
-          "$type": "color",
-          "$value": "{global.color.white.800}"
-        },
-        "disable": {
-          "$type": "color",
-          "$value": "{global.color.slate.400}"
-        }
+        "info": { "$type": "color", "$value": "{global.color.blue.600}" },
+        "notice": { "$type": "color", "$value": "{global.color.red.600}" },
+        "positive": { "$type": "color", "$value": "{global.color.green.600}" },
+        "negative": { "$type": "color", "$value": "{global.color.red.800}" },
+        "contrast": { "$type": "color", "$value": "{global.color.white.800}" },
+        "disable": { "$type": "color", "$value": "{global.color.slate.400}" }
       }
     }
   }
