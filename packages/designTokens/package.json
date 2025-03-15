@@ -28,6 +28,7 @@
   "scripts": {
     "build": "bash build.sh",
     "node-build": "node build",
+    "update-design-tokens": "node update",
     "format": "pnpm prettier --check .",
     "format:fix": "pnpm prettier --write ."
   },
