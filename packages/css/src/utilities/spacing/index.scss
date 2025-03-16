@@ -5,7 +5,7 @@ $sides: (
   left: 'l',
 );
 
-@each $spaceKey, $spaceValue in $spacers {
+@each $spaceKey, $spaceValue in variables.$spacers {
   .ab-p-#{$spaceKey} {
     padding: #{$spaceValue};
   }

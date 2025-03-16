@@ -15,13 +15,13 @@ $sides: (
   }
 }
 
-@each $widthKey, $widthValue in $border-widths {
+@each $widthKey, $widthValue in variables.$border-widths {
   .ab-border-#{$widthKey} {
     border-width: #{$widthValue};
   }
 }
 
-@each $radiusKey, $radiusValue in $border-radii-semantics {
+@each $radiusKey, $radiusValue in variables.$border-radii-semantics {
   .ab-rounded-#{$radiusKey} {
     border-radius: #{$radiusValue};
   }
