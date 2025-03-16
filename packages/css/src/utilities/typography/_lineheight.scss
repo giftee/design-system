@@ -1,3 +1,5 @@
+@use '../../designTokens' as css-design-tokens;
+
 $line-heights: (
   none: css-design-tokens.$line-height-none,
   s: css-design-tokens.$line-height-s,

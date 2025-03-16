@@ -1,9 +1,4 @@
-$sides: (
-  top: 't',
-  right: 'r',
-  bottom: 'b',
-  left: 'l',
-);
+@use '../../variables' as variables;
 
 @each $spaceKey, $spaceValue in variables.$spacers {
   .ab-p-#{$spaceKey} {
@@ -29,7 +24,7 @@ $sides: (
     margin-bottom: #{$spaceValue};
   }
 
-  @each $sideKey, $sideShorthand in $sides {
+  @each $sideKey, $sideShorthand in variables.$sides {
     .ab-p#{$sideShorthand}-#{$spaceKey} {
       padding-#{$sideKey}: #{$spaceValue};
     }
@@ -48,7 +43,7 @@ $sides: (
   margin-left: auto;
 }
 
-@each $sideKey, $sideShorthand in $sides {
+@each $sideKey, $sideShorthand in variables.$sides {
   .ab-m#{$sideShorthand}-auto {
     margin-#{$sideKey}: auto;
   }

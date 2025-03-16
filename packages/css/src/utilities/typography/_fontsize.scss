@@ -1,3 +1,5 @@
+@use '../../designTokens' as css-design-tokens;
+
 .ab-text-headline-l {
   font-size: calc(var(--ab-semantic-typography-font-size-headline-l) * 1px);
   line-height: css-design-tokens.$line-height-m;

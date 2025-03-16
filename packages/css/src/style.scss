@@ -4,4 +4,4 @@
 @use './mixins/index' as mixins;
 @use './base/index' as base;
 @use './components/index' as components;
-@import './utilities/index';
+@use './utilities/index' as utilities;

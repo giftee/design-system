@@ -1,3 +1,5 @@
+@use "../../designTokens" as css-design-tokens;
+
 @each $breakpoint, $variant in css-design-tokens.$responsive-variants {
   @include css-design-tokens.breakpoint($breakpoint) {
     .ab#{$variant}-items-start {

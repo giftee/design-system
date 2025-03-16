@@ -1,4 +1,6 @@
-// Gap
+@use "../../designTokens" as css-design-tokens;
+@use "../../variables" as variables;
+
 @each $breakpoint, $variant in css-design-tokens.$responsive-variants {
   @include css-design-tokens.breakpoint($breakpoint) {
     @each $spaceKey, $spaceValue in variables.$spacers {
