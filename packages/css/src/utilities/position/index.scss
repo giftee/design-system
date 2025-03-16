@@ -1,7 +1,9 @@
+@use '../../designTokens' as css-design-tokens;
+
 $responsive-positions: (static, relative, absolute, fixed, sticky) !default;
 
-@each $breakpoint, $variant in $responsive-variants {
-  @include breakpoint($breakpoint) {
+@each $breakpoint, $variant in css-design-tokens.$responsive-variants {
+  @include css-design-tokens.breakpoint($breakpoint) {
     @each $position in $responsive-positions {
       .ab#{$variant}-position-#{$position} {
         position: $position;

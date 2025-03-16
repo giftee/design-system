@@ -1,27 +1,23 @@
-$sides: (
-  top: 't',
-  right: 'r',
-  bottom: 'b',
-  left: 'l',
-);
+@use '../../designTokens' as css-design-tokens;
+@use '../../variables' as variables;
 
 .ab-border {
-  border: $border;
+  border: css-design-tokens.$border;
 }
 
-@each $sideKey, $sideValue in $sides {
+@each $sideKey, $sideValue in variables.$sides {
   .ab-border-#{$sideValue} {
-    border-#{$sideKey}: #{$border};
+    border-#{$sideKey}: #{css-design-tokens.$border};
   }
 }
 
-@each $widthKey, $widthValue in $border-widths {
+@each $widthKey, $widthValue in variables.$border-widths {
   .ab-border-#{$widthKey} {
     border-width: #{$widthValue};
   }
 }
 
-@each $radiusKey, $radiusValue in $border-radii-semantics {
+@each $radiusKey, $radiusValue in variables.$border-radii-semantics {
   .ab-rounded-#{$radiusKey} {
     border-radius: #{$radiusValue};
   }

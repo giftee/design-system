@@ -1,8 +1,10 @@
+@use '../../designTokens' as css-design-tokens;
+
 $line-heights: (
-  none: $line-height-none,
-  s: $line-height-s,
-  m: $line-height-m,
-  l: $line-height-l,
+  none: css-design-tokens.$line-height-none,
+  s: css-design-tokens.$line-height-s,
+  m: css-design-tokens.$line-height-m,
+  l: css-design-tokens.$line-height-l,
 );
 
 @each $key, $value in $line-heights {

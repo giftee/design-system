@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use '../../designTokens' as css-design-tokens;
 
 // Columns
 .ab-col-1 {
@@ -49,8 +50,8 @@
   width: 100%;
 }
 
-@each $breakpoint in map.keys($breakpoints) {
-  @include breakpoint($breakpoint) {
+@each $breakpoint in map.keys(css-design-tokens.$breakpoints) {
+  @include css-design-tokens.breakpoint($breakpoint) {
     .ab-col-#{$breakpoint}-1 {
       width: (1 * 0.0833 * 100%);
     }
@@ -99,8 +100,8 @@ $grid-fractions: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 $grid-lines: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
 
 // grid-template-columns/rows
-@each $breakpoint, $variant in $responsive-variants {
-  @include breakpoint($breakpoint) {
+@each $breakpoint, $variant in css-design-tokens.$responsive-variants {
+  @include css-design-tokens.breakpoint($breakpoint) {
     @each $direction-long, $direction-short in $grid-directions {
       @each $grid-fraction in $grid-fractions {
         .ab#{$variant}-grid-#{$direction-short}s-#{$grid-fraction} {
@@ -119,8 +120,8 @@ $grid-lines: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
 }
 
 // grid-auto-columns/rows
-@each $breakpoint, $variant in $responsive-variants {
-  @include breakpoint($breakpoint) {
+@each $breakpoint, $variant in css-design-tokens.$responsive-variants {
+  @include css-design-tokens.breakpoint($breakpoint) {
     @each $direction-long, $direction-short in $grid-directions {
       .ab#{$variant}-grid-#{$direction-short}s-auto {
         grid-auto-#{$direction-long}s: auto;
@@ -139,8 +140,8 @@ $grid-lines: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
 }
 
 // grid-auto-flow
-@each $breakpoint, $variant in $responsive-variants {
-  @include breakpoint($breakpoint) {
+@each $breakpoint, $variant in css-design-tokens.$responsive-variants {
+  @include css-design-tokens.breakpoint($breakpoint) {
     .ab#{$variant}-grid-flow-row {
       grid-auto-flow: row;
     }
@@ -160,8 +161,8 @@ $grid-lines: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
 }
 
 // grid-column/row
-@each $breakpoint, $variant in $responsive-variants {
-  @include breakpoint($breakpoint) {
+@each $breakpoint, $variant in css-design-tokens.$responsive-variants {
+  @include css-design-tokens.breakpoint($breakpoint) {
     @each $direction-long, $direction-short in $grid-directions {
       .ab#{$variant}-#{$direction-short}-auto {
         grid-#{$direction-long}: auto;

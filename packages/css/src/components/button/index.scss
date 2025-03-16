@@ -1,6 +1,9 @@
+@use '../../designTokens' as css-design-tokens;
+@use '../../mixins' as mixins;
+
 .ab-Button {
   --button-color: var(--ab-semantic-color-text-contrast);
-  --button-font-size: #{$font-size-body-s};
+  --button-font-size: #{css-design-tokens.$font-size-body-s};
   --button-font-weight: var(--ab-semantic-typography-font-weight-bold);
   --button-background-color: var(--ab-semantic-color-background-brand-primary);
   --button-border-color: var(--ab-semantic-color-border-brand);
@@ -133,17 +136,17 @@
 }
 
 .ab-Button-xsmall {
-  --button-font-size: #{$font-size-body-xs};
+  --button-font-size: #{css-design-tokens.$font-size-body-xs};
   --button-height: 36px;
 }
 
 .ab-Button-small {
-  --button-font-size: #{$font-size-body-s};
+  --button-font-size: #{css-design-tokens.$font-size-body-s};
   --button-height: 42px;
 }
 
 .ab-Button-large {
-  --button-font-size: #{$font-size-body-m};
+  --button-font-size: #{css-design-tokens.$font-size-body-m};
   --button-height: 56px;
 }
 
@@ -162,7 +165,7 @@
   border-radius: var(--button-border-radius);
   transition: all 0.3s ease;
 
-  @include hover {
+  @include mixins.hover {
     color: var(--button-hover-color);
     background-color: var(--button-hover-background-color);
     border-color: var(--button-hover-border-color);

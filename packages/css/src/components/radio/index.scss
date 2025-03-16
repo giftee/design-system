@@ -1,3 +1,6 @@
+@use '../../designTokens' as css-design-tokens;
+@use '../../mixins' as mixins;
+
 .ab-Radio-radio {
   --radio-radio-size: 18px;
   --radio-radio-circle-size: 8px;
@@ -25,7 +28,7 @@
 }
 
 .ab-Radio-label {
-  --radio-label-font-size: #{$font-size-body-s};
+  --radio-label-font-size: #{css-design-tokens.$font-size-body-s};
   --radio-label-color: var(--ab-semantic-color-text-default);
   --radio-label-disabled-color: var(--ab-semantic-color-text-secondary);
 }
@@ -107,7 +110,7 @@
     }
   }
 
-  @include hover {
+  @include mixins.hover {
     .ab-Radio-radio,
     .ab-Radio-input:checked ~ .ab-Radio-radio {
       background-color: var(--radio-radio-hover-background-color);

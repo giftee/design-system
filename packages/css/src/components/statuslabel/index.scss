@@ -1,9 +1,11 @@
+@use '../../designTokens' as css-design-tokens;
+
 .ab-StatusLabel {
   --status-label-padding: #{var(--ab-semantic-spacing-0)}
     #{var(--ab-semantic-spacing-2)};
-  --status-label-font-size: #{$font-size-body-xs};
+  --status-label-font-size: #{css-design-tokens.$font-size-body-xs};
   --status-label-height: 19px;
-  --status-label-line-height: #{$line-height-s};
+  --status-label-line-height: #{css-design-tokens.$line-height-s};
   --status-label-background: var(--ab-semantic-color-background-brand-primary);
   --status-label-color: var(--ab-semantic-color-text-contrast);
   --status-label-border-color: transparent;
@@ -12,25 +14,25 @@
 .ab-StatusLabel-small {
   --status-label-padding: #{var(--ab-semantic-spacing-0)}
     #{var(--ab-semantic-spacing-2)};
-  --status-label-font-size: #{$font-size-body-xs};
+  --status-label-font-size: #{css-design-tokens.$font-size-body-xs};
   --status-label-height: 19px;
-  --status-label-line-height: #{$line-height-s};
+  --status-label-line-height: #{css-design-tokens.$line-height-s};
 }
 
 .ab-StatusLabel-medium {
   --status-label-padding: #{var(--ab-semantic-spacing-0)}
     #{var(--ab-semantic-spacing-2)};
-  --status-label-font-size: #{$font-size-body-s};
+  --status-label-font-size: #{css-design-tokens.$font-size-body-s};
   --status-label-height: 23px;
-  --status-label-line-height: #{$line-height-m};
+  --status-label-line-height: #{css-design-tokens.$line-height-m};
 }
 
 .ab-StatusLabel-large {
   --status-label-padding: #{var(--ab-semantic-spacing-0)}
     #{var(--ab-semantic-spacing-4)};
-  --status-label-font-size: #{$font-size-body-m};
+  --status-label-font-size: #{css-design-tokens.$font-size-body-m};
   --status-label-height: 29px;
-  --status-label-line-height: #{$line-height-l};
+  --status-label-line-height: #{css-design-tokens.$line-height-l};
 }
 
 .ab-StatusLabel-primary {
@@ -99,7 +101,7 @@
   cursor: default;
   background: var(--status-label-background);
   border-color: var(--status-label-border-color);
-  border-style: $border-style;
+  border-style: css-design-tokens.$border-style;
   border-width: var(--ab-semantic-border-width-1);
   border-radius: var(--ab-semantic-border-radius-xs);
 
