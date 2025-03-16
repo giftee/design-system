@@ -2,6 +2,6 @@
 @use './designTokens/index' as css-design-tokens;
 @use './variables/index' as variables;
 @use './mixins/index' as mixins;
-@import './base/index';
+@use './base/index' as base;
 @import './components/index';
 @import './utilities/index';
