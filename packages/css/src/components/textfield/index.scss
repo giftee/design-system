@@ -1,3 +1,6 @@
+@use '../../designTokens' as css-design-tokens;
+@use '../../mixins' as mixins;
+
 .ab-Textfield {
   --textfield-font-size: css-design-tokens.$font-size-body-m;
 }

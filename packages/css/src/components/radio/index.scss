@@ -1,3 +1,6 @@
+@use '../../designTokens' as css-design-tokens;
+@use '../../mixins' as mixins;
+
 .ab-Radio-radio {
   --radio-radio-size: 18px;
   --radio-radio-circle-size: 8px;

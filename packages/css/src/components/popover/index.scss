@@ -1,3 +1,5 @@
+@use '../../designTokens' as css-design-tokens;
+
 .ab-Popover {
   background-color: var(--ab-semantic-color-background-rest-primary);
   border-radius: var(--ab-semantic-border-radius-md);

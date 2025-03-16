@@ -3,5 +3,5 @@
 @use './variables/index' as variables;
 @use './mixins/index' as mixins;
 @use './base/index' as base;
-@import './components/index';
+@use './components/index' as components;
 @import './utilities/index';

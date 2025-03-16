@@ -1,3 +1,5 @@
+@use '../../designTokens' as css-design-tokens;
+
 .ab-Badge {
   --badge-height: 19px;
   --badge-width: auto;

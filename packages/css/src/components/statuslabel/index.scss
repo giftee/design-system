@@ -1,3 +1,5 @@
+@use '../../designTokens' as css-design-tokens;
+
 .ab-StatusLabel {
   --status-label-padding: #{var(--ab-semantic-spacing-0)}
     #{var(--ab-semantic-spacing-2)};

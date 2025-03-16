@@ -1,3 +1,6 @@
+@use '../../designTokens' as css-design-tokens;
+@use '../../mixins' as mixins;
+
 .ab-Button {
   --button-color: var(--ab-semantic-color-text-contrast);
   --button-font-size: #{css-design-tokens.$font-size-body-s};

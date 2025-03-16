@@ -1,3 +1,6 @@
+@use '../../designTokens' as css-design-tokens;
+@use '../../mixins' as mixins;
+
 .ab-Tabs {
   --tabs-background-color: var(--ab-semantic-color-background-rest-secondary);
   --tabs-height: 48px;

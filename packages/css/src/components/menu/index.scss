@@ -1,3 +1,5 @@
+@use '../../designTokens' as css-design-tokens;
+
 .ab-Menu {
   --menu-font-size: #{css-design-tokens.$font-size-body-s};
 }

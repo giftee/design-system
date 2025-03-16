@@ -1,3 +1,5 @@
+@use '../../designTokens' as css-design-tokens;
+
 .ab-InlineAlert-neutral {
   --inlinealert-header-color: var(--ab-semantic-color-text-default);
   --inlinealert-body-color: var(--ab-semantic-color-text-default);
