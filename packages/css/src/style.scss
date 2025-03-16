@@ -1,4 +1,4 @@
-@import '@giftee/abukuma-design-tokens/scss/index';
+@use '@giftee/abukuma-design-tokens/scss/index' as abukuma-design-tokens;
 @import './designTokens/index';
 @import './variables/index';
 @import './mixins/index';
