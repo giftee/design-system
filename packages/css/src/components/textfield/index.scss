@@ -52,7 +52,7 @@
       color: var(--textfield-input-placeholder-color);
     }
 
-    @include hover {
+    @include mixins.hover {
       border-color: var(--textfield-input-hover-border-color);
     }
 

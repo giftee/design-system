@@ -127,7 +127,7 @@ $checkmark-url: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgd
     }
 
     &:not(:disabled) {
-      @include hover {
+      @include mixins.hover {
         & ~ .ab-Switch-slider {
           background-color: var(--switch-slider-hover-background-color);
         }
@@ -155,7 +155,7 @@ $checkmark-url: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgd
 
     &:checked {
       &:not(:disabled) {
-        @include hover {
+        @include mixins.hover {
           & ~ .ab-Switch-slider {
             background-color: var(
               --switch-slider-checked-hover-background-color

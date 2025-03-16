@@ -62,7 +62,7 @@
 .ab-Table-select {
   & .ab-Table-body {
     &-row {
-      @include hover {
+      @include mixins.hover {
         background-color: var(--ab-semantic-color-background-brand-secondary);
         cursor: pointer;
       }

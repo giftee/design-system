@@ -45,7 +45,7 @@
     text-decoration: var(--linktext-focus-text-decoration);
   }
 
-  @include hover {
+  @include mixins.hover {
     color: var(--linktext-hover-color);
     text-decoration: var(--linktext-hover-text-decoration);
   }
