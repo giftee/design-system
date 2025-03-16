@@ -18,7 +18,7 @@ touch dist/scss/index.scss
 for scss_file in ${scss_files[@]}
 do
   scss_filename=`basename ${scss_file}`
-  echo "@import \"${scss_filename}\";" >> dist/scss/index.scss
+  echo "@use \"${scss_filename}\";" >> dist/scss/index.scss
 done
 
 cjs_files=`find dist/cjs -type f -name "*.js"`
