@@ -1,0 +1,54 @@
+name: design_tokens_update
+
+on:
+  schedule:
+    - cron: "0 6 * * MON-FRI"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+      FIGMA_FILE_KEY: ${{ secrets.FIGMA_FILE_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - run: npm install -g corepack@latest
+      - run: corepack enable
+      - name: Set up node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.9.0"
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Update
+        run: |
+          pnpm update-design-tokens
+          pnpm format:fix
+        working-directory: ./packages/designTokens
+      - name: Create PR if needed
+        run: |
+          if [[ `git status --porcelain` ]]; then
+              echo "changed"
+              git diff --name-only
+              git config user.name github-actions
+              git config user.email github-actions@github.com
+
+              CURRENT_DATETIME=$(date +'%Y%m%d%H%M')
+              BRANCH_NAME="feature/designTokens/figma_diff_$CURRENT_DATETIME"
+
+              git switch -c $BRANCH_NAME
+              git add .
+              git commit -m "[DesignToken] Figma との差分吸収_$CURRENT_DATETIME"
+              git push -u origin $BRANCH_NAME
+              gh pr create --base $BASE_BRANCH --title "[DesignToken] Figma との差分吸収_$CURRENT_DATETIME" --body "PR 作成は自動化されています。" --head $(git branch --show-current)
+              PR_URL=$(gh pr view --json url $BRANCH_NAME --jq .url)
+
+              curl -s -X POST -H 'Content-Type: application/json' \
+                -d '{ "text": "Figma と DesignToken に差分があるので確認してください！\n $PR_URL"}' \
+                ${{ secrets.DESIGN_SYSTEM_SLACK_WEBHOOK_URL }}
+          else
+              echo "no change"
+          fi
+        working-directory: ./packages/designTokens
