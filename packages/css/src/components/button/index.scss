@@ -1,6 +1,6 @@
 .ab-Button {
   --button-color: var(--ab-semantic-color-text-contrast);
-  --button-font-size: #{$font-size-body-s};
+  --button-font-size: #{css-design-tokens.$font-size-body-s};
   --button-font-weight: var(--ab-semantic-typography-font-weight-bold);
   --button-background-color: var(--ab-semantic-color-background-brand-primary);
   --button-border-color: var(--ab-semantic-color-border-brand);
@@ -133,17 +133,17 @@
 }
 
 .ab-Button-xsmall {
-  --button-font-size: #{$font-size-body-xs};
+  --button-font-size: #{css-design-tokens.$font-size-body-xs};
   --button-height: 36px;
 }
 
 .ab-Button-small {
-  --button-font-size: #{$font-size-body-s};
+  --button-font-size: #{css-design-tokens.$font-size-body-s};
   --button-height: 42px;
 }
 
 .ab-Button-large {
-  --button-font-size: #{$font-size-body-m};
+  --button-font-size: #{css-design-tokens.$font-size-body-m};
   --button-height: 56px;
 }
 

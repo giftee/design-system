@@ -1,5 +1,5 @@
 .ab-Menu {
-  --menu-font-size: #{$font-size-body-s};
+  --menu-font-size: #{css-design-tokens.$font-size-body-s};
 }
 
 .ab-Menu-item {
@@ -23,7 +23,7 @@
 }
 
 .ab-Menu-medium {
-  --menu-font-size: #{$font-size-body-s};
+  --menu-font-size: #{css-design-tokens.$font-size-body-s};
 
   .ab-Menu-item {
     --menu-item-height: 56px;
@@ -31,7 +31,7 @@
 }
 
 .ab-Menu-small {
-  --menu-font-size: #{$font-size-body-xs};
+  --menu-font-size: #{css-design-tokens.$font-size-body-xs};
 
   .ab-Menu-item {
     --menu-item-height: 42px;

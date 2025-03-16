@@ -7,7 +7,7 @@
     visibility 0.15s ease-in-out;
   padding: 0;
   position: absolute;
-  z-index: $zindex-overlap;
+  z-index: css-design-tokens.$zindex-overlap;
   display: none;
   overflow: auto;
 

@@ -47,7 +47,7 @@ $checkmark-url: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgd
 }
 
 .ab-Switch-label {
-  --switch-label-font-size: #{$font-size-body-s};
+  --switch-label-font-size: #{css-design-tokens.$font-size-body-s};
   --switch-label-color: var(--ab-semantic-color-text-default);
   --switch-label-disabled-color: var(--ab-semantic-color-text-secondary);
 }

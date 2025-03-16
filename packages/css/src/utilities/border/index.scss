@@ -6,12 +6,12 @@ $sides: (
 );
 
 .ab-border {
-  border: $border;
+  border: css-design-tokens.$border;
 }
 
 @each $sideKey, $sideValue in $sides {
   .ab-border-#{$sideValue} {
-    border-#{$sideKey}: #{$border};
+    border-#{$sideKey}: #{css-design-tokens.$border};
   }
 }
 

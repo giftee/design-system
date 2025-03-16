@@ -76,8 +76,8 @@ $sizes: (
 );
 
 // Width/Hight
-@each $breakpoint, $variant in $responsive-variants {
-  @include breakpoint($breakpoint) {
+@each $breakpoint, $variant in css-design-tokens.$responsive-variants {
+  @include css-design-tokens.breakpoint($breakpoint) {
     @each $sizeKey, $sizeValue in $sizes {
       .ab#{$variant}-w-#{$sizeKey} {
         width: $sizeValue;
@@ -118,8 +118,8 @@ $sizes: (
 }
 
 // Min
-@each $breakpoint, $variant in $responsive-variants {
-  @include breakpoint($breakpoint) {
+@each $breakpoint, $variant in css-design-tokens.$responsive-variants {
+  @include css-design-tokens.breakpoint($breakpoint) {
     .ab#{$variant}-min-w-full {
       min-width: 100%;
     }
@@ -158,8 +158,8 @@ $sizes: (
 }
 
 // Max
-@each $breakpoint, $variant in $responsive-variants {
-  @include breakpoint($breakpoint) {
+@each $breakpoint, $variant in css-design-tokens.$responsive-variants {
+  @include css-design-tokens.breakpoint($breakpoint) {
     .ab#{$variant}-max-w-full {
       max-width: 100%;
     }

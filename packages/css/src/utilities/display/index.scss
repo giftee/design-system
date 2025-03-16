@@ -10,8 +10,8 @@ $display-values: (
   table-cell
 ) !default;
 
-@each $breakpoint, $variant in $responsive-variants {
-  @include breakpoint($breakpoint) {
+@each $breakpoint, $variant in css-design-tokens.$responsive-variants {
+  @include css-design-tokens.breakpoint($breakpoint) {
     @each $display in $display-values {
       .ab#{$variant}-#{$display} {
         display: $display;

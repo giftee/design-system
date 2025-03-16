@@ -18,7 +18,7 @@
   border-radius: var(--ab-semantic-border-radius-md);
   height: var(--badge-height);
   width: var(--badge-width);
-  font-size: $font-size-body-xs;
+  font-size: css-design-tokens.$font-size-body-xs;
   padding: var(--badge-padding);
 
   &-dot {

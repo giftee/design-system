@@ -1,5 +1,5 @@
-@each $breakpoint, $variant in $responsive-variants {
-  @include breakpoint($breakpoint) {
+@each $breakpoint, $variant in css-design-tokens.$responsive-variants {
+  @include css-design-tokens.breakpoint($breakpoint) {
     @each $overflow in (visible, hidden, auto, scroll) {
       .ab#{$variant}-overflow-#{$overflow} {
         overflow: $overflow;

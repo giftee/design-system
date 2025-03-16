@@ -10,7 +10,7 @@
     padding: var(--ab-semantic-spacing-1) var(--ab-semantic-spacing-2);
     background-color: var(--ab-semantic-color-background-brand-primary);
     color: var(--ab-semantic-color-text-contrast);
-    font-size: $font-size-body-xs;
+    font-size: css-design-tokens.$font-size-body-xs;
     font-weight: var(--ab-semantic-typography-font-weight-bold);
     max-inline-size: 200px;
     overflow-wrap: break-word;

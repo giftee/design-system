@@ -1,5 +1,5 @@
 .ab-Textfield {
-  --textfield-font-size: $font-size-body-m;
+  --textfield-font-size: css-design-tokens.$font-size-body-m;
 }
 
 .ab-Textfield-input {
@@ -30,7 +30,7 @@
     align-items: center;
     gap: var(--ab-semantic-spacing-2);
     margin-bottom: var(--ab-semantic-spacing-4);
-    font-size: $font-size-body-m;
+    font-size: css-design-tokens.$font-size-body-m;
     color: var(--ab-semantic-color-text-default);
   }
 
@@ -74,7 +74,7 @@
 
   &-helptext {
     padding-top: var(--ab-semantic-spacing-1);
-    font-size: $font-size-body-xs;
+    font-size: css-design-tokens.$font-size-body-xs;
     color: var(--ab-semantic-color-text-default);
   }
 }

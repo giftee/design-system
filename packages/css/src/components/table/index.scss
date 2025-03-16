@@ -1,6 +1,6 @@
 .ab-Table {
   width: 100%;
-  font-size: $font-size-body-s;
+  font-size: css-design-tokens.$font-size-body-s;
   border-collapse: separate;
   border-spacing: 0 var(--ab-semantic-spacing-2);
 
@@ -44,16 +44,16 @@
   & .ab-Table-body {
     &-row {
       & td {
-        border-top: $border;
-        border-bottom: $border;
+        border-top: css-design-tokens.$border;
+        border-bottom: css-design-tokens.$border;
       }
 
       & td:first-child {
-        border-left: $border;
+        border-left: css-design-tokens.$border;
       }
 
       & td:last-child {
-        border-right: $border;
+        border-right: css-design-tokens.$border;
       }
     }
   }

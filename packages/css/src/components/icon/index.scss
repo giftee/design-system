@@ -24,7 +24,7 @@
   width: var(--icon-size);
   color: inherit;
   fill: currentColor;
-  line-height: $line-height-none;
+  line-height: css-design-tokens.$line-height-none;
 
   &-small,
   &-medium {

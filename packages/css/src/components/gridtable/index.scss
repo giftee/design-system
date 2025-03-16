@@ -1,6 +1,6 @@
 .ab-GridTable {
   width: 100%;
-  font-size: $font-size-body-s;
+  font-size: css-design-tokens.$font-size-body-s;
   display: grid;
   grid-template-columns: repeat(var(--ab-gridtable-columns-count), auto);
 
@@ -68,7 +68,7 @@
   }
 
   &-cell-border {
-    border-top: $border;
+    border-top: css-design-tokens.$border;
   }
 
   &-row:first-child &-cell-border {
@@ -78,7 +78,7 @@
 
 .ab-GridTable-bordered {
   & .ab-GridTable-rowgroup {
-    border: $border;
+    border: css-design-tokens.$border;
   }
 }
 

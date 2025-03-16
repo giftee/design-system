@@ -65,13 +65,13 @@
     align-items: center;
     column-gap: var(--ab-semantic-spacing-2);
     color: var(--inlinealert-header-color);
-    font-size: $font-size-body-s;
+    font-size: css-design-tokens.$font-size-body-s;
     font-weight: var(--ab-semantic-typography-font-weight-bold);
   }
 
   &-description {
     color: var(--inlinealert-body-color);
-    font-size: $font-size-body-s;
+    font-size: css-design-tokens.$font-size-body-s;
     font-weight: var(--ab-semantic-typography-font-weight-regular);
   }
 }
