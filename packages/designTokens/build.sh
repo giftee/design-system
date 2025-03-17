@@ -3,7 +3,7 @@
 echo "Start Building"
 
 rm -rf dist
-pnpm node-build
+NODE_OPTIONS="--experimental-json-modules" pnpm node-build
 
 css_files=`find dist/css -type f -name "*.css"`
 touch dist/css/index.css

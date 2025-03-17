@@ -1,4 +1,4 @@
-const StyleDictionaryPackage = require('style-dictionary');
+import StyleDictionary from 'style-dictionary';
 
 const PATH = 'tokens';
 const getStyleDictionaryConfig = (brand) => {
@@ -8,6 +8,7 @@ const getStyleDictionaryConfig = (brand) => {
       `${PATH}/semantics/common/**/*.json`,
       `${PATH}/semantics/brands/${brand}/*.json`,
     ],
+    parsers: ['w3c-token-parser'],
     platforms: {
       web: {
         transformGroup: 'web',
@@ -78,9 +79,10 @@ const getStyleDictionaryConfig = (brand) => {
 
 // style-dictionary は W3C spec に準拠していないため、W3C spec を style-dictionary に合わせる
 // https://github.com/lukasoppermann/style-dictionary-utils/blob/main/src/parser/w3c-token-json-parser.ts
-StyleDictionaryPackage.registerParser({
+StyleDictionary.registerParser({
+  name: 'w3c-token-parser',
   pattern: /\.json$|\.tokens\.json$|\.tokens$/,
-  parse: ({ contents }) => {
+  parser: ({ contents }) => {
     const preparedContent = (contents || '{}')
       .replace(/"\$?value"\s*:/g, '"value":')
       .replace(/"\$?type"\s*:/g, '"type":')
@@ -90,42 +92,44 @@ StyleDictionaryPackage.registerParser({
 });
 
 // グローバルトークンとセマンティクストークンのファイルを分けるためのフィルター
-StyleDictionaryPackage.registerFilter({
+StyleDictionary.registerFilter({
   name: 'isGlobal',
-  matcher: function (token) {
+  filter: function (token) {
     return token?.attributes?.category === 'global';
   },
 });
-StyleDictionaryPackage.registerFilter({
+StyleDictionary.registerFilter({
   name: 'isSemantic',
-  matcher: function (token) {
+  filter: function (token) {
     return token?.attributes?.category === 'semantic';
   },
 });
 
 // token.attributes.category は global/semantics になり size/px のデフォルトマッチャーに合わないのでカスタマイズ
 // https://amzn.github.io/style-dictionary/#/transforms?id=sizepx
-StyleDictionaryPackage.registerTransform({
+StyleDictionary.registerTransform({
   name: 'size/px',
   type: 'value',
-  matcher: function (token) {
+  filter: function (token) {
     return token.attributes.type === 'size';
   },
-  transformer: function (token) {
+  transform: function (token) {
     return `${token.value}px`;
   },
 });
 
-StyleDictionaryPackage.registerTransformGroup({
+StyleDictionary.registerTransformGroup({
   name: 'js',
-  transforms: ['attribute/cti', 'name/cti/kebab', 'size/px', 'color/hex'],
+  transforms: ['attribute/cti', 'name/kebab', 'size/px', 'color/hex'],
 });
+
+import { usesReferences, getReferences } from 'style-dictionary/utils';
 
 // マルチブランド対応：ブランド名をセレクタに追加
 // https://github.com/amzn/style-dictionary/blob/main/examples/advanced/multi-brand-multi-platform/build.js
-StyleDictionaryPackage.registerFormat({
+StyleDictionary.registerFormat({
   name: 'css/variables',
-  formatter: function ({ dictionary, options }) {
+  format: function ({ dictionary, options }) {
     const selector =
       this.selector === `[data-theme='${DEFAULT_BRAND}']`
         ? `${this.selector},${NOT_DEFAULT_BRANDS.map(
@@ -142,8 +146,8 @@ ${dictionary.allTokens
         : JSON.stringify(token.value);
 
     if (options.outputReferences) {
-      if (dictionary.usesReference(token.original.value)) {
-        const refs = dictionary.getReferences(token.original.value);
+      if (usesReferences(token.original.value, dictionary.tokens)) {
+        const refs = getReferences(token.original.value, dictionary.tokens);
         refs.forEach((ref) => {
           value = value.replace(ref.value, function () {
             return ref.name;
@@ -166,16 +170,16 @@ const DEFAULT_BRAND = 'g4b-light';
 const NOT_DEFAULT_BRANDS = ['g4b-dark', 'skeleton-light'];
 const BRANDS = [DEFAULT_BRAND, ...NOT_DEFAULT_BRANDS];
 
-BRANDS.map((brand) => {
+// Use Promise.all to run all builds in parallel
+await Promise.all(BRANDS.map(async (brand) => {
   console.log('\n==============================================');
   console.log(`\nProcessing: ${brand}`);
 
-  const StyleDictionary = StyleDictionaryPackage.extend(
-    getStyleDictionaryConfig(brand),
-  );
-  StyleDictionary.buildAllPlatforms();
+  const sd = new StyleDictionary(getStyleDictionaryConfig(brand));
+  await sd.hasInitialized;
+  await sd.buildAllPlatforms();
 
   console.log('\nEnd processing');
-});
+}));
 
 console.log('\nBuild completed!');
