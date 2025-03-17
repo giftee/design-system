@@ -1,6 +1,7 @@
 {
   "name": "@giftee/abukuma-design-tokens",
   "version": "1.0.0",
+  "type": "module",
   "license": "MIT",
   "description": "Design Tokens of Giftee Design System",
   "style": "dist/css/index.css",
@@ -34,7 +35,7 @@
   },
   "devDependencies": {
     "prettier": "^3.5.3",
-    "style-dictionary": "^3.9.2"
+    "style-dictionary": "^4.0.0"
   },
   "engines": {
     "node": ">=18.0.0"
