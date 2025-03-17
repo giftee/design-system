@@ -171,15 +171,17 @@ const NOT_DEFAULT_BRANDS = ['g4b-dark', 'skeleton-light'];
 const BRANDS = [DEFAULT_BRAND, ...NOT_DEFAULT_BRANDS];
 
 // Use Promise.all to run all builds in parallel
-await Promise.all(BRANDS.map(async (brand) => {
-  console.log('\n==============================================');
-  console.log(`\nProcessing: ${brand}`);
+await Promise.all(
+  BRANDS.map(async (brand) => {
+    console.log('\n==============================================');
+    console.log(`\nProcessing: ${brand}`);
 
-  const sd = new StyleDictionary(getStyleDictionaryConfig(brand));
-  await sd.hasInitialized;
-  await sd.buildAllPlatforms();
+    const sd = new StyleDictionary(getStyleDictionaryConfig(brand));
+    await sd.hasInitialized;
+    await sd.buildAllPlatforms();
 
-  console.log('\nEnd processing');
-}));
+    console.log('\nEnd processing');
+  }),
+);
 
 console.log('\nBuild completed!');
