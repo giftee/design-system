@@ -1,5 +1,14 @@
 # @giftee/abukuma-css
 
+## 1.1.2
+
+### Patch Changes
+
+- [#376](https://github.com/giftee/design-system/pull/376) [`98d230b`](https://github.com/giftee/design-system/commit/98d230b15fcd4e7a32f2ca9facfce7c6bb397b41) Thanks [@egurinko](https://github.com/egurinko)! - [enhancement] @import の deprecation warning に対応
+
+- Updated dependencies [[`8727de5`](https://github.com/giftee/design-system/commit/8727de5481cf8182863406e665f8745243dced6c), [`7962ed2`](https://github.com/giftee/design-system/commit/7962ed28709cfaea8108c7f0ca51380f354bba68)]:
+  - @giftee/abukuma-design-tokens@1.0.1
+
 ## 1.1.1
 
 ### Patch Changes
