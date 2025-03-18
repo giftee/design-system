@@ -1,5 +1,13 @@
 # @giftee/abukuma-design-tokens
 
+## 1.0.1
+
+### Patch Changes
+
+- [#379](https://github.com/giftee/design-system/pull/379) [`8727de5`](https://github.com/giftee/design-system/commit/8727de5481cf8182863406e665f8745243dced6c) Thanks [@egurinko](https://github.com/egurinko)! - [enhancement] sass の @import の deprecation warning に対応
+
+- [#381](https://github.com/giftee/design-system/pull/381) [`7962ed2`](https://github.com/giftee/design-system/commit/7962ed28709cfaea8108c7f0ca51380f354bba68) Thanks [@egurinko](https://github.com/egurinko)! - [enhancement] type: module にして、デフォルトを esm で扱えるようにする
+
 ## 1.0.0
 
 ### Major Changes
