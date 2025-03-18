@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "description": "Design Tokens of Giftee Design System",
+  "type": "module",
   "style": "dist/css/index.css",
   "main": "dist/cjs/index.js",
   "typings": "dist/types/index.d.ts",

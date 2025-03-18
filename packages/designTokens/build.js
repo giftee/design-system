@@ -1,4 +1,4 @@
-const StyleDictionaryPackage = require('style-dictionary');
+import StyleDictionaryPackage from 'style-dictionary';
 
 const PATH = 'tokens';
 const getStyleDictionaryConfig = (brand) => {
