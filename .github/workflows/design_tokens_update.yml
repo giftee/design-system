@@ -42,7 +42,7 @@ jobs:
               git add .
               git commit -m "[DesignToken] Figma との差分吸収_$CURRENT_DATETIME"
               git push -u origin $BRANCH_NAME
-              gh pr create --base $BASE_BRANCH --title "[DesignToken] Figma との差分吸収_$CURRENT_DATETIME" --body "PR 作成は自動化されています。" --head $(git branch --show-current)
+              gh pr create --base $BASE_BRANCH --title "[DesignToken]Figmaとの差分吸収" --body "PR作成は自動化されています。" --head $(git branch --show-current)
               PR_URL=$(gh pr view --json url $BRANCH_NAME --jq .url)
 
               curl -s -X POST -H 'Content-Type: application/json' \
