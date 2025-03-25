@@ -14,6 +14,7 @@ const meta = {
     disabled: false,
     multiline: undefined,
     resize: 'none',
+    slotProps: undefined,
   },
   argTypes: {
     label: {
@@ -69,6 +70,15 @@ const meta = {
         },
       },
       description: 'テキストエリアデフォルト行数',
+    },
+    slotProps: {
+      control: { type: 'object' },
+      table: {
+        defaultValue: {
+          summary: undefined,
+        },
+      },
+      description: 'SlotProps',
     },
   },
 } satisfies Meta<typeof Textfield>;
@@ -169,6 +179,36 @@ export const Disabled: Story = {
           helptext="disabled"
         ></Textfield>
         <Textfield name="notDisabled" {...args}></Textfield>
+      </div>
+    </>
+  ),
+};
+
+export const SlotProps: Story = {
+  render: ({ ...args }: TextfieldProps) => (
+    <>
+      <div className="ab-flex ab-flex-column ab-gap-12">
+        <Textfield
+          name="slotProps"
+          {...args}
+          helptext="slotProps で input tag に ab-w-120 を設定しています"
+          slotProps={{
+            input: {
+              className: 'ab-w-120',
+            },
+          }}
+        />
+        <Textfield
+          name="slotProps"
+          {...args}
+          multiline={5}
+          helptext="slotProps で textarea tag に ab-w-120 を設定しています"
+          slotProps={{
+            textarea: {
+              className: 'ab-w-120',
+            },
+          }}
+        />
       </div>
     </>
   ),

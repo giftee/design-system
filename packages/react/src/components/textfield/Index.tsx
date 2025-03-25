@@ -10,6 +10,10 @@ export type TextfieldProps = ComponentPropsWithoutRef<'input'> &
     error?: boolean;
     multiline?: number;
     resize?: 'vertical' | 'horizontal' | 'both' | 'none';
+    slotProps?: {
+      input?: ComponentPropsWithoutRef<'input'>;
+      textarea?: ComponentPropsWithoutRef<'textarea'>;
+    };
   };
 
 export const Textfield = forwardRef<
@@ -28,6 +32,7 @@ export const Textfield = forwardRef<
       resize = 'none',
       children,
       className,
+      slotProps,
       ...rest
     },
     forwardedRef,
@@ -58,20 +63,28 @@ export const Textfield = forwardRef<
           <input
             id={name}
             name={name}
-            className="ab-Textfield-input"
             ref={forwardedRef}
             required={required}
             {...rest}
+            {...slotProps?.input}
+            className={classNames(
+              'ab-Textfield-input',
+              slotProps?.input?.className,
+            )}
           />
         ) : (
           <textarea
             id={name}
             name={name}
-            className="ab-Textfield-textarea"
             ref={forwardedRef}
             required={required}
             rows={multiline}
             {...rest}
+            {...slotProps?.textarea}
+            className={classNames(
+              'ab-Textfield-textarea',
+              slotProps?.textarea?.className,
+            )}
           />
         )}
         {!!helptext && <div className="ab-Textfield-helptext">{helptext}</div>}
