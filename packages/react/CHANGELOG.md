@@ -1,5 +1,11 @@
 # @giftee/abukuma-react
 
+## 2.1.0
+
+### Minor Changes
+
+- [#396](https://github.com/giftee/design-system/pull/396) [`3b939d5`](https://github.com/giftee/design-system/commit/3b939d55a1e8742755a06bbba87dd5e6b0380f80) Thanks [@egurinko](https://github.com/egurinko)! - [add:Textfield] slotProps を導入し input/textarea に props を渡せるようにする
+
 ## 2.0.3
 
 ### Patch Changes
