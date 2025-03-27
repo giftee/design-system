@@ -8,7 +8,6 @@
         "600": { "$type": "color", "$value": "rgba(255, 255, 255, 0.75)" },
         "800": { "$type": "color", "$value": "#ffffff" }
       },
-      "other": { "danger": { "$type": "color", "$value": "#00ffd1" } },
       "steel": {
         "50": { "$type": "color", "$value": "#f6f7f8" },
         "70": { "$type": "color", "$value": "#eaeef0" },
@@ -29,6 +28,16 @@
         "900": { "$type": "color", "$value": "#002a43" }
       },
       "coral": {
+        "50": { "$type": "color", "$value": "#faf6f5" },
+        "70": { "$type": "color", "$value": "#f7ebe8" },
+        "100": { "$type": "color", "$value": "#fbe1da" },
+        "200": { "$type": "color", "$value": "#f9cec3" },
+        "400": { "$type": "color", "$value": "#f4ac99" },
+        "600": { "$type": "color", "$value": "#f08b71" },
+        "800": { "$type": "color", "$value": "#7b3522" },
+        "900": { "$type": "color", "$value": "#502419" }
+      },
+      "forest": {
         "50": { "$type": "color", "$value": "#faf6f5" },
         "70": { "$type": "color", "$value": "#f7ebe8" },
         "100": { "$type": "color", "$value": "#fbe1da" },
