@@ -19,6 +19,7 @@ ${createComponent({
       Top
     </div>
   `,
+  name: 'image',
 })}
   `;
   },
