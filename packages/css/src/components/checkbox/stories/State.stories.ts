@@ -14,12 +14,14 @@ export const State: Story = {
     ...args,
     checked: true,
     id: 'default',
+    name: 'default-checked',
     children: 'Default',
   })}
   ${createComponent({
     ...args,
     checked: false,
     id: 'default',
+    name: 'default-notchecked',
     children: 'Default',
   })}
 </div>
@@ -28,12 +30,14 @@ export const State: Story = {
     ...args,
     checked: true,
     id: 'hover',
+    name: 'hover-checked',
     children: 'Hover',
   })}
   ${createComponent({
     ...args,
     checked: false,
     id: 'hover',
+    name: 'hover-notchecked',
     children: 'Hover',
   })}
 </div>
@@ -42,12 +46,14 @@ export const State: Story = {
     ...args,
     checked: true,
     id: 'focus',
+    name: 'focus-checked',
     children: 'Focus',
   })}
   ${createComponent({
     ...args,
     checked: false,
     id: 'focus',
+    name: 'focus-notchecked',
     children: 'Focus',
   })}
 </div>
@@ -56,12 +62,14 @@ export const State: Story = {
     ...args,
     checked: true,
     id: 'active',
+    name: 'active-checked',
     children: 'Active',
   })}
   ${createComponent({
     ...args,
     checked: false,
     id: 'active',
+    name: 'active-notchecked',
     children: 'Active',
   })}
 </div>
@@ -70,12 +78,14 @@ export const State: Story = {
     ...args,
     checked: true,
     id: 'disabled',
+    name: 'disabled-checked',
     children: 'Disabled',
   })}
   ${createComponent({
     ...args,
     checked: false,
     id: 'disabled',
+    name: 'disabled-notchecked',
     children: 'Disabled',
   })}
 </div>

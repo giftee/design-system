@@ -23,6 +23,7 @@ export type Story = StoryObj<Args>;
 type ComponentArgs = Args & {
   children?: React.ReactNode;
   id?: 'default' | 'hover' | 'active' | 'focus' | 'disabled';
+  name?: string;
 };
 
 export const createComponent = ({
@@ -30,15 +31,16 @@ export const createComponent = ({
   children = '',
   position = 'right',
   id = 'default',
+  name = '',
 }: ComponentArgs): string => {
   const positionClass = `position-${position}`;
 
   return `<div id="${id}" class="ab-Checkbox-wrapper ${positionClass} ${
     id === 'disabled' ? 'is-disabled' : ''
   }">
-  <label for="${id}" class="ab-Checkbox-label">${children}</label>
+  <label for="${name}" class="ab-Checkbox-label">${children}</label>
   <div class="ab-Checkbox">
-    <input type="checkbox" id="${id}" ${
+    <input type="checkbox" name="${name}" id="${name}" ${
       checked ? 'checked' : ''
     } class="ab-Checkbox-input" />
     <span class="ab-Checkbox-box"></span>

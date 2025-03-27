@@ -13,21 +13,25 @@ ${createComponent({
   ...args,
   position: 'top',
   children: 'Top',
+  name: 'top',
 })}
 ${createComponent({
   ...args,
   position: 'right',
   children: 'Right',
+  name: 'right',
 })}
 ${createComponent({
   ...args,
   position: 'bottom',
   children: 'Bottom',
+  name: 'bottom',
 })}
 ${createComponent({
   ...args,
   position: 'left',
   children: 'Left',
+  name: 'left',
 })}
   `;
   },
