@@ -75,6 +75,13 @@
     min-height: var(--textfield-input-height);
   }
 
+  &-error-message {
+    padding-top: var(--ab-semantic-spacing-1);
+    font-size: css-design-tokens.$font-size-body-xs;
+    color: var(--ab-semantic-color-text-negative);
+    font-weight: var(--ab-semantic-typography-font-weight-bold);
+  }
+
   &-helptext {
     padding-top: var(--ab-semantic-spacing-1);
     font-size: css-design-tokens.$font-size-body-xs;
@@ -118,9 +125,5 @@
 .ab-Textfield-helptext {
   .is-disabled & {
     color: var(--ab-semantic-color-text-secondary);
-  }
-
-  .is-error & {
-    color: var(--ab-semantic-color-text-negative);
   }
 }
