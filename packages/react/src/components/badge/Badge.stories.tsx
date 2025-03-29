@@ -6,9 +6,6 @@ const meta = {
   title: 'Badge',
   tags: ['autodocs'],
   component: Badge,
-  args: {
-    isDot: false,
-  },
   argTypes: {
     isDot: {
       control: { type: 'boolean' },

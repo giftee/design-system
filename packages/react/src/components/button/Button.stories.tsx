@@ -7,9 +7,7 @@ const meta = {
   tags: ['autodocs'],
   component: Button,
   args: {
-    variant: 'default',
-    size: 'small',
-    children: 'ButtonText',
+    children: 'ラベル',
   },
   argTypes: {
     variant: {
@@ -31,6 +29,44 @@ const meta = {
         },
       },
       description: 'サイズ',
+    },
+    component: {
+      control: { type: 'select' },
+      options: [undefined, 'a'],
+      table: {
+        defaultValue: {
+          summary: 'undefined',
+        },
+        type: {
+          summary: 'React.ElementType',
+        },
+      },
+      description: 'component',
+    },
+    onClick: {
+      control: { disable: true },
+      table: {
+        defaultValue: {
+          summary: 'undefined',
+        },
+        type: {
+          summary:
+            '(event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => void',
+        },
+      },
+      description: 'onClick',
+    },
+    children: {
+      control: { disable: true },
+      table: {
+        defaultValue: {
+          summary: 'undefined',
+        },
+        type: {
+          summary: 'React.ReactNode',
+        },
+      },
+      description: 'children',
     },
   },
 } satisfies Meta<typeof Button>;

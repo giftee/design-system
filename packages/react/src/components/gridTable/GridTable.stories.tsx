@@ -18,6 +18,7 @@ const meta = {
         defaultValue: {
           summary: '4',
         },
+        category: 'GridTable.Root',
       },
       description: 'ヘッダーカラム数',
     },
@@ -27,6 +28,7 @@ const meta = {
         defaultValue: {
           summary: 'false',
         },
+        category: 'GridTable.Root',
       },
       description: '行選択',
     },
@@ -36,8 +38,94 @@ const meta = {
         defaultValue: {
           summary: 'false',
         },
+        category: 'GridTable.Root',
       },
       description: '行ボーダー',
+    },
+    // @ts-expect-error Subcomponent 用
+    'align(GridTable.HeaderCell)': {
+      table: {
+        defaultValue: {
+          summary: 'left',
+        },
+        type: {
+          summary: 'center | left | right',
+        },
+        category: 'GridTable.HeaderCell',
+      },
+      description: 'ヘッダーセル Align',
+    },
+    columnStart: {
+      table: {
+        defaultValue: {
+          summary: 'undefined',
+        },
+        type: {
+          summary: 'number',
+        },
+        category: 'GridTable.RowGroup',
+      },
+      description: 'カラム方向 GridStart',
+    },
+    columnEnd: {
+      table: {
+        defaultValue: {
+          summary: 'undefined',
+        },
+        type: {
+          summary: 'number',
+        },
+        category: 'GridTable.RowGroup',
+      },
+      description: 'カラム方向 GridEnd',
+    },
+    'align(GridTable.BodyCell)': {
+      table: {
+        defaultValue: {
+          summary: 'left',
+        },
+        type: {
+          summary: 'center | left | right',
+        },
+        category: 'GridTable.BodyCell',
+      },
+      description: 'ボディセル Align',
+    },
+    rowSpan: {
+      table: {
+        defaultValue: {
+          summary: 'undefined',
+        },
+        type: {
+          summary: 'number',
+        },
+        category: 'GridTable.BodyCell',
+      },
+      description: 'rowspan',
+    },
+    colSpan: {
+      table: {
+        defaultValue: {
+          summary: 'undefined',
+        },
+        type: {
+          summary: 'number',
+        },
+        category: 'GridTable.BodyCell',
+      },
+      description: 'colspan',
+    },
+    'isBordered(GridTable.BodyCell)': {
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+        type: {
+          summary: 'boolean',
+        },
+        category: 'GridTable.BodyCell',
+      },
+      description: 'セルボーダー',
     },
   },
 } satisfies Meta<GridTable.RootProps>;

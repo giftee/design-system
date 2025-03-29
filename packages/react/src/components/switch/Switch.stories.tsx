@@ -30,18 +30,12 @@ export const Base: Story = {
   render: ({ ...args }: SwitchProps) => (
     <div className="ab-flex ab-flex-column ab-gap-4">
       <div className="ab-flex ab-flex-row ab-gap-2">
-        <Switch checked={true} id="default" {...args}>
-          Default
-        </Switch>
-        <Switch checked={false} id="default" {...args}>
+        <Switch id="default" {...args}>
           Default
         </Switch>
       </div>
       <div className="ab-flex ab-flex-row ab-gap-2">
-        <Switch disabled={true} checked={true} {...args}>
-          Disabled
-        </Switch>
-        <Switch disabled={true} checked={false} {...args}>
+        <Switch disabled={true} {...args}>
           Disabled
         </Switch>
       </div>

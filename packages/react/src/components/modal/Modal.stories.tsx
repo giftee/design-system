@@ -1,5 +1,5 @@
 import dialogPolyfill from 'dialog-polyfill';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, BaseSyntheticEvent } from 'react';
 import {
   Modal,
   Button,
@@ -25,7 +25,32 @@ const meta = {
   tags: ['autodocs'],
   component: Modal.Root,
   args: {},
-  argTypes: {},
+  argTypes: {
+    onCancel: {
+      control: { disable: true },
+      table: {
+        defaultValue: {
+          summary: 'undefined',
+        },
+        type: {
+          summary: '(event: React.BaseSyntheticEvent) => void',
+        },
+      },
+      description: 'onCancel',
+    },
+    onClose: {
+      control: { disable: true },
+      table: {
+        defaultValue: {
+          summary: 'undefined',
+        },
+        type: {
+          summary: '(event: React.BaseSyntheticEvent) => void',
+        },
+      },
+      description: 'onClose',
+    },
+  },
 } satisfies Meta<Modal.RootProps>;
 
 export default meta;

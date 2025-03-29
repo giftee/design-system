@@ -33,6 +33,18 @@ const meta = {
       },
       description: 'サイズ',
     },
+    children: {
+      control: { disable: true },
+      table: {
+        defaultValue: {
+          summary: 'undefined',
+        },
+        type: {
+          summary: 'React.ReactNode',
+        },
+      },
+      description: 'children',
+    },
   },
 } satisfies Meta<typeof IconButton>;
 

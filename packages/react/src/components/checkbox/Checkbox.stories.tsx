@@ -20,6 +20,30 @@ const meta = {
       },
       description: 'ラベル位置',
     },
+    name: {
+      control: { type: 'text' },
+      table: {
+        defaultValue: {
+          summary: 'undefined',
+        },
+        type: {
+          summary: 'string',
+        },
+      },
+      description: 'Checkbox の name。label と input を紐づけるのに必須',
+    },
+    disabled: {
+      control: { type: 'boolean' },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+        type: {
+          summary: 'boolean',
+        },
+      },
+      description: '非活性',
+    },
   },
 } satisfies Meta<typeof Checkbox>;
 

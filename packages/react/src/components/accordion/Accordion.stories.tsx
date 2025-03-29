@@ -5,9 +5,6 @@ const meta = {
   title: 'Accordion',
   tags: ['autodocs'],
   component: Accordion.Root,
-  args: {
-    size: 'medium',
-  },
   argTypes: {
     size: {
       control: { type: 'select' },
@@ -18,6 +15,15 @@ const meta = {
         },
       },
       description: 'サイズ',
+    },
+    disabled: {
+      control: { type: 'boolean' },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+      description: '非活性',
     },
   },
 } satisfies Meta<Accordion.RootProps>;

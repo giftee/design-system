@@ -29,6 +29,18 @@ const meta = {
       },
       description: 'ラベル',
     },
+    name: {
+      control: { type: 'text' },
+      table: {
+        defaultValue: {
+          summary: 'undefined',
+        },
+        type: {
+          summary: 'string',
+        },
+      },
+      description: 'Select の name。label と input を紐づけるのに必須',
+    },
     helptext: {
       control: { type: 'text' },
       table: {
