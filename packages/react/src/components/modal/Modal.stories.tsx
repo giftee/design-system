@@ -1,5 +1,5 @@
 import dialogPolyfill from 'dialog-polyfill';
-import { useRef, useState, useEffect, BaseSyntheticEvent } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import {
   Modal,
   Button,
