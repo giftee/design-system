@@ -8,6 +8,7 @@ export type TextfieldProps = ComponentPropsWithoutRef<'input'> &
     label?: string;
     helptext?: string;
     error?: boolean;
+    errorMessages?: string[] | string;
     multiline?: number;
     resize?: 'vertical' | 'horizontal' | 'both' | 'none';
     slotProps?: {
@@ -25,6 +26,7 @@ export const Textfield = forwardRef<
       label,
       helptext,
       error,
+      errorMessages,
       name,
       required,
       disabled,
@@ -86,6 +88,15 @@ export const Textfield = forwardRef<
               slotProps?.textarea?.className,
             )}
           />
+        )}
+        {!errorMessages ? null : typeof errorMessages === 'string' ? (
+          <div className="ab-Textfield-error-message">{errorMessages}</div>
+        ) : (
+          errorMessages.map((errorMessage) => (
+            <div key={errorMessage} className="ab-Textfield-error-message">
+              {errorMessage}
+            </div>
+          ))
         )}
         {!!helptext && <div className="ab-Textfield-helptext">{helptext}</div>}
       </div>

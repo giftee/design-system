@@ -10,6 +10,7 @@ const meta = {
     label: 'label',
     helptext: 'helptext',
     error: false,
+    errorMessages: undefined,
     required: false,
     disabled: false,
     multiline: undefined,
@@ -39,10 +40,26 @@ const meta = {
       control: { type: 'boolean' },
       table: {
         defaultValue: {
-          summary: 'false',
+          summary: 'undefined',
         },
       },
-      description: 'エラー',
+      description: 'エラー有無',
+    },
+    errorMessages: {
+      control: { type: 'select' },
+      options: [
+        '単一エラーメッセージ',
+        ['複数エラーメッセージ1', '複数エラーメッセージ2'],
+      ],
+      table: {
+        defaultValue: {
+          summary: 'undefined',
+        },
+        type: {
+          summary: 'string | string[]',
+        },
+      },
+      description: 'エラーメッセージ',
     },
     required: {
       control: { type: 'boolean' },
@@ -157,10 +174,16 @@ export const Error: Story = {
     <>
       <div className="ab-flex ab-flex-column ab-gap-12">
         <Textfield
-          name="error"
+          name="single-error"
           {...args}
           error={true}
-          helptext="エラーメッセージ"
+          errorMessages="単一エラーメッセージ"
+        ></Textfield>
+        <Textfield
+          name="multi-errors"
+          {...args}
+          error={true}
+          errorMessages={['複数エラーメッセージ1', '複数エラーメッセージ2']}
         ></Textfield>
         <Textfield name="notError" {...args}></Textfield>
       </div>
