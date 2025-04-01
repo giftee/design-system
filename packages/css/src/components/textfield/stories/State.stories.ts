@@ -87,7 +87,9 @@ export const State: Story = {
       name="field"
       class="ab-Textfield-input"
     />
-    <div class="ab-Textfield-helptext">error</div>
+    <div class="ab-Textfield-error-message">error</div>
+    <div class="ab-Textfield-error-message">error</div>
+    <div class="ab-Textfield-helptext">helptext</div>
   </div>
 </div>
   `;
