@@ -103,7 +103,7 @@ importers:
         specifier: ^5.8.2
         version: 5.8.2
       vite:
-        specifier: ^6.2.3
+        specifier: ^6.2.4
         version: 6.2.4(@types/node@22.13.14)(sass@1.86.1)(terser@5.39.0)
 
   packages/designTokens:
@@ -211,7 +211,7 @@ importers:
         specifier: ^5.8.2
         version: 5.8.2
       vite:
-        specifier: ^6.2.3
+        specifier: ^6.2.4
         version: 6.2.4(@types/node@22.13.14)(sass@1.86.1)(terser@5.39.0)
       vite-plugin-dts:
         specifier: ^4.5.3
