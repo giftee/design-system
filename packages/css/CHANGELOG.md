@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 2.0.0
+
+### Major Changes
+
+- [#406](https://github.com/giftee/design-system/pull/406) [`09307b4`](https://github.com/giftee/design-system/commit/09307b4531bbbf10e773c0b9903ae3278f4d5da7) Thanks [@egurinko](https://github.com/egurinko)! - [breaking: Textfield] エラー表示には helptext ではなく error-message クラスを使う
+
 ## 1.1.2
 
 ### Patch Changes

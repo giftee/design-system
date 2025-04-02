@@ -1,5 +1,16 @@
 # @giftee/abukuma-react
 
+## 3.0.0
+
+### Major Changes
+
+- [#408](https://github.com/giftee/design-system/pull/408) [`53f9587`](https://github.com/giftee/design-system/commit/53f958751cb44e728a46da2361ad09d36b295ecd) Thanks [@egurinko](https://github.com/egurinko)! - [breaking:Textfield] エラーメッセージには helptext ではなく errorMessages props を利用するようにする
+
+### Patch Changes
+
+- Updated dependencies [[`09307b4`](https://github.com/giftee/design-system/commit/09307b4531bbbf10e773c0b9903ae3278f4d5da7)]:
+  - @giftee/abukuma-css@2.0.0
+
 ## 2.1.0
 
 ### Minor Changes
