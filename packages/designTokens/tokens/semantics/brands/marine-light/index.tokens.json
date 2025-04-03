@@ -2,11 +2,11 @@
   "semantic": {
     "color": {
       "brand": {
-        "dark": { "$type": "color", "$value": "{global.color.steel.800}" },
-        "default": { "$type": "color", "$value": "{global.color.steel.600}" },
-        "light": { "$type": "color", "$value": "{global.color.steel.400}" },
-        "lighter": { "$type": "color", "$value": "{global.color.steel.200}" },
-        "lightest": { "$type": "color", "$value": "{global.color.steel.50}" }
+        "dark": { "$type": "color", "$value": "{global.color.marine.800}" },
+        "default": { "$type": "color", "$value": "{global.color.marine.600}" },
+        "light": { "$type": "color", "$value": "{global.color.marine.400}" },
+        "lighter": { "$type": "color", "$value": "{global.color.marine.200}" },
+        "lightest": { "$type": "color", "$value": "{global.color.marine.50}" }
       },
       "background": {
         "brand-primary": {
@@ -18,7 +18,7 @@
           "$value": "{semantic.color.brand.lightest}"
         },
         "disabled": { "$type": "color", "$value": "{global.color.slate.100}" },
-        "base": { "$type": "color", "$value": "{global.color.slate.50}" },
+        "base": { "$type": "color", "$value": "{global.color.steel.50}" },
         "base-secondary（廃止予定）": {
           "$type": "color",
           "$value": "{global.color.white.800}"
@@ -29,7 +29,7 @@
         },
         "rest-secondary": {
           "$type": "color",
-          "$value": "{global.color.slate.70}"
+          "$value": "{global.color.steel.70}"
         },
         "rest-accent": {
           "$type": "color",
@@ -89,7 +89,7 @@
         },
         "pressed-on-neutral": {
           "$type": "color",
-          "$value": "{semantic.color.brand.lightest}"
+          "$value": "{semantic.color.brand.lighter}"
         },
         "hover-on-negative": {
           "$type": "color",
@@ -121,8 +121,8 @@
           "$type": "color",
           "$value": "{semantic.color.brand.default}"
         },
-        "bold": { "$type": "color", "$value": "{global.color.slate.400}" },
-        "light": { "$type": "color", "$value": "{global.color.slate.100}" },
+        "bold": { "$type": "color", "$value": "{global.color.steel.400}" },
+        "light": { "$type": "color", "$value": "{global.color.steel.100}" },
         "info": { "$type": "color", "$value": "{global.color.blue.600}" },
         "notice": { "$type": "color", "$value": "{global.color.red.600}" },
         "positive": { "$type": "color", "$value": "{global.color.green.600}" },
@@ -131,8 +131,8 @@
         "disable": { "$type": "color", "$value": "{global.color.slate.200}" }
       },
       "text": {
-        "default": { "$type": "color", "$value": "{global.color.slate.600}" },
-        "secondary": { "$type": "color", "$value": "{global.color.slate.400}" },
+        "default": { "$type": "color", "$value": "{global.color.steel.600}" },
+        "secondary": { "$type": "color", "$value": "{global.color.steel.400}" },
         "brand": {
           "$type": "color",
           "$value": "{semantic.color.brand.default}"
