@@ -2,11 +2,11 @@
   "semantic": {
     "color": {
       "brand": {
-        "dark": { "$type": "color", "$value": "{global.color.steel.800}" },
-        "default": { "$type": "color", "$value": "{global.color.steel.600}" },
-        "light": { "$type": "color", "$value": "{global.color.steel.400}" },
-        "lighter": { "$type": "color", "$value": "{global.color.steel.200}" },
-        "lightest": { "$type": "color", "$value": "{global.color.steel.50}" }
+        "dark": { "$type": "color", "$value": "{global.color.marine.800}" },
+        "default": { "$type": "color", "$value": "{global.color.marine.600}" },
+        "light": { "$type": "color", "$value": "{global.color.marine.400}" },
+        "lighter": { "$type": "color", "$value": "{global.color.marine.200}" },
+        "lightest": { "$type": "color", "$value": "{global.color.marine.50}" }
       },
       "background": {
         "brand-primary": {
@@ -15,21 +15,21 @@
         },
         "brand-secondary": {
           "$type": "color",
-          "$value": "{semantic.color.brand.lightest}"
+          "$value": "{semantic.color.brand.dark}"
         },
-        "disabled": { "$type": "color", "$value": "{global.color.slate.100}" },
-        "base": { "$type": "color", "$value": "{global.color.slate.50}" },
+        "disabled": { "$type": "color", "$value": "{global.color.slate.600}" },
+        "base": { "$type": "color", "$value": "{global.color.steel.900}" },
         "base-secondary（廃止予定）": {
           "$type": "color",
           "$value": "{global.color.white.800}"
         },
         "rest-primary": {
           "$type": "color",
-          "$value": "{global.color.white.800}"
+          "$value": "{global.color.steel.800}"
         },
         "rest-secondary": {
           "$type": "color",
-          "$value": "{global.color.slate.70}"
+          "$value": "{global.color.steel.600}"
         },
         "rest-accent": {
           "$type": "color",
@@ -41,7 +41,7 @@
         },
         "positive-secondary": {
           "$type": "color",
-          "$value": "{global.color.green.50}"
+          "$value": "{global.color.steel.800}"
         },
         "negative-primary": {
           "$type": "color",
@@ -49,7 +49,7 @@
         },
         "negative-secondary": {
           "$type": "color",
-          "$value": "{global.color.red.50}"
+          "$value": "{global.color.steel.800}"
         },
         "notice-primary": {
           "$type": "color",
@@ -57,7 +57,7 @@
         },
         "notice-secondary": {
           "$type": "color",
-          "$value": "{global.color.white.800}"
+          "$value": "{global.color.steel.800}"
         },
         "info-primary": {
           "$type": "color",
@@ -65,7 +65,7 @@
         },
         "info-secondary": {
           "$type": "color",
-          "$value": "{global.color.blue.50}"
+          "$value": "{global.color.steel.800}"
         },
         "hover-on-brand": {
           "$type": "color",
@@ -81,15 +81,15 @@
         },
         "hover-on-neutral": {
           "$type": "color",
-          "$value": "{semantic.color.brand.lightest}"
+          "$value": "{global.color.marine.900}"
         },
         "focus-on-neutral": {
           "$type": "color",
-          "$value": "{semantic.color.brand.lightest}"
+          "$value": "{global.color.marine.900}"
         },
         "pressed-on-neutral": {
           "$type": "color",
-          "$value": "{semantic.color.brand.lightest}"
+          "$value": "{global.color.marine.800}"
         },
         "hover-on-negative": {
           "$type": "color",
@@ -105,11 +105,11 @@
         },
         "neutral-primary": {
           "$type": "color",
-          "$value": "{global.color.white.800}"
+          "$value": "{global.color.steel.800}"
         },
         "neutral-secondary": {
           "$type": "color",
-          "$value": "{global.color.white.800}"
+          "$value": "{global.color.steel.800}"
         },
         "overlay": {
           "$type": "color",
@@ -121,22 +121,19 @@
           "$type": "color",
           "$value": "{semantic.color.brand.default}"
         },
-        "bold": { "$type": "color", "$value": "{global.color.slate.400}" },
-        "light": { "$type": "color", "$value": "{global.color.slate.100}" },
+        "bold": { "$type": "color", "$value": "{global.color.steel.400}" },
+        "light": { "$type": "color", "$value": "{global.color.steel.600}" },
         "info": { "$type": "color", "$value": "{global.color.blue.600}" },
         "notice": { "$type": "color", "$value": "{global.color.red.600}" },
         "positive": { "$type": "color", "$value": "{global.color.green.600}" },
         "negative": { "$type": "color", "$value": "{global.color.red.800}" },
-        "neutral": { "$type": "color", "$value": "{global.color.slate.200}" },
-        "disable": { "$type": "color", "$value": "{global.color.slate.200}" }
+        "neutral": { "$type": "color", "$value": "{global.color.slate.400}" },
+        "disable": { "$type": "color", "$value": "{global.color.slate.400}" }
       },
       "text": {
-        "default": { "$type": "color", "$value": "{global.color.slate.600}" },
-        "secondary": { "$type": "color", "$value": "{global.color.slate.400}" },
-        "brand": {
-          "$type": "color",
-          "$value": "{semantic.color.brand.default}"
-        },
+        "default": { "$type": "color", "$value": "{global.color.white.800}" },
+        "secondary": { "$type": "color", "$value": "{global.color.steel.200}" },
+        "brand": { "$type": "color", "$value": "{semantic.color.brand.light}" },
         "brand-secondary": {
           "$type": "color",
           "$value": "{semantic.color.brand.light}"
