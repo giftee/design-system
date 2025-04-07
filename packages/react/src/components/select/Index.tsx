@@ -7,6 +7,7 @@ export type SelectProps = ComponentPropsWithoutRef<'select'> & {
   label?: string;
   helptext?: string;
   error?: boolean;
+  errorMessages?: string[] | string;
   options: Option[];
 };
 
@@ -24,6 +25,7 @@ export const Select = forwardRef<ElementRef<'select'>, SelectProps>(
       label,
       helptext,
       error,
+      errorMessages,
       name,
       required,
       disabled,
@@ -84,6 +86,15 @@ export const Select = forwardRef<ElementRef<'select'>, SelectProps>(
             <path d="M7.10156 9.14844L0.851562 2.89844C0.34375 2.42969 0.34375 1.60938 0.851562 1.14062C1.32031 0.632812 2.14062 0.632812 2.60938 1.14062L8 6.49219L13.3516 1.14062C13.8203 0.632812 14.6406 0.632812 15.1094 1.14062C15.6172 1.60938 15.6172 2.42969 15.1094 2.89844L8.85938 9.14844C8.39062 9.65625 7.57031 9.65625 7.10156 9.14844Z" />
           </svg>
         </span>
+        {!errorMessages ? null : typeof errorMessages === 'string' ? (
+          <div className="ab-Textfield-error-message">{errorMessages}</div>
+        ) : (
+          errorMessages.map((errorMessage) => (
+            <div key={errorMessage} className="ab-Textfield-error-message">
+              {errorMessage}
+            </div>
+          ))
+        )}
         {!!helptext && <div className="ab-Textfield-helptext">{helptext}</div>}
       </div>
     );
