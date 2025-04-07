@@ -14,7 +14,7 @@ $ npm install @giftee/abukuma-design-tokens
 
 ## 使い方
 
-現在、CSS Variables の形態と JavaScript + 型定義の携帯でデザイントークンを提供しています。他の形態で欲しい場合は、お問い合わせください。
+現在、CSS Variables の形態と JavaScript + 型定義の形態でデザイントークンを提供しています。他の形態で欲しい場合は、お問い合わせください。
 
 ### CSS/SCSS
 
