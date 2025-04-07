@@ -122,7 +122,9 @@ export const State: Story = {
     </select>
     ${angleDown('ab-Select-icon')}
   </span>
-  <div class="ab-Textfield-helptext">error</div>
+  <div class="ab-Textfield-error-message">error</div>
+  <div class="ab-Textfield-error-message">error</div>
+  <div class="ab-Textfield-helptext">helptext</div>
 </div>
   `;
   },
