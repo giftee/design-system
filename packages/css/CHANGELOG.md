@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 2.0.1
+
+### Patch Changes
+
+- [#429](https://github.com/giftee/design-system/pull/429) [`be899e8`](https://github.com/giftee/design-system/commit/be899e83171f814f403539800cc86b3fa410b5c0) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [breaking: Select] エラー表示に helptext ではなく error-message クラスを利用する
+
 ## 2.0.0
 
 ### Major Changes
