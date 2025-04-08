@@ -2,4 +2,4 @@
 "@giftee/abukuma-react": patch
 ---
 
-[React] Select コンポーネントに errorMessages props を追加し、複数エラーに対応できるようにする
+[breaking: Select] エラーメッセージには helptext ではなく errorMessages props を利用するようにする
