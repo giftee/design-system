@@ -1,5 +1,14 @@
 # @giftee/abukuma-react
 
+## 3.0.1
+
+### Patch Changes
+
+- [#431](https://github.com/giftee/design-system/pull/431) [`d2a64d0`](https://github.com/giftee/design-system/commit/d2a64d0b9fb49a0a504366b7c687f39a7474257c) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [breaking: Select] エラーメッセージには helptext ではなく errorMessages props を利用するようにする
+
+- Updated dependencies [[`be899e8`](https://github.com/giftee/design-system/commit/be899e83171f814f403539800cc86b3fa410b5c0)]:
+  - @giftee/abukuma-css@2.0.1
+
 ## 3.0.0
 
 ### Major Changes
