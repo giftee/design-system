@@ -43,10 +43,6 @@
           "$type": "color",
           "$value": "{global.color.steel.800}"
         },
-        "warning-primary": {
-          "$type": "color",
-          "$value": "{global.color.green.800}"
-        },
         "negative-primary": {
           "$type": "color",
           "$value": "{global.color.red.800}"
