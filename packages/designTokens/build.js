@@ -163,7 +163,7 @@ ${dictionary.allTokens
 console.log('Build started...');
 
 const DEFAULT_BRAND = 'marine-light';
-const NOT_DEFAULT_BRANDS = ['marine-dark', 'skeleton-light'];
+const NOT_DEFAULT_BRANDS = ['marine-dark', 'skeleton-light', 'coral-light'];
 const BRANDS = [DEFAULT_BRAND, ...NOT_DEFAULT_BRANDS];
 
 BRANDS.map((brand) => {
