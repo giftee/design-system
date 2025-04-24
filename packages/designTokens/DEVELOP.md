@@ -31,8 +31,8 @@ $ pnpm build
 Generate した JSON は以下のようになっています。それらを以下のようにコピーしてください。（そのうち自動連携したいです）
 
 - global.base.tokens.json → `tokens/globals/index.tokens.json`
-- semantic-theme.g4b-light.tokens.json → `tokens/semantics/brands/g4b-light/index.tokens.json`
-- semantic-theme.g4b-dark.tokens.json → `tokens/semantics/brands/g4b-dark/index.tokens.json`
+- semantic-theme.marine-light.tokens.json → `tokens/semantics/brands/marine-light/index.tokens.json`
+- semantic-theme.marine-dark.tokens.json → `tokens/semantics/brands/marine-dark/index.tokens.json`
 - semantic-theme.skeleton-light.tokens.json → `tokens/semantics/brands/skeleton-light/index.tokens.json`
 - semantic-common.base.tokens.json → `tokens/semantics/common/index.tokens.json`
 
@@ -49,7 +49,7 @@ Generate した JSON は以下のようになっています。それらを以�
   }
 }
 
-/* semantic-theme.g4b-light.tokens.json */
+/* semantic-theme.marine-light.tokens.json */
 {
   "semantic": {
     "color": {
@@ -62,7 +62,7 @@ Generate した JSON は以下のようになっています。それらを以�
     }
   }
 }
-/* semantic-theme.g4b-dark.tokens.json */
+/* semantic-theme.marine-dark.tokens.json */
 {
   "semantic": {
     "color": {
