@@ -10,7 +10,7 @@ $ npm install @giftee/abukuma-design-tokens
 
 ## テーマ
 
-現在、g4b-light, g4b-dark, skeleton-light を提供しています。テーマ設定の方法は言語ごとに違います。
+現在、marine-light, marine-dark, skeleton-light を提供しています。テーマ設定の方法は言語ごとに違います。
 
 ## 使い方
 
@@ -18,7 +18,7 @@ $ npm install @giftee/abukuma-design-tokens
 
 ### CSS/SCSS
 
-CSS variables の形で提供しています。テーマ設定は HTML に `[data-theme=g4b-light]` とすることで可能です。
+CSS variables の形で提供しています。テーマ設定は HTML に `[data-theme=marine-light]` とすることで可能です。
 
 ```css
 @import '@giftee/abukuma-design-tokens';
@@ -29,7 +29,7 @@ CSS variables の形で提供しています。テーマ設定は HTML に `[dat
 JavaScript の object とそれに対応した型定義を提供しています。テーマごとにデザイントークンが import できるので、好きに使ってください。
 
 ```ts
-import { g4bLight, saasLight } from '@giftee/abukuma-design-tokens';
+import { marineLight, saasLight } from '@giftee/abukuma-design-tokens';
 ```
 
 ## 開発
