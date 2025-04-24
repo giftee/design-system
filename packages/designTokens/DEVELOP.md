@@ -34,6 +34,7 @@ Generate した JSON は以下のようになっています。それらを以�
 - semantic-theme.marine-light.tokens.json → `tokens/semantics/brands/marine-light/index.tokens.json`
 - semantic-theme.marine-dark.tokens.json → `tokens/semantics/brands/marine-dark/index.tokens.json`
 - semantic-theme.skeleton-light.tokens.json → `tokens/semantics/brands/skeleton-light/index.tokens.json`
+- semantic-theme.coral-light.tokens.json → `tokens/semantics/brands/coral-light/index.tokens.json`
 - semantic-common.base.tokens.json → `tokens/semantics/common/index.tokens.json`
 
 ```json

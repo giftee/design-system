@@ -10,7 +10,7 @@ $ npm install @giftee/abukuma-design-tokens
 
 ## テーマ
 
-現在、marine-light, marine-dark, skeleton-light を提供しています。テーマ設定の方法は言語ごとに違います。
+現在、marine-light, marine-dark, skeleton-light, coral-light を提供しています。テーマ設定の方法は言語ごとに違います。
 
 ## 使い方
 
