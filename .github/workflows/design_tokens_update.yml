@@ -10,6 +10,7 @@ jobs:
     env:
       FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
       FIGMA_FILE_KEY: ${{ secrets.FIGMA_FILE_KEY }}
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
