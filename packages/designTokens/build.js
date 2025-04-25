@@ -62,6 +62,16 @@ const getStyleDictionaryConfig = (brand) => {
           },
         ],
       },
+      mjs: {
+        transformGroup: 'js',
+        buildPath: 'dist/',
+        files: [
+          {
+            destination: `mjs/${brand}.js`,
+            format: 'javascript/esm',
+          },
+        ],
+      },
       types: {
         transformGroup: 'js',
         buildPath: `dist/`,

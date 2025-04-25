@@ -35,6 +35,20 @@ do
   echo "exports[\"${cjsFilename}\"] = require(\"./${cjs_filename}\");" >> dist/cjs/index.js
 done
 
+mjs_files=`find dist/mjs -type f -name "*.js"`
+for mjs_file in ${mjs_files[@]}
+do
+  mjs_filename=`basename ${mjs_file} .js`
+  mjsFilename=$(echo $mjs_filename | 
+    awk 'BEGIN{FS="-";OFS="";}{
+        for(i=1;i<=NF;i++)
+            $i=(i==1 ? tolower(substr($i,1,1)) : toupper(substr($i,1,1))) substr($i,2)
+    }1'
+  )
+
+  echo "export * as ${mjsFilename} from \"./${mjs_filename}\";" >> dist/mjs/index.js
+done
+
 ts_files=`find dist/types -type f -name "*.d.ts"`
 for ts_file in ${ts_files[@]}
 do
