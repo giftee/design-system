@@ -3,7 +3,7 @@
 .ab-Stepper {
   --stepper-label-gap: var(--ab-semantic-spacing-2);
   --stepper-border-size: var(--ab-semantic-border-width-2);
-  --ab-stepper-vertical-gap: var(--ab-semantic-spacing-4);
+  --stepper-vertical-gap: var(--ab-semantic-spacing-4);
 
   &-medium {
     --stepper-marker-size: 32px;
@@ -110,7 +110,7 @@
       flex-direction: row;
       align-items: center;
       position: relative;
-      padding-bottom: var(--ab-stepper-vertical-gap);
+      padding-bottom: var(--stepper-vertical-gap);
       text-align: left;
 
       // 垂直方向のコネクターラインスタイル
@@ -120,7 +120,7 @@
         width: var(--stepper-border-size);
         background-color: var(--ab-semantic-color-background-disabled);
         top: var(--stepper-marker-size);
-        bottom: calc(var(--ab-stepper-vertical-gap) * -1);
+        bottom: calc(var(--stepper-vertical-gap) * -1);
         left: calc(var(--stepper-marker-size) / 2);
         transform: translateX(-50%);
       }
