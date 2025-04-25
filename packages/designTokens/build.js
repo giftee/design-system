@@ -79,8 +79,9 @@ const getStyleDictionaryConfig = (brand) => {
 // style-dictionary は W3C spec に準拠していないため、W3C spec を style-dictionary に合わせる
 // https://github.com/lukasoppermann/style-dictionary-utils/blob/main/src/parser/w3c-token-json-parser.ts
 StyleDictionaryPackage.registerParser({
+  name: 'w3c-token-parser',
   pattern: /\.json$|\.tokens\.json$|\.tokens$/,
-  parse: ({ contents }) => {
+  parser: ({ contents }) => {
     const preparedContent = (contents || '{}')
       .replace(/"\$?value"\s*:/g, '"value":')
       .replace(/"\$?type"\s*:/g, '"type":')
@@ -92,13 +93,13 @@ StyleDictionaryPackage.registerParser({
 // グローバルトークンとセマンティクストークンのファイルを分けるためのフィルター
 StyleDictionaryPackage.registerFilter({
   name: 'isGlobal',
-  matcher: function (token) {
+  filter: function (token) {
     return token?.attributes?.category === 'global';
   },
 });
 StyleDictionaryPackage.registerFilter({
   name: 'isSemantic',
-  matcher: function (token) {
+  filter: function (token) {
     return token?.attributes?.category === 'semantic';
   },
 });
@@ -108,24 +109,24 @@ StyleDictionaryPackage.registerFilter({
 StyleDictionaryPackage.registerTransform({
   name: 'size/px',
   type: 'value',
-  matcher: function (token) {
+  filter: function (token) {
     return token.attributes.type === 'size';
   },
-  transformer: function (token) {
+  transform: function (token) {
     return `${token.value}px`;
   },
 });
 
 StyleDictionaryPackage.registerTransformGroup({
   name: 'js',
-  transforms: ['attribute/cti', 'name/cti/kebab', 'size/px', 'color/hex'],
+  transforms: ['attribute/cti', 'name/kebab', 'size/px', 'color/hex'],
 });
 
 // マルチブランド対応：ブランド名をセレクタに追加
 // https://github.com/amzn/style-dictionary/blob/main/examples/advanced/multi-brand-multi-platform/build.js
 StyleDictionaryPackage.registerFormat({
   name: 'css/variables',
-  formatter: function ({ dictionary, options }) {
+  format: function ({ dictionary, options }) {
     const selector =
       this.selector === `[data-theme='${DEFAULT_BRAND}']`
         ? `${this.selector},${NOT_DEFAULT_BRANDS.map(
@@ -166,16 +167,14 @@ const DEFAULT_BRAND = 'marine-light';
 const NOT_DEFAULT_BRANDS = ['marine-dark', 'skeleton-light', 'coral-light'];
 const BRANDS = [DEFAULT_BRAND, ...NOT_DEFAULT_BRANDS];
 
-BRANDS.map((brand) => {
+for (const brand of BRANDS) {
   console.log('\n==============================================');
   console.log(`\nProcessing: ${brand}`);
 
-  const StyleDictionary = StyleDictionaryPackage.extend(
-    getStyleDictionaryConfig(brand),
-  );
-  StyleDictionary.buildAllPlatforms();
+  const sd = new StyleDictionaryPackage(getStyleDictionaryConfig(brand));
+  await sd.buildAllPlatforms();
 
   console.log('\nEnd processing');
-});
+}
 
 console.log('\nBuild completed!');
