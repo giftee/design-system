@@ -11,7 +11,7 @@
     ".": {
       "types": "./dist/types/index.d.ts",
       "require": "./dist/cjs/index.js",
-      "import": "./dist/cjs/index.js"
+      "import": "./dist/mjs/index.js"
     },
     "./css/*": "./dist/css/*",
     "./scss/*": "./dist/scss/*"
@@ -34,10 +34,12 @@
     "format:fix": "pnpm prettier --write ."
   },
   "devDependencies": {
-    "prettier": "^3.5.3",
-    "style-dictionary": "^3.9.2"
+    "prettier": "^3.5.3"
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "style-dictionary": "^4.4.0"
   }
 }
