@@ -19,23 +19,26 @@ package のインストール後は適切な箇所にインポートして使っ
 ```html
 <body>
   <div>
-    <button class="ab-Button">g4b-light Button</button>
+    <button class="ab-Button">marine-light Button</button>
   </div>
 </body>
 ```
 
 ### テーマ
 
-デフォルトで g4b-light テーマになっています。テーマをスイッチしたい場合は、任意の箇所に `data-theme='g4b-light/skeleton-light'` を追加してください。
+デフォルトで marine-light テーマになっています。テーマをスイッチしたい場合は、任意の箇所に `data-theme='marine-light/marine-dark/skeleton-light/coral-light'` を追加してください。
 
 ```html
 <body>
   <div>
-    <button class="ab-Button">g4b-light Button</button>
-    <div data-theme="g4b-dark">
-      <button class="ab-Button">g4b-dark Button</button>
+    <button class="ab-Button">marine-light Button</button>
+    <div data-theme="marine-dark">
+      <button class="ab-Button">marine-dark Button</button>
       <div data-theme="skeleton-light">
         <button class="ab-Button">skeleton-light Button</button>
+        <div data-theme="coral-light">
+          <button class="ab-Button">coral-light Button</button>
+        </div>
       </div>
     </div>
   </div>

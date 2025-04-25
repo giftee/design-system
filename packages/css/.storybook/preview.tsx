@@ -45,9 +45,10 @@ const preview: Preview = {
                 }
               >
                 <option value="">テーマを選択</option>
-                <option value="g4b-light">g4b-light </option>
-                <option value="g4b-dark">g4b-dark</option>
+                <option value="marine-light">marine-light </option>
+                <option value="marine-dark">marine-dark</option>
                 <option value="skeleton-light">skeleton-light</option>
+                <option value="coral-light">coral-light</option>
               </select>
               <div id="canvas-root">
                 <Canvas sourceState="shown"></Canvas>
@@ -56,15 +57,6 @@ const preview: Preview = {
           </>
         );
       },
-    },
-    backgrounds: {
-      default: 'light',
-      values: [
-        {
-          name: 'light',
-          value: '#f6f7f8',
-        },
-      ],
     },
   },
 };

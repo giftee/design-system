@@ -16,7 +16,7 @@ $ pnpm install
     - base： reset.css などのベースとなる CSS が置かれています。
     - components： コンポーネントです。
     - designTokens： デザイントークンが定義されています（`@giftee/abukuma-design-tokens` があるので廃止予定）。
-    - themes： テーマ定義（g4b-light/g4b-dark/skeleton-light）があります。
+    - themes： テーマ定義（marine-light/marine-dark/skeleton-light/coral-light）があります。
     - utilities： spacing などの utility クラスがあります。
 - stories： story 群です。
 - .storybook: storybook の設定です
