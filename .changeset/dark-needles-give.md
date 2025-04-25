@@ -1,5 +1,0 @@
----
-"@giftee/abukuma-css": major
----
-
-[breaking] g4b テーマを marine にリネームし、coral-light を追加
