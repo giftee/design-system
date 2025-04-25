@@ -1,5 +1,17 @@
 # @giftee/abukuma-design-tokens
 
+## 2.0.0
+
+### Major Changes
+
+- [#458](https://github.com/giftee/design-system/pull/458) [`07ca443`](https://github.com/giftee/design-system/commit/07ca443f11d8fdbb683e995fa69ea003dd592dfd) Thanks [@egurinko](https://github.com/egurinko)! - [add] coral-light のデザイントークンを追加し、新テーマとして扱えるようにする
+
+- [#456](https://github.com/giftee/design-system/pull/456) [`630f410`](https://github.com/giftee/design-system/commit/630f410de7c6d12d84b31d299b353e4de61692b3) Thanks [@egurinko](https://github.com/egurinko)! - [breaking] g4b-light, g4b-dark を marine-light, marine-dark にリネーム
+
+### Patch Changes
+
+- [#459](https://github.com/giftee/design-system/pull/459) [`daa3620`](https://github.com/giftee/design-system/commit/daa3620d3914f1c8ab62ecaf0d0964fc778fe4bc) Thanks [@egurinko](https://github.com/egurinko)! - [enhancement] primitive color の追加と利用してない token の削除
+
 ## 1.0.1
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @giftee/abukuma-react
 
+## 4.0.0
+
+### Major Changes
+
+- [#461](https://github.com/giftee/design-system/pull/461) [`e2542f5`](https://github.com/giftee/design-system/commit/e2542f58c2546ce0754559ae6e0efb196c8f8c59) Thanks [@egurinko](https://github.com/egurinko)! - [breaking] g4b テーマを marine にリネームし、coral-light を追加
+
+### Patch Changes
+
+- Updated dependencies [[`8b847c6`](https://github.com/giftee/design-system/commit/8b847c61066cd59611a02c53e5785786f9586c60)]:
+  - @giftee/abukuma-css@3.0.0
+
 ## 3.0.1
 
 ### Patch Changes
