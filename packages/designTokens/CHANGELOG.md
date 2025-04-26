@@ -1,5 +1,13 @@
 # @giftee/abukuma-design-tokens
 
+## 2.0.1
+
+### Patch Changes
+
+- [#464](https://github.com/giftee/design-system/pull/464) [`62603f9`](https://github.com/giftee/design-system/commit/62603f966fd6717ca77b6913638ef0013d1cd8f0) Thanks [@egurinko](https://github.com/egurinko)! - [fix] StyleDictionary update でトークンがうまく CSS に吐き出せてない問題を修正
+
+- [#462](https://github.com/giftee/design-system/pull/462) [`238f2ea`](https://github.com/giftee/design-system/commit/238f2eaf66761e6b3719bb4cb9a16838171aafbf) Thanks [@egurinko](https://github.com/egurinko)! - [enhancement] DesignToken を esm で build できるようにする
+
 ## 2.0.0
 
 ### Major Changes
