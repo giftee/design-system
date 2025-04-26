@@ -1,5 +1,11 @@
 # @giftee/abukuma-design-tokens
 
+## 2.0.3
+
+### Patch Changes
+
+- [`80ea686`](https://github.com/giftee/design-system/commit/80ea686a2a5c9f42427ca59858c600c7c842a357) Thanks [@egurinko](https://github.com/egurinko)! - [fix] esm で import するときに、default をつけないといけない問題を修正
+
 ## 2.0.2
 
 ### Patch Changes
