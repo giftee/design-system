@@ -1,33 +1,15 @@
 // font-size for PC
-$font-size-headline-l: calc(
-  var(--ab-semantic-typography-font-size-headline-l) * 1px
-);
-$font-size-headline-m: calc(
-  var(--ab-semantic-typography-font-size-headline-m) * 1px
-);
-$font-size-headline-s: calc(
-  var(--ab-semantic-typography-font-size-headline-s) * 1px
-);
-$font-size-body-m: calc(var(--ab-semantic-typography-font-size-body-m) * 1px);
-$font-size-body-s: calc(var(--ab-semantic-typography-font-size-body-s) * 1px);
-$font-size-body-xs: calc(var(--ab-semantic-typography-font-size-body-xs) * 1px);
+$font-size-headline-l: var(--ab-semantic-typography-font-size-headline-l);
+$font-size-headline-m: var(--ab-semantic-typography-font-size-headline-m);
+$font-size-headline-s: var(--ab-semantic-typography-font-size-headline-s);
+$font-size-body-m: var(--ab-semantic-typography-font-size-body-m);
+$font-size-body-s: var(--ab-semantic-typography-font-size-body-s);
+$font-size-body-xs: var(--ab-semantic-typography-font-size-body-xs);
 
 // font-size for SP
-$font-size-headline-l-sp: calc(
-  var(--ab-semantic-typography-font-size-headline-l) * 1px
-);
-$font-size-headline-m-sp: calc(
-  var(--ab-semantic-typography-font-size-headline-m) * 1px
-);
-$font-size-headline-s-sp: calc(
-  var(--ab-semantic-typography-font-size-headline-s) * 1px
-);
-$font-size-body-m-sp: calc(
-  var(--ab-semantic-typography-font-size-body-m) * 1px
-);
-$font-size-body-s-sp: calc(
-  var(--ab-semantic-typography-font-size-body-s) * 1px
-);
-$font-size-body-xs-sp: calc(
-  var(--ab-semantic-typography-font-size-body-xs) * 1px
-);
+$font-size-headline-l-sp: var(--ab-semantic-typography-font-size-headline-l);
+$font-size-headline-m-sp: var(--ab-semantic-typography-font-size-headline-m);
+$font-size-headline-s-sp: var(--ab-semantic-typography-font-size-headline-s);
+$font-size-body-m-sp: var(--ab-semantic-typography-font-size-body-m);
+$font-size-body-s-sp: var(--ab-semantic-typography-font-size-body-s);
+$font-size-body-xs-sp: var(--ab-semantic-typography-font-size-body-xs);

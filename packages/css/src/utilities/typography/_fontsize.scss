@@ -1,55 +1,55 @@
 @use '../../designTokens' as css-design-tokens;
 
 .ab-text-headline-l {
-  font-size: calc(var(--ab-semantic-typography-font-size-headline-l) * 1px);
+  font-size: var(--ab-semantic-typography-font-size-headline-l);
   line-height: css-design-tokens.$line-height-m;
 
   @include css-design-tokens.breakpoint(md) {
-    font-size: calc(var(--ab-semantic-typography-font-size-headline-l) * 1px);
+    font-size: var(--ab-semantic-typography-font-size-headline-l);
   }
 }
 
 .ab-text-headline-m {
-  font-size: calc(var(--ab-semantic-typography-font-size-headline-m) * 1px);
+  font-size: var(--ab-semantic-typography-font-size-headline-m);
   line-height: css-design-tokens.$line-height-m;
 
   @include css-design-tokens.breakpoint(md) {
-    font-size: calc(var(--ab-semantic-typography-font-size-headline-m) * 1px);
+    font-size: var(--ab-semantic-typography-font-size-headline-m);
   }
 }
 
 .ab-text-headline-s {
-  font-size: calc(var(--ab-semantic-typography-font-size-headline-s) * 1px);
+  font-size: var(--ab-semantic-typography-font-size-headline-s);
   line-height: css-design-tokens.$line-height-m;
 
   @include css-design-tokens.breakpoint(md) {
-    font-size: calc(var(--ab-semantic-typography-font-size-headline-s) * 1px);
+    font-size: var(--ab-semantic-typography-font-size-headline-s);
   }
 }
 
 .ab-text-body-m {
-  font-size: calc(var(--ab-semantic-typography-font-size-body-m) * 1px);
+  font-size: var(--ab-semantic-typography-font-size-body-m);
   line-height: css-design-tokens.$line-height-l;
 
   @include css-design-tokens.breakpoint(md) {
-    font-size: calc(var(--ab-semantic-typography-font-size-body-m) * 1px);
+    font-size: var(--ab-semantic-typography-font-size-body-m);
   }
 }
 
 .ab-text-body-s {
-  font-size: calc(var(--ab-semantic-typography-font-size-body-s) * 1px);
+  font-size: var(--ab-semantic-typography-font-size-body-s);
   line-height: css-design-tokens.$line-height-l;
 
   @include css-design-tokens.breakpoint(md) {
-    font-size: calc(var(--ab-semantic-typography-font-size-body-s) * 1px);
+    font-size: var(--ab-semantic-typography-font-size-body-s);
   }
 }
 
 .ab-text-body-xs {
-  font-size: calc(var(--ab-semantic-typography-font-size-body-xs) * 1px);
+  font-size: var(--ab-semantic-typography-font-size-body-xs);
   line-height: css-design-tokens.$line-height-m;
 
   @include css-design-tokens.breakpoint(md) {
-    font-size: calc(var(--ab-semantic-typography-font-size-body-xs) * 1px);
+    font-size: var(--ab-semantic-typography-font-size-body-xs);
   }
 }
