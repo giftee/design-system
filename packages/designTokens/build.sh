@@ -46,7 +46,7 @@ do
     }1'
   )
 
-  echo "export * as ${mjsFilename} from \"./${mjs_filename}\";" >> dist/mjs/index.js
+  echo "export * as ${mjsFilename} from \"./${mjs_filename}.js\";" >> dist/mjs/index.js
 done
 
 ts_files=`find dist/types -type f -name "*.d.ts"`
