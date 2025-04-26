@@ -1,5 +1,14 @@
 # @giftee/abukuma-css
 
+## 3.0.3
+
+### Patch Changes
+
+- [#468](https://github.com/giftee/design-system/pull/468) [`933da09`](https://github.com/giftee/design-system/commit/933da09f2b8692fe2a891c1c9bfb578058589f28) Thanks [@egurinko](https://github.com/egurinko)! - [fix:Typography] Typography の Type が効かなくなっていたので修正
+
+- Updated dependencies [[`80ea686`](https://github.com/giftee/design-system/commit/80ea686a2a5c9f42427ca59858c600c7c842a357)]:
+  - @giftee/abukuma-design-tokens@2.0.3
+
 ## 3.0.2
 
 ### Patch Changes
