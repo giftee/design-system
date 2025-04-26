@@ -1,6 +1,6 @@
 {
   "name": "@giftee/abukuma-design-tokens",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "MIT",
   "description": "Design Tokens of Giftee Design System",
   "type": "module",
