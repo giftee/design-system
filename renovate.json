@@ -23,7 +23,9 @@
         "@babel/core",
         "style-dictionary",
         "@typescript-eslint",
-        "sass"
+        "sass",
+        "typescript-eslint",
+        "pnpm"
       ],
       "automerge": true
     }
