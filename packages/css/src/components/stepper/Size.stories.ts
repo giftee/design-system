@@ -1,4 +1,4 @@
-import { meta, createComponent, Story } from './shared';
+import { meta, Story } from './shared';
 
 export default {
   ...meta,
