@@ -1,5 +1,7 @@
 @use '../../designTokens' as css-design-tokens;
 
+$stepper-checkmark-url: 'data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYWItSWNvbiBhYi1JY29uLXhzbWFsbCIgdmlld0JveD0iMCAwIDE4IDEzIiBmaWxsPSIjMWU5MGZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciID4gPHBhdGggZD0iTTE3LjQ4NTcgMC41MTQyODZDMTggMC45ODkwMTEgMTggMS44MTk3OCAxNy40ODU3IDIuMjk0NTFMNy4zNTgyNCAxMi40MjJDNi44ODM1MiAxMi45MzYzIDYuMDUyNzUgMTIuOTM2MyA1LjU3ODAyIDEyLjQyMkwwLjUxNDI4NiA3LjM1ODI0QzAgNi44ODM1MiAwIDYuMDUyNzUgMC41MTQyODYgNS41NzgwMkMwLjk4OTAxMSA1LjA2Mzc0IDEuODE5NzggNS4wNjM3NCAyLjI5NDUxIDUuNTc4MDJMNi40ODc5MSA5LjczMTg3TDE1LjcwNTUgMC41MTQyODZDMTYuMTgwMiAwIDE3LjAxMSAwIDE3LjQ4NTcgMC41MTQyODZaIiAvPiA8L3N2Zz4=';
+
 .ab-Stepper {
   --stepper-label-gap: var(--ab-semantic-spacing-2);
   --stepper-border-size: var(--ab-semantic-border-width-2);
@@ -11,6 +13,11 @@
 
   &-small {
     --stepper-marker-size: 16px;
+
+    // smallサイズのとき、完了ステップのチェックマーク疑似要素は非表示にする
+    .ab-Stepper-item-passed .ab-Stepper-marker::before {
+      display: none;
+    }
   }
 }
 
@@ -28,6 +35,16 @@
       border: var(--stepper-border-size) solid
         var(--ab-semantic-color-background-info-primary);
       background-color: var(--ab-semantic-color-background-rest-primary);
+
+      &::before {
+        content: '';
+        background-image: url($stepper-checkmark-url);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 14px;
+        height: 14px;
+      }
     }
 
     .ab-Stepper-label {
