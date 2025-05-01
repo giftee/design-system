@@ -20,15 +20,3 @@ export const meta: Meta<Args> = {
 };
 
 export type Story = StoryObj<Args>;
-
-type ComponentArgs = Args & {
-  children?: React.ReactNode;
-};
-
-export const createComponent = ({
-  direction = 'horizontal',
-  size = 'medium',
-  children,
-}: ComponentArgs): string => {
-  return `<ol class="ab-Stepper ab-Stepper-${direction} ab-Stepper-${size}">${children}</ol>`;
-};
