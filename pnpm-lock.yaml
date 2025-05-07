@@ -125,7 +125,7 @@ importers:
         specifier: ^3.3.1
         version: 3.3.1
       '@eslint/js':
-        specifier: ^9.25.1
+        specifier: ^9.26.0
         version: 9.26.0
       '@giftee/abukuma-css':
         specifier: workspace:^
@@ -176,7 +176,7 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
       eslint:
-        specifier: ^9.25.1
+        specifier: ^9.26.0
         version: 9.26.0
       eslint-config-prettier:
         specifier: ^10.1.3
