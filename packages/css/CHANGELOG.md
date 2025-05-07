@@ -1,5 +1,15 @@
 # @giftee/abukuma-css
 
+## 3.0.4
+
+### Patch Changes
+
+- [#359](https://github.com/giftee/design-system/pull/359) [`a81a931`](https://github.com/giftee/design-system/commit/a81a931d1b17363999eff88828ca5a5393bb208e) Thanks [@yacchi1123](https://github.com/yacchi1123)! - [add:Fieldset] Fieldset を追加
+
+- [#449](https://github.com/giftee/design-system/pull/449) [`d1a90c7`](https://github.com/giftee/design-system/commit/d1a90c7ad67e939411c8546cbb423950621abed2) Thanks [@yacchi1123](https://github.com/yacchi1123)! - [add:Stepper] Stepper を追加
+
+- [#489](https://github.com/giftee/design-system/pull/489) [`a901dae`](https://github.com/giftee/design-system/commit/a901dae2129acd4ae78e7d0d1ca2a30f1bebfade) Thanks [@ishikawamitsugi](https://github.com/ishikawamitsugi)! - [feature:utility] spacing (margin/padding) にレスポンシブ対応を追加
+
 ## 3.0.3
 
 ### Patch Changes
