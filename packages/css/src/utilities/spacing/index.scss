@@ -1,50 +1,56 @@
 @use '../../variables' as variables;
+@use '../../designTokens' as css-design-tokens;
 
-@each $spaceKey, $spaceValue in variables.$spacers {
-  .ab-p-#{$spaceKey} {
-    padding: #{$spaceValue};
-  }
-  .ab-px-#{$spaceKey} {
-    padding-left: #{$spaceValue};
-    padding-right: #{$spaceValue};
-  }
-  .ab-py-#{$spaceKey} {
-    padding-top: #{$spaceValue};
-    padding-bottom: #{$spaceValue};
-  }
-  .ab-m-#{$spaceKey} {
-    margin: #{$spaceValue};
-  }
-  .ab-mx-#{$spaceKey} {
-    margin-left: #{$spaceValue};
-    margin-right: #{$spaceValue};
-  }
-  .ab-my-#{$spaceKey} {
-    margin-top: #{$spaceValue};
-    margin-bottom: #{$spaceValue};
-  }
+@each $breakpoint, $variant in css-design-tokens.$responsive-variants {
+  @include css-design-tokens.breakpoint($breakpoint) {
+    @each $spaceKey, $spaceValue in variables.$spacers {
+      .ab#{$variant}-p-#{$spaceKey} {
+        padding: #{$spaceValue};
+      }
+      .ab#{$variant}-px-#{$spaceKey} {
+        padding-left: #{$spaceValue};
+        padding-right: #{$spaceValue};
+      }
+      .ab#{$variant}-py-#{$spaceKey} {
+        padding-top: #{$spaceValue};
+        padding-bottom: #{$spaceValue};
+      }
+      .ab#{$variant}-m-#{$spaceKey} {
+        margin: #{$spaceValue};
+      }
+      .ab#{$variant}-mx-#{$spaceKey} {
+        margin-left: #{$spaceValue};
+        margin-right: #{$spaceValue};
+      }
+      .ab#{$variant}-my-#{$spaceKey} {
+        margin-top: #{$spaceValue};
+        margin-bottom: #{$spaceValue};
+      }
 
-  @each $sideKey, $sideShorthand in variables.$sides {
-    .ab-p#{$sideShorthand}-#{$spaceKey} {
-      padding-#{$sideKey}: #{$spaceValue};
+      @each $sideKey, $sideShorthand in variables.$sides {
+        .ab#{$variant}-p#{$sideShorthand}-#{$spaceKey} {
+          padding-#{$sideKey}: #{$spaceValue};
+        }
+        .ab#{$variant}-m#{$sideShorthand}-#{$spaceKey} {
+          margin-#{$sideKey}: #{$spaceValue};
+        }
+      }
     }
-    .ab-m#{$sideShorthand}-#{$spaceKey} {
-      margin-#{$sideKey}: #{$spaceValue};
+
+    // margin auto（autoはspace mapにはないので個別に対応）
+    .ab#{$variant}-m-auto {
+      margin: auto;
     }
-  }
-}
 
-.ab-m-auto {
-  margin: auto;
-}
+    .ab#{$variant}-mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.ab-mx-auto {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@each $sideKey, $sideShorthand in variables.$sides {
-  .ab-m#{$sideShorthand}-auto {
-    margin-#{$sideKey}: auto;
+    @each $sideKey, $sideShorthand in variables.$sides {
+      .ab#{$variant}-m#{$sideShorthand}-auto {
+        margin-#{$sideKey}: auto;
+      }
+    }
   }
 }
