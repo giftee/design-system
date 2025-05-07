@@ -1,0 +1,163 @@
+@use '../../designTokens' as css-design-tokens;
+
+$stepper-checkmark-url: 'data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYWItSWNvbiBhYi1JY29uLXhzbWFsbCIgdmlld0JveD0iMCAwIDE4IDEzIiBmaWxsPSIjMWU5MGZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciID4gPHBhdGggZD0iTTE3LjQ4NTcgMC41MTQyODZDMTggMC45ODkwMTEgMTggMS44MTk3OCAxNy40ODU3IDIuMjk0NTFMNy4zNTgyNCAxMi40MjJDNi44ODM1MiAxMi45MzYzIDYuMDUyNzUgMTIuOTM2MyA1LjU3ODAyIDEyLjQyMkwwLjUxNDI4NiA3LjM1ODI0QzAgNi44ODM1MiAwIDYuMDUyNzUgMC41MTQyODYgNS41NzgwMkMwLjk4OTAxMSA1LjA2Mzc0IDEuODE5NzggNS4wNjM3NCAyLjI5NDUxIDUuNTc4MDJMNi40ODc5MSA5LjczMTg3TDE1LjcwNTUgMC41MTQyODZDMTYuMTgwMiAwIDE3LjAxMSAwIDE3LjQ4NTcgMC41MTQyODZaIiAvPiA8L3N2Zz4=';
+
+.ab-Stepper {
+  --stepper-label-gap: var(--ab-semantic-spacing-2);
+  --stepper-border-size: var(--ab-semantic-border-width-2);
+  --stepper-vertical-gap: var(--ab-semantic-spacing-4);
+
+  &-medium {
+    --stepper-marker-size: 32px;
+  }
+
+  &-small {
+    --stepper-marker-size: 16px;
+
+    // smallサイズのとき、完了ステップのチェックマーク疑似要素は非表示にする
+    .ab-Stepper-item-passed .ab-Stepper-marker::before {
+      display: none;
+    }
+  }
+}
+
+.ab-Stepper {
+  display: flex;
+
+  &-item {
+    display: flex;
+    position: relative;
+  }
+
+  &-item-passed {
+    .ab-Stepper-marker {
+      color: var(--ab-semantic-color-background-info-primary);
+      border: var(--stepper-border-size) solid
+        var(--ab-semantic-color-background-info-primary);
+      background-color: var(--ab-semantic-color-background-rest-primary);
+
+      &::before {
+        content: '';
+        background-image: url($stepper-checkmark-url);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    .ab-Stepper-label {
+      color: var(--ab-semantic-color-text-default);
+    }
+  }
+
+  &-item-current {
+    .ab-Stepper-marker {
+      background-color: var(--ab-semantic-color-background-info-primary);
+      color: var(--ab-semantic-color-text-contrast);
+    }
+
+    .ab-Stepper-label {
+      font-weight: var(--ab-semantic-typography-font-weight-bold);
+      color: var(--ab-semantic-color-text-default);
+    }
+  }
+
+  &-marker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--stepper-marker-size);
+    height: var(--stepper-marker-size);
+    border-radius: var(--ab-semantic-border-radius-full);
+    background-color: var(--ab-semantic-color-background-disabled);
+    color: var(--ab-semantic-color-text-secondary);
+    font-size: css-design-tokens.$font-size-body-s;
+    font-weight: var(--ab-semantic-typography-font-weight-bold);
+    z-index: css-design-tokens.$zindex-overlap;
+  }
+
+  &-label {
+    font-size: css-design-tokens.$font-size-body-xs;
+    color: var(--ab-semantic-color-text-disable);
+  }
+
+  &-horizontal {
+    flex-direction: row;
+
+    .ab-Stepper-item {
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      text-align: center;
+
+      // 水平方向のコネクターラインスタイル
+      &::after {
+        content: '';
+        position: absolute;
+        top: calc(var(--stepper-marker-size) / 2);
+        left: 50%;
+        width: 100%;
+        height: var(--stepper-border-size);
+        background-color: var(--ab-semantic-color-background-disabled);
+        transform: translateY(-50%);
+      }
+
+      // 最後のステップの後には線を表示しない
+      &:last-child::after {
+        display: none;
+      }
+    }
+
+    .ab-Stepper-label {
+      margin-top: var(--stepper-label-gap);
+    }
+
+    .ab-Stepper-item-passed::after {
+      background-color: var(--ab-semantic-color-background-info-primary);
+    }
+  }
+
+  &-vertical {
+    flex-direction: column;
+    width: fit-content;
+
+    .ab-Stepper-item {
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      padding-bottom: var(--stepper-vertical-gap);
+      text-align: left;
+
+      // 垂直方向のコネクターラインスタイル
+      &::after {
+        content: '';
+        position: absolute;
+        width: var(--stepper-border-size);
+        background-color: var(--ab-semantic-color-background-disabled);
+        top: var(--stepper-marker-size);
+        bottom: calc(var(--stepper-vertical-gap) * -1);
+        left: calc(var(--stepper-marker-size) / 2);
+        transform: translateX(-50%);
+      }
+
+      // 最後のステップの後には線を表示しない
+      &:last-child {
+        padding-bottom: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    .ab-Stepper-label {
+      margin-left: var(--stepper-label-gap);
+    }
+
+    .ab-Stepper-item-passed::after {
+      background-color: var(--ab-semantic-color-background-info-primary);
+    }
+  }
+}
