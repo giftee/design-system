@@ -1,0 +1,22 @@
+@use '../../designTokens' as css-design-tokens;
+
+.ab-Fieldset {
+  &-legend {
+    margin-bottom: var(--ab-semantic-spacing-4);
+    font-size: css-design-tokens.$font-size-body-m;
+    color: var(--ab-semantic-color-text-default);
+  }
+
+  &-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--ab-semantic-spacing-6);
+  }
+}
+
+.ab-Fieldset-vertical {
+  .ab-Fieldset-content {
+    flex-direction: column;
+  }
+}
