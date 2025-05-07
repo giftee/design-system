@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { SwitchProps } from '@/index';
 import { Switch } from '@/index';
 import type { Meta, StoryObj } from '@storybook/react';
@@ -20,24 +21,48 @@ const meta = {
       },
       description: 'ラベル位置',
     },
+    checked: {
+      control: 'boolean',
+      description: 'チェック状態',
+    },
+    disabled: {
+      control: 'boolean',
+      description: '無効状態',
+    },
   },
 } satisfies Meta<typeof Switch>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const InteractiveSwitch = ({ id, disabled, position, children }: Partial<SwitchProps>) => {
+  const [checked, setChecked] = useState(false);
+  
+  return (
+    <Switch 
+      id={id} 
+      checked={checked} 
+      onChange={(e) => setChecked(e.target.checked)} 
+      disabled={disabled}
+      position={position}
+    >
+      {children}
+    </Switch>
+  );
+};
+
 export const Base: Story = {
   render: ({ ...args }: SwitchProps) => (
     <div className="ab-flex ab-flex-column ab-gap-4">
       <div className="ab-flex ab-flex-row ab-gap-2">
-        <Switch id="default" {...args}>
+        <InteractiveSwitch id="default" {...args}>
           Default
-        </Switch>
+        </InteractiveSwitch>
       </div>
       <div className="ab-flex ab-flex-row ab-gap-2">
-        <Switch disabled={true} {...args}>
+        <InteractiveSwitch disabled={true} {...args}>
           Disabled
-        </Switch>
+        </InteractiveSwitch>
       </div>
     </div>
   ),
@@ -46,18 +71,18 @@ export const Base: Story = {
 export const Position: Story = {
   render: ({ ...args }: SwitchProps) => (
     <div className="ab-flex ab-flex-column ab-gap-4">
-      <Switch {...args} position="top">
+      <InteractiveSwitch {...args} position="top">
         Top
-      </Switch>
-      <Switch {...args} position="right">
+      </InteractiveSwitch>
+      <InteractiveSwitch {...args} position="right">
         Right
-      </Switch>
-      <Switch {...args} position="bottom">
+      </InteractiveSwitch>
+      <InteractiveSwitch {...args} position="bottom">
         Bottom
-      </Switch>
-      <Switch {...args} position="left">
+      </InteractiveSwitch>
+      <InteractiveSwitch {...args} position="left">
         Left
-      </Switch>
+      </InteractiveSwitch>
     </div>
   ),
 };
