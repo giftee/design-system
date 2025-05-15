@@ -8,6 +8,7 @@
     "no-duplicate-selectors": null,
     "scss/at-extend-no-missing-placeholder": null,
     "no-descending-specificity": null,
+    "color-function-alias-notation": null,
     "selector-pseudo-class-no-unknown": [
       true,
       {
