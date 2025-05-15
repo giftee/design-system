@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.0.5
+
+### Patch Changes
+
+- [#501](https://github.com/giftee/design-system/pull/501) [`fba7aee`](https://github.com/giftee/design-system/commit/fba7aeea85282f3b5b663a7318a16f55658e65de) Thanks [@egurinko](https://github.com/egurinko)! - [change:Textfield/Select] label と input の margin を 16px から 8px に変更
+
 ## 3.0.4
 
 ### Patch Changes
