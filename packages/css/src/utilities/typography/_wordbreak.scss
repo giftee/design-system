@@ -1,8 +1,8 @@
 // Break by word
 .ab-wb-break-word {
-  word-break: break-word;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
 }
 
 // Break by character
