@@ -175,6 +175,8 @@
     color: var(--button-focus-visible-color);
     background-color: var(--button-focus-visible-background-color);
     border-color: var(--button-focus-visible-border-color);
+    outline: 2px solid var(--ab-semantic-color-border-brand);
+    outline-offset: 2px;
   }
 
   &:active {
