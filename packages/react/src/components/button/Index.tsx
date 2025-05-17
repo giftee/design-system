@@ -17,7 +17,7 @@ type ElementRefs = ElementRef<'button'> | ElementRef<'a'>;
 
 export const Button = forwardRef<ElementRefs, ButtonProps>(
   (
-    { children, className, variant, size, component, ...rest },
+    { children, className, variant, size, component, disabled, ...rest },
     forwardedRef,
   ) => {
     const classes = classNames(
@@ -30,8 +30,16 @@ export const Button = forwardRef<ElementRefs, ButtonProps>(
     const defaultRootNode = rest.href ? 'a' : 'button';
     const RootNode = component ? component : defaultRootNode;
 
+    const ariaDisabled = !!disabled;
+
     return (
-      <RootNode className={classes} ref={forwardedRef} {...rest}>
+      <RootNode
+        className={classes}
+        ref={forwardedRef}
+        disabled={disabled}
+        aria-disabled={ariaDisabled}
+        {...rest}
+      >
         {children}
       </RootNode>
     );
