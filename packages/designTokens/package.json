@@ -41,6 +41,6 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "style-dictionary": "^4.4.0"
+    "style-dictionary": "^5.0.0"
   }
 }
