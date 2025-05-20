@@ -4,7 +4,11 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 type Step = {
   label: string;
-}
+};
+const PASS_STATUSES = {
+  CURRENT: 'current',
+  PASSWED: 'passed',
+};
 
 export type StepperProps = ComponentPropsWithoutRef<'ol'> & {
   currentStep: number;
@@ -25,22 +29,21 @@ export const Stepper = forwardRef<ElementRef<'ol'>, StepperProps>(
     },
     forwardedRef,
   ) => {
-
     const classes = classNames(
       'ab-Stepper',
       `ab-Stepper-${direction}`,
-      `ab-Stepper-${size}`
+      `ab-Stepper-${size}`,
     );
 
     return (
       <ol className={classes} ref={forwardedRef} {...rest}>
         {steps.map((step, i) => {
           const passStatus =
-          i < currentStep
-              ? 'passed'
+            i < currentStep
+              ? PASS_STATUSES.PASSWED
               : i === currentStep
-              ? 'current'
-              : undefined;
+                ? PASS_STATUSES.CURRENT
+                : undefined;
 
           return (
             <li
@@ -49,15 +52,21 @@ export const Stepper = forwardRef<ElementRef<'ol'>, StepperProps>(
                 'ab-Stepper-item',
                 passStatus && `ab-Stepper-item-${passStatus}`,
               )}
-              aria-current={passStatus === 'current' ? 'step' : undefined}
+              aria-current={
+                passStatus === PASS_STATUSES.CURRENT ? 'step' : undefined
+              }
             >
               <div
                 className="ab-Stepper-marker"
-                aria-label={passStatus === 'passed' ? '成功' : undefined}
-                role={passStatus === 'passed' ? 'img' : undefined}
-                aria-hidden={passStatus !== 'passed'}
+                aria-label={
+                  passStatus === PASS_STATUSES.PASSWED ? '成功' : undefined
+                }
+                role={passStatus === PASS_STATUSES.PASSWED ? 'img' : undefined}
+                aria-hidden={passStatus !== PASS_STATUSES.PASSWED}
               >
-                {size !== 'small' && passStatus !== 'passed' ? i + 1 : null}
+                {size !== 'small' && passStatus !== PASS_STATUSES.PASSWED
+                  ? i + 1
+                  : null}
               </div>
               <div className="ab-Stepper-label">{step.label}</div>
             </li>
