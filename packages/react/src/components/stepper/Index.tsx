@@ -35,7 +35,7 @@ export const Stepper = forwardRef<ElementRef<'ol'>, StepperProps>(
     return (
       <ol className={classes} ref={forwardedRef} {...rest}>
         {steps.map((step, i) => {
-          const status =
+          const passStatus =
           i < currentStep
               ? 'passed'
               : i === currentStep
@@ -47,12 +47,12 @@ export const Stepper = forwardRef<ElementRef<'ol'>, StepperProps>(
               key={step.label}
               className={classNames(
                 'ab-Stepper-item',
-                status && `ab-Stepper-item-${status}`,
+                passStatus && `ab-Stepper-item-${passStatus}`,
               )}
-              aria-current={status === 'current' ? 'step' : undefined}
+              aria-current={passStatus === 'current' ? 'step' : undefined}
             >
-              <div className="ab-Stepper-marker" aria-hidden={status === 'passed'}>
-              {size !== 'small' && status !== 'passed' ? i + 1 : null}
+              <div className="ab-Stepper-marker" aria-hidden={passStatus === 'passed'}>
+              {size !== 'small' && passStatus !== 'passed' ? i + 1 : null}
               </div>
               <div className="ab-Stepper-label">{step.label}</div>
             </li>
