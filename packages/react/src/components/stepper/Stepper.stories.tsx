@@ -9,11 +9,21 @@ const meta = {
   args: {
     currentStep: 1,
     steps: [
-      'メールアドレス確認',
-      '認証コード入力',
-      'パスワード設定',
-      '企業情報入力',
-      '登録内容確認',
+      {
+        label: 'メールアドレス確認',
+      },
+      {
+        label: '認証コード入力',
+      },
+      {
+        label: 'パスワード設定',
+      },
+      {
+        label: '企業情報入力',
+      },
+      {
+        label: '登録内容確認',
+      },
     ],
     direction: 'horizontal',
     size: 'medium',
