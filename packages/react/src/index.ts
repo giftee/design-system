@@ -19,3 +19,4 @@ export * from '@/components/switch/Index';
 export * as Table from '@/components/table/Index';
 export * from '@/components/textfield/Index';
 export * from '@/components/typography/Index';
+export * from '@/components/stepper/Index';
