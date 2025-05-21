@@ -1,5 +1,13 @@
 # @giftee/abukuma-react
 
+## 4.0.6
+
+### Patch Changes
+
+- [#513](https://github.com/giftee/design-system/pull/513) [`519944a`](https://github.com/giftee/design-system/commit/519944a91a96ce3fd12491979d4956a027770d72) Thanks [@ishikawamitsugi](https://github.com/ishikawamitsugi)! - [feat:Stepper] Stepper コンポーネントを追加
+
+- [#510](https://github.com/giftee/design-system/pull/510) [`aa19f11`](https://github.com/giftee/design-system/commit/aa19f11e44ea05bb52a68f8af00ba9740feff523) Thanks [@egurinko](https://github.com/egurinko)! - [enhance:Button] disabled 時に aria-disabled を付加
+
 ## 4.0.5
 
 ### Patch Changes
