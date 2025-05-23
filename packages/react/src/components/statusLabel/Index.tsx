@@ -5,6 +5,7 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 export type StatusLabelProps = ComponentPropsWithoutRef<'label'> & {
   /**
    * ラベルのバリアント
+   * @default 'primary'
    */
   variant?:
     | 'primary'
@@ -17,6 +18,7 @@ export type StatusLabelProps = ComponentPropsWithoutRef<'label'> & {
     | 'disabled';
   /**
    * ラベルのサイズ
+   * @default 'small'
    */
   size?: 'small' | 'medium' | 'large';
 };

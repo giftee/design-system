@@ -4,8 +4,8 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type CheckboxProps = ComponentPropsWithoutRef<'input'> & {
   /**
-   * チェックボックスの位置
-   * @default right
+   * ラベルの位置
+   * @default 'right'
    */
   position?: 'top' | 'bottom' | 'left' | 'right';
 };

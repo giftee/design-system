@@ -7,7 +7,7 @@ export type TypographyProps = ComponentPropsWithoutRef<
 > & {
   /**
    * テキストのバリアント
-   * @default body-m
+   * @default 'body-m'
    */
   variant?:
     | 'headline-l'
@@ -18,10 +18,12 @@ export type TypographyProps = ComponentPropsWithoutRef<
     | 'body-xs';
   /**
    * フォントの太さ
+   * @default 'normal'
    */
   fontWeight?: 'normal' | 'bold';
   /**
    * テキストの色
+   * @default 'default'
    */
   color?:
     | 'default'

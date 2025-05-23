@@ -3,7 +3,13 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type MenuCollapseItemProps = ComponentPropsWithoutRef<'li'> & {
+  /**
+   * サブメニューラベル
+   */
   label: string;
+  /**
+   * サブメニューのデフォルト開閉状態
+   */
   defaultOpen?: boolean;
 };
 

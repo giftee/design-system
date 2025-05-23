@@ -8,12 +8,12 @@ export type CircularProgressProps = Omit<
 > & {
   /**
    * プログレスの表示バリアント
-   * @default brand
+   * @default 'brand'
    */
   variant?: 'brand' | 'disabled';
   /**
    * プログレスのサイズ
-   * @default large
+   * @default 'large'
    */
   size?: 'xsmall' | 'small' | 'large' | 'xlarge';
 };

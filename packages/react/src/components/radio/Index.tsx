@@ -4,7 +4,7 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type RadioProps = ComponentPropsWithoutRef<'input'> & {
   /**
-   * ラジオボタンの位置
+   * ラベルの位置
    * @default 'right'
    */
   position?: 'top' | 'bottom' | 'left' | 'right';

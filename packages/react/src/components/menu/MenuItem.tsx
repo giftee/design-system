@@ -3,7 +3,15 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type MenuItemProps = ComponentPropsWithoutRef<'li'> & {
+  /**
+   * 無効状態かどうか
+   * @default false
+   */
   disabled?: boolean;
+  /**
+   * 選択されている状態かどうか
+   * @default false
+   */
   selected?: boolean;
 };
 

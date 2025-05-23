@@ -24,12 +24,12 @@ export type StepperProps = ComponentPropsWithoutRef<'ol'> & {
   steps: Step[];
   /**
    * ステッパーの方向
-   * @default horizontal
+   * @default 'horizontal'
    */
   direction?: 'horizontal' | 'vertical';
   /**
    * ステッパーのサイズ
-   * @default medium
+   * @default 'medium'
    */
   size?: 'small' | 'medium';
 };

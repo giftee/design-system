@@ -27,7 +27,7 @@ export type TextfieldProps = ComponentPropsWithoutRef<'input'> &
     multiline?: number;
     /**
      * リサイズの方向
-     * @default none
+     * @default 'none'
      */
     resize?: 'vertical' | 'horizontal' | 'both' | 'none';
     /**

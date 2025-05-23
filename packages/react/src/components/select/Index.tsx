@@ -33,19 +33,19 @@ type Option = string | OptionGroup;
 /**
  * オプショングループの型
  */
-type OptionGroup = { 
+type OptionGroup = {
   /**
    * オプションの値
    */
-  value: string; 
+  value: string;
   /**
    * オプションの表示ラベル
    */
-  label: string; 
+  label: string;
   /**
    * Reactのキー（指定しない場合はvalueが使用される）
    */
-  key?: string; 
+  key?: string;
 };
 
 const isOptionGroup = (option: Option): option is OptionGroup =>

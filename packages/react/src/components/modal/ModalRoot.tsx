@@ -10,7 +10,13 @@ import type {
 } from 'react';
 
 export type ModalRootProps = ComponentPropsWithoutRef<'dialog'> & {
+  /**
+   * キャンセル時のイベントハンドラ
+   */
   onCancel?: (event: BaseSyntheticEvent) => void;
+  /**
+   * 閉じる時のイベントハンドラ
+   */
   onClose?: (event: BaseSyntheticEvent) => void;
 };
 
