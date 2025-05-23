@@ -2,6 +2,11 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
+/**
+ * ステータスラベルコンポーネントのProps
+ * @property {('primary'|'outlined'|'neutral'|'info'|'notice'|'positive'|'negative'|'disabled')} [variant] - ラベルのバリアント
+ * @property {('small'|'medium'|'large')} [size] - ラベルのサイズ
+ */
 export type StatusLabelProps = ComponentPropsWithoutRef<'label'> & {
   variant?:
     | 'primary'

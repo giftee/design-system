@@ -3,6 +3,14 @@ import { StatusLabel } from '@/index';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
+/**
+ * セレクト（ドロップダウン）コンポーネントのProps
+ * @property {string} [label] - フィールドのラベル
+ * @property {string} [helptext] - 補助テキスト
+ * @property {boolean} [error] - エラー状態を示す
+ * @property {string[]|string} [errorMessages] - エラーメッセージ（複数可）
+ * @property {Option[]} options - セレクトオプションの配列
+ */
 export type SelectProps = ComponentPropsWithoutRef<'select'> & {
   label?: string;
   helptext?: string;
@@ -11,7 +19,16 @@ export type SelectProps = ComponentPropsWithoutRef<'select'> & {
   options: Option[];
 };
 
+/**
+ * セレクトオプションの型（文字列またはオプショングループ）
+ */
 type Option = string | OptionGroup;
+/**
+ * オプショングループの型
+ * @property {string} value - オプションの値
+ * @property {string} label - オプションの表示ラベル
+ * @property {string} [key] - Reactのキー（指定しない場合はvalueが使用される）
+ */
 type OptionGroup = { value: string; label: string; key?: string };
 
 const isOptionGroup = (option: Option): option is OptionGroup =>

@@ -2,6 +2,10 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
+/**
+ * モーダルボディコンポーネントのProps
+ * @property {ComponentPropsWithoutRef<'div'>} - divタグのすべてのプロパティを継承
+ */
 export type ModalBodyProps = ComponentPropsWithoutRef<'div'>;
 
 export const ModalBody = forwardRef<ElementRef<'div'>, ModalBodyProps>(

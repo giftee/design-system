@@ -2,6 +2,10 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
+/**
+ * ラジオボタンコンポーネントのProps
+ * @property {('top'|'bottom'|'left'|'right')} [position='right'] - ラジオボタンの位置
+ */
 export type RadioProps = ComponentPropsWithoutRef<'input'> & {
   position?: 'top' | 'bottom' | 'left' | 'right';
 };

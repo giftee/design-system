@@ -2,6 +2,10 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
+/**
+ * ステッパーのステップ情報
+ * @property {string} label - ステップのラベル
+ */
 type Step = {
   label: string;
 };
@@ -10,6 +14,13 @@ const PASS_STATUSES = {
   PASSWED: 'passed',
 };
 
+/**
+ * ステッパーコンポーネントのProps
+ * @property {number} currentStep - 現在のステップ（0から始まる）
+ * @property {Step[]} steps - ステップ情報の配列
+ * @property {('horizontal'|'vertical')} [direction='horizontal'] - ステッパーの方向
+ * @property {('small'|'medium')} [size='medium'] - ステッパーのサイズ
+ */
 export type StepperProps = ComponentPropsWithoutRef<'ol'> & {
   currentStep: number;
   steps: Step[];

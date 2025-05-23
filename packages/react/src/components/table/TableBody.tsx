@@ -2,6 +2,10 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
+/**
+ * テーブルボディコンポーネントのProps
+ * @property {ComponentPropsWithoutRef<'tbody'>} - tbodyタグのすべてのプロパティを継承
+ */
 export type TableBodyProps = ComponentPropsWithoutRef<'tbody'>;
 
 export const TableBody = forwardRef<ElementRef<'tbody'>, TableBodyProps>(

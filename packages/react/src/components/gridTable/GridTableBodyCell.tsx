@@ -2,6 +2,13 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
+/**
+ * グリッドテーブルボディセルコンポーネントのProps
+ * @property {('center'|'left'|'right')} [align] - セル内のテキスト配置
+ * @property {number} [rowSpan] - セルの行結合数
+ * @property {number} [colSpan] - セルの列結合数
+ * @property {boolean} [isBordered=false] - ボーダーを表示するかどうか
+ */
 export type GridTableBodyCellProps = ComponentPropsWithoutRef<'div'> & {
   align?: 'center' | 'left' | 'right';
   rowSpan?: number;

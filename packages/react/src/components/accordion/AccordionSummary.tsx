@@ -2,6 +2,10 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
+/**
+ * アコーディオンサマリーコンポーネントのProps
+ * @property {ComponentPropsWithoutRef<'summary'>} - summaryタグのすべてのプロパティを継承
+ */
 export type AccordionSummaryProps = ComponentPropsWithoutRef<'summary'>;
 
 export const AccordionSummary = forwardRef<

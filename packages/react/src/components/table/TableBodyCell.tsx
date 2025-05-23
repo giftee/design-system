@@ -2,6 +2,10 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
+/**
+ * テーブルボディセルコンポーネントのProps
+ * @property {('center'|'left'|'right')} [align] - セル内のテキスト配置
+ */
 export type TableBodyCellProps = ComponentPropsWithoutRef<'td'> & {
   align?: 'center' | 'left' | 'right';
 };
