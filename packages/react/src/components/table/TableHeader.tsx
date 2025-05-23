@@ -2,9 +2,6 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * テーブルヘッダーコンポーネントのProps
- */
 export type TableHeaderProps = ComponentPropsWithoutRef<'thead'>;
 
 export const TableHeader = forwardRef<ElementRef<'thead'>, TableHeaderProps>(

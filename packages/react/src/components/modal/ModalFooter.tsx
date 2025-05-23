@@ -2,9 +2,6 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * モーダルフッターコンポーネントのProps
- */
 export type ModalFooterProps = ComponentPropsWithoutRef<'div'>;
 
 export const ModalFooter = forwardRef<ElementRef<'div'>, ModalFooterProps>(

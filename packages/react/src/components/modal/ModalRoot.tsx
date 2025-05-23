@@ -9,11 +9,6 @@ import type {
   ElementRef,
 } from 'react';
 
-/**
- * モーダルルートコンポーネントのProps
- * @property {(event: BaseSyntheticEvent) => void} [onCancel] - キャンセル時のコールバック関数
- * @property {(event: BaseSyntheticEvent) => void} [onClose] - 閉じる時のコールバック関数
- */
 export type ModalRootProps = ComponentPropsWithoutRef<'dialog'> & {
   onCancel?: (event: BaseSyntheticEvent) => void;
   onClose?: (event: BaseSyntheticEvent) => void;

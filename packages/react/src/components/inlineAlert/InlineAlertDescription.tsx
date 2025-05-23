@@ -2,9 +2,6 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * インラインアラート説明コンポーネントのProps
- */
 export type InlineAlertDescriptionProps = ComponentPropsWithoutRef<'div'>;
 
 export const InlineAlertDescription = forwardRef<

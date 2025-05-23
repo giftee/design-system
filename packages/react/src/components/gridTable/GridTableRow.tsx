@@ -2,9 +2,6 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * グリッドテーブル行コンポーネントのProps
- */
 export type GridTableRowProps = ComponentPropsWithoutRef<'div'>;
 
 export const GridTableRow = forwardRef<ElementRef<'div'>, GridTableRowProps>(

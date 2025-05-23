@@ -2,9 +2,6 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * グリッドテーブルヘッダーコンポーネントのProps
- */
 export type GridTableHeaderProps = ComponentPropsWithoutRef<'div'>;
 
 export const GridTableHeader = forwardRef<

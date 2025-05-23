@@ -2,9 +2,6 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * テーブルボディ行コンポーネントのProps
- */
 export type TableBodyRowProps = ComponentPropsWithoutRef<'tr'>;
 
 export const TableBodyRow = forwardRef<ElementRef<'tr'>, TableBodyRowProps>(

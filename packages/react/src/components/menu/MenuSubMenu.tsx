@@ -2,9 +2,6 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * メニューサブメニューコンポーネントのProps
- */
 export type MenuSubMenuProps = ComponentPropsWithoutRef<'ul'>;
 
 export const MenuSubMenu = forwardRef<ElementRef<'ul'>, MenuSubMenuProps>(
