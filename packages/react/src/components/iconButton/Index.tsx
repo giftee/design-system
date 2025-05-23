@@ -2,13 +2,14 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * アイコンボタンコンポーネントのProps
- * @property {('default'|'outlined'|'neutral'|'text'|'negative')} [variant] - ボタンのバリアント（見た目のスタイル）
- * @property {('small'|'large')} [size] - ボタンのサイズ
- */
 export type IconButtonProps = ComponentPropsWithoutRef<'button'> & {
+  /**
+   * ボタンのバリアント（見た目のスタイル）
+   */
   variant?: 'default' | 'outlined' | 'neutral' | 'text' | 'negative';
+  /**
+   * ボタンのサイズ
+   */
   size?: 'small' | 'large';
 };
 

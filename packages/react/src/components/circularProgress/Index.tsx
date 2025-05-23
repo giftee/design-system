@@ -2,16 +2,19 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * サーキュラープログレスコンポーネントのProps
- * @property {('brand'|'disabled')} [variant='brand'] - プログレスの表示バリアント
- * @property {('xsmall'|'small'|'large'|'xlarge')} [size='large'] - プログレスのサイズ
- */
 export type CircularProgressProps = Omit<
   ComponentPropsWithoutRef<'div'>,
   'children'
 > & {
+  /**
+   * プログレスの表示バリアント
+   * @default brand
+   */
   variant?: 'brand' | 'disabled';
+  /**
+   * プログレスのサイズ
+   * @default large
+   */
   size?: 'xsmall' | 'small' | 'large' | 'xlarge';
 };
 

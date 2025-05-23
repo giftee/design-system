@@ -2,11 +2,11 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * スイッチコンポーネントのProps
- * @property {('top'|'bottom'|'left'|'right')} [position='right'] - スイッチの位置
- */
 export type SwitchProps = ComponentPropsWithoutRef<'input'> & {
+  /**
+   * スイッチの位置
+   * @default right
+   */
   position?: 'top' | 'bottom' | 'left' | 'right';
 };
 

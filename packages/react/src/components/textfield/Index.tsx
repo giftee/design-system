@@ -3,26 +3,44 @@ import { StatusLabel } from '@/index';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * テキストフィールドコンポーネントのProps
- * @property {string} [label] - フィールドのラベル
- * @property {string} [helptext] - 補助テキスト
- * @property {boolean} [error] - エラー状態を示す
- * @property {string[]|string} [errorMessages] - エラーメッセージ（複数可）
- * @property {number} [multiline] - 複数行入力の場合の行数
- * @property {('vertical'|'horizontal'|'both'|'none')} [resize='none'] - リサイズの方向
- * @property {{input?: ComponentPropsWithoutRef<'input'>, textarea?: ComponentPropsWithoutRef<'textarea'>}} [slotProps] - 内部コンポーネントに渡すProps
- */
 export type TextfieldProps = ComponentPropsWithoutRef<'input'> &
   ComponentPropsWithoutRef<'textarea'> & {
+    /**
+     * フィールドのラベル
+     */
     label?: string;
+    /**
+     * 補助テキスト
+     */
     helptext?: string;
+    /**
+     * エラー状態を示す
+     */
     error?: boolean;
+    /**
+     * エラーメッセージ（複数可）
+     */
     errorMessages?: string[] | string;
+    /**
+     * 複数行入力の場合の行数
+     */
     multiline?: number;
+    /**
+     * リサイズの方向
+     * @default none
+     */
     resize?: 'vertical' | 'horizontal' | 'both' | 'none';
+    /**
+     * 内部コンポーネントに渡すProps
+     */
     slotProps?: {
+      /**
+       * inputタグに渡すProps
+       */
       input?: ComponentPropsWithoutRef<'input'>;
+      /**
+       * textareaタグに渡すProps
+       */
       textarea?: ComponentPropsWithoutRef<'textarea'>;
     };
   };

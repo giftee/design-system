@@ -2,11 +2,11 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * チェックボックスコンポーネントのProps
- * @property {('top'|'bottom'|'left'|'right')} [position='right'] - チェックボックスの位置
- */
 export type CheckboxProps = ComponentPropsWithoutRef<'input'> & {
+  /**
+   * チェックボックスの位置
+   * @default right
+   */
   position?: 'top' | 'bottom' | 'left' | 'right';
 };
 

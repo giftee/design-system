@@ -2,16 +2,13 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * タイポグラフィコンポーネントのProps
- * @property {('headline-l'|'headline-m'|'headline-s'|'body-m'|'body-s'|'body-xs')} [variant='body-m'] - テキストのバリアント
- * @property {('normal'|'bold')} [fontWeight] - フォントの太さ
- * @property {('default'|'secondary'|'brand'|'contrast'|'info'|'notice'|'positive'|'negative')} [color] - テキストの色
- * @property {React.ElementType} [component] - 基本となるコンポーネント（指定しない場合はvariantに基づいて自動選択）
- */
 export type TypographyProps = ComponentPropsWithoutRef<
   'h1' | 'h2' | 'h3' | 'p' | 'span'
 > & {
+  /**
+   * テキストのバリアント
+   * @default body-m
+   */
   variant?:
     | 'headline-l'
     | 'headline-m'
@@ -19,7 +16,13 @@ export type TypographyProps = ComponentPropsWithoutRef<
     | 'body-m'
     | 'body-s'
     | 'body-xs';
+  /**
+   * フォントの太さ
+   */
   fontWeight?: 'normal' | 'bold';
+  /**
+   * テキストの色
+   */
   color?:
     | 'default'
     | 'secondary'
@@ -29,6 +32,9 @@ export type TypographyProps = ComponentPropsWithoutRef<
     | 'notice'
     | 'positive'
     | 'negative';
+  /**
+   * 基本となるコンポーネント（指定しない場合はvariantに基づいて自動選択）
+   */
   component?: React.ElementType;
 };
 

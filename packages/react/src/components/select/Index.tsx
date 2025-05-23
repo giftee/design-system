@@ -3,19 +3,26 @@ import { StatusLabel } from '@/index';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * セレクト（ドロップダウン）コンポーネントのProps
- * @property {string} [label] - フィールドのラベル
- * @property {string} [helptext] - 補助テキスト
- * @property {boolean} [error] - エラー状態を示す
- * @property {string[]|string} [errorMessages] - エラーメッセージ（複数可）
- * @property {Option[]} options - セレクトオプションの配列
- */
 export type SelectProps = ComponentPropsWithoutRef<'select'> & {
+  /**
+   * フィールドのラベル
+   */
   label?: string;
+  /**
+   * 補助テキスト
+   */
   helptext?: string;
+  /**
+   * エラー状態を示す
+   */
   error?: boolean;
+  /**
+   * エラーメッセージ（複数可）
+   */
   errorMessages?: string[] | string;
+  /**
+   * セレクトオプションの配列
+   */
   options: Option[];
 };
 
@@ -25,11 +32,21 @@ export type SelectProps = ComponentPropsWithoutRef<'select'> & {
 type Option = string | OptionGroup;
 /**
  * オプショングループの型
- * @property {string} value - オプションの値
- * @property {string} label - オプションの表示ラベル
- * @property {string} [key] - Reactのキー（指定しない場合はvalueが使用される）
  */
-type OptionGroup = { value: string; label: string; key?: string };
+type OptionGroup = { 
+  /**
+   * オプションの値
+   */
+  value: string; 
+  /**
+   * オプションの表示ラベル
+   */
+  label: string; 
+  /**
+   * Reactのキー（指定しない場合はvalueが使用される）
+   */
+  key?: string; 
+};
 
 const isOptionGroup = (option: Option): option is OptionGroup =>
   typeof option !== 'string';

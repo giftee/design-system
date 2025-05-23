@@ -2,15 +2,20 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * リンクテキストコンポーネントのProps
- * @property {('default'|'brand')} [variant='default'] - リンクのバリアント
- * @property {boolean} [disabled] - 無効状態かどうか
- * @property {boolean} [underline=true] - 下線を表示するかどうか
- */
 export type LinkTextProps = ComponentPropsWithoutRef<'a'> & {
+  /**
+   * リンクのバリアント
+   * @default default
+   */
   variant?: 'default' | 'brand';
+  /**
+   * 無効状態かどうか
+   */
   disabled?: boolean;
+  /**
+   * 下線を表示するかどうか
+   * @default true
+   */
   underline?: boolean;
 };
 
