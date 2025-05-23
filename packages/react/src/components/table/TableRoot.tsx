@@ -3,7 +3,15 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type TableRootProps = ComponentPropsWithoutRef<'table'> & {
+  /**
+   * 縞模様の行を表示するかどうか
+   * @default false
+   */
   isStripe?: boolean;
+  /**
+   * 行を選択可能にするかどうか
+   * @default false
+   */
   isSelectable?: boolean;
 };
 

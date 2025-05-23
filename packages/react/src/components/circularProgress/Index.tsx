@@ -6,7 +6,15 @@ export type CircularProgressProps = Omit<
   ComponentPropsWithoutRef<'div'>,
   'children'
 > & {
+  /**
+   * プログレスの表示バリアント
+   * @default 'brand'
+   */
   variant?: 'brand' | 'disabled';
+  /**
+   * プログレスのサイズ
+   * @default 'large'
+   */
   size?: 'xsmall' | 'small' | 'large' | 'xlarge';
 };
 

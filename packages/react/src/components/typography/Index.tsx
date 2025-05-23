@@ -5,6 +5,10 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 export type TypographyProps = ComponentPropsWithoutRef<
   'h1' | 'h2' | 'h3' | 'p' | 'span'
 > & {
+  /**
+   * テキストのバリアント
+   * @default 'body-m'
+   */
   variant?:
     | 'headline-l'
     | 'headline-m'
@@ -12,7 +16,15 @@ export type TypographyProps = ComponentPropsWithoutRef<
     | 'body-m'
     | 'body-s'
     | 'body-xs';
+  /**
+   * フォントの太さ
+   * @default 'normal'
+   */
   fontWeight?: 'normal' | 'bold';
+  /**
+   * テキストの色
+   * @default 'default'
+   */
   color?:
     | 'default'
     | 'secondary'
@@ -22,6 +34,9 @@ export type TypographyProps = ComponentPropsWithoutRef<
     | 'notice'
     | 'positive'
     | 'negative';
+  /**
+   * 基本となるコンポーネント（指定しない場合はvariantに基づいて自動選択）
+   */
   component?: React.ElementType;
 };
 

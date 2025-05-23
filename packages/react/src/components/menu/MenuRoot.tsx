@@ -3,6 +3,10 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type MenuRootProps = ComponentPropsWithoutRef<'ul'> & {
+  /**
+   * メニューのサイズ
+   * @default 'medium'
+   */
   size?: 'medium' | 'small';
 };
 

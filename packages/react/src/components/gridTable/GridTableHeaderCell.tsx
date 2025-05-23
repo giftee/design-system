@@ -3,6 +3,10 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type GridTableHeaderCellProps = ComponentPropsWithoutRef<'div'> & {
+  /**
+   * セル内のテキスト配置
+   * @default 'left'
+   */
   align?: 'center' | 'left' | 'right';
 };
 

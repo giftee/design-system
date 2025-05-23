@@ -3,6 +3,10 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type DividerProps = Omit<ComponentPropsWithoutRef<'hr'>, 'children'> & {
+  /**
+   * 区切り線の方向
+   * @default 'horizontal'
+   */
   direction?: 'horizontal' | 'vertical';
 };
 

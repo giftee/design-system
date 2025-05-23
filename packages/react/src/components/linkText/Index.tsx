@@ -3,8 +3,19 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type LinkTextProps = ComponentPropsWithoutRef<'a'> & {
+  /**
+   * リンクのバリアント
+   * @default default
+   */
   variant?: 'default' | 'brand';
+  /**
+   * 無効状態かどうか
+   */
   disabled?: boolean;
+  /**
+   * 下線を表示するかどうか
+   * @default true
+   */
   underline?: boolean;
 };
 

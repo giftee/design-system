@@ -3,7 +3,15 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type IconButtonProps = ComponentPropsWithoutRef<'button'> & {
+  /**
+   * ボタンのバリアント（見た目のスタイル）
+   * @default 'default'
+   */
   variant?: 'default' | 'outlined' | 'neutral' | 'text' | 'negative';
+  /**
+   * ボタンのサイズ
+   * @default 'small'
+   */
   size?: 'small' | 'large';
 };
 

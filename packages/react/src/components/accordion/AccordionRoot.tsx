@@ -3,7 +3,15 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type AccordionRootProps = ComponentPropsWithoutRef<'details'> & {
+  /**
+   * アコーディオンのサイズ
+   * @default 'medium'
+   */
   size?: 'small' | 'medium';
+  /**
+   * 無効状態かどうか
+   * @default false
+   */
   disabled?: boolean;
 };
 

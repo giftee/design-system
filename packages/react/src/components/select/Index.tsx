@@ -4,15 +4,49 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type SelectProps = ComponentPropsWithoutRef<'select'> & {
+  /**
+   * フィールドのラベル
+   */
   label?: string;
+  /**
+   * 補助テキスト
+   */
   helptext?: string;
+  /**
+   * エラー状態を示す
+   */
   error?: boolean;
+  /**
+   * エラーメッセージ（複数可）
+   */
   errorMessages?: string[] | string;
+  /**
+   * セレクトオプションの配列
+   */
   options: Option[];
 };
 
+/**
+ * セレクトオプションの型（文字列またはオプショングループ）
+ */
 type Option = string | OptionGroup;
-type OptionGroup = { value: string; label: string; key?: string };
+/**
+ * オプショングループの型
+ */
+type OptionGroup = {
+  /**
+   * オプションの値
+   */
+  value: string;
+  /**
+   * オプションの表示ラベル
+   */
+  label: string;
+  /**
+   * Reactのキー（指定しない場合はvalueが使用される）
+   */
+  key?: string;
+};
 
 const isOptionGroup = (option: Option): option is OptionGroup =>
   typeof option !== 'string';

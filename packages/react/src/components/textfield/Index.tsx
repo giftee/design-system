@@ -5,14 +5,42 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type TextfieldProps = ComponentPropsWithoutRef<'input'> &
   ComponentPropsWithoutRef<'textarea'> & {
+    /**
+     * フィールドのラベル
+     */
     label?: string;
+    /**
+     * 補助テキスト
+     */
     helptext?: string;
+    /**
+     * エラー状態を示す
+     */
     error?: boolean;
+    /**
+     * エラーメッセージ（複数可）
+     */
     errorMessages?: string[] | string;
+    /**
+     * 複数行入力の場合の行数
+     */
     multiline?: number;
+    /**
+     * リサイズの方向
+     * @default 'none'
+     */
     resize?: 'vertical' | 'horizontal' | 'both' | 'none';
+    /**
+     * 内部コンポーネントに渡すProps
+     */
     slotProps?: {
+      /**
+       * inputタグに渡すProps
+       */
       input?: ComponentPropsWithoutRef<'input'>;
+      /**
+       * textareaタグに渡すProps
+       */
       textarea?: ComponentPropsWithoutRef<'textarea'>;
     };
   };

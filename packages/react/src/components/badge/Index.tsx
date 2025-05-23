@@ -3,6 +3,10 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type BadgeProps = ComponentPropsWithoutRef<'span'> & {
+  /**
+   * ドット表示するかどうか
+   * @default false
+   */
   isDot?: boolean;
 };
 

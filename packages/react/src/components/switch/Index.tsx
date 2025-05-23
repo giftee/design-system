@@ -3,6 +3,10 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type SwitchProps = ComponentPropsWithoutRef<'input'> & {
+  /**
+   * ラベルの位置
+   * @default 'right'
+   */
   position?: 'top' | 'bottom' | 'left' | 'right';
 };
 

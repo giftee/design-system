@@ -3,7 +3,13 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type GridTableRowGroupProps = ComponentPropsWithoutRef<'div'> & {
+  /**
+   * 開始列位置
+   */
   columnStart?: number;
+  /**
+   * 終了列位置
+   */
   columnEnd?: number;
 };
 

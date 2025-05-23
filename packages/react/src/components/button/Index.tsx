@@ -7,9 +7,23 @@ export type ButtonProps = Omit<
   'onClick'
 > &
   Omit<ComponentPropsWithoutRef<'a'>, 'onClick'> & {
+    /**
+     * ボタンのバリアント（見た目のスタイル）
+     * @default 'default'
+     */
     variant?: 'default' | 'outlined' | 'neutral' | 'negative' | 'text';
+    /**
+     * ボタンのサイズ
+     * @default 'small'
+     */
     size?: 'xsmall' | 'small' | 'large';
+    /**
+     * ボタンの基本となるコンポーネント
+     */
     component?: React.ElementType;
+    /**
+     * クリック時のイベントハンドラ
+     */
     onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
   };
 
