@@ -4,7 +4,6 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 /**
  * モーダルフッターコンポーネントのProps
- * @property {ComponentPropsWithoutRef<'div'>} - divタグのすべてのプロパティを継承
  */
 export type ModalFooterProps = ComponentPropsWithoutRef<'div'>;
 

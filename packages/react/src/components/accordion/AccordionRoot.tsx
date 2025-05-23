@@ -2,13 +2,16 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * アコーディオンルートコンポーネントのProps
- * @property {('small'|'medium')} [size='medium'] - アコーディオンのサイズ
- * @property {boolean} [disabled=false] - 無効状態かどうか
- */
 export type AccordionRootProps = ComponentPropsWithoutRef<'details'> & {
+  /**
+   * アコーディオンのサイズ
+   * @default 'medium'
+   */
   size?: 'small' | 'medium';
+  /**
+   * 無効状態かどうか
+   * @default false
+   */
   disabled?: boolean;
 };
 

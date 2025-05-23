@@ -4,7 +4,6 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 /**
  * アコーディオンサマリーコンポーネントのProps
- * @property {ComponentPropsWithoutRef<'summary'>} - summaryタグのすべてのプロパティを継承
  */
 export type AccordionSummaryProps = ComponentPropsWithoutRef<'summary'>;
 

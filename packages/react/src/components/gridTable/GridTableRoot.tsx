@@ -2,15 +2,20 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * グリッドテーブルルートコンポーネントのProps
- * @property {number} columnsCount - テーブルの列数
- * @property {boolean} [isSelectable=false] - 行を選択可能にするかどうか
- * @property {boolean} [isBordered=false] - ボーダーを表示するかどうか
- */
 export type GridTableRootProps = ComponentPropsWithoutRef<'div'> & {
+  /**
+   * テーブルの列数
+   */
   columnsCount: number;
+  /**
+   * 行を選択可能にするかどうか
+   * @default false
+   */
   isSelectable?: boolean;
+  /**
+   * ボーダーを表示するかどうか
+   * @default false
+   */
   isBordered?: boolean;
 };
 

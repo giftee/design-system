@@ -2,11 +2,10 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * グリッドテーブルヘッダーセルコンポーネントのProps
- * @property {('center'|'left'|'right')} [align] - セル内のテキスト配置
- */
 export type GridTableHeaderCellProps = ComponentPropsWithoutRef<'div'> & {
+  /**
+   * セル内のテキスト配置
+   */
   align?: 'center' | 'left' | 'right';
 };
 

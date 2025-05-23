@@ -4,7 +4,6 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 /**
  * テーブルボディ行コンポーネントのProps
- * @property {ComponentPropsWithoutRef<'tr'>} - trタグのすべてのプロパティを継承
  */
 export type TableBodyRowProps = ComponentPropsWithoutRef<'tr'>;
 

@@ -4,7 +4,6 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 /**
  * インラインアラート説明コンポーネントのProps
- * @property {ComponentPropsWithoutRef<'div'>} - divタグのすべてのプロパティを継承
  */
 export type InlineAlertDescriptionProps = ComponentPropsWithoutRef<'div'>;
 

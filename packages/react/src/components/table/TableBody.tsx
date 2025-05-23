@@ -4,7 +4,6 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 /**
  * テーブルボディコンポーネントのProps
- * @property {ComponentPropsWithoutRef<'tbody'>} - tbodyタグのすべてのプロパティを継承
  */
 export type TableBodyProps = ComponentPropsWithoutRef<'tbody'>;
 

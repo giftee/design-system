@@ -2,11 +2,11 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-/**
- * インラインアラートルートコンポーネントのProps
- * @property {('neutral'|'info'|'notice'|'positive'|'negative')} [variant='neutral'] - アラートのバリアント
- */
 export type InlineAlertRootProps = ComponentPropsWithoutRef<'div'> & {
+  /**
+   * アラートのバリアント
+   * @default 'neutral'
+   */
   variant?: 'neutral' | 'info' | 'notice' | 'positive' | 'negative';
 };
 

@@ -4,7 +4,6 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 /**
  * テーブルヘッダーコンポーネントのProps
- * @property {ComponentPropsWithoutRef<'thead'>} - theadタグのすべてのプロパティを継承
  */
 export type TableHeaderProps = ComponentPropsWithoutRef<'thead'>;
 
