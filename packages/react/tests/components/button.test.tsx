@@ -1,28 +1,31 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import { vi, describe, test, expect } from 'vitest';
+
+// eslint-disable-next-line no-restricted-imports
 import { Button } from '../../src/components/button/Index';
 
 describe('Button', () => {
   test('ボタンをレンダリングする', () => {
-    render(<Button>テストボタン</Button>);
+    const { getByRole } = render(<Button>テストボタン</Button>);
     
-    const button = screen.getByRole('button', { name: 'テストボタン' });
+    const button = getByRole('button', { name: 'テストボタン' });
     expect(button).toBeInTheDocument();
     expect(button).toHaveClass('ab-Button');
   });
 
   test('variantプロパティが正しくCSSクラスに反映される', () => {
-    render(<Button variant="outlined">アウトラインボタン</Button>);
+    const { getByRole } = render(<Button variant="outlined">アウトラインボタン</Button>);
     
-    const button = screen.getByRole('button');
+    const button = getByRole('button');
     expect(button).toHaveClass('ab-Button', 'ab-Button-outlined');
   });
 
   test('sizeプロパティが正しくCSSクラスに反映される', () => {
-    render(<Button size="large">大きなボタン</Button>);
+    const { getByRole } = render(<Button size="large">大きなボタン</Button>);
     
-    const button = screen.getByRole('button');
+    const button = getByRole('button');
     expect(button).toHaveClass('ab-Button', 'ab-Button-large');
   });
 
@@ -30,18 +33,18 @@ describe('Button', () => {
     const user = userEvent.setup();
     const handleClick = vi.fn();
     
-    render(<Button onClick={handleClick}>クリック可能ボタン</Button>);
+    const { getByRole } = render(<Button onClick={handleClick}>クリック可能ボタン</Button>);
     
-    const button = screen.getByRole('button');
+    const button = getByRole('button');
     await user.click(button);
     
     expect(handleClick).toHaveBeenCalledOnce();
   });
 
   test('disabledプロパティが正しく動作する', () => {
-    render(<Button disabled>無効化ボタン</Button>);
+    const { getByRole } = render(<Button disabled>無効化ボタン</Button>);
     
-    const button = screen.getByRole('button');
+    const button = getByRole('button');
     expect(button).toBeDisabled();
     expect(button).toHaveAttribute('aria-disabled', 'true');
   });
