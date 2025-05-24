@@ -15,6 +15,16 @@ export type AccordionRootProps = ComponentPropsWithoutRef<'details'> & {
   disabled?: boolean;
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [Accordion](https://abukuma.netlify.app/react/component/accordion)
+ *
+ * GitHub:
+ *
+ * - [Accordion](https://github.com/giftee/design-system/tree/main/packages/react/src/components/accordion)
+ */
 export const AccordionRoot = forwardRef<
   ElementRef<'details'>,
   AccordionRootProps

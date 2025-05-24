@@ -10,6 +10,16 @@ export type DividerProps = Omit<ComponentPropsWithoutRef<'hr'>, 'children'> & {
   direction?: 'horizontal' | 'vertical';
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [Divider](https://abukuma.netlify.app/react/component/divider)
+ *
+ * GitHub:
+ *
+ * - [Divider](https://github.com/giftee/design-system/tree/main/packages/react/src/components/divider)
+ */
 export const Divider = forwardRef<ElementRef<'hr'>, DividerProps>(
   ({ direction = 'horizontal', className, ...rest }, forwardedRef) => {
     const classes = classNames(

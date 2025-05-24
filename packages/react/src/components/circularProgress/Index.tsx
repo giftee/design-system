@@ -18,6 +18,16 @@ export type CircularProgressProps = Omit<
   size?: 'xsmall' | 'small' | 'large' | 'xlarge';
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [CircularProgress](https://abukuma.netlify.app/react/component/circularprogress)
+ *
+ * GitHub:
+ *
+ * - [CircularProgress](https://github.com/giftee/design-system/tree/main/packages/react/src/components/circularProgress)
+ */
 export const CircularProgress = forwardRef<
   ElementRef<'div'>,
   CircularProgressProps

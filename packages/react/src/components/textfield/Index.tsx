@@ -45,6 +45,16 @@ export type TextfieldProps = ComponentPropsWithoutRef<'input'> &
     };
   };
 
+/**
+ *
+ * Docs:
+ *
+ * - [Textfield](https://abukuma.netlify.app/react/component/textfield)
+ *
+ * GitHub:
+ *
+ * - [Textfield](https://github.com/giftee/design-system/tree/main/packages/react/src/components/textfield)
+ */
 export const Textfield = forwardRef<
   ElementRef<'input'> & ElementRef<'textarea'>,
   TextfieldProps

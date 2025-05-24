@@ -53,6 +53,16 @@ const isOptionGroup = (option: Option): option is OptionGroup =>
 const isStringOptionGroup = (option: Option): option is string =>
   typeof option === 'string';
 
+/**
+ *
+ * Docs:
+ *
+ * - [Select](https://abukuma.netlify.app/react/component/select)
+ *
+ * GitHub:
+ *
+ * - [Select](https://github.com/giftee/design-system/tree/main/packages/react/src/components/select)
+ */
 export const Select = forwardRef<ElementRef<'select'>, SelectProps>(
   (
     {

@@ -10,6 +10,16 @@ export type BadgeProps = ComponentPropsWithoutRef<'span'> & {
   isDot?: boolean;
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [Badge](https://abukuma.netlify.app/react/component/badge)
+ *
+ * GitHub:
+ *
+ * - [Badge](https://github.com/giftee/design-system/tree/main/packages/react/src/components/badge)
+ */
 export const Badge = forwardRef<ElementRef<'span'>, BadgeProps>(
   ({ isDot = false, children, className, ...rest }, forwardedRef) => {
     const classes = classNames('ab-Badge', isDot && 'ab-Badge-dot', className);

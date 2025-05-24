@@ -10,6 +10,16 @@ export type CheckboxProps = ComponentPropsWithoutRef<'input'> & {
   position?: 'top' | 'bottom' | 'left' | 'right';
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [Checkbox](https://abukuma.netlify.app/react/component/checkbox)
+ *
+ * GitHub:
+ *
+ * - [Checkbox](https://github.com/giftee/design-system/tree/main/packages/react/src/components/checkbox)
+ */
 export const Checkbox = forwardRef<ElementRef<'input'>, CheckboxProps>(
   (
     { position = 'right', name, disabled, children, className, ...rest },

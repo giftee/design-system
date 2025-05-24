@@ -19,6 +19,16 @@ export type GridTableRootProps = ComponentPropsWithoutRef<'div'> & {
   isBordered?: boolean;
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [GridTable](https://abukuma.netlify.app/react/component/gridtable)
+ *
+ * GitHub:
+ *
+ * - [GridTable](https://github.com/giftee/design-system/tree/main/packages/react/src/components/gridTable)
+ */
 export const GridTableRoot = forwardRef<ElementRef<'div'>, GridTableRootProps>(
   (
     {
