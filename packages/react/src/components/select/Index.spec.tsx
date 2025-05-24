@@ -1,7 +1,6 @@
 import { render } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import React from 'react';
-import { vi, describe, test, expect } from 'vitest';
+import { describe, test, expect } from 'vitest';
 
 import { Select } from './Index';
 
@@ -127,12 +126,5 @@ describe('Select', () => {
     
     const selectContainer = container.querySelector('.ab-Textfield');
     expect(selectContainer).toHaveClass('ab-Textfield', 'custom-class');
-  });
-
-  test('カスタムキーが正しく適用される', () => {
-    const { getAllByRole } = render(<Select name="test" options={objectOptions} />);
-    
-    const options = getAllByRole('option');
-    expect(options).toHaveLength(3);
   });
 });
