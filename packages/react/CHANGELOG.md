@@ -1,5 +1,11 @@
 # @giftee/abukuma-react
 
+## 4.1.0
+
+### Minor Changes
+
+- [#519](https://github.com/giftee/design-system/pull/519) [`d61d672`](https://github.com/giftee/design-system/commit/d61d672927152ff49514b177970ec2d25d21eacd) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [add] vitest で unit test を回せるようにした
+
 ## 4.0.7
 
 ### Patch Changes
