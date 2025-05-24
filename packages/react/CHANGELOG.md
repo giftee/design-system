@@ -1,5 +1,13 @@
 # @giftee/abukuma-react
 
+## 4.0.7
+
+### Patch Changes
+
+- [#518](https://github.com/giftee/design-system/pull/518) [`70d2602`](https://github.com/giftee/design-system/commit/70d2602eddfb845c3c962f6b06b475f8b4ce4415) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [add] コンポーネントに JSDoc を追加し。エディタのコードヒントにドキュメントと GitHub リンクを表示する
+
+- [#515](https://github.com/giftee/design-system/pull/515) [`17d881d`](https://github.com/giftee/design-system/commit/17d881dab316a903a92d0af15491bebe9cd62b25) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [add] Props に JSDoc を追加しエディタの補完を便利にする
+
 ## 4.0.6
 
 ### Patch Changes
