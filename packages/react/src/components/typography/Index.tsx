@@ -56,6 +56,16 @@ type ElementRefs =
   | ElementRef<'p'>
   | ElementRef<'span'>;
 
+/**
+ *
+ * Docs:
+ *
+ * - [Typography](https://abukuma.netlify.app/react/component/typography)
+ *
+ * GitHub:
+ *
+ * - [Typography](https://github.com/giftee/design-system/tree/main/packages/react/src/components/typography)
+ */
 export const Typography = forwardRef<ElementRefs, TypographyProps>(
   (
     {

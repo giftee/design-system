@@ -15,6 +15,16 @@ export type IconButtonProps = ComponentPropsWithoutRef<'button'> & {
   size?: 'small' | 'large';
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [IconButton](https://abukuma.netlify.app/react/component/iconbutton)
+ *
+ * GitHub:
+ *
+ * - [IconButton](https://github.com/giftee/design-system/tree/main/packages/react/src/components/iconButton)
+ */
 export const IconButton = forwardRef<ElementRef<'button'>, IconButtonProps>(
   ({ children, className, variant, size, ...rest }, forwardedRef) => {
     const classes = classNames(

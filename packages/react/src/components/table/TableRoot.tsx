@@ -15,6 +15,16 @@ export type TableRootProps = ComponentPropsWithoutRef<'table'> & {
   isSelectable?: boolean;
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [Table](https://abukuma.netlify.app/react/component/table)
+ *
+ * GitHub:
+ *
+ * - [Table](https://github.com/giftee/design-system/tree/main/packages/react/src/components/table)
+ */
 export const TableRoot = forwardRef<ElementRef<'table'>, TableRootProps>(
   (
     { isStripe = false, isSelectable = false, children, className, ...rest },

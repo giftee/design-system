@@ -29,6 +29,16 @@ export type ButtonProps = Omit<
 
 type ElementRefs = ElementRef<'button'> | ElementRef<'a'>;
 
+/**
+ *
+ * Docs:
+ *
+ * - [Button](https://abukuma.netlify.app/react/component/button)
+ *
+ * GitHub:
+ *
+ * - [Button](https://github.com/giftee/design-system/tree/main/packages/react/src/components/button)
+ */
 export const Button = forwardRef<ElementRefs, ButtonProps>(
   (
     { children, className, variant, size, component, disabled, ...rest },

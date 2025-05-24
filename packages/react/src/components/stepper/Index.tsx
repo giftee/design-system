@@ -34,6 +34,16 @@ export type StepperProps = ComponentPropsWithoutRef<'ol'> & {
   size?: 'small' | 'medium';
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [Stepper](https://abukuma.netlify.app/react/component/stepper)
+ *
+ * GitHub:
+ *
+ * - [Stepper](https://github.com/giftee/design-system/tree/main/packages/react/src/components/stepper)
+ */
 export const Stepper = forwardRef<ElementRef<'ol'>, StepperProps>(
   (
     {

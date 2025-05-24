@@ -20,6 +20,16 @@ export type ModalRootProps = ComponentPropsWithoutRef<'dialog'> & {
   onClose?: (event: BaseSyntheticEvent) => void;
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [Modal](https://abukuma.netlify.app/react/component/modal)
+ *
+ * GitHub:
+ *
+ * - [Modal](https://github.com/giftee/design-system/tree/main/packages/react/src/components/modal)
+ */
 export const ModalRoot = forwardRef<ElementRef<'dialog'>, ModalRootProps>(
   ({ children, className, onClose, open, ...rest }, forwardedRef) => {
     const classes = classNames('ab-Modal', className);

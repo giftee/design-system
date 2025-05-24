@@ -23,6 +23,16 @@ export type StatusLabelProps = ComponentPropsWithoutRef<'label'> & {
   size?: 'small' | 'medium' | 'large';
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [StatusLabel](https://abukuma.netlify.app/react/component/statuslabel)
+ *
+ * GitHub:
+ *
+ * - [StatusLabel](https://github.com/giftee/design-system/tree/main/packages/react/src/components/statusLabel)
+ */
 export const StatusLabel = forwardRef<ElementRef<'label'>, StatusLabelProps>(
   ({ children, variant, size, className, ...rest }, forwardedRef) => {
     const statusLabelClassName = classNames(

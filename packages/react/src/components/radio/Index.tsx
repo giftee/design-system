@@ -10,6 +10,16 @@ export type RadioProps = ComponentPropsWithoutRef<'input'> & {
   position?: 'top' | 'bottom' | 'left' | 'right';
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [Radio](https://abukuma.netlify.app/react/component/radio)
+ *
+ * GitHub:
+ *
+ * - [Radio](https://github.com/giftee/design-system/tree/main/packages/react/src/components/radio)
+ */
 export const Radio = forwardRef<ElementRef<'input'>, RadioProps>(
   (
     { position = 'right', name, disabled, children, className, ...rest },

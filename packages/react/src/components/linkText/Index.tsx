@@ -19,6 +19,16 @@ export type LinkTextProps = ComponentPropsWithoutRef<'a'> & {
   underline?: boolean;
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [LinkText](https://abukuma.netlify.app/react/component/linktext)
+ *
+ * GitHub:
+ *
+ * - [LinkText](https://github.com/giftee/design-system/tree/main/packages/react/src/components/linkText)
+ */
 export const LinkText = forwardRef<ElementRef<'a'>, LinkTextProps>(
   (
     {

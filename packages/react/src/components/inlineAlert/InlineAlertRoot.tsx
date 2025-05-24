@@ -10,6 +10,16 @@ export type InlineAlertRootProps = ComponentPropsWithoutRef<'div'> & {
   variant?: 'neutral' | 'info' | 'notice' | 'positive' | 'negative';
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [InlineAlert](https://abukuma.netlify.app/react/component/inlinealert)
+ *
+ * GitHub:
+ *
+ * - [InlineAlert](https://github.com/giftee/design-system/tree/main/packages/react/src/components/inlineAlert)
+ */
 export const InlineAlertRoot = forwardRef<
   ElementRef<'div'>,
   InlineAlertRootProps
