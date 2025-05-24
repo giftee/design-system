@@ -47,4 +47,42 @@ describe('Button', () => {
     expect(button).toBeDisabled();
     expect(button).toHaveAttribute('aria-disabled', 'true');
   });
+
+  test('classNameプロパティが追加で指定できる', () => {
+    const { getByRole } = render(
+      <Button className="custom-class">カスタムクラスボタン</Button>
+    );
+    
+    const button = getByRole('button');
+    expect(button).toHaveClass('ab-Button', 'custom-class');
+  });
+
+  test('componentプロパティが指定された場合、そのタグでレンダリングされる', () => {
+    const { container } = render(
+      <Button component="div">DIVボタン</Button>
+    );
+    
+    const divButton = container.querySelector('div.ab-Button');
+    expect(divButton).toBeInTheDocument();
+    expect(divButton).toHaveTextContent('DIVボタン');
+  });
+
+  test('componentなしでhrefがある場合、aタグでレンダリングされる', () => {
+    const { container } = render(
+      <Button href="https://example.com">リンクボタン</Button>
+    );
+    
+    const linkButton = container.querySelector('a.ab-Button');
+    expect(linkButton).toBeInTheDocument();
+    expect(linkButton).toHaveAttribute('href', 'https://example.com');
+  });
+
+  test('componentもhrefもない場合、buttonタグでレンダリングされる', () => {
+    const { container } = render(
+      <Button>デフォルトボタン</Button>
+    );
+    
+    const defaultButton = container.querySelector('button.ab-Button');
+    expect(defaultButton).toBeInTheDocument();
+  });
 });
