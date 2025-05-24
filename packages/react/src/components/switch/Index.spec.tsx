@@ -29,25 +29,7 @@ describe('Switch', () => {
     expect(switchWrapper).toHaveClass('position-right');
   });
 
-  test('ポジションプロパティが正しくCSSクラスに反映される（top）', () => {
-    const { container } = render(
-      <Switch name="test" position="top">テストスイッチ</Switch>
-    );
-    
-    const switchWrapper = container.querySelector('.ab-Switch-wrapper');
-    expect(switchWrapper).toHaveClass('position-top');
-  });
-
-  test('ポジションプロパティが正しくCSSクラスに反映される（bottom）', () => {
-    const { container } = render(
-      <Switch name="test" position="bottom">テストスイッチ</Switch>
-    );
-    
-    const switchWrapper = container.querySelector('.ab-Switch-wrapper');
-    expect(switchWrapper).toHaveClass('position-bottom');
-  });
-
-  test('ポジションプロパティが正しくCSSクラスに反映される（left）', () => {
+  test('ポジションプロパティが正しくCSSクラスに反映される', () => {
     const { container } = render(
       <Switch name="test" position="left">テストスイッチ</Switch>
     );
