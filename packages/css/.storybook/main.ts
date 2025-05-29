@@ -1,8 +1,11 @@
-import type { StorybookConfig } from '@storybook/types';
+import type { StorybookConfig } from '@storybook/html-vite';
 import remarkGfm from 'remark-gfm';
 
 const config: StorybookConfig = {
-  framework: '@storybook/html-vite',
+  framework: {
+    name: '@storybook/html-vite',
+    options: {},
+  },
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
 
   addons: [
@@ -23,18 +26,11 @@ const config: StorybookConfig = {
         },
       },
     },
-    '@storybook/addon-interactions',
     'storybook-addon-pseudo-states',
     '@storybook/addon-a11y',
   ],
 
-  features: {
-    storyStoreV7: true,
-  },
 
-  docs: {
-    autodocs: true,
-  },
   staticDirs: ['../dist'],
 };
 

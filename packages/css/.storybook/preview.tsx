@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Canvas } from '@storybook/blocks';
-import { Preview, Parameters } from '@storybook/html';
+import type { Preview, Parameters } from '@storybook/html';
 
 const preview: Preview = {
   beforeEach: () => {
