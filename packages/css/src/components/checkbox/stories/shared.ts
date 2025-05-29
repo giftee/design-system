@@ -24,6 +24,7 @@ type ComponentArgs = Args & {
   children?: React.ReactNode;
   id?: 'default' | 'hover' | 'active' | 'focus' | 'disabled';
   name?: string;
+  disabledType?: 'class' | 'attribute';
 };
 
 export const createComponent = ({
@@ -32,17 +33,18 @@ export const createComponent = ({
   position = 'right',
   id = 'default',
   name = '',
+  disabledType = undefined,
 }: ComponentArgs): string => {
   const positionClass = `position-${position}`;
 
   return `<div id="${id}" class="ab-Checkbox-wrapper ${positionClass} ${
-    id === 'disabled' ? 'is-disabled' : ''
+    id === 'disabled' && disabledType === 'class' ? 'is-disabled' : ''
   }">
   <label for="${name}" class="ab-Checkbox-label">${children}</label>
   <div class="ab-Checkbox">
     <input type="checkbox" name="${name}" id="${name}" ${
       checked ? 'checked' : ''
-    } class="ab-Checkbox-input" />
+    } ${id === 'disabled' && disabledType === 'attribute' ? 'disabled' : ''} class="ab-Checkbox-input" />
     <span class="ab-Checkbox-box"></span>
   </div>
 </div>`;

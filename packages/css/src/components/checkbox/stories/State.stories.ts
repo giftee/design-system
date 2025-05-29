@@ -79,14 +79,34 @@ export const State: Story = {
     checked: true,
     id: 'disabled',
     name: 'disabled-checked',
-    children: 'Disabled',
+    children: 'Disabled(廃止予定)',
+    disabledType: 'class',
   })}
   ${createComponent({
     ...args,
     checked: false,
     id: 'disabled',
     name: 'disabled-notchecked',
-    children: 'Disabled',
+    children: 'Disabled(廃止予定)',
+    disabledType: 'class',
+  })}
+</div>
+<div class="ab-m-4">
+  ${createComponent({
+    ...args,
+    checked: true,
+    id: 'disabled',
+    name: 'disabled-checked',
+    children: 'Disabled(使用推奨)',
+    disabledType: 'attribute',
+  })}
+  ${createComponent({
+    ...args,
+    checked: false,
+    id: 'disabled',
+    name: 'disabled-notchecked',
+    children: 'Disabled(使用推奨)',
+    disabledType: 'attribute',
   })}
 </div>
   `;
