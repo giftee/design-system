@@ -10,26 +10,9 @@ const config: StorybookConfig = {
 
   addons: [
     '@storybook/addon-links',
-    {
-      name: '@storybook/addon-essentials',
-      options: {
-        docs: false,
-      },
-    },
-    {
-      name: '@storybook/addon-docs',
-      options: {
-        mdxPluginOptions: {
-          mdxCompileOptions: {
-            remarkPlugins: [remarkGfm],
-          },
-        },
-      },
-    },
-    'storybook-addon-pseudo-states',
     '@storybook/addon-a11y',
+    'storybook-addon-pseudo-states',
   ],
-
 
   staticDirs: ['../dist'],
 };

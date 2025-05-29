@@ -18,9 +18,6 @@
   "devDependencies": {
     "@babel/core": "^7.27.3",
     "@storybook/addon-a11y": "^9.0.0",
-    "@storybook/addon-actions": "^9.0.0",
-    "@storybook/addon-essentials": "^9.0.0-alpha.12",
-    "@storybook/addon-interactions": "^9.0.0-alpha.10",
     "@storybook/addon-links": "^9.0.0",
     "@storybook/html": "^9.0.0",
     "@storybook/html-vite": "^9.0.0",
