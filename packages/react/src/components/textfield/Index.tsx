@@ -91,6 +91,15 @@ export const Textfield = forwardRef<
       className,
     );
 
+    const errorMessageIds = errorMessages
+      ? Array.isArray(errorMessages)
+        ? errorMessages.map((_, index) => `${name}-error-${index}`)
+        : [`${name}-error`]
+      : [];
+
+    const ariaDescribedBy =
+      errorMessageIds.length > 0 ? errorMessageIds.join(' ') : undefined;
+
     return (
       <div className={classes}>
         {!!label && (
@@ -105,6 +114,8 @@ export const Textfield = forwardRef<
             name={name}
             ref={forwardedRef}
             required={required}
+            aria-describedby={ariaDescribedBy}
+            aria-invalid={!!errorMessages}
             {...rest}
             {...slotProps?.input}
             className={classNames(
@@ -119,6 +130,8 @@ export const Textfield = forwardRef<
             ref={forwardedRef}
             required={required}
             rows={multiline}
+            aria-describedby={ariaDescribedBy}
+            aria-invalid={!!errorMessages}
             {...rest}
             {...slotProps?.textarea}
             className={classNames(
@@ -128,14 +141,27 @@ export const Textfield = forwardRef<
           />
         )}
         {!errorMessages ? null : typeof errorMessages === 'string' ? (
-          <div className="ab-Textfield-error-message">{errorMessages}</div>
+          <div
+            id={`${name}-error`}
+            className="ab-Textfield-error-message"
+            role="alert"
+          >
+            {errorMessages}
+          </div>
         ) : (
-          errorMessages.map((errorMessage) => (
-            <div key={errorMessage} className="ab-Textfield-error-message">
-              {errorMessage}
-            </div>
-          ))
+          <div role="alert">
+            {errorMessages.map((errorMessage, index) => (
+              <div
+                key={errorMessage}
+                id={`${name}-error-${index}`}
+                className="ab-Textfield-error-message"
+              >
+                {errorMessage}
+              </div>
+            ))}
+          </div>
         )}
+
         {!!helptext && <div className="ab-Textfield-helptext">{helptext}</div>}
       </div>
     );
