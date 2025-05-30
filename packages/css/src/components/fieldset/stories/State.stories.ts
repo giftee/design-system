@@ -11,7 +11,7 @@ export const State: Story = {
 <div class="ab-m-4">
   ${createComponent({
     ...args,
-    legend: 'Default - Radio',
+    legend: 'Default',
     id: 'default',
     children: `
       <div class="ab-Radio-wrapper position-right">
@@ -41,53 +41,7 @@ export const State: Story = {
           <span class="ab-Radio-radio"></span>
         </div>
       </div>
-    `,
-  })}
-</div>
-<div class="ab-m-4">
-  ${createComponent({
-    ...args,
-    legend: 'Disabled - Radio',
-    id: 'disabled',
-    children: `
-      <div class="ab-Radio-wrapper position-right">
-        <label for="disabled-yes" class="ab-Radio-label">Yes</label>
-        <div class="ab-Radio">
-          <input
-            id="disabled-yes"
-            name="radio-disabled"
-            class="ab-Radio-input"
-            type="radio"
-            checked="true"
-            value="1"
-            disabled
-          />
-          <span class="ab-Radio-radio"></span>
-        </div>
-      </div>
-      <div class="ab-Radio-wrapper position-right">
-        <label for="disabled-no" class="ab-Radio-label">No</label>
-        <div class="ab-Radio">
-          <input
-            id="disabled-no"
-            name="radio-disabled"
-            class="ab-Radio-input"
-            type="radio"
-            value="0"
-            disabled
-          />
-          <span class="ab-Radio-radio"></span>
-        </div>
-      </div>
-    `,
-  })}
-</div>
-<div class="ab-m-4">
-  ${createComponent({
-    ...args,
-    legend: 'Default - Checkbox',
-    id: 'default',
-    children: `
+      <div class="ab-mt-4"></div>
       <div class="ab-Checkbox-wrapper position-right">
         <label for="default-hoge" class="ab-Checkbox-label">Hoge</label>
         <div class="ab-Checkbox">
@@ -121,9 +75,39 @@ export const State: Story = {
 <div class="ab-m-4">
   ${createComponent({
     ...args,
-    legend: 'Disabled - Checkbox',
+    legend: 'Disabled',
     id: 'disabled',
     children: `
+      <div class="ab-Radio-wrapper position-right">
+        <label for="disabled-yes" class="ab-Radio-label">Yes</label>
+        <div class="ab-Radio">
+          <input
+            id="disabled-yes"
+            name="radio-disabled"
+            class="ab-Radio-input"
+            type="radio"
+            checked="true"
+            value="1"
+            disabled
+          />
+          <span class="ab-Radio-radio"></span>
+        </div>
+      </div>
+      <div class="ab-Radio-wrapper position-right">
+        <label for="disabled-no" class="ab-Radio-label">No</label>
+        <div class="ab-Radio">
+          <input
+            id="disabled-no"
+            name="radio-disabled"
+            class="ab-Radio-input"
+            type="radio"
+            value="0"
+            disabled
+          />
+          <span class="ab-Radio-radio"></span>
+        </div>
+      </div>
+      <div class="ab-mt-4"></div>
       <div class="ab-Checkbox-wrapper position-right">
         <label for="disabled-hoge" class="ab-Checkbox-label">Hoge</label>
         <div class="ab-Checkbox">
