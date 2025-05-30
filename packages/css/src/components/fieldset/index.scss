@@ -20,3 +20,9 @@
     flex-direction: column;
   }
 }
+
+.ab-Fieldset-legend {
+  .is-disabled & {
+    color: var(--ab-semantic-color-text-secondary);
+  }
+}
