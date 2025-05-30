@@ -47,114 +47,6 @@ export const State: Story = {
 <div class="ab-m-4">
   ${createComponent({
     ...args,
-    legend: 'Hover',
-    id: 'hover',
-    children: `
-      <div class="ab-Radio-wrapper position-right">
-        <label for="hover-yes" class="ab-Radio-label">Yes</label>
-        <div class="ab-Radio">
-          <input
-            id="hover-yes"
-            name="radio-hover"
-            class="ab-Radio-input"
-            type="radio"
-            checked="true"
-            value="1"
-          />
-          <span class="ab-Radio-radio"></span>
-        </div>
-      </div>
-      <div class="ab-Radio-wrapper position-right">
-        <label for="hover-no" class="ab-Radio-label">No</label>
-        <div class="ab-Radio">
-          <input
-            id="hover-no"
-            name="radio-hover"
-            class="ab-Radio-input"
-            type="radio"
-            value="0"
-          />
-          <span class="ab-Radio-radio"></span>
-        </div>
-      </div>
-    `,
-  })}
-</div>
-<div class="ab-m-4">
-  ${createComponent({
-    ...args,
-    legend: 'Focus',
-    id: 'focus',
-    children: `
-      <div class="ab-Radio-wrapper position-right">
-        <label for="focus-yes" class="ab-Radio-label">Yes</label>
-        <div class="ab-Radio">
-          <input
-            id="focus-yes"
-            name="radio-focus"
-            class="ab-Radio-input"
-            type="radio"
-            checked="true"
-            value="1"
-          />
-          <span class="ab-Radio-radio"></span>
-        </div>
-      </div>
-      <div class="ab-Radio-wrapper position-right">
-        <label for="focus-no" class="ab-Radio-label">No</label>
-        <div class="ab-Radio">
-          <input
-            id="focus-no"
-            name="radio-focus"
-            class="ab-Radio-input"
-            type="radio"
-            value="0"
-          />
-          <span class="ab-Radio-radio"></span>
-        </div>
-      </div>
-    `,
-  })}
-</div>
-<div class="ab-m-4">
-  ${createComponent({
-    ...args,
-    legend: 'Active',
-    id: 'active',
-    children: `
-      <div class="ab-Radio-wrapper position-right">
-        <label for="active-yes" class="ab-Radio-label">Yes</label>
-        <div class="ab-Radio">
-          <input
-            id="active-yes"
-            name="radio-active"
-            class="ab-Radio-input"
-            type="radio"
-            checked="true"
-            value="1"
-          />
-          <span class="ab-Radio-radio"></span>
-        </div>
-      </div>
-      <div class="ab-Radio-wrapper position-right">
-        <label for="active-no" class="ab-Radio-label">No</label>
-        <div class="ab-Radio">
-          <input
-            id="active-no"
-            name="radio-active"
-            class="ab-Radio-input"
-            type="radio"
-            value="0"
-          />
-          <span class="ab-Radio-radio"></span>
-        </div>
-      </div>
-    `,
-  })}
-</div>
-<div class="ab-m-4">
-  ${createComponent({
-    ...args,
     legend: 'Disabled',
     id: 'disabled',
     children: `
@@ -195,11 +87,5 @@ export const State: Story = {
   args: {
     direction: 'horizontal',
   },
-  parameters: {
-    pseudo: {
-      hover: '#hover',
-      active: '#active',
-      focusVisible: '#focus',
-    },
-  },
+  parameters: {},
 };
