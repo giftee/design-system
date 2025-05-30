@@ -63,16 +63,29 @@ export const State: Story = {
     <div class="ab-Textfield-helptext">focus</div>
   </div>
   <div id="disabled" class="ab-Textfield is-disabled ab-mb-8">
-    <label for="disabled" class="ab-Textfield-label">
-      Disabled
+    <label for="disabled-class" class="ab-Textfield-label">
+      Disabled(廃止予定)
       ${args.required ? `<div class="ab-StatusLabel">必須</div>` : ''}
     </label>
     <input
-      id="disabled"
+      id="disabled-class"
       placeholder="placeholder"
       name="field"
       class="ab-Textfield-input"
-      disabled="true"
+    />
+    <div class="ab-Textfield-helptext">disabled</div>
+  </div>
+  <div id="disabled-attribute" class="ab-Textfield ab-mb-8">
+    <label for="disabled-attribute" class="ab-Textfield-label">
+      Disabled(使用推奨)
+      ${args.required ? `<div class="ab-StatusLabel">必須</div>` : ''}
+    </label>
+    <input
+      id="disabled-attribute"
+      placeholder="placeholder"
+      name="field"
+      class="ab-Textfield-input"
+      disabled
     />
     <div class="ab-Textfield-helptext">disabled</div>
   </div>
