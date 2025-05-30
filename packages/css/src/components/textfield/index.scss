@@ -96,6 +96,12 @@
   }
 }
 
+.ab-Textfield:has(.ab-Textfield-input:disabled) .ab-Textfield-label,
+.ab-Textfield:has(.ab-Textfield-textarea:disabled) .ab-Textfield-label {
+  color: var(--ab-semantic-color-text-secondary);
+  pointer-events: none;
+}
+
 .ab-Textfield-input {
   .is-disabled & {
     color: var(--textfield-input-disabled-color);
@@ -122,8 +128,21 @@
   }
 }
 
+.ab-Textfield-input:disabled,
+.ab-Textfield-textarea:disabled {
+  color: var(--textfield-input-disabled-color);
+  pointer-events: none;
+  background-color: var(--textfield-input-disabled-background-color);
+  border-color: none;
+}
+
 .ab-Textfield-helptext {
   .is-disabled & {
     color: var(--ab-semantic-color-text-secondary);
   }
+}
+
+.ab-Textfield:has(.ab-Textfield-input:disabled) .ab-Textfield-helptext,
+.ab-Textfield:has(.ab-Textfield-textarea:disabled) .ab-Textfield-helptext {
+  color: var(--ab-semantic-color-text-secondary);
 }
