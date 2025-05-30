@@ -19,7 +19,7 @@ export type Story = StoryObj<Args>;
 type ComponentArgs = Args & {
   legend: string;
   children: React.ReactNode;
-  id?: 'default' | 'hover' | 'active' | 'focus' | 'disabled';
+  id?: 'default' | 'disabled';
 };
 
 export const createComponent = ({
