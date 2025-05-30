@@ -21,8 +21,6 @@
   }
 }
 
-.ab-Fieldset-legend {
-  .is-disabled & {
-    color: var(--ab-semantic-color-text-secondary);
-  }
+fieldset[disabled] .ab-Fieldset-legend {
+  color: var(--ab-semantic-color-text-secondary);
 }

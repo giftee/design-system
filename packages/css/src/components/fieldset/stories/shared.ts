@@ -30,10 +30,10 @@ export const createComponent = ({
 }: ComponentArgs): string => {
   const directionClass =
     direction === 'vertical' ? `ab-Fieldset-${direction}` : '';
-  const disabledClass = id === 'disabled' ? 'is-disabled' : '';
+  const isDisabled = id === 'disabled';
 
   return `
-<fieldset id="${id}" class="ab-Fieldset ${directionClass} ${disabledClass}">
+<fieldset id="${id}" class="ab-Fieldset ${directionClass}" ${isDisabled ? 'disabled' : ''}>
   <legend class="ab-Fieldset-legend">${legend}</legend>
   <div class="ab-Fieldset-content">${children}</div>
 </fieldset>

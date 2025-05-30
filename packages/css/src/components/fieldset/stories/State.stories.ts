@@ -158,7 +158,7 @@ export const State: Story = {
     legend: 'Disabled',
     id: 'disabled',
     children: `
-      <div class="ab-Radio-wrapper position-right is-disabled">
+      <div class="ab-Radio-wrapper position-right">
         <label for="disabled-yes" class="ab-Radio-label">Yes</label>
         <div class="ab-Radio">
           <input
@@ -173,7 +173,7 @@ export const State: Story = {
           <span class="ab-Radio-radio"></span>
         </div>
       </div>
-      <div class="ab-Radio-wrapper position-right is-disabled">
+      <div class="ab-Radio-wrapper position-right">
         <label for="disabled-no" class="ab-Radio-label">No</label>
         <div class="ab-Radio">
           <input
