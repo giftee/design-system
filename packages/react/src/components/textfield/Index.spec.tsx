@@ -183,4 +183,35 @@ describe('Textfield', () => {
     expect(errorMessage1).toHaveAttribute('id', 'test-error-0');
     expect(errorMessage2).toHaveAttribute('id', 'test-error-1');
   });
+
+  test('ヘルプテキストのアクセシビリティ属性が正しく設定される', () => {
+    const { getByRole, getByText } = render(
+      <Textfield name="test" helptext="ヘルプテキスト" />,
+    );
+
+    const input = getByRole('textbox');
+    const helptext = getByText('ヘルプテキスト');
+
+    expect(input).toHaveAttribute('aria-describedby', 'test-helptext');
+    expect(helptext).toHaveAttribute('id', 'test-helptext');
+  });
+
+  test('ヘルプテキストとエラーメッセージの両方がある場合のアクセシビリティ属性', () => {
+    const { getByRole, getByText } = render(
+      <Textfield 
+        name="test" 
+        helptext="ヘルプテキスト" 
+        error 
+        errorMessages="エラーメッセージ" 
+      />,
+    );
+
+    const input = getByRole('textbox');
+    const helptext = getByText('ヘルプテキスト');
+    const errorMessage = getByText('エラーメッセージ');
+
+    expect(input).toHaveAttribute('aria-describedby', 'test-error test-helptext');
+    expect(helptext).toHaveAttribute('id', 'test-helptext');
+    expect(errorMessage).toHaveAttribute('id', 'test-error');
+  });
 });
