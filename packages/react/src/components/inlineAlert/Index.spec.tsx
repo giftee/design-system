@@ -10,9 +10,9 @@ describe('InlineAlert', () => {
       <Root>
         <Title>アラートタイトル</Title>
         <Description>アラートの説明文</Description>
-      </Root>
+      </Root>,
     );
-    
+
     const alert = container.querySelector('.ab-InlineAlert');
     expect(alert).toBeInTheDocument();
   });
@@ -22,9 +22,9 @@ describe('InlineAlert', () => {
       <Root variant="info">
         <Title>情報アラート</Title>
         <Description>情報の説明</Description>
-      </Root>
+      </Root>,
     );
-    
+
     const alert = container.querySelector('.ab-InlineAlert');
     expect(alert).toHaveClass('ab-InlineAlert-info');
   });
@@ -34,9 +34,9 @@ describe('InlineAlert', () => {
       <Root>
         <Title>アラートタイトル</Title>
         <Description>アラートの説明文</Description>
-      </Root>
+      </Root>,
     );
-    
+
     const title = getByText('アラートタイトル');
     expect(title).toBeInTheDocument();
     expect(title).toHaveClass('ab-InlineAlert-title');
@@ -47,9 +47,9 @@ describe('InlineAlert', () => {
       <Root>
         <Title>アラートタイトル</Title>
         <Description>アラートの説明文</Description>
-      </Root>
+      </Root>,
     );
-    
+
     const description = getByText('アラートの説明文');
     expect(description).toBeInTheDocument();
     expect(description).toHaveClass('ab-InlineAlert-description');
@@ -60,9 +60,9 @@ describe('InlineAlert', () => {
       <Root className="custom-class">
         <Title>タイトル</Title>
         <Description>説明</Description>
-      </Root>
+      </Root>,
     );
-    
+
     const alert = container.querySelector('.ab-InlineAlert');
     expect(alert).toHaveClass('ab-InlineAlert', 'custom-class');
   });
@@ -72,9 +72,9 @@ describe('InlineAlert', () => {
       <Root>
         <Title className="custom-title-class">カスタムタイトル</Title>
         <Description>説明</Description>
-      </Root>
+      </Root>,
     );
-    
+
     const title = getByText('カスタムタイトル');
     expect(title).toHaveClass('ab-InlineAlert-title', 'custom-title-class');
   });
@@ -84,10 +84,13 @@ describe('InlineAlert', () => {
       <Root>
         <Title>タイトル</Title>
         <Description className="custom-desc-class">カスタム説明</Description>
-      </Root>
+      </Root>,
     );
-    
+
     const description = getByText('カスタム説明');
-    expect(description).toHaveClass('ab-InlineAlert-description', 'custom-desc-class');
+    expect(description).toHaveClass(
+      'ab-InlineAlert-description',
+      'custom-desc-class',
+    );
   });
 });

@@ -12,9 +12,9 @@ describe('Modal', () => {
         <Header>モーダルヘッダー</Header>
         <Body>モーダル本文</Body>
         <Footer>モーダルフッター</Footer>
-      </Root>
+      </Root>,
     );
-    
+
     const modal = container.querySelector('.ab-Modal');
     expect(modal).toBeInTheDocument();
   });
@@ -24,9 +24,9 @@ describe('Modal', () => {
       <Root open={true}>
         <Header>モーダルヘッダー</Header>
         <Body>モーダル本文</Body>
-      </Root>
+      </Root>,
     );
-    
+
     const header = getByText('モーダルヘッダー');
     expect(header).toBeInTheDocument();
     expect(header).toHaveClass('ab-Modal-header');
@@ -37,9 +37,9 @@ describe('Modal', () => {
       <Root open={true}>
         <Header>モーダルヘッダー</Header>
         <Body>モーダル本文</Body>
-      </Root>
+      </Root>,
     );
-    
+
     const body = getByText('モーダル本文');
     expect(body).toBeInTheDocument();
     expect(body).toHaveClass('ab-Modal-body');
@@ -51,9 +51,9 @@ describe('Modal', () => {
         <Header>モーダルヘッダー</Header>
         <Body>モーダル本文</Body>
         <Footer>モーダルフッター</Footer>
-      </Root>
+      </Root>,
     );
-    
+
     const footer = getByText('モーダルフッター');
     expect(footer).toBeInTheDocument();
     expect(footer).toHaveClass('ab-Modal-footer');
@@ -64,42 +64,42 @@ describe('Modal', () => {
       <Root open={false}>
         <Header>モーダルヘッダー</Header>
         <Body>モーダル本文</Body>
-      </Root>
+      </Root>,
     );
-    
+
     const modal = container.querySelector('dialog[open]');
     expect(modal).not.toBeInTheDocument();
   });
 
   test('onCloseコールバックが呼び出される', () => {
     const handleClose = vi.fn();
-    
+
     const { container } = render(
       <Root open={true} onClose={handleClose}>
         <Header>モーダルヘッダー</Header>
         <Body>モーダル本文</Body>
-      </Root>
+      </Root>,
     );
-    
+
     const form = container.querySelector('form');
     fireEvent.submit(form as HTMLFormElement);
-    
+
     expect(handleClose).toHaveBeenCalledOnce();
   });
 
   test('ダイアログの外側をクリックするとonCloseが呼び出される', () => {
     const handleClose = vi.fn();
-    
+
     const { container } = render(
       <Root open={true} onClose={handleClose}>
         <Header>モーダルヘッダー</Header>
         <Body>モーダル本文</Body>
-      </Root>
+      </Root>,
     );
-    
+
     const dialog = container.querySelector('dialog');
     fireEvent.click(dialog as HTMLDialogElement);
-    
+
     expect(handleClose).toHaveBeenCalledOnce();
   });
 
@@ -107,9 +107,9 @@ describe('Modal', () => {
     const { container } = render(
       <Root open={true} className="custom-modal-class">
         <Body>モーダル本文</Body>
-      </Root>
+      </Root>,
     );
-    
+
     const modal = container.querySelector('.ab-Modal');
     expect(modal).toHaveClass('ab-Modal', 'custom-modal-class');
   });
@@ -119,9 +119,9 @@ describe('Modal', () => {
       <Root open={true}>
         <Header className="custom-header-class">カスタムヘッダー</Header>
         <Body>モーダル本文</Body>
-      </Root>
+      </Root>,
     );
-    
+
     const header = getByText('カスタムヘッダー');
     expect(header).toHaveClass('ab-Modal-header', 'custom-header-class');
   });
@@ -131,9 +131,9 @@ describe('Modal', () => {
       <Root open={true}>
         <Header>モーダルヘッダー</Header>
         <Body className="custom-body-class">カスタム本文</Body>
-      </Root>
+      </Root>,
     );
-    
+
     const body = getByText('カスタム本文');
     expect(body).toHaveClass('ab-Modal-body', 'custom-body-class');
   });
@@ -144,9 +144,9 @@ describe('Modal', () => {
         <Header>モーダルヘッダー</Header>
         <Body>モーダル本文</Body>
         <Footer className="custom-footer-class">カスタムフッター</Footer>
-      </Root>
+      </Root>,
     );
-    
+
     const footer = getByText('カスタムフッター');
     expect(footer).toHaveClass('ab-Modal-footer', 'custom-footer-class');
   });

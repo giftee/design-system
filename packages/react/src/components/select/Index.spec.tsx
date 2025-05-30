@@ -9,20 +9,24 @@ describe('Select', () => {
   const objectOptions = [
     { value: 'value1', label: 'ラベル1' },
     { value: 'value2', label: 'ラベル2' },
-    { value: 'value3', label: 'ラベル3', key: 'custom-key' }
+    { value: 'value3', label: 'ラベル3', key: 'custom-key' },
   ];
 
   test('セレクトをレンダリングする', () => {
-    const { getByRole } = render(<Select name="test" options={stringOptions} />);
-    
+    const { getByRole } = render(
+      <Select name="test" options={stringOptions} />,
+    );
+
     const select = getByRole('combobox');
     expect(select).toBeInTheDocument();
     expect(select).toHaveClass('ab-Select-input');
   });
 
   test('文字列オプションが正しくレンダリングされる', () => {
-    const { getAllByRole } = render(<Select name="test" options={stringOptions} />);
-    
+    const { getAllByRole } = render(
+      <Select name="test" options={stringOptions} />,
+    );
+
     const options = getAllByRole('option');
     expect(options).toHaveLength(3);
     expect(options[0]).toHaveTextContent('オプション1');
@@ -34,8 +38,10 @@ describe('Select', () => {
   });
 
   test('オブジェクトオプションが正しくレンダリングされる', () => {
-    const { getAllByRole } = render(<Select name="test" options={objectOptions} />);
-    
+    const { getAllByRole } = render(
+      <Select name="test" options={objectOptions} />,
+    );
+
     const options = getAllByRole('option');
     expect(options).toHaveLength(3);
     expect(options[0]).toHaveTextContent('ラベル1');
@@ -48,9 +54,9 @@ describe('Select', () => {
 
   test('ラベルが正しく表示される', () => {
     const { getByText } = render(
-      <Select label="テストラベル" name="test" options={stringOptions} />
+      <Select label="テストラベル" name="test" options={stringOptions} />,
     );
-    
+
     const label = getByText('テストラベル');
     expect(label).toBeInTheDocument();
     expect(label).toHaveClass('ab-Textfield-label');
@@ -58,25 +64,37 @@ describe('Select', () => {
 
   test('必須フィールドが正しく表示される', () => {
     const { getByText } = render(
-      <Select label="テストラベル" name="test" options={stringOptions} required />
+      <Select
+        label="テストラベル"
+        name="test"
+        options={stringOptions}
+        required
+      />,
     );
-    
+
     const requiredLabel = getByText('必須');
     expect(requiredLabel).toBeInTheDocument();
   });
 
   test('エラー状態が正しくCSSクラスに反映される', () => {
-    const { container } = render(<Select name="test" options={stringOptions} error />);
-    
+    const { container } = render(
+      <Select name="test" options={stringOptions} error />,
+    );
+
     const selectContainer = container.querySelector('.ab-Textfield');
     expect(selectContainer).toHaveClass('is-error');
   });
 
   test('エラーメッセージ（文字列）が正しく表示される', () => {
     const { getByText } = render(
-      <Select name="test" options={stringOptions} error errorMessages="エラーメッセージ" />
+      <Select
+        name="test"
+        options={stringOptions}
+        error
+        errorMessages="エラーメッセージ"
+      />,
     );
-    
+
     const errorMessage = getByText('エラーメッセージ');
     expect(errorMessage).toBeInTheDocument();
     expect(errorMessage).toHaveClass('ab-Textfield-error-message');
@@ -84,14 +102,14 @@ describe('Select', () => {
 
   test('エラーメッセージ（配列）が正しく表示される', () => {
     const { getByText } = render(
-      <Select 
-        name="test" 
+      <Select
+        name="test"
         options={stringOptions}
-        error 
-        errorMessages={['エラーメッセージ1', 'エラーメッセージ2']} 
-      />
+        error
+        errorMessages={['エラーメッセージ1', 'エラーメッセージ2']}
+      />,
     );
-    
+
     const errorMessage1 = getByText('エラーメッセージ1');
     const errorMessage2 = getByText('エラーメッセージ2');
     expect(errorMessage1).toBeInTheDocument();
@@ -102,9 +120,9 @@ describe('Select', () => {
 
   test('ヘルプテキストが正しく表示される', () => {
     const { getByText } = render(
-      <Select name="test" options={stringOptions} helptext="ヘルプテキスト" />
+      <Select name="test" options={stringOptions} helptext="ヘルプテキスト" />,
     );
-    
+
     const helptext = getByText('ヘルプテキスト');
     expect(helptext).toBeInTheDocument();
     expect(helptext).toHaveClass('ab-Textfield-helptext');
@@ -112,18 +130,18 @@ describe('Select', () => {
 
   test('無効化状態が正しくCSSクラスに反映される', () => {
     const { container } = render(
-      <Select name="test" options={stringOptions} disabled />
+      <Select name="test" options={stringOptions} disabled />,
     );
-    
+
     const selectContainer = container.querySelector('.ab-Textfield');
     expect(selectContainer).toHaveClass('is-disabled');
   });
 
   test('classNameプロパティが追加で指定できる', () => {
     const { container } = render(
-      <Select name="test" options={stringOptions} className="custom-class" />
+      <Select name="test" options={stringOptions} className="custom-class" />,
     );
-    
+
     const selectContainer = container.querySelector('.ab-Textfield');
     expect(selectContainer).toHaveClass('ab-Textfield', 'custom-class');
   });
