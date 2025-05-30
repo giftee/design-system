@@ -23,6 +23,7 @@ export type Story = StoryObj<Args>;
 type ComponentArgs = Args & {
   children?: React.ReactNode;
   id?: 'default' | 'hover' | 'active' | 'focus' | 'disabled';
+  disabledType?: 'class' | 'attribute';
 };
 
 export const createComponent = ({
@@ -30,17 +31,21 @@ export const createComponent = ({
   children = '',
   position = 'right',
   id = 'default',
+  disabledType = 'class',
 }: ComponentArgs): string => {
   const positionClass = `position-${position}`;
+  const isDisabled = id === 'disabled';
+  const useDisabledClass = isDisabled && disabledType === 'class';
+  const useDisabledAttribute = isDisabled && disabledType === 'attribute';
 
   return `<div id="${id}" class="ab-Radio-wrapper ${positionClass} ${
-    id === 'disabled' && 'is-disabled'
+    useDisabledClass ? 'is-disabled' : ''
   }">
   <label for="${id}" class="ab-Radio-label">${children}</label>
   <div class="ab-Radio">
     <input type="radio" id="${id}" ${
-      checked && 'checked=true'
-    } class="ab-Radio-input" />
+      checked ? 'checked=true' : ''
+    } class="ab-Radio-input" ${useDisabledAttribute ? 'disabled' : ''} />
     <span class="ab-Radio-radio"></span>
   </div>
 </div>`;

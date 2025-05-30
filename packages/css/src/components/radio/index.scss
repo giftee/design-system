@@ -143,6 +143,10 @@
   &.is-disabled {
     pointer-events: none;
   }
+
+  &:has(.ab-Radio-input:disabled) {
+    pointer-events: none;
+  }
 }
 
 .ab-Radio-radio {
@@ -150,6 +154,11 @@
     border: none;
     background-color: var(--radio-radio-disabled-background-color);
   }
+}
+
+.ab-Radio-input:disabled ~ .ab-Radio-radio {
+  border: none;
+  background-color: var(--radio-radio-disabled-background-color);
 }
 
 .ab-Radio-input:checked ~ .ab-Radio-radio {
@@ -162,8 +171,20 @@
   }
 }
 
+.ab-Radio-input:checked:disabled ~ .ab-Radio-radio {
+  background-color: var(--radio-radio-disabled-background-color);
+
+  &::after {
+    background-color: var(--ab-semantic-color-background-rest-primary);
+  }
+}
+
 .ab-Radio-label {
   .is-disabled & {
     color: var(--radio-label-disabled-color);
   }
+}
+
+.ab-Radio-wrapper:has(.ab-Radio-input:disabled) .ab-Radio-label {
+  color: var(--radio-label-disabled-color);
 }
