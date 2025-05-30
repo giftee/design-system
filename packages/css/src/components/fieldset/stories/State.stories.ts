@@ -11,7 +11,7 @@ export const State: Story = {
 <div class="ab-m-4">
   ${createComponent({
     ...args,
-    legend: 'Default',
+    legend: 'Default - Radio',
     id: 'default',
     children: `
       <div class="ab-Radio-wrapper position-right">
@@ -47,7 +47,7 @@ export const State: Story = {
 <div class="ab-m-4">
   ${createComponent({
     ...args,
-    legend: 'Disabled',
+    legend: 'Disabled - Radio',
     id: 'disabled',
     children: `
       <div class="ab-Radio-wrapper position-right">
@@ -77,6 +77,80 @@ export const State: Story = {
             disabled
           />
           <span class="ab-Radio-radio"></span>
+        </div>
+      </div>
+    `,
+  })}
+</div>
+<div class="ab-m-4">
+  ${createComponent({
+    ...args,
+    legend: 'Default - Checkbox',
+    id: 'default',
+    children: `
+      <div class="ab-Checkbox-wrapper position-right">
+        <label for="default-hoge" class="ab-Checkbox-label">Hoge</label>
+        <div class="ab-Checkbox">
+          <input
+            id="default-hoge"
+            name="checkbox-default"
+            class="ab-Checkbox-input"
+            type="checkbox"
+            checked="true"
+            value="0"
+          />
+          <span class="ab-Checkbox-box"></span>
+        </div>
+      </div>
+      <div class="ab-Checkbox-wrapper position-right">
+        <label for="default-fuga" class="ab-Checkbox-label">Fuga</label>
+        <div class="ab-Checkbox">
+          <input
+            id="default-fuga"
+            name="checkbox-default"
+            class="ab-Checkbox-input"
+            type="checkbox"
+            value="1"
+          />
+          <span class="ab-Checkbox-box"></span>
+        </div>
+      </div>
+    `,
+  })}
+</div>
+<div class="ab-m-4">
+  ${createComponent({
+    ...args,
+    legend: 'Disabled - Checkbox',
+    id: 'disabled',
+    children: `
+      <div class="ab-Checkbox-wrapper position-right">
+        <label for="disabled-hoge" class="ab-Checkbox-label">Hoge</label>
+        <div class="ab-Checkbox">
+          <input
+            id="disabled-hoge"
+            name="checkbox-disabled"
+            class="ab-Checkbox-input"
+            type="checkbox"
+            checked="true"
+            value="0"
+            disabled
+          />
+          <span class="ab-Checkbox-box"></span>
+        </div>
+      </div>
+      <div class="ab-Checkbox-wrapper position-right">
+        <label for="disabled-fuga" class="ab-Checkbox-label">Fuga</label>
+        <div class="ab-Checkbox">
+          <input
+            id="disabled-fuga"
+            name="checkbox-disabled"
+            class="ab-Checkbox-input"
+            type="checkbox"
+            value="1"
+            disabled
+          />
+          <span class="ab-Checkbox-box"></span>
         </div>
       </div>
     `,
