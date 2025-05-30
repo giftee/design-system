@@ -4,7 +4,14 @@ import React from 'react';
 import { describe, test, expect, vi } from 'vitest';
 import '@testing-library/jest-dom';
 
-import { Root, Item, ItemLabel, ItemLink, CollapseItem, SubMenu } from './Index';
+import {
+  Root,
+  Item,
+  ItemLabel,
+  ItemLink,
+  CollapseItem,
+  SubMenu,
+} from './Index';
 
 describe('Menu', () => {
   test('メニューをレンダリングする', () => {
@@ -13,9 +20,9 @@ describe('Menu', () => {
         <Item>
           <ItemLabel>メニュー項目</ItemLabel>
         </Item>
-      </Root>
+      </Root>,
     );
-    
+
     const menu = container.querySelector('.ab-Menu');
     expect(menu).toBeInTheDocument();
     expect(menu).toHaveAttribute('role', 'menu');
@@ -27,9 +34,9 @@ describe('Menu', () => {
         <Item>
           <ItemLabel>小さいメニュー</ItemLabel>
         </Item>
-      </Root>
+      </Root>,
     );
-    
+
     const menu = container.querySelector('.ab-Menu');
     expect(menu).toHaveClass('ab-Menu-small');
   });
@@ -40,9 +47,9 @@ describe('Menu', () => {
         <Item>
           <ItemLabel>メニュー項目</ItemLabel>
         </Item>
-      </Root>
+      </Root>,
     );
-    
+
     const menuItem = getByText('メニュー項目').closest('.ab-Menu-item');
     expect(menuItem).toBeInTheDocument();
     expect(menuItem).toHaveAttribute('role', 'menuitem');
@@ -54,9 +61,9 @@ describe('Menu', () => {
         <Item>
           <ItemLabel>メニューラベル</ItemLabel>
         </Item>
-      </Root>
+      </Root>,
     );
-    
+
     const menuItemLabel = getByText('メニューラベル');
     expect(menuItemLabel).toBeInTheDocument();
     expect(menuItemLabel).toHaveClass('ab-Menu-item-label');
@@ -68,9 +75,9 @@ describe('Menu', () => {
         <Item>
           <ItemLink href="/test">メニューリンク</ItemLink>
         </Item>
-      </Root>
+      </Root>,
     );
-    
+
     const menuItemLink = getByText('メニューリンク');
     expect(menuItemLink).toBeInTheDocument();
     expect(menuItemLink).toHaveClass('ab-Menu-item-link');
@@ -87,9 +94,9 @@ describe('Menu', () => {
             </Item>
           </SubMenu>
         </CollapseItem>
-      </Root>
+      </Root>,
     );
-    
+
     const collapseSummary = getByText('折りたたみメニュー');
     expect(collapseSummary).toBeInTheDocument();
     expect(collapseSummary.closest('.ab-Menu-item')).toBeInTheDocument();
@@ -106,9 +113,9 @@ describe('Menu', () => {
             </Item>
           </SubMenu>
         </Item>
-      </Root>
+      </Root>,
     );
-    
+
     const subMenu = container.querySelector('.ab-Menu-sub-menu');
     expect(subMenu).toBeInTheDocument();
   });
@@ -116,18 +123,18 @@ describe('Menu', () => {
   test('クリックイベントが正しく処理される', async () => {
     const user = userEvent.setup();
     const handleClick = vi.fn();
-    
+
     const { getByText } = render(
       <Root>
         <Item onClick={handleClick}>
           <ItemLabel>クリック可能項目</ItemLabel>
         </Item>
-      </Root>
+      </Root>,
     );
-    
+
     const menuItem = getByText('クリック可能項目').closest('li');
     await user.click(menuItem as HTMLElement);
-    
+
     expect(handleClick).toHaveBeenCalledOnce();
   });
 
@@ -137,9 +144,9 @@ describe('Menu', () => {
         <Item>
           <ItemLabel>メニュー項目</ItemLabel>
         </Item>
-      </Root>
+      </Root>,
     );
-    
+
     const menu = container.querySelector('.ab-Menu');
     expect(menu).toHaveClass('ab-Menu', 'custom-class');
   });
@@ -150,9 +157,9 @@ describe('Menu', () => {
         <Item className="custom-item-class">
           <ItemLabel>メニュー項目</ItemLabel>
         </Item>
-      </Root>
+      </Root>,
     );
-    
+
     const menuItem = getByText('メニュー項目').closest('.ab-Menu-item');
     expect(menuItem).toHaveClass('ab-Menu-item', 'custom-item-class');
   });
@@ -163,9 +170,9 @@ describe('Menu', () => {
         <Item>
           <ItemLabel className="custom-label-class">カスタムラベル</ItemLabel>
         </Item>
-      </Root>
+      </Root>,
     );
-    
+
     const label = getByText('カスタムラベル');
     expect(label).toHaveClass('ab-Menu-item-label', 'custom-label-class');
   });
@@ -174,11 +181,13 @@ describe('Menu', () => {
     const { getByText } = render(
       <Root>
         <Item>
-          <ItemLink href="/test" className="custom-link-class">カスタムリンク</ItemLink>
+          <ItemLink href="/test" className="custom-link-class">
+            カスタムリンク
+          </ItemLink>
         </Item>
-      </Root>
+      </Root>,
     );
-    
+
     const link = getByText('カスタムリンク');
     expect(link).toHaveClass('ab-Menu-item-link', 'custom-link-class');
   });

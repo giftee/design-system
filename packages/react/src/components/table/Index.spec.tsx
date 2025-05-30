@@ -3,7 +3,15 @@ import React from 'react';
 import { describe, test, expect } from 'vitest';
 import '@testing-library/jest-dom';
 
-import { Root, Header, HeaderRow, HeaderCell, Body, BodyRow, BodyCell } from './Index';
+import {
+  Root,
+  Header,
+  HeaderRow,
+  HeaderCell,
+  Body,
+  BodyRow,
+  BodyCell,
+} from './Index';
 
 describe('Table', () => {
   test('テーブルをレンダリングする', () => {
@@ -21,9 +29,9 @@ describe('Table', () => {
             <BodyCell>セル2</BodyCell>
           </BodyRow>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const table = container.querySelector('.ab-Table');
     expect(table).toBeInTheDocument();
   });
@@ -41,9 +49,9 @@ describe('Table', () => {
             <BodyCell>セル</BodyCell>
           </BodyRow>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const table = container.querySelector('.ab-Table');
     expect(table).toHaveClass('ab-Table-stripe');
   });
@@ -61,9 +69,9 @@ describe('Table', () => {
             <BodyCell>セル</BodyCell>
           </BodyRow>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const table = container.querySelector('.ab-Table');
     expect(table).toHaveClass('ab-Table-select');
   });
@@ -76,9 +84,9 @@ describe('Table', () => {
             <HeaderCell>ヘッダーセル</HeaderCell>
           </HeaderRow>
         </Header>
-      </Root>
+      </Root>,
     );
-    
+
     const header = container.querySelector('.ab-Table-head');
     expect(header).toBeInTheDocument();
   });
@@ -91,9 +99,9 @@ describe('Table', () => {
             <HeaderCell>ヘッダーセル</HeaderCell>
           </HeaderRow>
         </Header>
-      </Root>
+      </Root>,
     );
-    
+
     const headerRow = container.querySelector('tr');
     expect(headerRow).toBeInTheDocument();
   });
@@ -106,9 +114,9 @@ describe('Table', () => {
             <HeaderCell>ヘッダーセル</HeaderCell>
           </HeaderRow>
         </Header>
-      </Root>
+      </Root>,
     );
-    
+
     const headerCell = getByText('ヘッダーセル');
     expect(headerCell).toBeInTheDocument();
     expect(headerCell.closest('td')).toHaveClass('ab-Table-head-cell');
@@ -122,9 +130,9 @@ describe('Table', () => {
             <BodyCell>ボディセル</BodyCell>
           </BodyRow>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const body = container.querySelector('.ab-Table-body');
     expect(body).toBeInTheDocument();
   });
@@ -137,9 +145,9 @@ describe('Table', () => {
             <BodyCell>ボディセル</BodyCell>
           </BodyRow>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const bodyRow = container.querySelector('.ab-Table-body-row');
     expect(bodyRow).toBeInTheDocument();
   });
@@ -152,9 +160,9 @@ describe('Table', () => {
             <BodyCell>ボディセル</BodyCell>
           </BodyRow>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const bodyCell = getByText('ボディセル');
     expect(bodyCell).toBeInTheDocument();
     expect(bodyCell.closest('td')).toHaveClass('ab-Table-cell');
@@ -168,9 +176,9 @@ describe('Table', () => {
             <BodyCell>テスト</BodyCell>
           </BodyRow>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const table = container.querySelector('.ab-Table');
     expect(table).toHaveClass('ab-Table', 'custom-table-class');
   });
@@ -183,9 +191,9 @@ describe('Table', () => {
             <HeaderCell>ヘッダー</HeaderCell>
           </HeaderRow>
         </Header>
-      </Root>
+      </Root>,
     );
-    
+
     const header = container.querySelector('.ab-Table-head');
     expect(header).toHaveClass('ab-Table-head', 'custom-header-class');
   });
@@ -198,9 +206,9 @@ describe('Table', () => {
             <HeaderCell>ヘッダー</HeaderCell>
           </HeaderRow>
         </Header>
-      </Root>
+      </Root>,
     );
-    
+
     const headerRow = container.querySelector('tr');
     expect(headerRow).toHaveClass('custom-header-row-class');
   });
@@ -210,14 +218,19 @@ describe('Table', () => {
       <Root>
         <Header>
           <HeaderRow>
-            <HeaderCell className="custom-header-cell-class">カスタムヘッダー</HeaderCell>
+            <HeaderCell className="custom-header-cell-class">
+              カスタムヘッダー
+            </HeaderCell>
           </HeaderRow>
         </Header>
-      </Root>
+      </Root>,
     );
-    
+
     const headerCell = getByText('カスタムヘッダー').closest('td');
-    expect(headerCell).toHaveClass('ab-Table-head-cell', 'custom-header-cell-class');
+    expect(headerCell).toHaveClass(
+      'ab-Table-head-cell',
+      'custom-header-cell-class',
+    );
   });
 
   test('classNameプロパティが追加で指定できる（Body）', () => {
@@ -228,9 +241,9 @@ describe('Table', () => {
             <BodyCell>セル</BodyCell>
           </BodyRow>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const body = container.querySelector('.ab-Table-body');
     expect(body).toHaveClass('ab-Table-body', 'custom-body-class');
   });
@@ -243,9 +256,9 @@ describe('Table', () => {
             <BodyCell>セル</BodyCell>
           </BodyRow>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const bodyRow = container.querySelector('.ab-Table-body-row');
     expect(bodyRow).toHaveClass('ab-Table-body-row', 'custom-body-row-class');
   });
@@ -258,9 +271,9 @@ describe('Table', () => {
             <BodyCell className="custom-body-cell-class">カスタムセル</BodyCell>
           </BodyRow>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const bodyCell = getByText('カスタムセル').closest('td');
     expect(bodyCell).toHaveClass('ab-Table-cell', 'custom-body-cell-class');
   });

@@ -14,9 +14,9 @@ describe('Stepper', () => {
           { label: 'ステップ3' },
         ]}
         currentStep={1}
-      />
+      />,
     );
-    
+
     const stepper = container.querySelector('.ab-Stepper');
     expect(stepper).toBeInTheDocument();
   });
@@ -30,9 +30,9 @@ describe('Stepper', () => {
           { label: 'ステップ3' },
         ]}
         currentStep={1}
-      />
+      />,
     );
-    
+
     const currentStep = container.querySelectorAll('.ab-Stepper-item')[1];
     expect(currentStep).toHaveClass('ab-Stepper-item-current');
   });
@@ -46,25 +46,24 @@ describe('Stepper', () => {
           { label: 'ステップ3' },
         ]}
         currentStep={1}
-      />
+      />,
     );
-    
-    const completedStep = container.querySelectorAll('.ab-Stepper-item-passed')[0];
+
+    const completedStep = container.querySelectorAll(
+      '.ab-Stepper-item-passed',
+    )[0];
     expect(completedStep).toBeInTheDocument();
   });
 
   test('方向プロパティが正しくCSSクラスに反映される', () => {
     const { container } = render(
       <Stepper
-        steps={[
-          { label: 'ステップ1' },
-          { label: 'ステップ2' },
-        ]}
+        steps={[{ label: 'ステップ1' }, { label: 'ステップ2' }]}
         currentStep={1}
         direction="vertical"
-      />
+      />,
     );
-    
+
     const stepper = container.querySelector('.ab-Stepper');
     expect(stepper).toHaveClass('ab-Stepper-vertical');
   });
@@ -72,15 +71,12 @@ describe('Stepper', () => {
   test('classNameプロパティが追加で指定できる', () => {
     const { container } = render(
       <Stepper
-        steps={[
-          { label: 'ステップ1' },
-          { label: 'ステップ2' },
-        ]}
+        steps={[{ label: 'ステップ1' }, { label: 'ステップ2' }]}
         currentStep={1}
         className="custom-class"
-      />
+      />,
     );
-    
+
     const stepper = container.querySelector('.ab-Stepper');
     expect(stepper).toBeInTheDocument();
     expect(container.querySelector('.custom-class')).toBeNull();

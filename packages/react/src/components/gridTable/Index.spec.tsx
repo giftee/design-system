@@ -2,7 +2,15 @@ import { render } from '@testing-library/react';
 import React from 'react';
 import { describe, test, expect } from 'vitest';
 
-import { Root, Header, HeaderCell, Body, BodyCell, Row, RowGroup } from './Index';
+import {
+  Root,
+  Header,
+  HeaderCell,
+  Body,
+  BodyCell,
+  Row,
+  RowGroup,
+} from './Index';
 
 describe('GridTable', () => {
   test('グリッドテーブルをレンダリングする', () => {
@@ -22,9 +30,9 @@ describe('GridTable', () => {
             <BodyCell>セル3</BodyCell>
           </Row>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const gridTable = container.querySelector('.ab-GridTable');
     expect(gridTable).toBeInTheDocument();
   });
@@ -40,9 +48,9 @@ describe('GridTable', () => {
             <HeaderCell>ヘッダー4</HeaderCell>
           </Row>
         </Header>
-      </Root>
+      </Root>,
     );
-    
+
     const gridTable = container.querySelector('.ab-GridTable');
     expect(gridTable).toHaveStyle('--ab-gridtable-columns-count: 4');
   });
@@ -55,9 +63,9 @@ describe('GridTable', () => {
             <HeaderCell align="center">中央揃え</HeaderCell>
           </Row>
         </Header>
-      </Root>
+      </Root>,
     );
-    
+
     const headerCell = getByText('中央揃え').closest('.ab-GridTable-head-cell');
     expect(headerCell).toHaveClass('ab-text-center');
   });
@@ -70,9 +78,9 @@ describe('GridTable', () => {
             <BodyCell align="right">右揃え</BodyCell>
           </Row>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const bodyCell = getByText('右揃え').closest('.ab-GridTable-cell');
     expect(bodyCell).toHaveClass('ab-text-right');
   });
@@ -87,9 +95,9 @@ describe('GridTable', () => {
             </Row>
           </RowGroup>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const rowGroup = container.querySelector('.ab-GridTable-rowgroup');
     expect(rowGroup).toBeInTheDocument();
     expect(rowGroup).toHaveStyle('--ab-gridtable-column-start: 1');
@@ -104,9 +112,9 @@ describe('GridTable', () => {
             <BodyCell>テスト</BodyCell>
           </Row>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const gridTable = container.querySelector('.ab-GridTable');
     expect(gridTable).toHaveClass('ab-GridTable', 'custom-class');
   });
@@ -119,9 +127,9 @@ describe('GridTable', () => {
             <HeaderCell>ヘッダー</HeaderCell>
           </Row>
         </Header>
-      </Root>
+      </Root>,
     );
-    
+
     const header = container.querySelector('.ab-GridTable-head');
     expect(header).toHaveClass('ab-GridTable-head', 'custom-header-class');
   });
@@ -134,9 +142,9 @@ describe('GridTable', () => {
             <BodyCell>セル</BodyCell>
           </Row>
         </Body>
-      </Root>
+      </Root>,
     );
-    
+
     const body = container.querySelector('.ab-GridTable-body');
     expect(body).toHaveClass('ab-GridTable-body', 'custom-body-class');
   });

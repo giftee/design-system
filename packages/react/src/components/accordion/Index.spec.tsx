@@ -11,12 +11,12 @@ describe('Accordion', () => {
       <Root>
         <Summary>アコーディオンタイトル</Summary>
         <Content>アコーディオンコンテンツ</Content>
-      </Root>
+      </Root>,
     );
-    
+
     const summary = getByText('アコーディオンタイトル');
     const content = getByText('アコーディオンコンテンツ');
-    
+
     expect(summary).toBeInTheDocument();
     expect(content).toBeInTheDocument();
     expect(summary).toHaveClass('ab-Accordion-summary');
@@ -28,9 +28,9 @@ describe('Accordion', () => {
       <Root size="small">
         <Summary>小さいアコーディオン</Summary>
         <Content>コンテンツ</Content>
-      </Root>
+      </Root>,
     );
-    
+
     const accordion = container.querySelector('.ab-Accordion');
     expect(accordion).toHaveClass('ab-Accordion-small');
   });
@@ -40,9 +40,9 @@ describe('Accordion', () => {
       <Root disabled>
         <Summary>無効化アコーディオン</Summary>
         <Content>コンテンツ</Content>
-      </Root>
+      </Root>,
     );
-    
+
     const accordion = container.querySelector('.ab-Accordion');
     expect(accordion).toHaveClass('is-disabled');
   });
@@ -52,9 +52,9 @@ describe('Accordion', () => {
       <Root className="custom-class">
         <Summary>カスタムクラスアコーディオン</Summary>
         <Content>コンテンツ</Content>
-      </Root>
+      </Root>,
     );
-    
+
     const accordion = container.querySelector('.ab-Accordion');
     expect(accordion).toHaveClass('ab-Accordion', 'custom-class');
   });
@@ -64,9 +64,9 @@ describe('Accordion', () => {
       <Root>
         <Summary className="custom-summary-class">サマリー</Summary>
         <Content>コンテンツ</Content>
-      </Root>
+      </Root>,
     );
-    
+
     const summary = getByText('サマリー');
     expect(summary).toHaveClass('ab-Accordion-summary', 'custom-summary-class');
   });
@@ -76,26 +76,26 @@ describe('Accordion', () => {
       <Root>
         <Summary>サマリー</Summary>
         <Content className="custom-content-class">コンテンツ</Content>
-      </Root>
+      </Root>,
     );
-    
+
     const content = getByText('コンテンツ');
     expect(content).toHaveClass('ab-Accordion-content', 'custom-content-class');
   });
 
   test('アコーディオンの開閉が正しく動作する', async () => {
     const user = userEvent.setup();
-    
+
     const { getByText } = render(
       <Root>
         <Summary>クリック可能サマリー</Summary>
         <Content>表示されるコンテンツ</Content>
-      </Root>
+      </Root>,
     );
-    
+
     const summary = getByText('クリック可能サマリー');
     await user.click(summary);
-    
+
     const details = summary.closest('details');
     expect(details).toHaveAttribute('open');
   });
