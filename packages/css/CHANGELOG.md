@@ -1,5 +1,17 @@
 # @giftee/abukuma-css
 
+## 3.0.6
+
+### Patch Changes
+
+- [#539](https://github.com/giftee/design-system/pull/539) [`9d5cc78`](https://github.com/giftee/design-system/commit/9d5cc788ad9865f609f7389bbc72a9ea11b3d556) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [feature：component] Textfield へ disabled 属性のスタイルを追加
+
+- [#541](https://github.com/giftee/design-system/pull/541) [`40c461c`](https://github.com/giftee/design-system/commit/40c461ca7a01f70313a74c5f67e9c218a0b810b2) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [enhancement:fieldset] Fieldset コンポーネントに disabled 状態を追加
+
+- [#528](https://github.com/giftee/design-system/pull/528) [`970beac`](https://github.com/giftee/design-system/commit/970beacd4eb1d7dae8f55f182d834edceb9d656a) Thanks [@yacchi1123](https://github.com/yacchi1123)! - [feature：component] Checkbox へ disabled 属性のスタイルを追加
+
+- [#538](https://github.com/giftee/design-system/pull/538) [`ef5579e`](https://github.com/giftee/design-system/commit/ef5579e068706ec911baf6d6136193723a55b5fd) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [feature：component] Radio へ disabled 属性のスタイルを追加
+
 ## 3.0.5
 
 ### Patch Changes
