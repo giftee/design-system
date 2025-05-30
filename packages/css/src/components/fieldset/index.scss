@@ -13,6 +13,10 @@
     align-items: flex-start;
     gap: var(--ab-semantic-spacing-6);
   }
+
+  &:disabled &-legend {
+    color: var(--ab-semantic-color-text-secondary);
+  }
 }
 
 .ab-Fieldset-vertical {

@@ -19,20 +19,21 @@ export type Story = StoryObj<Args>;
 type ComponentArgs = Args & {
   legend: string;
   children: React.ReactNode;
+  id?: 'default' | 'disabled';
 };
 
 export const createComponent = ({
   direction = 'horizontal',
   legend,
   children,
+  id = 'default',
 }: ComponentArgs): string => {
   const directionClass =
     direction === 'vertical' ? `ab-Fieldset-${direction}` : '';
-  console.log('direction', direction);
-  console.log('directionClass', directionClass);
+  const isDisabled = id === 'disabled';
 
   return `
-<fieldset class="ab-Fieldset ${directionClass}">
+<fieldset id="${id}" class="ab-Fieldset ${directionClass}" ${isDisabled ? 'disabled' : ''}>
   <legend class="ab-Fieldset-legend">${legend}</legend>
   <div class="ab-Fieldset-content">${children}</div>
 </fieldset>
