@@ -22,7 +22,7 @@ export const State: Story = {
             name="radio-default"
             class="ab-Radio-input"
             type="radio"
-            checked="true"
+            checked
             value="1"
           />
           <span class="ab-Radio-radio"></span>
@@ -50,7 +50,7 @@ export const State: Story = {
             name="checkbox-default"
             class="ab-Checkbox-input"
             type="checkbox"
-            checked="true"
+            checked
             value="0"
           />
           <span class="ab-Checkbox-box"></span>
@@ -86,9 +86,8 @@ export const State: Story = {
             name="radio-disabled"
             class="ab-Radio-input"
             type="radio"
-            checked="true"
+            checked
             value="1"
-            disabled
           />
           <span class="ab-Radio-radio"></span>
         </div>
@@ -102,7 +101,6 @@ export const State: Story = {
             class="ab-Radio-input"
             type="radio"
             value="0"
-            disabled
           />
           <span class="ab-Radio-radio"></span>
         </div>
@@ -116,9 +114,8 @@ export const State: Story = {
             name="checkbox-disabled"
             class="ab-Checkbox-input"
             type="checkbox"
-            checked="true"
+            checked
             value="0"
-            disabled
           />
           <span class="ab-Checkbox-box"></span>
         </div>
@@ -132,7 +129,6 @@ export const State: Story = {
             class="ab-Checkbox-input"
             type="checkbox"
             value="1"
-            disabled
           />
           <span class="ab-Checkbox-box"></span>
         </div>
