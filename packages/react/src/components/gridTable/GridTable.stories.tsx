@@ -174,6 +174,8 @@ export const Base: Story = {
                     className="ab-mr-2 ab-inline"
                     style={{ height: '56px' }}
                     alt="giftee Box"
+                    width={56}
+                    height={56}
                   />
                   <div className="ab-flex ab-flex-column">
                     <Typography variant="body-xs" className="ab-text-secondary">
@@ -197,6 +199,8 @@ export const Base: Story = {
                     className="ab-mr-2 ab-inline"
                     style={{ height: '56px' }}
                     alt="giftee Box"
+                    width={56}
+                    height={56}
                   />
                   <div className="ab-flex ab-flex-column">
                     <Typography variant="body-xs" className="ab-text-secondary">
@@ -253,6 +257,8 @@ export const Select: Story = {
                   className="ab-mr-2 ab-inline"
                   style={{ height: '56px' }}
                   alt="giftee Box"
+                  width={56}
+                  height={56}
                 />
                 <div className="ab-flex ab-flex-column">
                   <Typography variant="body-xs" className="ab-text-secondary">
@@ -276,6 +282,8 @@ export const Select: Story = {
                   className="ab-mr-2 ab-inline"
                   style={{ height: '56px' }}
                   alt="giftee Box"
+                  width={56}
+                  height={56}
                 />
                 <div className="ab-flex ab-flex-column">
                   <Typography variant="body-xs" className="ab-text-secondary">
@@ -331,6 +339,8 @@ export const BorderedRow: Story = {
                   className="ab-mr-2 ab-inline"
                   style={{ height: '56px' }}
                   alt="giftee Box"
+                  width={56}
+                  height={56}
                 />
                 <div className="ab-flex ab-flex-column">
                   <Typography variant="body-xs" className="ab-text-secondary">
@@ -354,6 +364,8 @@ export const BorderedRow: Story = {
                   className="ab-mr-2 ab-inline"
                   style={{ height: '56px' }}
                   alt="giftee Box"
+                  width={56}
+                  height={56}
                 />
                 <div className="ab-flex ab-flex-column">
                   <Typography variant="body-xs" className="ab-text-secondary">
@@ -416,6 +428,8 @@ export const RowSpan: Story = {
                     className="ab-mr-2 ab-inline"
                     style={{ height: '56px' }}
                     alt="giftee Box"
+                    width={56}
+                    height={56}
                   />
                   <div className="ab-flex ab-flex-column">
                     <Typography variant="body-xs" className="ab-text-secondary">
@@ -499,6 +513,8 @@ export const ColSpan: Story = {
                     className="ab-mr-2 ab-inline"
                     style={{ height: '56px' }}
                     alt="giftee Box"
+                    width={56}
+                    height={56}
                   />
                   <div className="ab-flex ab-flex-column">
                     <Typography variant="body-xs" className="ab-text-secondary">
@@ -574,6 +590,8 @@ export const GridColumn: Story = {
                     className="ab-mr-2 ab-inline"
                     style={{ height: '56px' }}
                     alt="giftee Box"
+                    width={56}
+                    height={56}
                   />
                   <div className="ab-flex ab-flex-column">
                     <Typography variant="body-xs" className="ab-text-secondary">
@@ -670,6 +688,8 @@ export const BorderedCell: Story = {
                     className="ab-mr-2 ab-inline"
                     style={{ height: '56px' }}
                     alt="giftee Box"
+                    width={56}
+                    height={56}
                   />
                   <div className="ab-flex ab-flex-column">
                     <Typography variant="body-xs" className="ab-text-secondary">
