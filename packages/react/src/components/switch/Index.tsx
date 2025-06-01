@@ -33,8 +33,8 @@ export const Switch = forwardRef<ElementRef<'input'>, SwitchProps>(
 
     return (
       <label className={classes}>
-        <div className="ab-Switch-label">{children}</div>
-        <div className="ab-Switch">
+        <span className="ab-Switch-label">{children}</span>
+        <span className="ab-Switch">
           <input
             type="checkbox"
             className="ab-Switch-input"
@@ -43,7 +43,7 @@ export const Switch = forwardRef<ElementRef<'input'>, SwitchProps>(
           />
           <span className="ab-Switch-slider"></span>
           <span className="ab-Switch-mark"></span>
-        </div>
+        </span>
       </label>
     );
   },

@@ -35,6 +35,9 @@ jobs:
       - name: Lint
         run: pnpm lint
         working-directory: ./packages/react
+      - name: Markuplint
+        run: pnpm lint:markuplint
+        working-directory: ./packages/react
       - name: Format
         run: pnpm prettier
         working-directory: ./packages/react

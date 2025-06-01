@@ -71,6 +71,8 @@ export const Icon: Story = {
           className="ab-mr-1"
           style={{ height: '30px' }}
           alt="giftee Box"
+          width={30}
+          height={30}
         />
         Icon
       </div>
