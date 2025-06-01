@@ -1,6 +1,6 @@
 import type { DividerProps } from '@/index';
 import { Divider } from '@/index';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Divider',

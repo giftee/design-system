@@ -7,7 +7,7 @@ import {
   Stories,
 } from '@storybook/blocks';
 import * as React from 'react';
-import type { Preview } from '@storybook/react';
+import type { Preview } from '@storybook/react-vite';
 import '@giftee/abukuma-css';
 
 const preview: Preview = {
