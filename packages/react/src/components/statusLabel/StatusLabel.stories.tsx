@@ -1,6 +1,6 @@
 import type { StatusLabelProps } from '@/index';
 import { StatusLabel } from '@/index';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'StatusLabel',
