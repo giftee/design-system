@@ -83,18 +83,17 @@ export const Stepper = forwardRef<ElementRef<'ol'>, StepperProps>(
                 passStatus === PASS_STATUSES.CURRENT ? 'step' : undefined
               }
             >
-              <div
-                className="ab-Stepper-marker"
-                aria-label={
-                  passStatus === PASS_STATUSES.PASSWED ? '成功' : undefined
-                }
-                role={passStatus === PASS_STATUSES.PASSWED ? 'img' : undefined}
-                aria-hidden={passStatus !== PASS_STATUSES.PASSWED}
-              >
-                {size !== 'small' && passStatus !== PASS_STATUSES.PASSWED
-                  ? i + 1
-                  : null}
-              </div>
+              {passStatus === PASS_STATUSES.PASSWED ? (
+                <div
+                  className="ab-Stepper-marker"
+                  aria-label="成功"
+                  role="img"
+                />
+              ) : (
+                <div className="ab-Stepper-marker" aria-hidden="true">
+                  {size !== 'small' ? i + 1 : null}
+                </div>
+              )}
               <div className="ab-Stepper-label">{step.label}</div>
             </li>
           );
