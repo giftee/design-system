@@ -1,5 +1,20 @@
 # @giftee/abukuma-react
 
+## 4.1.0
+
+### Minor Changes
+
+- [#519](https://github.com/giftee/design-system/pull/519) [`d61d672`](https://github.com/giftee/design-system/commit/d61d672927152ff49514b177970ec2d25d21eacd) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [add] vitest で unit test を回せるようにした
+
+### Patch Changes
+
+- [#540](https://github.com/giftee/design-system/pull/540) [`e1c233c`](https://github.com/giftee/design-system/commit/e1c233c01df572f1980b1e898fbb2f492d6d5109) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [enhance:Textfield] エラーメッセージと input を aria-describedby で紐づける
+
+- [#543](https://github.com/giftee/design-system/pull/543) [`8cacc5f`](https://github.com/giftee/design-system/commit/8cacc5fe6f9a166eff4058f48987de030c7ca398) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [enhance:Textfield] ヘルプテキストと input を aria-describedby で紐づける
+
+- Updated dependencies [[`9d5cc78`](https://github.com/giftee/design-system/commit/9d5cc788ad9865f609f7389bbc72a9ea11b3d556), [`40c461c`](https://github.com/giftee/design-system/commit/40c461ca7a01f70313a74c5f67e9c218a0b810b2), [`970beac`](https://github.com/giftee/design-system/commit/970beacd4eb1d7dae8f55f182d834edceb9d656a), [`ef5579e`](https://github.com/giftee/design-system/commit/ef5579e068706ec911baf6d6136193723a55b5fd)]:
+  - @giftee/abukuma-css@3.0.6
+
 ## 4.0.7
 
 ### Patch Changes
