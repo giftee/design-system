@@ -99,10 +99,11 @@ export const Textfield = forwardRef<
 
     const helptextId = helptext ? `${name}-helptext` : undefined;
 
-    const ariaDescribedBy = [
-      ...(errorMessageIds.length > 0 ? errorMessageIds : []),
-      ...(helptextId ? [helptextId] : [])
-    ].join(' ') || undefined;
+    const ariaDescribedBy =
+      [
+        ...(errorMessageIds.length > 0 ? errorMessageIds : []),
+        ...(helptextId ? [helptextId] : []),
+      ].join(' ') || undefined;
 
     return (
       <div className={classes}>
@@ -166,7 +167,11 @@ export const Textfield = forwardRef<
           </div>
         )}
 
-        {!!helptext && <div id={helptextId} className="ab-Textfield-helptext">{helptext}</div>}
+        {!!helptext && (
+          <div id={helptextId} className="ab-Textfield-helptext">
+            {helptext}
+          </div>
+        )}
       </div>
     );
   },

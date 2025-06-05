@@ -198,11 +198,11 @@ describe('Textfield', () => {
 
   test('ヘルプテキストとエラーメッセージの両方がある場合のアクセシビリティ属性', () => {
     const { getByRole, getByText } = render(
-      <Textfield 
-        name="test" 
-        helptext="ヘルプテキスト" 
-        error 
-        errorMessages="エラーメッセージ" 
+      <Textfield
+        name="test"
+        helptext="ヘルプテキスト"
+        error
+        errorMessages="エラーメッセージ"
       />,
     );
 
@@ -210,7 +210,10 @@ describe('Textfield', () => {
     const helptext = getByText('ヘルプテキスト');
     const errorMessage = getByText('エラーメッセージ');
 
-    expect(input).toHaveAttribute('aria-describedby', 'test-error test-helptext');
+    expect(input).toHaveAttribute(
+      'aria-describedby',
+      'test-error test-helptext',
+    );
     expect(helptext).toHaveAttribute('id', 'test-helptext');
     expect(errorMessage).toHaveAttribute('id', 'test-error');
   });
