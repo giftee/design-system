@@ -16,6 +16,12 @@
 
     align-items: center;
     width: 100%;
+    padding-right: calc(
+      var(--ab-semantic-spacing-2) * 2 + var(--ab-semantic-icon-size-xsmall)
+    );
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   &-icon {
