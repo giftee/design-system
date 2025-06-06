@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.0.7
+
+### Patch Changes
+
+- [#555](https://github.com/giftee/design-system/pull/555) [`c6404a9`](https://github.com/giftee/design-system/commit/c6404a91ad929d75cbe3dcd007d73c4d1939e62f) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [fix:Select] input value が長い時に 3 点リーダーで省略しつつアイコンに重ならないようにする
+
 ## 3.0.6
 
 ### Patch Changes
