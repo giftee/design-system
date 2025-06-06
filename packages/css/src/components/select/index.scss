@@ -42,4 +42,8 @@
   .is-disabled & {
     pointer-events: none;
   }
+
+  &:has(.ab-Select-input:disabled) {
+    pointer-events: none;
+  }
 }
