@@ -88,7 +88,7 @@ export const State: Story = {
 </div>
 <div id="disabled" class="ab-Textfield is-disabled ab-mb-8">
   <label for="disabled" class="ab-Textfield-label">
-    Disabled
+    Disabled(廃止予定)
     ${args.required ? `<div class="ab-StatusLabel">必須</div>` : ''}
   </label>
   <span class="ab-Select">
@@ -96,6 +96,26 @@ export const State: Story = {
       id="disabled"
       name="field"
       class="ab-Select-input"
+    >
+      <option value="option1" selected="">Option1</option>
+      <option value="option2" selected="">Option2</option>
+      <option value="option3" selected="">Option3</option>
+    </select>
+    ${angleDown('ab-Select-icon')}
+  </span>
+  <div class="ab-Textfield-helptext">disabled</div>
+</div>
+<div id="disabled-attribute" class="ab-Textfield ab-mb-8">
+  <label for="disabled-attribute" class="ab-Textfield-label">
+    Disabled(使用推奨)
+    ${args.required ? `<div class="ab-StatusLabel">必須</div>` : ''}
+  </label>
+  <span class="ab-Select">
+    <select
+      id="disabled-attribute"
+      name="field"
+      class="ab-Select-input"
+      disabled
     >
       <option value="option1" selected="">Option1</option>
       <option value="option2" selected="">Option2</option>

@@ -102,6 +102,7 @@ export const Select = forwardRef<ElementRef<'select'>, SelectProps>(
             className="ab-Select-input"
             ref={forwardedRef}
             required={required}
+            disabled={disabled}
             {...rest}
           >
             {options.map((option) => {
