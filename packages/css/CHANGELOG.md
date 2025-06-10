@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.0.8
+
+### Patch Changes
+
+- [#558](https://github.com/giftee/design-system/pull/558) [`c7928e0`](https://github.com/giftee/design-system/commit/c7928e0b0b89a4e8438eb355cda88ff1dfa4ad43) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [feature：component] Select へ disabled 属性のスタイルを追加
+
 ## 3.0.7
 
 ### Patch Changes
