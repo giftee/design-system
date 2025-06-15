@@ -49,7 +49,7 @@ importers:
         specifier: ^0.2.2
         version: 0.2.2
       '@types/react':
-        specifier: ^19.1.7
+        specifier: ^19.1.8
         version: 19.1.8
       '@types/react-dom':
         specifier: ^19.1.6
@@ -173,7 +173,7 @@ importers:
         specifier: ^14.6.1
         version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/react':
-        specifier: ^19.1.7
+        specifier: ^19.1.8
         version: 19.1.8
       '@types/react-dom':
         specifier: ^19.1.6
