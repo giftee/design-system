@@ -1,0 +1,49 @@
+@use '../icon';
+@use '../textfield';
+
+.ab-DatePicker-icon {
+  --datepicker-icon-color: var(--ab-semantic-color-text-brand);
+}
+
+.ab-DatePicker {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+
+  &-input {
+    @extend .ab-Textfield-input;
+
+    align-items: center;
+    width: 100%;
+    padding-right: calc(
+      var(--ab-semantic-spacing-2) * 2 + var(--ab-semantic-icon-size-xsmall)
+    );
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &-icon {
+    @extend .ab-Icon;
+    @extend .ab-Icon-xsmall;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: var(--ab-semantic-spacing-2);
+    color: var(--datepicker-icon-color);
+    pointer-events: none;
+  }
+}
+
+.ab-DatePicker {
+  .is-disabled & {
+    pointer-events: none;
+  }
+
+  &:has(.ab-DatePicker-input:disabled) {
+    pointer-events: none;
+  }
+}
