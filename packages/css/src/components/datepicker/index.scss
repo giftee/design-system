@@ -1,0 +1,48 @@
+@use '../icon';
+@use '../textfield';
+
+$calender-url: 'data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTQgMEM0LjUzMTI1IDAgNSAwLjQ2ODc1IDUgMVYySDlWMUM5IDAuNDY4NzUgOS40Mzc1IDAgMTAgMEMxMC41MzEyIDAgMTEgMC40Njg3NSAxMSAxVjJIMTIuNUMxMy4zMTI1IDIgMTQgMi42ODc1IDE0IDMuNVY1SDBWMy41QzAgMi42ODc1IDAuNjU2MjUgMiAxLjUgMkgzVjFDMyAwLjQ2ODc1IDMuNDM3NSAwIDQgMFpNMCA2SDE0VjE0LjVDMTQgMTUuMzQzOCAxMy4zMTI1IDE2IDEyLjUgMTZIMS41QzAuNjU2MjUgMTYgMCAxNS4zNDM4IDAgMTQuNVY2Wk0yIDguNVY5LjVDMiA5Ljc4MTI1IDIuMjE4NzUgMTAgMi41IDEwSDMuNUMzLjc1IDEwIDQgOS43ODEyNSA0IDkuNVY4LjVDNCA4LjI1IDMuNzUgOCAzLjUgOEgyLjVDMi4yMTg3NSA4IDIgOC4yNSAyIDguNVpNNiA4LjVWOS41QzYgOS43ODEyNSA2LjIxODc1IDEwIDYuNSAxMEg3LjVDNy43NSAxMCA4IDkuNzgxMjUgOCA5LjVWOC41QzggOC4yNSA3Ljc1IDggNy41IDhINi41QzYuMjE4NzUgOCA2IDguMjUgNiA4LjVaTTEwLjUgOEMxMC4yMTg4IDggMTAgOC4yNSAxMCA4LjVWOS41QzEwIDkuNzgxMjUgMTAuMjE4OCAxMCAxMC41IDEwSDExLjVDMTEuNzUgMTAgMTIgOS43ODEyNSAxMiA5LjVWOC41QzEyIDguMjUgMTEuNzUgOCAxMS41IDhIMTAuNVpNMiAxMi41VjEzLjVDMiAxMy43ODEyIDIuMjE4NzUgMTQgMi41IDE0SDMuNUMzLjc1IDE0IDQgMTMuNzgxMiA0IDEzLjVWMTIuNUM0IDEyLjI1IDMuNzUgMTIgMy41IDEySDIuNUMyLjIxODc1IDEyIDIgMTIuMjUgMiAxMi41Wk02LjUgMTJDNi4yMTg3NSAxMiA2IDEyLjI1IDYgMTIuNVYxMy41QzYgMTMuNzgxMiA2LjIxODc1IDE0IDYuNSAxNEg3LjVDNy43NSAxNCA4IDEzLjc4MTIgOCAxMy41VjEyLjVDOCAxMi4yNSA3Ljc1IDEyIDcuNSAxMkg2LjVaTTEwIDEyLjVWMTMuNUMxMCAxMy43ODEyIDEwLjIxODggMTQgMTAuNSAxNEgxMS41QzExLjc1IDE0IDEyIDEzLjc4MTIgMTIgMTMuNVYxMi41QzEyIDEyLjI1IDExLjc1IDEyIDExLjUgMTJIMTAuNUMxMC4yMTg4IDEyIDEwIDEyLjI1IDEwIDEyLjVaIiBmaWxsPSIjNEU1QjYxIi8+Cjwvc3ZnPgo=';
+
+.ab-DatePicker {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+
+  &-input {
+    @extend .ab-Textfield-input;
+
+    align-items: center;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+
+    &::-webkit-calendar-picker-indicator {
+      background: transparent;
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      background-image: url($calender-url);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 0 0;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 50%;
+      right: var(--ab-semantic-spacing-2);
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+}
+
+.ab-DatePicker {
+  &:has(.ab-DatePicker-input:disabled) {
+    pointer-events: none;
+  }
+}
