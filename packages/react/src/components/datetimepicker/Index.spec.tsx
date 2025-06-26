@@ -8,7 +8,9 @@ describe('DateTimePicker', () => {
   test('DateTimePickerをレンダリングする', () => {
     const { container } = render(<DateTimePicker name="test" />);
 
-    const datetimepicker = container.querySelector('input[type="datetime-local"]');
+    const datetimepicker = container.querySelector(
+      'input[type="datetime-local"]',
+    );
     expect(datetimepicker).toBeInTheDocument();
     expect(datetimepicker).toHaveClass('ab-DateTimePicker-input');
   });

@@ -32,7 +32,10 @@ export type DateTimePickerProps = ComponentPropsWithoutRef<'input'> & {
  *
  * - [DateTimePicker](https://github.com/giftee/design-system/tree/main/packages/react/src/components/datetimepicker)
  */
-export const DateTimePicker = forwardRef<ElementRef<'input'>, DateTimePickerProps>(
+export const DateTimePicker = forwardRef<
+  ElementRef<'input'>,
+  DateTimePickerProps
+>(
   (
     {
       label,
