@@ -61,6 +61,8 @@
 
     &:focus {
       border-color: var(--textfield-input-focus-border-color);
+      outline: solid var(--ab-semantic-color-border-brand) 2px;
+      outline-offset: 2px;
     }
 
     &:active {

@@ -118,6 +118,11 @@
   }
 
   &:focus {
+    .ab-Radio-radio {
+      outline: solid var(--ab-semantic-color-border-brand) 2px;
+      outline-offset: 2px;
+    }
+
     .ab-Radio-radio,
     .ab-Radio-input:checked ~ .ab-Radio-radio {
       background-color: var(--radio-radio-focus-background-color);
