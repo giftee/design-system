@@ -1,0 +1,9 @@
+@use '../datepicker';
+
+.ab-DateTimePicker {
+  @extend .ab-DatePicker;
+}
+
+.ab-DateTimePicker-input {
+  @extend .ab-DatePicker-input;
+}
