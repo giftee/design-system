@@ -1,5 +1,18 @@
 # @giftee/abukuma-react
 
+## 4.2.0
+
+### Minor Changes
+
+- [#603](https://github.com/giftee/design-system/pull/603) [`5dcd522`](https://github.com/giftee/design-system/commit/5dcd522f63c103484c19f18853fc41961ca74d8b) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [Add:DateTimePicker] DateTimePicker コンポーネントの追加
+
+- [#600](https://github.com/giftee/design-system/pull/600) [`5dcc9c3`](https://github.com/giftee/design-system/commit/5dcc9c3a1f208ef559149c7a858ddec1ddd4f6db) Thanks [@egurinko](https://github.com/egurinko)! - [Add:DatePicker] DatePicker コンポーネントの追加
+
+### Patch Changes
+
+- Updated dependencies [[`4e8b0dd`](https://github.com/giftee/design-system/commit/4e8b0dd2fa43a20459cdd5a7e3c4cbaa243652f2), [`213c429`](https://github.com/giftee/design-system/commit/213c429fb5be961f9778b37f2ad7a6975194b9e5)]:
+  - @giftee/abukuma-css@3.1.0
+
 ## 4.1.2
 
 ### Patch Changes
