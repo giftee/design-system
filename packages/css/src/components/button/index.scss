@@ -25,6 +25,7 @@
   --button-focus-visible-border-color: var(
     --ab-semantic-color-background-focus-on-brand
   );
+  --button-focus-visible-outline-color: var(--ab-semantic-color-border-brand);
   --button-active-color: var(--ab-semantic-color-text-contrast);
   --button-active-background-color: var(
     --ab-semantic-color-background-pressed-on-brand
@@ -53,6 +54,7 @@
     --ab-semantic-color-background-focus-on-neutral
   );
   --button-focus-visible-border-color: var(--ab-semantic-color-border-brand);
+  --button-focus-visible-outline-color: var(--ab-semantic-color-border-brand);
   --button-active-color: var(--ab-semantic-color-text-brand);
   --button-active-background-color: var(
     --ab-semantic-color-background-pressed-on-neutral
@@ -74,6 +76,9 @@
     --ab-semantic-color-background-focus-on-negative
   );
   --button-focus-visible-border-color: var(--ab-semantic-color-border-negative);
+  --button-focus-visible-outline-color: var(
+    --ab-semantic-color-border-negative
+  );
   --button-active-color: var(--ab-semantic-color-text-negative);
   --button-active-background-color: var(
     --ab-semantic-color-background-pressed-on-negative
@@ -99,6 +104,7 @@
     --ab-semantic-color-background-focus-on-neutral
   );
   --button-focus-visible-border-color: var(--ab-semantic-color-border-light);
+  --button-focus-visible-outline-color: var(--ab-semantic-color-border-brand);
   --button-active-color: var(--ab-semantic-color-text-default);
   --button-active-background-color: var(
     --ab-semantic-color-background-pressed-on-neutral
@@ -124,6 +130,7 @@
     --ab-semantic-color-background-focus-on-neutral
   );
   --button-focus-visible-border-color: none;
+  --button-focus-visible-outline-color: var(--ab-semantic-color-border-brand);
   --button-active-color: var(--ab-semantic-color-text-brand);
   --button-active-background-color: var(
     --ab-semantic-color-background-pressed-on-neutral
@@ -175,6 +182,8 @@
     color: var(--button-focus-visible-color);
     background-color: var(--button-focus-visible-background-color);
     border-color: var(--button-focus-visible-border-color);
+    outline: solid var(--button-focus-visible-outline-color) 2px;
+    outline-offset: 2px;
   }
 
   &:active {
