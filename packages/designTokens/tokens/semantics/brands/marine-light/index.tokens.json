@@ -2,6 +2,7 @@
   "semantic": {
     "color": {
       "brand": {
+        "darkest": { "$type": "color", "$value": "{global.color.marine.900}" },
         "dark": { "$type": "color", "$value": "{global.color.marine.800}" },
         "default": { "$type": "color", "$value": "{global.color.marine.600}" },
         "light": { "$type": "color", "$value": "{global.color.marine.400}" },
@@ -69,15 +70,15 @@
         },
         "hover-on-brand": {
           "$type": "color",
-          "$value": "{semantic.color.brand.light}"
+          "$value": "{semantic.color.brand.dark}"
         },
         "focus-on-brand": {
           "$type": "color",
-          "$value": "{semantic.color.brand.light}"
+          "$value": "{semantic.color.brand.dark}"
         },
         "pressed-on-brand": {
           "$type": "color",
-          "$value": "{semantic.color.brand.lighter}"
+          "$value": "{semantic.color.brand.darkest}"
         },
         "hover-on-neutral": {
           "$type": "color",
