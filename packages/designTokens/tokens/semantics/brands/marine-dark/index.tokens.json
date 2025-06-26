@@ -2,6 +2,7 @@
   "semantic": {
     "color": {
       "brand": {
+        "darkest": { "$type": "color", "$value": "{global.color.marine.900}" },
         "dark": { "$type": "color", "$value": "{global.color.marine.800}" },
         "default": { "$type": "color", "$value": "{global.color.marine.600}" },
         "light": { "$type": "color", "$value": "{global.color.marine.400}" },
