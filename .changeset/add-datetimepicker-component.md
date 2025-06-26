@@ -2,4 +2,4 @@
 "@giftee/abukuma-react": minor
 ---
 
-[React] DateTimePicker コンポーネントの追加
+[Add:DateTimePicker] DateTimePicker コンポーネントの追加
