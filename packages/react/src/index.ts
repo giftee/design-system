@@ -6,6 +6,7 @@ export * from '@/components/button/Index';
 export * from '@/components/checkbox/Index';
 export * from '@/components/circularProgress/Index';
 export * from '@/components/datepicker/Index';
+export * from '@/components/datetimepicker/Index';
 export * from '@/components/divider/Index';
 export * as GridTable from '@/components/gridTable/Index';
 export * from '@/components/iconButton/Index';
