@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
-import type { ComponentPropsWithoutRef, ElementRef, ReactNode } from 'react';
+import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type FieldsetProps = ComponentPropsWithoutRef<'fieldset'> & {
   /**
@@ -11,7 +11,7 @@ export type FieldsetProps = ComponentPropsWithoutRef<'fieldset'> & {
   /**
    * フィールドセットのタイトル
    */
-  title?: ReactNode;
+  title?: string;
 };
 
 /**
