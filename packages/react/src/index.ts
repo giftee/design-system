@@ -6,7 +6,7 @@ export * from '@/components/button/Index';
 export * from '@/components/checkbox/Index';
 export * from '@/components/circularProgress/Index';
 export * from '@/components/divider/Index';
-export * as Fieldset from '@/components/fieldset/Index';
+export * from '@/components/fieldset/Index';
 export * as GridTable from '@/components/gridTable/Index';
 export * from '@/components/iconButton/Index';
 export * as InlineAlert from '@/components/inlineAlert/Index';
