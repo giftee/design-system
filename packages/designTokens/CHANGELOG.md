@@ -1,5 +1,11 @@
 # @giftee/abukuma-design-tokens
 
+## 2.1.0
+
+### Minor Changes
+
+- [#604](https://github.com/giftee/design-system/pull/604) [`0a12780`](https://github.com/giftee/design-system/commit/0a1278037068ae3f9a3e39e39b75f87cc832a70f) Thanks [@egurinko](https://github.com/egurinko)! - [change] ブランドカラーで contain されている場合、hover,active,focus の時に色が薄くなるのではなく濃くなるようにした
+
 ## 2.0.3
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @giftee/abukuma-css
 
+## 3.1.1
+
+### Patch Changes
+
+- [#605](https://github.com/giftee/design-system/pull/605) [`65728ad`](https://github.com/giftee/design-system/commit/65728add2ed1ee0c0f07bef4f3b82c070ea4127d) Thanks [@egurinko](https://github.com/egurinko)! - [change] 視認性向上のために、focus 時に outline がつくように変更
+
+- Updated dependencies [[`0a12780`](https://github.com/giftee/design-system/commit/0a1278037068ae3f9a3e39e39b75f87cc832a70f)]:
+  - @giftee/abukuma-design-tokens@2.1.0
+
 ## 3.1.0
 
 ### Minor Changes
