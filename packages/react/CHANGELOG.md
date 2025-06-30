@@ -1,5 +1,11 @@
 # @giftee/abukuma-react
 
+## 4.2.1
+
+### Patch Changes
+
+- [#601](https://github.com/giftee/design-system/pull/601) [`a3ac8d7`](https://github.com/giftee/design-system/commit/a3ac8d7af55fc0bc715dad2ffbad58d1a40b5751) Thanks [@yacchi1123](https://github.com/yacchi1123)! - [add:Fieldset] Fieldset コンポーネントの追加
+
 ## 4.2.0
 
 ### Minor Changes
