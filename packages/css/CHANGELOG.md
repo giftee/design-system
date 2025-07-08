@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.1.2
+
+### Patch Changes
+
+- [#621](https://github.com/giftee/design-system/pull/621) [`091e4b8`](https://github.com/giftee/design-system/commit/091e4b814bcef5c1399358f45403aa29ec5fb618) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [fix:Textfield] error かつ focus された時に、negative color の outline が出るように修正
+
 ## 3.1.1
 
 ### Patch Changes
