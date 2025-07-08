@@ -115,6 +115,10 @@
   .is-error & {
     background-color: var(--ab-semantic-color-background-negative-secondary);
     border-color: var(--ab-semantic-color-border-negative);
+
+    &:focus {
+      outline-color: var(--ab-semantic-color-border-negative);
+    }
   }
 
   .resize-both & {
