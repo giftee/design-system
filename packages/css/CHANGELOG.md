@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.1.3
+
+### Patch Changes
+
+- [#622](https://github.com/giftee/design-system/pull/622) [`8019c9c`](https://github.com/giftee/design-system/commit/8019c9c23d704c4c247d42ef71fcc152e5c00a0b) Thanks [@linus-vanpelt919](https://github.com/linus-vanpelt919)! - [fix:modal] モーダル表示時に位置が先頭に戻る問題を修正
+
 ## 3.1.2
 
 ### Patch Changes
