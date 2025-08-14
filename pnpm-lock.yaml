@@ -125,7 +125,7 @@ importers:
         specifier: ^3.3.1
         version: 3.3.1
       '@eslint/js':
-        specifier: ^9.32.0
+        specifier: ^9.33.0
         version: 9.33.0
       '@giftee/abukuma-css':
         specifier: workspace:^
@@ -191,7 +191,7 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
       eslint:
-        specifier: ^9.32.0
+        specifier: ^9.33.0
         version: 9.33.0
       eslint-config-prettier:
         specifier: ^10.1.8
@@ -7391,7 +7391,7 @@ snapshots:
     dependencies:
       foreground-child: 3.3.1
       jackspeak: 4.1.1
-      minimatch: 10.0.1
+      minimatch: 10.0.3
       minipass: 7.1.2
       package-json-from-dist: 1.0.1
       path-scurry: 2.0.0
