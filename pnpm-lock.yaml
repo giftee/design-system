@@ -131,8 +131,8 @@ importers:
         specifier: workspace:^
         version: link:../css
       '@markuplint/jsx-parser':
-        specifier: ^4.7.19
-        version: 4.7.19(typescript@5.9.2)
+        specifier: ^4.7.20
+        version: 4.7.20(typescript@5.9.2)
       '@markuplint/react-spec':
         specifier: ^4.5.19
         version: 4.5.19
@@ -748,9 +748,6 @@ packages:
   '@markuplint/file-resolver@4.9.15':
     resolution: {integrity: sha512-E5KnIjL5IsygOvwbtEplfaPIAFtXxW6dUgXIwL/V+vz9tKgObHhOxEQwLheann5riyD8KQew+4G4NhR5/oOK1A==}
 
-  '@markuplint/html-parser@4.6.19':
-    resolution: {integrity: sha512-IGOPg0XjcYy9BE2GqZ8/oCVNWcAJG2u0MA4mz6KDDbaSXFzZBbFKgVLKT1YCvnjGgkeunl/RzTg9oLRdVjoyHQ==}
-
   '@markuplint/html-parser@4.6.20':
     resolution: {integrity: sha512-obpFA9wWqDWPUSqj5piPqRdR7paiNcWLFhQ8GzK7wV+h1ck41UgjYHQI6e5UKbuBEYofEfDSDbzt9GQr2NJNsg==}
 
@@ -760,8 +757,8 @@ packages:
   '@markuplint/i18n@4.7.0':
     resolution: {integrity: sha512-Oqp+eUScBrC/IymHjfLxINZUZ/eRcq0+0hz9Xv4Pfqz22Ae9xOwDaDqvxjrAP+kImGLdISoCBl34XyiHFOaBAg==}
 
-  '@markuplint/jsx-parser@4.7.19':
-    resolution: {integrity: sha512-O0v9ory03SYKpA3dopuqsFhO4O3TSNtRcQilN07nGDvJ10/Y0+Wuxng4nNSZD5I3QChQrJooo34rX/rBvwgrMQ==}
+  '@markuplint/jsx-parser@4.7.20':
+    resolution: {integrity: sha512-hdUddFgZP6Dguh7iXdrcgU5w0bWJsxx2K490/UTsRw26jwDh+JcgNxKkBxf5+nGoYM3M18ECXuegy9YST4n3VA==}
 
   '@markuplint/ml-ast@4.4.10':
     resolution: {integrity: sha512-cBujnRj/kMP5wtMml7eTzDEJRk/NQx8Fum4TPdRG97VNWVPBZi/FXDrgt7mIUAaLMiNQhaSKU7tTL4HB1qUChQ==}
@@ -780,9 +777,6 @@ packages:
 
   '@markuplint/ml-spec@4.9.7':
     resolution: {integrity: sha512-lem+4uXqgfufZxILUQhTKemL+V+yY+92GcYOhnjNCbIVLbyMAq6i2l/WDPqYOuL6hqNTKIRNctWJDTFVNOiCTQ==}
-
-  '@markuplint/parser-utils@4.8.7':
-    resolution: {integrity: sha512-7DPGi8PfD0CiZT2ifvtYnT7Oqci+PH64jXSBl4mJ8Oljg+ht1hrbJxJo5jk+gc+4K6PTZil9FGLhRBeiKks/aA==}
 
   '@markuplint/parser-utils@4.8.8':
     resolution: {integrity: sha512-Y/gjn6hV02ijXYqwMYeukcmHKL8ENDGCoXxm06hJ2Wa+f1+MONgKFrd0M5JXCVvf1NLUai+vrS5bflaFLyoqoQ==}
@@ -1459,10 +1453,6 @@ packages:
       eslint: ^8.57.0 || ^9.0.0
       typescript: '>=4.8.4 <6.0.0'
 
-  '@typescript-eslint/types@8.29.1':
-    resolution: {integrity: sha512-VT7T1PuJF1hpYC3AGm2rCgJBjHL3nc+A/bhOp9sGMKfi5v0WufsX/sHCFBfNTx2F+zA6qBc/PD0/kLRLjdt8mQ==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
   '@typescript-eslint/types@8.39.0':
     resolution: {integrity: sha512-ArDdaOllnCj3yn/lzKn9s0pBQYmmyme/v1HbGIGB0GB/knFI3fWMHloC+oYTJW46tVbYnGKTMDK4ah1sC2v0Kg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1470,12 +1460,6 @@ packages:
   '@typescript-eslint/types@8.39.1':
     resolution: {integrity: sha512-7sPDKQQp+S11laqTrhHqeAbsCfMkwJMrV7oTDvtDds4mEofJYir414bYKUEb8YPUm9QL3U+8f6L6YExSoAGdQw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@typescript-eslint/typescript-estree@8.29.1':
-    resolution: {integrity: sha512-l1enRoSaUkQxOQnbi0KPUtqeZkSiFlqrx9/3ns2rEDhGKfTa+88RmXqedC1zmVTOWrLc2e6DEJrTA51C9iLH5g==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      typescript: '>=4.8.4 <5.9.0'
 
   '@typescript-eslint/typescript-estree@8.39.0':
     resolution: {integrity: sha512-ndWdiflRMvfIgQRpckQQLiB5qAKQ7w++V4LlCHwp62eym1HLB/kw7D9f2e8ytONls/jt89TEasgvb+VwnRprsw==}
@@ -1502,10 +1486,6 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
       typescript: '>=4.8.4 <6.0.0'
-
-  '@typescript-eslint/visitor-keys@8.29.1':
-    resolution: {integrity: sha512-RGLh5CRaUEf02viP5c1Vh1cMGffQscyHe7HPAzGpfmfflFg1wUz2rYxd+OZqwpeypYvZ8UxSxuIpF++fmOzEcg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@typescript-eslint/visitor-keys@8.39.0':
     resolution: {integrity: sha512-ldgiJ+VAhQCfIjeOgu8Kj5nSxds0ktPOSO9p4+0VDH2R2pLvQraaM5Oen2d7NxzMCm+Sn/vJT+mv2H5u6b/3fA==}
@@ -2364,10 +2344,6 @@ packages:
     peerDependenciesMeta:
       jiti:
         optional: true
-
-  espree@10.3.0:
-    resolution: {integrity: sha512-0QYC8b24HWY8zjRnDTL6RiHfDbAWn63qb4LMj1Z4b076A4une81+z03Kg7l7mn/48PUTqoLptSXez8oknU8Clg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   espree@10.4.0:
     resolution: {integrity: sha512-j6PAQ2uUr79PZhBjP5C5fhl8e39FmRnOjsD5lGnWrFU8i2G776tBK7+nP8KuQUTTyAZUwfQqXAgrVH5MbH9CYQ==}
@@ -3508,9 +3484,6 @@ packages:
   parse-passwd@1.0.0:
     resolution: {integrity: sha512-1Y1A//QUXEZK7YKz+rD9WydcE1+EuPr6ZBgKecAB8tmoW6UFv0NREVJe1p+jRxtThkcbbKkfwIbWJe/IeE6m2Q==}
     engines: {node: '>=0.10.0'}
-
-  parse5@7.2.1:
-    resolution: {integrity: sha512-BuBYQYlv1ckiPdQi/ohiivi9Sagc9JG+Ozs0r7b/0iK3sKmrb0b9FdWdBbOdx6hBCM/F9Ir82ofnBhtZOjCRPQ==}
 
   parse5@8.0.0:
     resolution: {integrity: sha512-9m4m5GSgXjL4AjumKzq1Fgfp3Z8rsvjRNbnkVwfu2ImRqE5D0LnY2QfDen18FSY9C573YU5XxSapdHZTZ2WolA==}
@@ -5144,15 +5117,6 @@ snapshots:
       - supports-color
       - typescript
 
-  '@markuplint/html-parser@4.6.19':
-    dependencies:
-      '@markuplint/ml-ast': 4.4.9
-      '@markuplint/parser-utils': 4.8.7
-      parse5: 7.2.1
-      type-fest: 4.39.1
-    transitivePeerDependencies:
-      - supports-color
-
   '@markuplint/html-parser@4.6.20':
     dependencies:
       '@markuplint/ml-ast': 4.4.10
@@ -5170,13 +5134,13 @@ snapshots:
 
   '@markuplint/i18n@4.7.0': {}
 
-  '@markuplint/jsx-parser@4.7.19(typescript@5.9.2)':
+  '@markuplint/jsx-parser@4.7.20(typescript@5.9.2)':
     dependencies:
-      '@markuplint/html-parser': 4.6.19
-      '@markuplint/ml-ast': 4.4.9
-      '@markuplint/parser-utils': 4.8.7
-      '@typescript-eslint/types': 8.29.1
-      '@typescript-eslint/typescript-estree': 8.29.1(typescript@5.9.2)
+      '@markuplint/html-parser': 4.6.20
+      '@markuplint/ml-ast': 4.4.10
+      '@markuplint/parser-utils': 4.8.8
+      '@typescript-eslint/types': 8.39.0
+      '@typescript-eslint/typescript-estree': 8.39.0(typescript@5.9.2)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -5235,19 +5199,6 @@ snapshots:
       dom-accessibility-api: 0.7.0
       is-plain-object: 5.0.0
       type-fest: 4.41.0
-    transitivePeerDependencies:
-      - supports-color
-
-  '@markuplint/parser-utils@4.8.7':
-    dependencies:
-      '@markuplint/ml-ast': 4.4.9
-      '@markuplint/ml-spec': 4.9.6
-      '@markuplint/types': 4.7.6
-      '@types/uuid': 10.0.0
-      debug: 4.4.0
-      espree: 10.3.0
-      type-fest: 4.39.1
-      uuid: 11.1.0
     transitivePeerDependencies:
       - supports-color
 
@@ -6018,8 +5969,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.39.0(typescript@5.9.2)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.39.0(typescript@5.9.2)
-      '@typescript-eslint/types': 8.39.0
+      '@typescript-eslint/tsconfig-utils': 8.39.1(typescript@5.9.2)
+      '@typescript-eslint/types': 8.39.1
       debug: 4.4.1
       typescript: 5.9.2
     transitivePeerDependencies:
@@ -6064,25 +6015,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/types@8.29.1': {}
-
   '@typescript-eslint/types@8.39.0': {}
 
   '@typescript-eslint/types@8.39.1': {}
-
-  '@typescript-eslint/typescript-estree@8.29.1(typescript@5.9.2)':
-    dependencies:
-      '@typescript-eslint/types': 8.29.1
-      '@typescript-eslint/visitor-keys': 8.29.1
-      debug: 4.4.1
-      fast-glob: 3.3.3
-      is-glob: 4.0.3
-      minimatch: 9.0.5
-      semver: 7.7.2
-      ts-api-utils: 2.1.0(typescript@5.9.2)
-      typescript: 5.9.2
-    transitivePeerDependencies:
-      - supports-color
 
   '@typescript-eslint/typescript-estree@8.39.0(typescript@5.9.2)':
     dependencies:
@@ -6137,11 +6072,6 @@ snapshots:
       typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
-
-  '@typescript-eslint/visitor-keys@8.29.1':
-    dependencies:
-      '@typescript-eslint/types': 8.29.1
-      eslint-visitor-keys: 4.2.1
 
   '@typescript-eslint/visitor-keys@8.39.0':
     dependencies:
@@ -7227,12 +7157,6 @@ snapshots:
       optionator: 0.9.4
     transitivePeerDependencies:
       - supports-color
-
-  espree@10.3.0:
-    dependencies:
-      acorn: 8.15.0
-      acorn-jsx: 5.3.2(acorn@8.15.0)
-      eslint-visitor-keys: 4.2.1
 
   espree@10.4.0:
     dependencies:
@@ -8549,10 +8473,6 @@ snapshots:
       lines-and-columns: 1.2.4
 
   parse-passwd@1.0.0: {}
-
-  parse5@7.2.1:
-    dependencies:
-      entities: 4.5.0
 
   parse5@8.0.0:
     dependencies:
