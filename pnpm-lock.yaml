@@ -131,7 +131,7 @@ importers:
         specifier: workspace:^
         version: link:../css
       '@markuplint/jsx-parser':
-        specifier: ^4.7.20
+        specifier: ^4.7.21
         version: 4.7.21(typescript@5.9.2)
       '@markuplint/react-spec':
         specifier: ^4.5.19
