@@ -215,7 +215,7 @@ importers:
         specifier: ^18.0.1
         version: 18.0.1
       markuplint:
-        specifier: ^4.13.0
+        specifier: ^4.13.1
         version: 4.13.1(typescript@5.9.2)
       prettier:
         specifier: ^3.6.2
