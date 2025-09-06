@@ -36,7 +36,7 @@
     "react-syntax-highlighter": "^15.6.6",
     "remark-gfm": "^4.0.1",
     "rollup-plugin-visualizer": "^6.0.3",
-    "sass": "^1.92.0",
+    "sass": "^1.92.1",
     "storybook": "8.6.14",
     "storybook-addon-pseudo-states": "^4.0.4",
     "stylelint": "^16.23.1",
