@@ -39,7 +39,7 @@
     "sass": "^1.92.1",
     "storybook": "8.6.14",
     "storybook-addon-pseudo-states": "^4.0.4",
-    "stylelint": "^16.23.1",
+    "stylelint": "^16.24.0",
     "stylelint-config-standard-scss": "^15.0.1",
     "stylelint-prettier": "^5.0.3",
     "typescript": "^5.9.2",
