@@ -27,6 +27,7 @@ $checkmark-url: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgd
   --checkbox-box-focus-checked-background-color: var(
     --ab-semantic-color-background-focus-on-brand
   );
+  --checkbox-box-focus-outline-color: var(--ab-semantic-color-border-brand);
   --checkbox-box-active-background-color: var(
     --ab-semantic-color-background-pressed-on-neutral
   );
@@ -138,10 +139,14 @@ $checkmark-url: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgd
   &:focus {
     .ab-Checkbox-box {
       background-color: var(--checkbox-box-focus-background-color);
+      outline: solid var(--checkbox-box-focus-outline-color) 2px;
+      outline-offset: 2px;
     }
 
     .ab-Checkbox-input:checked ~ .ab-Checkbox-box {
       background-color: var(--checkbox-box-focus-checked-background-color);
+      outline: solid var(--checkbox-box-focus-outline-color) 2px;
+      outline-offset: 2px;
     }
   }
 
