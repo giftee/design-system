@@ -55,6 +55,6 @@ export const createComponent = ({
   const sizeClass = `ab-StatusLabel-${size}`;
 
   return `<div class="ab-StatusLabel ${typeClass} ${sizeClass}">
-  <div>${label}</div>
-</div>`;
+    <div>${label}</div>
+  </div>`;
 };

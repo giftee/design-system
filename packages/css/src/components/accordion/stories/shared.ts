@@ -32,9 +32,9 @@ export const createComponent = ({
   const disabledClass = id === 'disabled' ? 'is-disabled' : '';
 
   return `<details id=${id} class="ab-Accordion ${sizeClass} ${disabledClass}">
-    <summary class="ab-Accordion-summary">${summary}</summary>
-    <div class="ab-Accordion-content">
-      ${details}
-    </div>
-  </details>`;
+      <summary class="ab-Accordion-summary">${summary}</summary>
+      <div class="ab-Accordion-content">
+        ${details}
+      </div>
+    </details>`;
 };

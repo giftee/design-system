@@ -41,12 +41,12 @@ export const createComponent = ({
   return `<div id="${id}" class="ab-Radio-wrapper ${positionClass} ${
     useDisabledClass ? 'is-disabled' : ''
   }">
-  <label for="${id}" class="ab-Radio-label">${children}</label>
-  <div class="ab-Radio">
-    <input type="radio" id="${id}" ${
-      checked ? 'checked=true' : ''
-    } class="ab-Radio-input" ${useDisabledAttribute ? 'disabled' : ''} />
-    <span class="ab-Radio-radio"></span>
-  </div>
-</div>`;
+    <label for="${id}" class="ab-Radio-label">${children}</label>
+    <div class="ab-Radio">
+      <input type="radio" id="${id}" ${
+        checked ? 'checked=true' : ''
+      } class="ab-Radio-input" ${useDisabledAttribute ? 'disabled' : ''} />
+      <span class="ab-Radio-radio"></span>
+    </div>
+  </div>`;
 };
