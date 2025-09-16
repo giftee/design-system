@@ -40,12 +40,12 @@ export const createComponent = ({
   return `<div id="${id}" class="ab-Checkbox-wrapper ${positionClass} ${
     id === 'disabled' && disabledType === 'class' ? 'is-disabled' : ''
   }">
-  <label for="${name}" class="ab-Checkbox-label">${children}</label>
-  <div class="ab-Checkbox">
-    <input type="checkbox" name="${name}" id="${name}" ${
-      checked ? 'checked' : ''
-    } ${id === 'disabled' && disabledType === 'attribute' ? 'disabled' : ''} class="ab-Checkbox-input" />
-    <span class="ab-Checkbox-box"></span>
-  </div>
-</div>`;
+    <label for="${name}" class="ab-Checkbox-label">${children}</label>
+    <div class="ab-Checkbox">
+      <input type="checkbox" name="${name}" id="${name}" ${
+        checked ? 'checked' : ''
+      } ${id === 'disabled' && disabledType === 'attribute' ? 'disabled' : ''} class="ab-Checkbox-input" />
+      <span class="ab-Checkbox-box"></span>
+    </div>
+  </div>`;
 };

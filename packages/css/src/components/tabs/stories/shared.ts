@@ -41,15 +41,15 @@ export const createComponent = ({
     position === 'left' ? 'is-left' : position === 'center' ? 'is-center' : '';
 
   return `<div class="ab-Tabs ${sizeClass} ${fullWidthClass} ${positionClass} ab-mb-4">
-    <a id="${id}" href="#1" class="ab-Tabs-item ${
-      id === 'disabled' && 'is-disabled'
-    }">
-      <span class="ab-Tabs-item-label">${id}</span>
-    </a>
-    <a id="${id}" href="#2" class="ab-Tabs-item is-selected ${
-      id === 'disabled' && 'is-disabled'
-    }">
-      <span class="ab-Tabs-item-label">${id} Selected</span>
-    </a>
-  </div>`;
+      <a id="${id}" href="#1" class="ab-Tabs-item ${
+        id === 'disabled' && 'is-disabled'
+      }">
+        <span class="ab-Tabs-item-label">${id}</span>
+      </a>
+      <a id="${id}" href="#2" class="ab-Tabs-item is-selected ${
+        id === 'disabled' && 'is-disabled'
+      }">
+        <span class="ab-Tabs-item-label">${id} Selected</span>
+      </a>
+    </div>`;
 };
