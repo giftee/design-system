@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.1.4
+
+### Patch Changes
+
+- [#705](https://github.com/giftee/design-system/pull/705) [`9f5370a`](https://github.com/giftee/design-system/commit/9f5370a448bb61ec4e6c25fa5defa1827903a8aa) Thanks [@egurinko](https://github.com/egurinko)! - [enhancement:Checkbox] Focus 時に outline を導入し、視認性を向上
+
 ## 3.1.3
 
 ### Patch Changes
