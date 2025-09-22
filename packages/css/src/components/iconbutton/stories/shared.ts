@@ -38,6 +38,6 @@ export const createComponent = ({
   return `<button id="${id}" ${
     id === 'disabled' && 'disabled="true"'
   } class="${typeClass} ${sizeClass}">
-  ${plus('ab-Icon')}
-</button>`;
+    ${plus('ab-Icon')}
+  </button>`;
 };
