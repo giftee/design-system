@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { describe, test, expect, vi } from 'vitest';
 import '@testing-library/jest-dom';
+import { User } from '@/storyAssets/inlineSvgs';
 
 import {
   Root,
@@ -100,6 +101,32 @@ describe('Menu', () => {
     const collapseSummary = getByText('折りたたみメニュー');
     expect(collapseSummary).toBeInTheDocument();
     expect(collapseSummary.closest('.ab-Menu-item')).toBeInTheDocument();
+  });
+
+  test('アイコン付き折りたたみメニュー項目が正しくレンダリングされる', () => {
+    const { getByRole } = render(
+      <Root>
+        <CollapseItem
+          label={
+            <div className="ab-flex ab-flex-row ab-flex-justify-between ab-flex-items-center">
+              <User className="ab-Icon" />
+              <span className="ab-ml-2">アイコン付きメニュー</span>
+            </div>
+          }
+        >
+          <SubMenu>
+            <Item>
+              <ItemLabel>サブ項目</ItemLabel>
+            </Item>
+          </SubMenu>
+        </CollapseItem>
+      </Root>,
+    );
+
+    const menuButton = getByRole('button', { name: /アイコン付きメニュー/i });
+    const icon = menuButton.querySelector('svg.ab-Icon');
+    expect(menuButton).toBeInTheDocument();
+    expect(icon).toBeInTheDocument();
   });
 
   test('サブメニューが正しくレンダリングされる', () => {
