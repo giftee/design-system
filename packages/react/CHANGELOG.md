@@ -1,5 +1,11 @@
 # @giftee/abukuma-react
 
+## 4.2.2
+
+### Patch Changes
+
+- [#721](https://github.com/giftee/design-system/pull/721) [`84c5c10`](https://github.com/giftee/design-system/commit/84c5c10a19423b65a2111c0de1c532fa9ae78da9) Thanks [@ishikawamitsugi](https://github.com/ishikawamitsugi)! - [feature:Menu] MenuCollapseItem の label プロパティを ReactNode に変更
+
 ## 4.2.1
 
 ### Patch Changes
