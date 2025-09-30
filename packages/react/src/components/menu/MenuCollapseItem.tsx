@@ -1,12 +1,12 @@
 import { forwardRef, useState } from 'react';
 import { classNames } from '@/utils/classNames';
-import type { ComponentPropsWithoutRef, ElementRef } from 'react';
+import type { ComponentPropsWithoutRef, ElementRef, ReactNode } from 'react';
 
 export type MenuCollapseItemProps = ComponentPropsWithoutRef<'li'> & {
   /**
    * サブメニューラベル
    */
-  label: string;
+  label: ReactNode;
   /**
    * サブメニューのデフォルト開閉状態
    */
