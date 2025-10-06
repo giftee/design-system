@@ -9,7 +9,7 @@ describe('Pagination', () => {
   test('ページネーションをレンダリングする', () => {
     const handleChange = vi.fn();
     const { container } = render(
-      <Pagination currentPage={1} totalPage={5} onChange={handleChange} />,
+      <Pagination currentPage={1} totalPage={5} onClick={handleChange} />,
     );
 
     const nav = container.querySelector('nav');
@@ -19,7 +19,7 @@ describe('Pagination', () => {
   test('現在のページに該当する数字はdefaultバリアントが適用される', () => {
     const handleChange = vi.fn();
     const { container } = render(
-      <Pagination currentPage={3} totalPage={5} onChange={handleChange} />,
+      <Pagination currentPage={3} totalPage={5} onClick={handleChange} />,
     );
 
     const buttons = container.querySelectorAll('button');
@@ -33,7 +33,7 @@ describe('Pagination', () => {
   test('現在のページ以外の数字はtextバリアントが適用される', () => {
     const handleChange = vi.fn();
     const { container } = render(
-      <Pagination currentPage={3} totalPage={5} onChange={handleChange} />,
+      <Pagination currentPage={3} totalPage={5} onClick={handleChange} />,
     );
 
     const buttons = container.querySelectorAll('button');
@@ -46,7 +46,7 @@ describe('Pagination', () => {
   test('ナビゲーションボタンはoutlinedバリアントが適用される', () => {
     const handleChange = vi.fn();
     const { container } = render(
-      <Pagination currentPage={3} totalPage={5} onChange={handleChange} />,
+      <Pagination currentPage={3} totalPage={5} onClick={handleChange} />,
     );
 
     const buttons = container.querySelectorAll('button');
@@ -60,7 +60,7 @@ describe('Pagination', () => {
   test('先頭ページの場合、前へボタンがdisableになる', () => {
     const handleChange = vi.fn();
     const { container } = render(
-      <Pagination currentPage={1} totalPage={5} onChange={handleChange} />,
+      <Pagination currentPage={1} totalPage={5} onClick={handleChange} />,
     );
 
     const buttons = container.querySelectorAll('button');
@@ -71,7 +71,7 @@ describe('Pagination', () => {
   test('最終ページの場合、次へボタンがdisableになる', () => {
     const handleChange = vi.fn();
     const { container } = render(
-      <Pagination currentPage={5} totalPage={5} onChange={handleChange} />,
+      <Pagination currentPage={5} totalPage={5} onClick={handleChange} />,
     );
 
     const buttons = container.querySelectorAll('button');
@@ -82,7 +82,7 @@ describe('Pagination', () => {
   test('先頭ページと最終ページが同じ場合、両方のボタンがdisableになる', () => {
     const handleChange = vi.fn();
     const { container } = render(
-      <Pagination currentPage={1} totalPage={1} onChange={handleChange} />,
+      <Pagination currentPage={1} totalPage={1} onClick={handleChange} />,
     );
 
     const buttons = container.querySelectorAll('button');
@@ -93,12 +93,12 @@ describe('Pagination', () => {
     expect(nextButton).toBeDisabled();
   });
 
-  test('ページ番号をクリックするとonChangeが呼ばれる', async () => {
+  test('ページ番号をクリックするとonClickが呼ばれる', async () => {
     const user = userEvent.setup();
     const handleChange = vi.fn();
 
     const { container } = render(
-      <Pagination currentPage={1} totalPage={5} onChange={handleChange} />,
+      <Pagination currentPage={1} totalPage={5} onClick={handleChange} />,
     );
 
     const buttons = container.querySelectorAll('button');
@@ -112,12 +112,12 @@ describe('Pagination', () => {
     expect(handleChange.mock.calls[0][1]).toBe(2);
   });
 
-  test('前へボタンをクリックするとonChangeが呼ばれる', async () => {
+  test('前へボタンをクリックするとonClickが呼ばれる', async () => {
     const user = userEvent.setup();
     const handleChange = vi.fn();
 
     const { container } = render(
-      <Pagination currentPage={3} totalPage={5} onChange={handleChange} />,
+      <Pagination currentPage={3} totalPage={5} onClick={handleChange} />,
     );
 
     const buttons = container.querySelectorAll('button');
@@ -129,12 +129,12 @@ describe('Pagination', () => {
     expect(handleChange.mock.calls[0][1]).toBe(2);
   });
 
-  test('次へボタンをクリックするとonChangeが呼ばれる', async () => {
+  test('次へボタンをクリックするとonClickが呼ばれる', async () => {
     const user = userEvent.setup();
     const handleChange = vi.fn();
 
     const { container } = render(
-      <Pagination currentPage={3} totalPage={5} onChange={handleChange} />,
+      <Pagination currentPage={3} totalPage={5} onClick={handleChange} />,
     );
 
     const buttons = container.querySelectorAll('button');
@@ -149,7 +149,7 @@ describe('Pagination', () => {
   test('ページ数が10の場合に最大9要素が表示される', () => {
     const handleChange = vi.fn();
     const { container } = render(
-      <Pagination currentPage={2} totalPage={10} onChange={handleChange} />,
+      <Pagination currentPage={2} totalPage={10} onClick={handleChange} />,
     );
 
     const allElements = container.querySelectorAll('button, span');
@@ -159,7 +159,7 @@ describe('Pagination', () => {
   test('ページ数が10で現在が5ページ目の場合、適切な要素が表示される', () => {
     const handleChange = vi.fn();
     const { container } = render(
-      <Pagination currentPage={5} totalPage={10} onChange={handleChange} />,
+      <Pagination currentPage={5} totalPage={10} onClick={handleChange} />,
     );
 
     const allElements = container.querySelectorAll('button, span');
@@ -174,7 +174,7 @@ describe('Pagination', () => {
   test('ページ数が10で現在が10ページ目の場合、適切な要素が表示される', () => {
     const handleChange = vi.fn();
     const { container } = render(
-      <Pagination currentPage={10} totalPage={10} onChange={handleChange} />,
+      <Pagination currentPage={10} totalPage={10} onClick={handleChange} />,
     );
 
     const allElements = container.querySelectorAll('button, span');

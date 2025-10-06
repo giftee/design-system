@@ -20,7 +20,7 @@ const meta = {
       control: { type: 'number', min: 1 },
       description: 'ページの総数',
     },
-    onChange: {
+    onClick: {
       action: 'onChange',
       description: 'ページ変更時のコールバック関数',
     },
@@ -37,9 +37,9 @@ export const ManyPages: Story = {
       <Pagination
         {...args}
         currentPage={page}
-        onChange={(event, value) => {
+        onClick={(event, value) => {
           setPage(value);
-          args.onChange?.(event, value);
+          args.onClick?.(event, value);
         }}
       />
     );
@@ -47,7 +47,7 @@ export const ManyPages: Story = {
   args: {
     currentPage: 5,
     totalPage: 10,
-    onChange: () => {},
+    onClick: () => {},
   },
 };
 
@@ -55,7 +55,7 @@ export const SinglePage: Story = {
   args: {
     currentPage: 1,
     totalPage: 1,
-    onChange: () => {},
+    onClick: () => {},
   },
 };
 
@@ -63,7 +63,7 @@ export const FewPages: Story = {
   args: {
     currentPage: 3,
     totalPage: 5,
-    onChange: () => {},
+    onClick: () => {},
   },
 };
 
@@ -71,6 +71,6 @@ export const LastPage: Story = {
   args: {
     currentPage: 10,
     totalPage: 10,
-    onChange: () => {},
+    onClick: () => {},
   },
 };

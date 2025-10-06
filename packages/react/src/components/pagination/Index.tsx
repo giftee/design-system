@@ -6,7 +6,7 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type PaginationProps = Omit<
   ComponentPropsWithoutRef<'nav'>,
-  'onChange'
+  'onClick'
 > & {
   /**
    * 現在のページ番号
@@ -19,7 +19,7 @@ export type PaginationProps = Omit<
   /**
    * ページ変更時のコールバック関数
    */
-  onChange: (event: React.MouseEvent<HTMLButtonElement>, value: number) => void;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>, value: number) => void;
 };
 
 const getPaginationItems = (
@@ -68,24 +68,24 @@ const getPaginationItems = (
  * - [Pagination](https://github.com/giftee/design-system/tree/main/packages/react/src/components/pagination)
  */
 export const Pagination = forwardRef<ElementRef<'nav'>, PaginationProps>(
-  ({ currentPage, totalPage, onChange, className, ...rest }, forwardedRef) => {
+  ({ currentPage, totalPage, onClick, className, ...rest }, forwardedRef) => {
     const items = getPaginationItems(currentPage, totalPage);
 
     const handlePrevClick = (event: React.MouseEvent<HTMLButtonElement>) => {
       if (currentPage > 1) {
-        onChange(event, currentPage - 1);
+        onClick(event, currentPage - 1);
       }
     };
 
     const handleNextClick = (event: React.MouseEvent<HTMLButtonElement>) => {
       if (currentPage < totalPage) {
-        onChange(event, currentPage + 1);
+        onClick(event, currentPage + 1);
       }
     };
 
     const handlePageClick =
       (pageNumber: number) => (event: React.MouseEvent<HTMLButtonElement>) => {
-        onChange(event, pageNumber);
+        onClick(event, pageNumber);
       };
 
     const classes = classNames(
