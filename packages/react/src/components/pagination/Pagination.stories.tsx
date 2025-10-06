@@ -8,11 +8,11 @@ const meta = {
   tags: ['autodocs'],
   component: Pagination,
   args: {
-    page: 1,
+    currentPage: 1,
     totalPage: 10,
   },
   argTypes: {
-    page: {
+    currentPage: {
       control: { type: 'number', min: 1 },
       description: '現在のページ',
     },
@@ -32,11 +32,11 @@ type Story = StoryObj<typeof meta>;
 
 export const ManyPages: Story = {
   render: (args: PaginationProps) => {
-    const [page, setPage] = useState(args.page);
+    const [page, setPage] = useState(args.currentPage);
     return (
       <Pagination
         {...args}
-        page={page}
+        currentPage={page}
         onChange={(event, value) => {
           setPage(value);
           args.onChange?.(event, value);
@@ -45,7 +45,7 @@ export const ManyPages: Story = {
     );
   },
   args: {
-    page: 5,
+    currentPage: 5,
     totalPage: 10,
     onChange: () => {},
   },
@@ -53,7 +53,7 @@ export const ManyPages: Story = {
 
 export const SinglePage: Story = {
   args: {
-    page: 1,
+    currentPage: 1,
     totalPage: 1,
     onChange: () => {},
   },
@@ -61,7 +61,7 @@ export const SinglePage: Story = {
 
 export const FewPages: Story = {
   args: {
-    page: 3,
+    currentPage: 3,
     totalPage: 5,
     onChange: () => {},
   },
@@ -69,7 +69,7 @@ export const FewPages: Story = {
 
 export const LastPage: Story = {
   args: {
-    page: 10,
+    currentPage: 10,
     totalPage: 10,
     onChange: () => {},
   },

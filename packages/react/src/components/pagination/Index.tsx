@@ -11,7 +11,7 @@ export type PaginationProps = Omit<
   /**
    * 現在のページ番号
    */
-  page: number;
+  currentPage: number;
   /**
    * ページの総数
    */
@@ -68,18 +68,18 @@ const getPaginationItems = (
  * - [Pagination](https://github.com/giftee/design-system/tree/main/packages/react/src/components/pagination)
  */
 export const Pagination = forwardRef<ElementRef<'nav'>, PaginationProps>(
-  ({ page, totalPage, onChange, className, ...rest }, forwardedRef) => {
-    const items = getPaginationItems(page, totalPage);
+  ({ currentPage, totalPage, onChange, className, ...rest }, forwardedRef) => {
+    const items = getPaginationItems(currentPage, totalPage);
 
     const handlePrevClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-      if (page > 1) {
-        onChange(event, page - 1);
+      if (currentPage > 1) {
+        onChange(event, currentPage - 1);
       }
     };
 
     const handleNextClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-      if (page < totalPage) {
-        onChange(event, page + 1);
+      if (currentPage < totalPage) {
+        onChange(event, currentPage + 1);
       }
     };
 
@@ -101,12 +101,12 @@ export const Pagination = forwardRef<ElementRef<'nav'>, PaginationProps>(
         <IconButton
           variant="outlined"
           size="large"
-          disabled={page <= 1}
+          disabled={currentPage <= 1}
           onClick={handlePrevClick}
           aria-label="前へ"
         >
           <AngleLeft
-            className={`ab-Icon ${page <= 1 ? 'ab-text-default' : null}`}
+            className={`ab-Icon ${currentPage <= 1 ? 'ab-text-default' : null}`}
           />
         </IconButton>
         <div className="ab-flex ab-gap-1">
@@ -126,11 +126,11 @@ export const Pagination = forwardRef<ElementRef<'nav'>, PaginationProps>(
             return (
               <IconButton
                 key={item}
-                variant={item === page ? 'default' : 'text'}
+                variant={item === currentPage ? 'default' : 'text'}
                 size="small"
                 onClick={handlePageClick(item)}
                 aria-label={`ページ${item}`}
-                aria-current={item === page ? 'page' : undefined}
+                aria-current={item === currentPage ? 'page' : undefined}
               >
                 {item}
               </IconButton>
@@ -140,12 +140,12 @@ export const Pagination = forwardRef<ElementRef<'nav'>, PaginationProps>(
         <IconButton
           variant="outlined"
           size="large"
-          disabled={page >= totalPage}
+          disabled={currentPage >= totalPage}
           onClick={handleNextClick}
           aria-label="次へ"
         >
           <AngleRight
-            className={`ab-Icon ${page >= totalPage ? 'ab-text-default' : null}`}
+            className={`ab-Icon ${currentPage >= totalPage ? 'ab-text-default' : null}`}
           />
         </IconButton>
       </nav>
