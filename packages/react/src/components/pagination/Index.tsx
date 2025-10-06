@@ -15,7 +15,7 @@ export type PaginationProps = Omit<
   /**
    * ページの総数
    */
-  count: number;
+  totalPage: number;
   /**
    * ページ変更時のコールバック関数
    */
@@ -24,25 +24,25 @@ export type PaginationProps = Omit<
 
 const getPaginationItems = (
   currentPage: number,
-  pageCount: number,
+  totalPage: number,
 ): Array<number | 'ellipsis'> => {
-  if (pageCount <= 7) {
-    return Array.from({ length: pageCount }, (_, i) => i + 1);
+  if (totalPage <= 7) {
+    return Array.from({ length: totalPage }, (_, i) => i + 1);
   }
 
   if (currentPage <= 4) {
-    return [1, 2, 3, 4, 5, 'ellipsis', pageCount];
+    return [1, 2, 3, 4, 5, 'ellipsis', totalPage];
   }
 
-  if (currentPage >= pageCount - 3) {
+  if (currentPage >= totalPage - 3) {
     return [
       1,
       'ellipsis',
-      pageCount - 4,
-      pageCount - 3,
-      pageCount - 2,
-      pageCount - 1,
-      pageCount,
+      totalPage - 4,
+      totalPage - 3,
+      totalPage - 2,
+      totalPage - 1,
+      totalPage,
     ];
   }
 
@@ -53,7 +53,7 @@ const getPaginationItems = (
     currentPage,
     currentPage + 1,
     'ellipsis',
-    pageCount,
+    totalPage,
   ];
 };
 
@@ -68,8 +68,8 @@ const getPaginationItems = (
  * - [Pagination](https://github.com/giftee/design-system/tree/main/packages/react/src/components/pagination)
  */
 export const Pagination = forwardRef<ElementRef<'nav'>, PaginationProps>(
-  ({ page, count, onChange, className, ...rest }, forwardedRef) => {
-    const items = getPaginationItems(page, count);
+  ({ page, totalPage, onChange, className, ...rest }, forwardedRef) => {
+    const items = getPaginationItems(page, totalPage);
 
     const handlePrevClick = (event: React.MouseEvent<HTMLButtonElement>) => {
       if (page > 1) {
@@ -78,7 +78,7 @@ export const Pagination = forwardRef<ElementRef<'nav'>, PaginationProps>(
     };
 
     const handleNextClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-      if (page < count) {
+      if (page < totalPage) {
         onChange(event, page + 1);
       }
     };
@@ -140,12 +140,12 @@ export const Pagination = forwardRef<ElementRef<'nav'>, PaginationProps>(
         <IconButton
           variant="outlined"
           size="large"
-          disabled={page >= count}
+          disabled={page >= totalPage}
           onClick={handleNextClick}
           aria-label="次へ"
         >
           <AngleRight
-            className={`ab-Icon ${page >= count ? 'ab-text-default' : null}`}
+            className={`ab-Icon ${page >= totalPage ? 'ab-text-default' : null}`}
           />
         </IconButton>
       </nav>
