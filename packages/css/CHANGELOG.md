@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.1.5
+
+### Patch Changes
+
+- [#744](https://github.com/giftee/design-system/pull/744) [`a00f237`](https://github.com/giftee/design-system/commit/a00f237034802af4a02163f6621e4d7f957b5c45) Thanks [@aoki-ryusei](https://github.com/aoki-ryusei)! - [fix: statusLabel]–ab-semantic-color-text-defaul を–ab-semantic-color-text-default に修正
+
 ## 3.1.4
 
 ### Patch Changes
