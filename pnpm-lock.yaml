@@ -109,8 +109,8 @@ importers:
   packages/designTokens:
     dependencies:
       style-dictionary:
-        specifier: ^5.1.0
-        version: 5.1.0
+        specifier: ^5.1.1
+        version: 5.1.1
     devDependencies:
       prettier:
         specifier: ^3.6.2
@@ -3999,8 +3999,8 @@ packages:
   strip-literal@3.1.0:
     resolution: {integrity: sha512-8r3mkIM/2+PpjHoOtiAW8Rg3jJLHaV7xPwG+YRGrv6FP0wwk/toTpATxWYOW0BKdWwl82VT2tFYi5DlROa0Mxg==}
 
-  style-dictionary@5.1.0:
-    resolution: {integrity: sha512-HsCPJAqJIjQaxhHmiHSEqM96TAC/+6B6aLYeXAbcfLcrooKClKLaWl5T5vqJNNfqmJlpoRP9k0dkcqfAk0q4Kg==}
+  style-dictionary@5.1.1:
+    resolution: {integrity: sha512-scRFwr2VrerXy6BzO2Ym8AI0dRGkAIoS2YhooagytxCFkoXPYCLhvIxg3VO/yD2i4VeU4aGmHG80+ZLdPDb0uw==}
     engines: {node: '>=22.0.0'}
     hasBin: true
 
@@ -9027,7 +9027,7 @@ snapshots:
     dependencies:
       js-tokens: 9.0.1
 
-  style-dictionary@5.1.0:
+  style-dictionary@5.1.1:
     dependencies:
       '@bundled-es-modules/deepmerge': 4.3.1
       '@bundled-es-modules/glob': 11.0.3
