@@ -19,7 +19,7 @@ jobs:
       - run: npm install -g corepack@latest
       - run: corepack enable
       - name: Set up node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: "20.19.5"
           cache: pnpm
