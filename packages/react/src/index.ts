@@ -15,6 +15,7 @@ export * as InlineAlert from '@/components/inlineAlert/Index';
 export * from '@/components/linkText/Index';
 export * as Menu from '@/components/menu/Index';
 export * as Modal from '@/components/modal/Index';
+export * from '@/components/pagination/Index';
 export * from '@/components/radio/Index';
 export * from '@/components/select/Index';
 export * from '@/components/statusLabel/Index';
