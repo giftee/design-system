@@ -15,7 +15,7 @@ export type PaginationProps = Omit<
   /**
    * ページの総数
    */
-  totalPage: number;
+  totalPages: number;
   /**
    * ページ変更時のコールバック関数
    */
@@ -24,25 +24,25 @@ export type PaginationProps = Omit<
 
 const getPaginationItems = (
   currentPage: number,
-  totalPage: number,
+  totalPages: number,
 ): Array<number | 'ellipsis'> => {
-  if (totalPage <= 7) {
-    return Array.from({ length: totalPage }, (_, i) => i + 1);
+  if (totalPages <= 7) {
+    return Array.from({ length: totalPages }, (_, i) => i + 1);
   }
 
   if (currentPage <= 4) {
-    return [1, 2, 3, 4, 5, 'ellipsis', totalPage];
+    return [1, 2, 3, 4, 5, 'ellipsis', totalPages];
   }
 
-  if (currentPage >= totalPage - 3) {
+  if (currentPage >= totalPages - 3) {
     return [
       1,
       'ellipsis',
-      totalPage - 4,
-      totalPage - 3,
-      totalPage - 2,
-      totalPage - 1,
-      totalPage,
+      totalPages - 4,
+      totalPages - 3,
+      totalPages - 2,
+      totalPages - 1,
+      totalPages,
     ];
   }
 
@@ -53,7 +53,7 @@ const getPaginationItems = (
     currentPage,
     currentPage + 1,
     'ellipsis',
-    totalPage,
+    totalPages,
   ];
 };
 
@@ -68,7 +68,7 @@ const getPaginationItems = (
  * - [Pagination](https://github.com/giftee/design-system/tree/main/packages/react/src/components/pagination)
  */
 export const Pagination = forwardRef<ElementRef<'nav'>, PaginationProps>(
-  ({ currentPage, totalPage, onClick, className, ...rest }, forwardedRef) => {
+  ({ currentPage, totalPages: totalPage, onClick, className, ...rest }, forwardedRef) => {
     const items = getPaginationItems(currentPage, totalPage);
 
     const handlePrevClick = (event: React.MouseEvent<HTMLButtonElement>) => {

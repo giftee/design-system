@@ -9,14 +9,14 @@ const meta = {
   component: Pagination,
   args: {
     currentPage: 1,
-    totalPage: 10,
+    totalPages: 10,
   },
   argTypes: {
     currentPage: {
       control: { type: 'number', min: 1 },
       description: '現在のページ',
     },
-    totalPage: {
+    totalPages: {
       control: { type: 'number', min: 1 },
       description: 'ページの総数',
     },
@@ -46,7 +46,7 @@ export const ManyPages: Story = {
   },
   args: {
     currentPage: 5,
-    totalPage: 10,
+    totalPages: 10,
     onClick: () => {},
   },
 };
@@ -54,7 +54,7 @@ export const ManyPages: Story = {
 export const SinglePage: Story = {
   args: {
     currentPage: 1,
-    totalPage: 1,
+    totalPages: 1,
     onClick: () => {},
   },
 };
@@ -62,7 +62,7 @@ export const SinglePage: Story = {
 export const FewPages: Story = {
   args: {
     currentPage: 3,
-    totalPage: 5,
+    totalPages: 5,
     onClick: () => {},
   },
 };
@@ -70,7 +70,7 @@ export const FewPages: Story = {
 export const LastPage: Story = {
   args: {
     currentPage: 10,
-    totalPage: 10,
+    totalPages: 10,
     onClick: () => {},
   },
 };
