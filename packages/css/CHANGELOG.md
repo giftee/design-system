@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.1.6
+
+### Patch Changes
+
+- [#769](https://github.com/giftee/design-system/pull/769) [`7a4a196`](https://github.com/giftee/design-system/commit/7a4a196e594cffc03f97d9c0c77db6d9f5fb8ff0) Thanks [@egurinko](https://github.com/egurinko)! - [fix:Dropzone] エラー時の背景色を白から薄い赤に修正
+
 ## 3.1.5
 
 ### Patch Changes
