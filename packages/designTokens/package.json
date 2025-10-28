@@ -38,7 +38,7 @@
     "prettier": "^3.6.2"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.21.0"
   },
   "dependencies": {
     "style-dictionary": "^5.1.1"
