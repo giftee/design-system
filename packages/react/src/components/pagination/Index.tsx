@@ -1,0 +1,156 @@
+import { forwardRef } from 'react';
+import { IconButton } from '@/components/iconButton/Index';
+import { AngleLeft, AngleRight } from '@/storyAssets/inlineSvgs';
+import { classNames } from '@/utils/classNames';
+import type { ComponentPropsWithoutRef, ElementRef } from 'react';
+
+export type PaginationProps = Omit<
+  ComponentPropsWithoutRef<'nav'>,
+  'onClick'
+> & {
+  /**
+   * 現在のページ番号
+   */
+  currentPage: number;
+  /**
+   * ページの総数
+   */
+  totalPages: number;
+  /**
+   * ページ変更時のコールバック関数
+   */
+  onClick: (event: React.MouseEvent<HTMLButtonElement>, value: number) => void;
+};
+
+const getPaginationItems = (
+  currentPage: number,
+  totalPages: number,
+): Array<number | 'ellipsis'> => {
+  if (totalPages <= 7) {
+    return Array.from({ length: totalPages }, (_, i) => i + 1);
+  }
+
+  if (currentPage <= 4) {
+    return [1, 2, 3, 4, 5, 'ellipsis', totalPages];
+  }
+
+  if (currentPage >= totalPages - 3) {
+    return [
+      1,
+      'ellipsis',
+      totalPages - 4,
+      totalPages - 3,
+      totalPages - 2,
+      totalPages - 1,
+      totalPages,
+    ];
+  }
+
+  return [
+    1,
+    'ellipsis',
+    currentPage - 1,
+    currentPage,
+    currentPage + 1,
+    'ellipsis',
+    totalPages,
+  ];
+};
+
+/**
+ *
+ * Docs:
+ *
+ * - [Pagination](https://abukuma.netlify.app/react/component/pagination)
+ *
+ * GitHub:
+ *
+ * - [Pagination](https://github.com/giftee/design-system/tree/main/packages/react/src/components/pagination)
+ */
+export const Pagination = forwardRef<ElementRef<'nav'>, PaginationProps>(
+  ({ currentPage, totalPages: totalPage, onClick, className, ...rest }, forwardedRef) => {
+    const items = getPaginationItems(currentPage, totalPage);
+
+    const handlePrevClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+      if (currentPage > 1) {
+        onClick(event, currentPage - 1);
+      }
+    };
+
+    const handleNextClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+      if (currentPage < totalPage) {
+        onClick(event, currentPage + 1);
+      }
+    };
+
+    const handlePageClick =
+      (pageNumber: number) => (event: React.MouseEvent<HTMLButtonElement>) => {
+        onClick(event, pageNumber);
+      };
+
+    const classes = classNames(
+      'ab-flex',
+      'ab-flex-row',
+      'ab-flex-items-center',
+      'ab-gap-8',
+      className,
+    );
+
+    return (
+      <nav ref={forwardedRef} className={classes} {...rest}>
+        <IconButton
+          variant="outlined"
+          size="large"
+          disabled={currentPage <= 1}
+          onClick={handlePrevClick}
+          aria-label="前へ"
+        >
+          <AngleLeft
+            className={`ab-Icon ${currentPage <= 1 ? 'ab-text-default' : null}`}
+          />
+        </IconButton>
+        <div className="ab-flex ab-gap-1">
+          {items.map((item, index) => {
+            if (item === 'ellipsis') {
+              return (
+                <IconButton
+                  key={`ellipsis-${index.toString()}`}
+                  variant="text"
+                  size="small"
+                  style={{ pointerEvents: 'none' }}
+                >
+                  …
+                </IconButton>
+              );
+            }
+            return (
+              <IconButton
+                key={item}
+                variant={item === currentPage ? 'default' : 'text'}
+                size="small"
+                onClick={handlePageClick(item)}
+                aria-label={`ページ${item}`}
+                aria-current={item === currentPage ? 'page' : undefined}
+              >
+                {item}
+              </IconButton>
+            );
+          })}
+        </div>
+        <IconButton
+          variant="outlined"
+          size="large"
+          disabled={currentPage >= totalPage}
+          onClick={handleNextClick}
+          aria-label="次へ"
+        >
+          <AngleRight
+            className={`ab-Icon ${currentPage >= totalPage ? 'ab-text-default' : null}`}
+          />
+        </IconButton>
+      </nav>
+    );
+  },
+);
+
+Pagination.displayName = 'Pagination';
