@@ -134,7 +134,7 @@ importers:
         specifier: ^4.7.21
         version: 4.7.22(typescript@5.9.3)
       '@markuplint/react-spec':
-        specifier: ^4.5.21
+        specifier: ^4.5.22
         version: 4.5.22
       '@storybook/addon-a11y':
         specifier: ^8.6.14
