@@ -75,7 +75,7 @@ $stepper-checkmark-url: 'data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYWItSWNvbiBhY
     color: var(--ab-semantic-color-text-secondary);
     font-size: css-design-tokens.$font-size-body-s;
     font-weight: var(--ab-semantic-typography-font-weight-bold);
-    z-index: css-design-tokens.$zindex-overlap;
+    z-index: 1;
   }
 
   &-label {
