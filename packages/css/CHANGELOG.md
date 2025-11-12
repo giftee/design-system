@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.1.7
+
+### Patch Changes
+
+- [#792](https://github.com/giftee/design-system/pull/792) [`e8e7b9f`](https://github.com/giftee/design-system/commit/e8e7b9fb257ca90c4ab8670719ddc12db0aa4d81) Thanks [@linus-vanpelt919](https://github.com/linus-vanpelt919)! - [fix:stepper] z-index を修正
+
 ## 3.1.6
 
 ### Patch Changes
