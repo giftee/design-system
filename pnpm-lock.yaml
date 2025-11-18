@@ -215,7 +215,7 @@ importers:
         specifier: ^20.0.8
         version: 20.0.10
       markuplint:
-        specifier: ^4.13.1
+        specifier: ^4.14.0
         version: 4.14.0(typescript@5.9.3)
       prettier:
         specifier: ^3.6.2
