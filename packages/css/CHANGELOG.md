@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.1.8
+
+### Patch Changes
+
+- [#818](https://github.com/giftee/design-system/pull/818) [`853c360`](https://github.com/giftee/design-system/commit/853c36074355bb8e5f9bcbad1927fceacd3f65b1) Thanks [@egurinko](https://github.com/egurinko)! - [fix:Modal] top_layer をサポートしていない古いブラウザで、Modal が開けない問題を修正
+
 ## 3.1.7
 
 ### Patch Changes
