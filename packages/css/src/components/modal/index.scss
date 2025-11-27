@@ -5,8 +5,12 @@
   border-radius: var(--ab-semantic-border-radius-md);
   background-color: var(--ab-semantic-color-background-base);
   max-height: 100%;
-  width: 100%;
+  height: fit-content;
+  width: auto; // フォールバック
+  width: fit-content;
   overflow-y: auto;
+  inset: 0;
+  margin: auto;
 
   &::backdrop {
     background-color: rgba(35 35 35 / 70%);
