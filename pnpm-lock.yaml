@@ -212,7 +212,7 @@ importers:
         specifier: ^16.5.0
         version: 16.5.0
       happy-dom:
-        specifier: ^20.0.8
+        specifier: ^20.0.10
         version: 20.0.10
       markuplint:
         specifier: ^4.14.0
