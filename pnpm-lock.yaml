@@ -122,7 +122,7 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(eslint@9.39.1)
       '@eslint/eslintrc':
-        specifier: ^3.3.1
+        specifier: ^3.3.3
         version: 3.3.3
       '@eslint/js':
         specifier: ^9.39.1
@@ -7395,7 +7395,7 @@ snapshots:
     dependencies:
       foreground-child: 3.3.1
       jackspeak: 4.1.1
-      minimatch: 10.0.3
+      minimatch: 10.1.1
       minipass: 7.1.2
       package-json-from-dist: 1.0.1
       path-scurry: 2.0.1
