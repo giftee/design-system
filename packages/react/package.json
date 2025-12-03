@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@eslint/compat": "^2.0.0",
-    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/eslintrc": "^3.3.3",
     "@eslint/js": "^9.39.1",
     "@giftee/abukuma-css": "workspace:^",
     "@markuplint/jsx-parser": "^4.7.22",
