@@ -1,0 +1,76 @@
+import { useState } from 'react';
+import type { PaginationProps } from '@/index';
+import { Pagination } from '@/index';
+import type { Meta, StoryObj } from '@storybook/react';
+
+const meta = {
+  title: 'Pagination',
+  tags: ['autodocs'],
+  component: Pagination,
+  args: {
+    currentPage: 1,
+    totalPages: 10,
+  },
+  argTypes: {
+    currentPage: {
+      control: { type: 'number', min: 1 },
+      description: '現在のページ',
+    },
+    totalPages: {
+      control: { type: 'number', min: 1 },
+      description: 'ページの総数',
+    },
+    onClick: {
+      action: 'onChange',
+      description: 'ページ変更時のコールバック関数',
+    },
+  },
+} satisfies Meta<typeof Pagination>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const ManyPages: Story = {
+  render: (args: PaginationProps) => {
+    const [page, setPage] = useState(args.currentPage);
+    return (
+      <Pagination
+        {...args}
+        currentPage={page}
+        onClick={(event, value) => {
+          setPage(value);
+          args.onClick?.(event, value);
+        }}
+      />
+    );
+  },
+  args: {
+    currentPage: 5,
+    totalPages: 10,
+    onClick: () => {},
+  },
+};
+
+export const SinglePage: Story = {
+  args: {
+    currentPage: 1,
+    totalPages: 1,
+    onClick: () => {},
+  },
+};
+
+export const FewPages: Story = {
+  args: {
+    currentPage: 3,
+    totalPages: 5,
+    onClick: () => {},
+  },
+};
+
+export const LastPage: Story = {
+  args: {
+    currentPage: 10,
+    totalPages: 10,
+    onClick: () => {},
+  },
+};
