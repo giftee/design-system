@@ -67,10 +67,10 @@ importers:
         specifier: ^3.7.4
         version: 3.7.4
       react:
-        specifier: ^19.2.1
+        specifier: ^19.2.3
         version: 19.2.3
       react-dom:
-        specifier: ^19.2.1
+        specifier: ^19.2.3
         version: 19.2.3(react@19.2.3)
       react-syntax-highlighter:
         specifier: ^16.1.0
@@ -221,10 +221,10 @@ importers:
         specifier: ^3.7.4
         version: 3.7.4
       react:
-        specifier: ^19.2.1
+        specifier: ^19.2.3
         version: 19.2.3
       react-dom:
-        specifier: ^19.2.1
+        specifier: ^19.2.3
         version: 19.2.3(react@19.2.3)
       storybook:
         specifier: ^8.6.15
