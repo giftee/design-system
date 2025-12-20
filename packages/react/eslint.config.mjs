@@ -7,6 +7,7 @@ import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
+import storybook from 'eslint-plugin-storybook';
 import globals from 'globals';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -28,9 +29,9 @@ export default [
       'plugin:react/recommended',
       'plugin:import/recommended',
       'prettier',
-      'plugin:storybook/recommended',
     ),
   ),
+  ...storybook.configs['flat/recommended'],
   jsxA11y.flatConfigs.recommended,
   {
     plugins: {
