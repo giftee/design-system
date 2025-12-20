@@ -1,6 +1,6 @@
 import type { LinkTextProps } from '@/index';
 import { LinkText } from '@/index';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'LinkText',

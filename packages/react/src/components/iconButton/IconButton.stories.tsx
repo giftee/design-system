@@ -1,7 +1,7 @@
 import type { IconButtonProps } from '@/index';
 import { IconButton } from '@/index';
 import { Xmark } from '@/storyAssets/inlineSvgs';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'IconButton',
