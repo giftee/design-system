@@ -5,9 +5,9 @@ import {
   Primary,
   Controls,
   Stories,
-} from '@storybook/blocks';
+} from '@storybook/addon-docs/blocks';
 import * as React from 'react';
-import type { Preview } from '@storybook/react';
+import type { Preview } from '@storybook/react-vite';
 import '@giftee/abukuma-css';
 
 const preview: Preview = {

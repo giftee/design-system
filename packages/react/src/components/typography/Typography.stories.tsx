@@ -1,6 +1,6 @@
 import type { TypographyProps } from '@/index';
 import { Typography } from '@/index';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Typography',

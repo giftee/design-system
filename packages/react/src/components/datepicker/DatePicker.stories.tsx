@@ -1,7 +1,7 @@
 import * as React from 'react';
 import type { DatePickerProps } from '@/index';
 import { DatePicker } from '@/index';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'DatePicker',

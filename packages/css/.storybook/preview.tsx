@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Canvas } from '@storybook/blocks';
-import { Preview, Parameters } from '@storybook/html';
+import { Canvas } from '@storybook/addon-docs/blocks';
+import type { Preview, Parameters } from '@storybook/html-vite';
 
 const preview: Preview = {
   beforeEach: () => {

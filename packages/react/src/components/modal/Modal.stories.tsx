@@ -8,7 +8,7 @@ import {
   Typography,
   Textfield,
 } from '@/index';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import type { MouseEvent } from 'react';
 import 'dialog-polyfill/dist/dialog-polyfill.css';
 

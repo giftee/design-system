@@ -1,6 +1,6 @@
 import { Menu } from '@/index';
 import { AngleRight, User, CircleInfo } from '@/storyAssets/inlineSvgs';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Menu',

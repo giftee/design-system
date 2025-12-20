@@ -1,6 +1,6 @@
 import type { ButtonProps } from '@/index';
 import { Button, CircularProgress } from '@/index';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Button',
