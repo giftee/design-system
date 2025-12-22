@@ -3,6 +3,7 @@ import { Canvas } from '@storybook/addon-docs/blocks';
 import type { Preview, Parameters } from '@storybook/html-vite';
 
 const preview: Preview = {
+  tags: ['autodocs'],
   beforeEach: () => {
     const stories = document.getElementsByClassName('docs-story');
     for (const story of stories) {

@@ -11,6 +11,7 @@ import type { Preview } from '@storybook/react-vite';
 import '@giftee/abukuma-css';
 
 const preview: Preview = {
+  tags: ['autodocs'],
   beforeEach: () => {
     const stories = document.getElementsByClassName('docs-story');
     for (const story of stories) {
