@@ -23,3 +23,4 @@ export * as Table from '@/components/table/Index';
 export * from '@/components/textfield/Index';
 export * from '@/components/typography/Index';
 export * from '@/components/stepper/Index';
+export * from '@/components/skeleton/Index';
