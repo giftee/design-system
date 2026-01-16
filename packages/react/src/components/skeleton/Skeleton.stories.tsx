@@ -29,7 +29,6 @@ export const Variant: Story = {
       <div>
         <span className="ab-text-body-m ab-font-bold">text</span>
         <br />
-        <br />
         <div className="ab-flex ab-flex-column ab-gap-4">
           <Skeleton {...args} variant="text" />
           <Skeleton {...args} variant="text" />
@@ -39,7 +38,6 @@ export const Variant: Story = {
       <div>
         <span className="ab-text-body-m ab-font-bold">circular</span>
         <br />
-        <br />
         <div className="ab-flex ab-gap-4">
           <Skeleton {...args} variant="circular" width={48} height={48} />
           <Skeleton {...args} variant="circular" width={48} height={48} />
@@ -48,7 +46,6 @@ export const Variant: Story = {
       </div>
       <div>
         <span className="ab-text-body-m ab-font-bold">rectangular</span>
-        <br />
         <br />
         <div className="ab-flex ab-gap-4">
           <Skeleton {...args} variant="rectangular" width={280} height={212} />
