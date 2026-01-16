@@ -1,5 +1,5 @@
 ---
-"@giftee/abukuma-react": major
+"@giftee/abukuma-react": patch 
 ---
 
-[feat:component]Skeletonコンポーネントを追加
+[add:Skeleton] Skeletonコンポーネントを追加
