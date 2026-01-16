@@ -11,6 +11,16 @@ export type SkeletonProps = ComponentPropsWithoutRef<'span'> & {
   height?: string | number;
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [Skeleton](https://abukuma.netlify.app/react/component/skeleton)
+ *
+ * GitHub:
+ *
+ * - [Skeleton](https://github.com/giftee/design-system/tree/main/packages/react/src/components/skeleton)
+ */
 export const Skeleton = forwardRef<ElementRef<'span'>, SkeletonProps>(
   ({ variant = 'text', width, height, className, style, ...rest }, ref) => {
     const classes = classNames(
