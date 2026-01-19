@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-export type SkeletonProps = ComponentPropsWithoutRef<'span'> & {
+export type SkeletonProps = ComponentPropsWithoutRef<'div'> & {
   /** 形 @default 'text' */
   variant?: 'text' | 'circular' | 'rectangular';
   /** 幅 */
@@ -21,7 +21,7 @@ export type SkeletonProps = ComponentPropsWithoutRef<'span'> & {
  *
  * - [Skeleton](https://github.com/giftee/design-system/tree/main/packages/react/src/components/skeleton)
  */
-export const Skeleton = forwardRef<ElementRef<'span'>, SkeletonProps>(
+export const Skeleton = forwardRef<ElementRef<'div'>, SkeletonProps>(
   ({ variant = 'text', width, height, className, style, ...rest }, ref) => {
     const classes = classNames(
       'ab-Skeleton',
@@ -30,7 +30,7 @@ export const Skeleton = forwardRef<ElementRef<'span'>, SkeletonProps>(
     );
 
     return (
-      <span
+      <div
         ref={ref}
         className={classes}
         style={{ width, height, ...style }}
