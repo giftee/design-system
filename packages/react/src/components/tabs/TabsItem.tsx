@@ -38,6 +38,7 @@ export const TabsItem = forwardRef<ElementRef<'button'>, TabsItemProps>(
 
     return (
       <button
+        type="button"
         role="tab"
         aria-selected={selected}
         disabled={disabled}
