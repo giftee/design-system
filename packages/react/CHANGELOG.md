@@ -1,5 +1,11 @@
 # @giftee/abukuma-react
 
+## 4.3.0
+
+### Minor Changes
+
+- [#887](https://github.com/giftee/design-system/pull/887) [`ef87e22`](https://github.com/giftee/design-system/commit/ef87e225ae61da7c16f3507e87c1bc1b0dd9df6f) Thanks [@aidyak](https://github.com/aidyak)! - [add:Skeleton] Skeleton コンポーネントを追加
+
 ## 4.2.2
 
 ### Patch Changes
