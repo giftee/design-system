@@ -1,6 +1,10 @@
 import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
-import type { ComponentPropsWithoutRef, ElementRef } from 'react';
+import type {
+  ComponentPropsWithoutRef,
+  CSSProperties,
+  ElementRef,
+} from 'react';
 
 export type SkeletonProps = ComponentPropsWithoutRef<'div'> & {
   /**
@@ -8,10 +12,14 @@ export type SkeletonProps = ComponentPropsWithoutRef<'div'> & {
    * @default 'text'
    */
   variant?: 'text' | 'circular' | 'rectangular';
-  /** 幅 */
-  width?: string | number;
-  /** 高さ */
-  height?: string | number;
+  /**
+   * 幅
+   */
+  width?: CSSProperties['width'];
+  /**
+   * 高さ
+   */
+  height?: CSSProperties['height'];
 };
 
 /**
