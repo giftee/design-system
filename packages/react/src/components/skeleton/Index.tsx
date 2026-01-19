@@ -3,7 +3,10 @@ import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type SkeletonProps = ComponentPropsWithoutRef<'div'> & {
-  /** 形 @default 'text' */
+  /**
+   * スケルトンのバリアント（形）
+   * @default 'text'
+   */
   variant?: 'text' | 'circular' | 'rectangular';
   /** 幅 */
   width?: string | number;
