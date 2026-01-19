@@ -20,6 +20,7 @@ export * from '@/components/select/Index';
 export * from '@/components/statusLabel/Index';
 export * from '@/components/switch/Index';
 export * as Table from '@/components/table/Index';
+export * as Tabs from '@/components/tabs/Index';
 export * from '@/components/textfield/Index';
 export * from '@/components/typography/Index';
 export * from '@/components/stepper/Index';
