@@ -42,7 +42,7 @@ export const TabsRoot = forwardRef<ElementRef<'div'>, TabsRootProps>(
       fullWidth,
       ...rest
     },
-    ref,
+    forwardedRef,
   ) => {
     const classes = classNames(
       'ab-Tabs',
@@ -53,7 +53,7 @@ export const TabsRoot = forwardRef<ElementRef<'div'>, TabsRootProps>(
     );
 
     return (
-      <div role="tablist" ref={ref} className={classes} {...rest}>
+      <div role="tablist" ref={forwardedRef} className={classes} {...rest}>
         {children}
       </div>
     );

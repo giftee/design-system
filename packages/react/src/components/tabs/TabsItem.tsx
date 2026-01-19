@@ -28,7 +28,7 @@ export type TabsItemProps = ComponentPropsWithoutRef<'button'> & {
  */
 
 export const TabsItem = forwardRef<ElementRef<'button'>, TabsItemProps>(
-  ({ children, className, selected, disabled, ...rest }, forwardRef) => {
+  ({ children, className, selected, disabled, ...rest }, forwardedRef) => {
     const classes = classNames(
       'ab-Tabs-item',
       selected && 'is-selected',
@@ -42,7 +42,7 @@ export const TabsItem = forwardRef<ElementRef<'button'>, TabsItemProps>(
         role="tab"
         aria-selected={selected}
         disabled={disabled}
-        ref={forwardRef}
+        ref={forwardedRef}
         className={classes}
         {...rest}
       >
