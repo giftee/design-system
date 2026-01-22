@@ -94,8 +94,8 @@ importers:
   packages/designTokens:
     dependencies:
       style-dictionary:
-        specifier: ^5.1.4
-        version: 5.1.4
+        specifier: ^5.2.0
+        version: 5.2.0
     devDependencies:
       prettier:
         specifier: ^3.8.1
@@ -3831,8 +3831,8 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
-  style-dictionary@5.1.4:
-    resolution: {integrity: sha512-ig12xIuflWzvIQ+q+WlOynKS7B3+sE6Tj2XUeqtjv8mB+ljcomWJcc8PGcgrbYWXWY1GXw1rBEcsKY31qsmcNQ==}
+  style-dictionary@5.2.0:
+    resolution: {integrity: sha512-9jPX4uVOc+EXFaRFk7kR9+IzvW3Yy0DJTRAqrndvV5rOTAPF+DSDK7q+YKTzCIB2MGjv1KXtKzMcozprZcRfcg==}
     engines: {node: '>=22.0.0'}
     hasBin: true
 
@@ -8640,7 +8640,7 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  style-dictionary@5.1.4:
+  style-dictionary@5.2.0:
     dependencies:
       '@bundled-es-modules/deepmerge': 4.3.1
       '@bundled-es-modules/glob': 11.1.0
