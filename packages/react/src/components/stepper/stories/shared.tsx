@@ -2,9 +2,10 @@ import type { StepperProps } from '@/index';
 import { Stepper } from '@/index';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-const meta = {
-  title: 'Stepper',
-  tags: ['autodocs'],
+export { Stepper };
+export type { StepperProps };
+
+export const meta = {
   component: Stepper,
   args: {
     currentStep: 1,
@@ -60,43 +61,4 @@ const meta = {
   },
 } satisfies Meta<typeof Stepper>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Base: Story = {
-  render: (args: StepperProps) => (
-    <div className="ab-m-8">
-      <Stepper {...args} />
-    </div>
-  ),
-};
-
-export const Size: Story = {
-  render: (args: StepperProps) => (
-    <div className="ab-flex ab-gap-8">
-      <div>
-        <p className="ab-mb-2">small</p>
-        <Stepper {...args} size="small" />
-      </div>
-      <div>
-        <p className="ab-mb-2">medium</p>
-        <Stepper {...args} size="medium" />
-      </div>
-    </div>
-  ),
-};
-
-export const Direction: Story = {
-  render: (args: StepperProps) => (
-    <div className="ab-flex ab-gap-8">
-      <div>
-        <p className="ab-mb-2">Horizontal</p>
-        <Stepper {...args} direction="horizontal" />
-      </div>
-      <div>
-        <p className="ab-mb-2">Vertical</p>
-        <Stepper {...args} direction="vertical" />
-      </div>
-    </div>
-  ),
-};
+export type Story = StoryObj<typeof meta>;
