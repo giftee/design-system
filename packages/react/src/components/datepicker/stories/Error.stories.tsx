@@ -1,4 +1,10 @@
-import { React, meta, DatePicker, type DatePickerProps, type Story } from './shared';
+import {
+  React,
+  meta,
+  DatePicker,
+  type DatePickerProps,
+  type Story,
+} from './shared';
 
 export default {
   ...meta,

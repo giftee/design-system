@@ -12,7 +12,9 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import type { MouseEvent } from 'react';
 import 'dialog-polyfill/dist/dialog-polyfill.css';
 
-export function useDialogpolyfill(ref: React.RefObject<HTMLDialogElement | null>) {
+export function useDialogpolyfill(
+  ref: React.RefObject<HTMLDialogElement | null>,
+) {
   useEffect(() => {
     if (ref.current) {
       dialogPolyfill.registerDialog(ref.current);
@@ -20,7 +22,16 @@ export function useDialogpolyfill(ref: React.RefObject<HTMLDialogElement | null>
   }, [ref]);
 }
 
-export { Modal, Button, Divider, IconButton, Typography, Textfield, useRef, useState };
+export {
+  Modal,
+  Button,
+  Divider,
+  IconButton,
+  Typography,
+  Textfield,
+  useRef,
+  useState,
+};
 export type { MouseEvent };
 
 export const meta = {

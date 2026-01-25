@@ -1,4 +1,11 @@
-import { meta, Fieldset, Radio, Checkbox, type FieldsetProps, type Story } from './shared';
+import {
+  meta,
+  Fieldset,
+  Radio,
+  Checkbox,
+  type FieldsetProps,
+  type Story,
+} from './shared';
 
 export default {
   ...meta,

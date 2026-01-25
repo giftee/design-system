@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { DateTimePicker } from '../Index';
-import type { DateTimePickerProps } from '../Index';
+import { DateTimePicker } from '@/index';
+import type { DateTimePickerProps } from '@/index';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 export { React, DateTimePicker };

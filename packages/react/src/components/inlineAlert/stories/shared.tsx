@@ -7,7 +7,13 @@ import {
 } from '@/storyAssets/inlineSvgs';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-export { InlineAlert, CircleInfo, CircleExclamation, TriangleExclamation, CircleCheck };
+export {
+  InlineAlert,
+  CircleInfo,
+  CircleExclamation,
+  TriangleExclamation,
+  CircleCheck,
+};
 
 export const meta = {
   component: InlineAlert.Root,

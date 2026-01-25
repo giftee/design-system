@@ -1,4 +1,9 @@
-import { meta, CircularProgress, type CircularProgressProps, type Story } from './shared';
+import {
+  meta,
+  CircularProgress,
+  type CircularProgressProps,
+  type Story,
+} from './shared';
 
 export default {
   ...meta,
