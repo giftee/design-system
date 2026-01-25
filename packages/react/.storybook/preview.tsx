@@ -1,11 +1,4 @@
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  Controls,
-  Stories,
-} from '@storybook/addon-docs/blocks';
+import { Canvas } from '@storybook/addon-docs/blocks';
 import * as React from 'react';
 import type { Preview } from '@storybook/react-vite';
 import '@giftee/abukuma-css';
@@ -65,12 +58,7 @@ const preview: Preview = {
               <option value="coral-light">coral-light</option>
             </select>
             <div id="canvas-root">
-              <Title />
-              <Subtitle />
-              <Description />
-              <Primary />
-              <Controls />
-              <Stories />
+              <Canvas sourceState="shown" />
             </div>
           </div>
         </>
