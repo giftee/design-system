@@ -1,12 +1,13 @@
 import * as React from 'react';
-import type { DatePickerProps } from '@/index';
-import { DatePicker } from '@/index';
+import { DateTimePicker } from '../Index';
+import type { DateTimePickerProps } from '../Index';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-const meta = {
-  title: 'DatePicker',
-  tags: ['autodocs'],
-  component: DatePicker,
+export { React, DateTimePicker };
+export type { DateTimePickerProps };
+
+export const meta = {
+  component: DateTimePicker,
   args: {
     label: 'label',
     helptext: 'helptext',
@@ -35,7 +36,7 @@ const meta = {
           summary: 'string',
         },
       },
-      description: 'DatePicker の name。label と input を紐づけるのに必須',
+      description: 'DateTimePicker の name。label と input を紐づけるのに必須',
     },
     helptext: {
       control: { type: 'text' },
@@ -90,57 +91,6 @@ const meta = {
       description: '非活性',
     },
   },
-} satisfies Meta<typeof DatePicker>;
+} satisfies Meta<typeof DateTimePicker>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Base: Story = {
-  render: ({ ...args }: DatePickerProps) => {
-    const [value, setValue] = React.useState('2024-01-01');
-
-    return (
-      <DatePicker
-        name="base"
-        {...args}
-        onChange={(event) => setValue(event.target.value)}
-        value={value}
-      ></DatePicker>
-    );
-  },
-};
-
-export const Error: Story = {
-  render: ({ ...args }: DatePickerProps) => {
-    const [value, setValue] = React.useState('2024-01-01');
-
-    return (
-      <>
-        <div className="ab-flex ab-flex-column ab-gap-12">
-          <DatePicker
-            name="single-error"
-            {...args}
-            error={true}
-            errorMessages="単一エラーメッセージ"
-            onChange={(event) => setValue(event.target.value)}
-            value={value}
-          ></DatePicker>
-          <DatePicker
-            name="multi-errors"
-            {...args}
-            error={true}
-            errorMessages={['複数エラーメッセージ1', '複数エラーメッセージ2']}
-            onChange={(event) => setValue(event.target.value)}
-            value={value}
-          ></DatePicker>
-          <DatePicker
-            name="notError"
-            {...args}
-            onChange={(event) => setValue(event.target.value)}
-            value={value}
-          ></DatePicker>
-        </div>
-      </>
-    );
-  },
-};
+export type Story = StoryObj<typeof meta>;
