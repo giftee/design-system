@@ -1,27 +1,9 @@
-import type { SkeletonProps } from '@/index';
-import { Skeleton } from '@/index';
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import { meta, Skeleton, type SkeletonProps, type Story } from './shared';
 
-const meta = {
-  title: 'Skeleton',
-  tags: ['autodocs'],
-  component: Skeleton,
-  argTypes: {
-    variant: {
-      control: { type: 'select' },
-      options: ['text', 'circular', 'rectangular'],
-      table: {
-        defaultValue: {
-          summary: 'text',
-        },
-      },
-      description: '形状',
-    },
-  },
-} satisfies Meta<typeof Skeleton>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default {
+  ...meta,
+  title: 'Skeleton/Variant',
+};
 
 export const Variant: Story = {
   render: (args: SkeletonProps) => (
