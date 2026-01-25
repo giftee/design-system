@@ -25,7 +25,11 @@
         "@typescript-eslint",
         "sass",
         "typescript-eslint",
-        "pnpm"
+        "pnpm",
+        "global",
+        "@types/",
+        "happy-dom",
+        "@testing-library/"
       ],
       "automerge": true
     }
