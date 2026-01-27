@@ -1,5 +1,11 @@
 # @giftee/abukuma-react
 
+## 4.4.0
+
+### Minor Changes
+
+- [#894](https://github.com/giftee/design-system/pull/894) [`7c5946e`](https://github.com/giftee/design-system/commit/7c5946e33bde1d84aaab8b75c10d3e8ff998126f) Thanks [@aidyak](https://github.com/aidyak)! - [feat:component]Tabs コンポーネントを追加
+
 ## 4.3.0
 
 ### Minor Changes
