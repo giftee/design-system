@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-export type TabsItemProps = ComponentPropsWithoutRef<'button'> & {
+export type TabsItemProps = Omit<ComponentPropsWithoutRef<'button'>, 'onClick'> & {
   /**
    * 選択状態かどうか
    * @default false
@@ -14,6 +14,11 @@ export type TabsItemProps = ComponentPropsWithoutRef<'button'> & {
    * @default false
    */
   disabled?: boolean;
+
+  /**
+   * クリック時のイベントハンドラ
+   */
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 /**
