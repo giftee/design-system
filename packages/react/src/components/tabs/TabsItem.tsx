@@ -2,7 +2,10 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-export type TabsItemProps = Omit<ComponentPropsWithoutRef<'button'>, 'onClick'> & {
+export type TabsItemProps = Omit<
+  ComponentPropsWithoutRef<'button'>,
+  'onClick'
+> & {
   /**
    * 選択状態かどうか
    * @default false
