@@ -13,7 +13,7 @@ export const Direction: Story = {
 <div class="ab-flex ab-flex-justify-around">
   <div class="ab-position-relative">
     <button class="ab-Button">Popover Source</button>
-    <div class="ab-Popover ab-Popover-top is-open">
+    <div class="ab-Popover ab-Popover-top">
       <ul class="ab-Menu ab-Menu-small" role="menu">
         <li class="ab-Menu-item" role="menuitem" tabindex="0">
           MenuItem1
@@ -24,7 +24,7 @@ export const Direction: Story = {
   </div>
   <div class="ab-position-relative">
     <button class="ab-Button">Popover Source</button>
-    <div class="ab-Popover ab-Popover-top-start is-open">
+    <div class="ab-Popover ab-Popover-top-start">
       <ul class="ab-Menu ab-Menu-small" role="menu">
         <li class="ab-Menu-item" role="menuitem" tabindex="0">
           MenuItem1
@@ -35,7 +35,7 @@ export const Direction: Story = {
   </div>
   <div class="ab-position-relative">
     <button class="ab-Button">Popover Source</button>
-    <div class="ab-Popover ab-Popover-top-end is-open">
+    <div class="ab-Popover ab-Popover-top-end">
       <ul class="ab-Menu ab-Menu-small" role="menu">
         <li class="ab-Menu-item" role="menuitem" tabindex="0">
           MenuItem1
@@ -49,7 +49,7 @@ export const Direction: Story = {
 <div class="ab-flex ab-flex-justify-around">
   <div class="ab-position-relative">
     <button class="ab-Button">Popover Source</button>
-    <div class="ab-Popover ab-Popover-bottom is-open">
+    <div class="ab-Popover ab-Popover-bottom">
       <ul class="ab-Menu ab-Menu-small" role="menu">
         <li class="ab-Menu-item" role="menuitem" tabindex="0">
           MenuItem1
@@ -60,7 +60,7 @@ export const Direction: Story = {
   </div>
   <div class="ab-position-relative">
     <button class="ab-Button">Popover Source</button>
-    <div class="ab-Popover ab-Popover-bottom-start is-open">
+    <div class="ab-Popover ab-Popover-bottom-start">
       <ul class="ab-Menu ab-Menu-small" role="menu">
         <li class="ab-Menu-item" role="menuitem" tabindex="0">
           MenuItem1
@@ -71,7 +71,7 @@ export const Direction: Story = {
   </div>
   <div class="ab-position-relative">
     <button class="ab-Button">Popover Source</button>
-    <div class="ab-Popover ab-Popover-bottom-end is-open">
+    <div class="ab-Popover ab-Popover-bottom-end">
       <ul class="ab-Menu ab-Menu-small" role="menu">
         <li class="ab-Menu-item" role="menuitem" tabindex="0">
           MenuItem1
@@ -85,7 +85,7 @@ export const Direction: Story = {
 <div class="ab-flex ab-flex-justify-around">
   <div class="ab-position-relative">
     <button class="ab-Button">Popover Source</button>
-    <div class="ab-Popover ab-Popover-left is-open">
+    <div class="ab-Popover ab-Popover-left">
       <ul class="ab-Menu ab-Menu-small" role="menu">
         <li class="ab-Menu-item" role="menuitem" tabindex="0">
           MenuItem1
@@ -96,7 +96,7 @@ export const Direction: Story = {
   </div>
   <div class="ab-position-relative">
     <button class="ab-Button">Popover Source</button>
-    <div class="ab-Popover ab-Popover-left-start is-open">
+    <div class="ab-Popover ab-Popover-left-start">
       <ul class="ab-Menu ab-Menu-small" role="menu">
         <li class="ab-Menu-item" role="menuitem" tabindex="0">
           MenuItem1
@@ -107,7 +107,7 @@ export const Direction: Story = {
   </div>
   <div class="ab-position-relative">
     <button class="ab-Button">Popover Source</button>
-    <div class="ab-Popover ab-Popover-left-end is-open">
+    <div class="ab-Popover ab-Popover-left-end">
       <ul class="ab-Menu ab-Menu-small" role="menu">
         <li class="ab-Menu-item" role="menuitem" tabindex="0">
           MenuItem1
@@ -121,7 +121,7 @@ export const Direction: Story = {
 <div class="ab-flex ab-flex-justify-around">
   <div class="ab-position-relative">
     <button class="ab-Button">Popover Source</button>
-    <div class="ab-Popover ab-Popover-right is-open">
+    <div class="ab-Popover ab-Popover-right">
       <ul class="ab-Menu ab-Menu-small" role="menu">
         <li class="ab-Menu-item" role="menuitem" tabindex="0">
           MenuItem1
@@ -134,7 +134,7 @@ export const Direction: Story = {
   </div>
   <div class="ab-position-relative">
     <button class="ab-Button">Popover Source</button>
-    <div class="ab-Popover ab-Popover-right-start is-open">
+    <div class="ab-Popover ab-Popover-right-start">
       <ul class="ab-Menu ab-Menu-small" role="menu">
         <li class="ab-Menu-item" role="menuitem" tabindex="0">
           MenuItem1
@@ -147,7 +147,7 @@ export const Direction: Story = {
   </div>
   <div class="ab-position-relative">
     <button class="ab-Button">Popover Source</button>
-    <div class="ab-Popover ab-Popover-right-end is-open">
+    <div class="ab-Popover ab-Popover-right-end">
       <ul class="ab-Menu ab-Menu-small" role="menu">
         <li class="ab-Menu-item" role="menuitem" tabindex="0">
           MenuItem1
@@ -157,6 +157,20 @@ export const Direction: Story = {
     </div>
   </div>
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.ab-Button');
+
+    buttons.forEach((button) => {
+      const popover = button.parentElement.querySelector('.ab-Popover');
+      if (!popover) return;
+
+      button.addEventListener('click', (e) => {
+        popover.classList.toggle('is-open');
+      });
+    });
+  });
+</script>
   `;
   },
   parameters: {
