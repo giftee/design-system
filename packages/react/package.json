@@ -19,7 +19,7 @@
     "test": "vitest"
   },
   "devDependencies": {
-    "@eslint/compat": "^2.0.1",
+    "@eslint/compat": "^2.0.2",
     "@eslint/eslintrc": "^3.3.3",
     "@eslint/js": "^9.39.2",
     "@giftee/abukuma-css": "workspace:^",
