@@ -20,7 +20,7 @@
     "@storybook/addon-a11y": "10.2.4",
     "@storybook/addon-docs": "10.2.4",
     "@storybook/html-vite": "10.2.4",
-    "@types/react": "^19.2.13",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.24",
     "babel-loader": "^10.0.0",
