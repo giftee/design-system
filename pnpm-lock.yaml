@@ -116,7 +116,7 @@ importers:
         specifier: workspace:^
         version: link:../css
       '@markuplint/jsx-parser':
-        specifier: ^4.7.22
+        specifier: ^4.7.23
         version: 4.7.23(typescript@5.9.3)
       '@markuplint/react-spec':
         specifier: ^4.5.22
@@ -5744,8 +5744,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.54.0(typescript@5.9.3)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.54.0(typescript@5.9.3)
-      '@typescript-eslint/types': 8.54.0
+      '@typescript-eslint/tsconfig-utils': 8.55.0(typescript@5.9.3)
+      '@typescript-eslint/types': 8.55.0
       debug: 4.4.3
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -7078,7 +7078,7 @@ snapshots:
 
   glob@13.0.1:
     dependencies:
-      minimatch: 10.1.2
+      minimatch: 10.2.0
       minipass: 7.1.2
       path-scurry: 2.0.1
 
