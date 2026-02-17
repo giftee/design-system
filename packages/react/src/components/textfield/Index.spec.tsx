@@ -154,7 +154,7 @@ describe('Textfield', () => {
 
   test('エラーメッセージのアクセシビリティ属性が正しく設定される（単一）', () => {
     const { getByRole, getByText } = render(
-      <Textfield name="test" error errorMessages="エラーメッセージ" />,
+      <Textfield id="test" name="test" error errorMessages="エラーメッセージ" />,
     );
 
     const input = getByRole('textbox');
@@ -168,7 +168,7 @@ describe('Textfield', () => {
 
   test('エラーメッセージのアクセシビリティ属性が正しく設定される（複数）', () => {
     const { getByRole, getByText } = render(
-      <Textfield name="test" error errorMessages={['エラー1', 'エラー2']} />,
+      <Textfield id="test" name="test" error errorMessages={['エラー1', 'エラー2']} />,
     );
 
     const input = getByRole('textbox');
@@ -186,7 +186,7 @@ describe('Textfield', () => {
 
   test('ヘルプテキストのアクセシビリティ属性が正しく設定される', () => {
     const { getByRole, getByText } = render(
-      <Textfield name="test" helptext="ヘルプテキスト" />,
+      <Textfield id="test" name="test" helptext="ヘルプテキスト" />,
     );
 
     const input = getByRole('textbox');
@@ -199,6 +199,7 @@ describe('Textfield', () => {
   test('ヘルプテキストとエラーメッセージの両方がある場合のアクセシビリティ属性', () => {
     const { getByRole, getByText } = render(
       <Textfield
+        id="test"
         name="test"
         helptext="ヘルプテキスト"
         error

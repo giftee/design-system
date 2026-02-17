@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, useId } from 'react';
 import { StatusLabel } from '@/index';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
@@ -42,6 +42,7 @@ export const DateTimePicker = forwardRef<
       helptext,
       error,
       errorMessages,
+      id: idProp,
       name,
       required,
       className,
@@ -49,19 +50,22 @@ export const DateTimePicker = forwardRef<
     },
     forwardedRef,
   ) => {
+    const autoId = useId();
+    const id = idProp ?? autoId;
+
     const classes = classNames('ab-Textfield', error && 'is-error', className);
 
     return (
       <div className={classes}>
         {!!label && (
-          <label htmlFor={name} className="ab-Textfield-label">
+          <label htmlFor={id} className="ab-Textfield-label">
             {label}
             {required && <StatusLabel variant="primary">必須</StatusLabel>}
           </label>
         )}
         <span className="ab-DateTimePicker">
           <input
-            id={name}
+            id={id}
             name={name}
             type="datetime-local"
             className="ab-DateTimePicker-input"

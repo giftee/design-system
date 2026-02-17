@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, useId } from 'react';
 import { StatusLabel } from '@/index';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
@@ -65,6 +65,7 @@ export const Textfield = forwardRef<
       helptext,
       error,
       errorMessages,
+      id: idProp,
       name,
       required,
       disabled,
@@ -77,6 +78,8 @@ export const Textfield = forwardRef<
     },
     forwardedRef,
   ) => {
+    const autoId = useId();
+    const id = idProp ?? autoId;
     const classes = classNames(
       'ab-Textfield',
       error && 'is-error',
@@ -93,11 +96,11 @@ export const Textfield = forwardRef<
 
     const errorMessageIds = errorMessages
       ? Array.isArray(errorMessages)
-        ? errorMessages.map((_, index) => `${name}-error-${index}`)
-        : [`${name}-error`]
+        ? errorMessages.map((_, index) => `${id}-error-${index}`)
+        : [`${id}-error`]
       : [];
 
-    const helptextId = helptext ? `${name}-helptext` : undefined;
+    const helptextId = helptext ? `${id}-helptext` : undefined;
 
     const ariaDescribedBy =
       [
@@ -108,14 +111,14 @@ export const Textfield = forwardRef<
     return (
       <div className={classes}>
         {!!label && (
-          <label htmlFor={name} className="ab-Textfield-label">
+          <label htmlFor={id} className="ab-Textfield-label">
             {label}
             {required && <StatusLabel variant="primary">必須</StatusLabel>}
           </label>
         )}
         {!multiline ? (
           <input
-            id={name}
+            id={id}
             name={name}
             ref={forwardedRef}
             required={required}
@@ -130,7 +133,7 @@ export const Textfield = forwardRef<
           />
         ) : (
           <textarea
-            id={name}
+            id={id}
             name={name}
             ref={forwardedRef}
             required={required}
@@ -147,7 +150,7 @@ export const Textfield = forwardRef<
         )}
         {!errorMessages ? null : typeof errorMessages === 'string' ? (
           <div
-            id={`${name}-error`}
+            id={`${id}-error`}
             className="ab-Textfield-error-message"
             role="alert"
           >
@@ -158,7 +161,7 @@ export const Textfield = forwardRef<
             {errorMessages.map((errorMessage, index) => (
               <div
                 key={errorMessage}
-                id={`${name}-error-${index}`}
+                id={`${id}-error-${index}`}
                 className="ab-Textfield-error-message"
               >
                 {errorMessage}
