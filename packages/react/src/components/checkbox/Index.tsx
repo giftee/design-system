@@ -22,7 +22,15 @@ export type CheckboxProps = ComponentPropsWithoutRef<'input'> & {
  */
 export const Checkbox = forwardRef<ElementRef<'input'>, CheckboxProps>(
   (
-    { position = 'right', id: idProp, name, disabled, children, className, ...rest },
+    {
+      position = 'right',
+      id: idProp,
+      name,
+      disabled,
+      children,
+      className,
+      ...rest
+    },
     forwardedRef,
   ) => {
     const autoId = useId();

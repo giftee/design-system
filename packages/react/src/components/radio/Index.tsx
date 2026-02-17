@@ -22,7 +22,15 @@ export type RadioProps = ComponentPropsWithoutRef<'input'> & {
  */
 export const Radio = forwardRef<ElementRef<'input'>, RadioProps>(
   (
-    { position = 'right', id: idProp, name, disabled, children, className, ...rest },
+    {
+      position = 'right',
+      id: idProp,
+      name,
+      disabled,
+      children,
+      className,
+      ...rest
+    },
     forwardedRef,
   ) => {
     const autoId = useId();
