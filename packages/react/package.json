@@ -23,7 +23,7 @@
     "@eslint/eslintrc": "^3.3.3",
     "@eslint/js": "^9.39.2",
     "@giftee/abukuma-css": "workspace:^",
-    "@markuplint/jsx-parser": "^4.7.22",
+    "@markuplint/jsx-parser": "^4.7.23",
     "@markuplint/react-spec": "^4.5.23",
     "@storybook/addon-a11y": "10.2.4",
     "@storybook/addon-docs": "10.2.4",
