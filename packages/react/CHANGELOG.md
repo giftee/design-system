@@ -1,5 +1,11 @@
 # @giftee/abukuma-react
 
+## 4.5.0
+
+### Minor Changes
+
+- [#949](https://github.com/giftee/design-system/pull/949) [`be1239f`](https://github.com/giftee/design-system/commit/be1239fe6736c6b4474476d64a1a22b5a300c80e) Thanks [@devin-ai-integration](https://github.com/apps/devin-ai-integration)! - [Form:change] Checkbox/Datepicker/Datetimepicker/Radio/Select/Textfield の label と input 紐付けを name から id 属性ベースに修正
+
 ## 4.4.0
 
 ### Minor Changes
