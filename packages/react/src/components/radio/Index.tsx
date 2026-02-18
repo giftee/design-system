@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, useId } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
@@ -22,9 +22,20 @@ export type RadioProps = ComponentPropsWithoutRef<'input'> & {
  */
 export const Radio = forwardRef<ElementRef<'input'>, RadioProps>(
   (
-    { position = 'right', name, disabled, children, className, ...rest },
+    {
+      position = 'right',
+      id: idProp,
+      name,
+      disabled,
+      children,
+      className,
+      ...rest
+    },
     forwardedRef,
   ) => {
+    const autoId = useId();
+    const id = idProp ?? autoId;
+
     const classes = classNames(
       'ab-Radio-wrapper',
       `position-${position}`,
@@ -35,14 +46,14 @@ export const Radio = forwardRef<ElementRef<'input'>, RadioProps>(
     return (
       <div className={classes}>
         {children && (
-          <label htmlFor={name} className="ab-Radio-label">
+          <label htmlFor={id} className="ab-Radio-label">
             {children}
           </label>
         )}
         <div className="ab-Radio">
           <input
             type="radio"
-            id={name}
+            id={id}
             name={name}
             disabled={disabled}
             className="ab-Radio-input"
