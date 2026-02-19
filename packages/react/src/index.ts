@@ -22,6 +22,7 @@ export * from '@/components/switch/Index';
 export * as Table from '@/components/table/Index';
 export * as Tabs from '@/components/tabs/Index';
 export * from '@/components/textfield/Index';
+export * from '@/components/tooltip/Index';
 export * from '@/components/typography/Index';
 export * from '@/components/stepper/Index';
 export * from '@/components/skeleton/Index';
