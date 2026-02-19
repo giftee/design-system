@@ -45,4 +45,24 @@ $calender-url: 'data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMTYiIGZpbG
   &:has(.ab-DatePicker-input:disabled) {
     pointer-events: none;
   }
+
+  &-display {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding-left: var(--ab-semantic-spacing-2);
+    pointer-events: none;
+    color: var(--textfield-input-color);
+    font-size: inherit;
+  }
+}
+
+.ab-DatePicker-display {
+  .is-disabled &,
+  .ab-Textfield:has(.ab-DatePicker-input:disabled) & {
+    color: var(--textfield-input-disabled-color);
+  }
 }
