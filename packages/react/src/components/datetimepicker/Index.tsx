@@ -1,11 +1,7 @@
 import { forwardRef, useEffect, useId, useState } from 'react';
 import { StatusLabel } from '@/index';
 import { classNames } from '@/utils/classNames';
-import type {
-  ChangeEvent,
-  ComponentPropsWithoutRef,
-  ElementRef,
-} from 'react';
+import type { ChangeEvent, ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type DateTimePickerProps = ComponentPropsWithoutRef<'input'> & {
   /**
