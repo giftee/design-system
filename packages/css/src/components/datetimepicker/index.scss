@@ -7,3 +7,7 @@
 .ab-DateTimePicker-input {
   @extend .ab-DatePicker-input;
 }
+
+.ab-DateTimePicker-display {
+  @extend .ab-DatePicker-display;
+}
