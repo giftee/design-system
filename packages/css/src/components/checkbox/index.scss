@@ -136,7 +136,7 @@ $checkmark-url: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgd
     }
   }
 
-  &:focus {
+  &:focus-within {
     .ab-Checkbox-box {
       background-color: var(--checkbox-box-focus-background-color);
       outline: solid var(--checkbox-box-focus-outline-color) 2px;
