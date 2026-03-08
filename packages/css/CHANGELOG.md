@@ -1,5 +1,15 @@
 # @giftee/abukuma-css
 
+## 3.1.9
+
+### Patch Changes
+
+- [#984](https://github.com/giftee/design-system/pull/984) [`519dde5`](https://github.com/giftee/design-system/commit/519dde55d842ff58d626cb1df81558aff7ae3b3c) Thanks [@egurinko](https://github.com/egurinko)! - [fix:Modal] モーダルの text color が UA 定義のものになっているので、デザインシステム定義の text color なるように修正
+
+- [#987](https://github.com/giftee/design-system/pull/987) [`5dfebe8`](https://github.com/giftee/design-system/commit/5dfebe8bbddc83485b04d558769255ee1d86407b) Thanks [@egurinko](https://github.com/egurinko)! - [fix:Checkbox] Tab キーで Checkbox に focus 移動時に、focus 状態を視覚的に見えるようにする
+
+- [#839](https://github.com/giftee/design-system/pull/839) [`effa23a`](https://github.com/giftee/design-system/commit/effa23a945b9a1eca8b82f182ff1d905f501813c) Thanks [@aoki-ryusei](https://github.com/aoki-ryusei)! - Storybook の popover で最低限 popover の動作をするようにする
+
 ## 3.1.8
 
 ### Patch Changes
