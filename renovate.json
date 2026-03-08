@@ -8,6 +8,7 @@
     {
       "matchPackagePrefixes": [
         "@changesets",
+        "@eslint/",
         "stylelint",
         "typescript",
         "vite",
