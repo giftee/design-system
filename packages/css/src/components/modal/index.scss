@@ -4,7 +4,9 @@
   padding: var(--ab-semantic-spacing-0);
   border-radius: var(--ab-semantic-border-radius-md);
   background-color: var(--ab-semantic-color-background-base);
+  color: var(--ab-semantic-color-text-default);
   max-height: 100%;
+  max-width: calc(100% - 38px);
   height: fit-content;
   width: auto; // フォールバック
   width: fit-content;
