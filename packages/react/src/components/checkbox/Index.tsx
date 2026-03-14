@@ -39,7 +39,6 @@ export const Checkbox = forwardRef<ElementRef<'input'>, CheckboxProps>(
     const classes = classNames(
       'ab-Checkbox-wrapper',
       `position-${position}`,
-      disabled && 'is-disabled',
       className,
     );
 
