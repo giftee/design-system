@@ -128,13 +128,13 @@ describe('Select', () => {
     expect(helptext).toHaveClass('ab-Textfield-helptext');
   });
 
-  test('無効化状態が正しくCSSクラスに反映される', () => {
-    const { container } = render(
+  test('無効化状態が select 要素に正しく反映される', () => {
+    const { getByRole } = render(
       <Select name="test" options={stringOptions} disabled />,
     );
 
-    const selectContainer = container.querySelector('.ab-Textfield');
-    expect(selectContainer).toHaveClass('is-disabled');
+    const select = getByRole('combobox');
+    expect(select).toBeDisabled();
   });
 
   test('classNameプロパティが追加で指定できる', () => {

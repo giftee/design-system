@@ -84,12 +84,7 @@ export const Select = forwardRef<ElementRef<'select'>, SelectProps>(
     const autoId = useId();
     const id = idProp ?? autoId;
 
-    const classes = classNames(
-      'ab-Textfield',
-      error && 'is-error',
-      disabled && 'is-disabled',
-      className,
-    );
+    const classes = classNames('ab-Textfield', error && 'is-error', className);
 
     return (
       <div className={classes}>

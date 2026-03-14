@@ -39,7 +39,6 @@ export const Radio = forwardRef<ElementRef<'input'>, RadioProps>(
     const classes = classNames(
       'ab-Radio-wrapper',
       `position-${position}`,
-      disabled && 'is-disabled',
       className,
     );
 
