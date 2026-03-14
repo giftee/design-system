@@ -168,27 +168,8 @@ $checkmark-url: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgd
   }
 }
 
-.ab-Checkbox-wrapper {
-  &.is-disabled {
-    pointer-events: none;
-  }
-
-  &:has(.ab-Checkbox-input:disabled) {
-    pointer-events: none;
-  }
-}
-
-.ab-Checkbox-box {
-  .is-disabled & {
-    background-color: var(--checkbox-box-disabled-background-color);
-    border: none;
-  }
-}
-
-.ab-Checkbox-input:checked ~ .ab-Checkbox-box {
-  .is-disabled & {
-    background-color: var(--checkbox-box-disabled-background-color);
-  }
+.ab-Checkbox-wrapper:has(.ab-Checkbox-input:disabled) {
+  pointer-events: none;
 }
 
 .ab-Checkbox-input:disabled ~ .ab-Checkbox-box {
@@ -199,12 +180,6 @@ $checkmark-url: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgd
 .ab-Checkbox-input:checked:disabled ~ .ab-Checkbox-box {
   background-color: var(--checkbox-box-disabled-background-color);
   border: none;
-}
-
-.ab-Checkbox-label {
-  .is-disabled & {
-    color: var(--checkbox-label-disabled-color);
-  }
 }
 
 .ab-Checkbox-wrapper:has(.ab-Checkbox-input:disabled) .ab-Checkbox-label {
