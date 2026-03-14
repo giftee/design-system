@@ -83,7 +83,6 @@ export const Textfield = forwardRef<
     const classes = classNames(
       'ab-Textfield',
       error && 'is-error',
-      disabled && 'is-disabled',
       resize === 'both'
         ? 'resize-both'
         : resize === 'horizontal'
@@ -122,6 +121,7 @@ export const Textfield = forwardRef<
             name={name}
             ref={forwardedRef}
             required={required}
+            disabled={disabled}
             aria-describedby={ariaDescribedBy}
             aria-invalid={!!errorMessages}
             {...rest}
@@ -137,6 +137,7 @@ export const Textfield = forwardRef<
             name={name}
             ref={forwardedRef}
             required={required}
+            disabled={disabled}
             rows={multiline}
             aria-describedby={ariaDescribedBy}
             aria-invalid={!!errorMessages}

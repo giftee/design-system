@@ -78,11 +78,11 @@ describe('Textfield', () => {
     expect(helptext).toHaveClass('ab-Textfield-helptext');
   });
 
-  test('無効化状態が正しくCSSクラスに反映される', () => {
-    const { container } = render(<Textfield name="test" disabled />);
+  test('無効化状態が input/textarea に正しく反映される', () => {
+    const { getByRole } = render(<Textfield name="test" disabled />);
 
-    const textfieldContainer = container.querySelector('.ab-Textfield');
-    expect(textfieldContainer).toHaveClass('is-disabled');
+    const textfield = getByRole('textbox');
+    expect(textfield).toBeDisabled();
   });
 
   test('マルチライン入力が正しくレンダリングされる', () => {
