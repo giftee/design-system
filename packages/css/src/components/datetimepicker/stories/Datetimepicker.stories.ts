@@ -49,7 +49,7 @@ export const State: Story = {
   </span>
   <div class="ab-Textfield-helptext">focus</div>
 </div>
-<div class="ab-Textfield is-disabled ab-mb-8">
+<div class="ab-Textfield ab-mb-8">
   <label for="disabled" class="ab-Textfield-label">
     Disabled
     ${args.required ? `<div class="ab-StatusLabel">必須</div>` : ''}
