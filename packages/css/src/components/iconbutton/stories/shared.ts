@@ -24,12 +24,14 @@ export type Story = StoryObj<Args>;
 
 type ComponentArgs = Args & {
   id?: 'default' | 'hover' | 'active' | 'focus' | 'disabled';
+  label?: string;
 };
 
 export const createComponent = ({
   size = 'small',
   type = 'default',
   id = 'default',
+  label = '追加',
 }: ComponentArgs): string => {
   const typeClass =
     type === 'default' ? 'ab-IconButton' : `ab-IconButton-${type}`;
@@ -37,7 +39,7 @@ export const createComponent = ({
 
   return `<button id="${id}" ${
     id === 'disabled' && 'disabled="true"'
-  } class="${typeClass} ${sizeClass}">
+  } type="button" aria-label="${label}" class="${typeClass} ${sizeClass}">
   ${plus('ab-Icon')}
 </button>`;
 };
