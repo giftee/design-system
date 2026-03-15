@@ -11,9 +11,25 @@ export const meta = {
   args: {
     variant: 'default',
     size: 'small',
-    children: <Xmark className="ab-Icon" />,
+    'aria-label': '閉じる',
+    children: (
+      <span aria-hidden="true">
+        <Xmark className="ab-Icon" />
+      </span>
+    ),
   },
   argTypes: {
+    'aria-label': {
+      table: {
+        defaultValue: {
+          summary: '閉じる',
+        },
+        type: {
+          summary: 'string',
+        },
+      },
+      description: 'アイコンボタンのアクセシブルネーム',
+    },
     variant: {
       control: { type: 'select' },
       options: ['default', 'outlined', 'neutral', 'text', 'negative'],
@@ -38,7 +54,7 @@ export const meta = {
       control: { disable: true },
       table: {
         defaultValue: {
-          summary: 'undefined',
+          summary: '<span aria-hidden="true"><Xmark /></span>',
         },
         type: {
           summary: 'React.ReactNode',
