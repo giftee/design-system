@@ -169,6 +169,10 @@ describe('Textfield', () => {
       'aria-describedby',
       'test-single-error-error',
     );
+    expect(input).toHaveAttribute(
+      'aria-errormessage',
+      'test-single-error-error',
+    );
     expect(input).toHaveAttribute('aria-invalid', 'true');
     expect(errorMessage).toHaveAttribute('id', 'test-single-error-error');
     expect(errorMessage).toHaveAttribute('role', 'alert');
@@ -190,6 +194,10 @@ describe('Textfield', () => {
 
     expect(input).toHaveAttribute(
       'aria-describedby',
+      'test-multi-error-error-0 test-multi-error-error-1',
+    );
+    expect(input).toHaveAttribute(
+      'aria-errormessage',
       'test-multi-error-error-0 test-multi-error-error-1',
     );
     expect(input).toHaveAttribute('aria-invalid', 'true');
@@ -235,7 +243,16 @@ describe('Textfield', () => {
       'aria-describedby',
       'test-both-error test-both-helptext',
     );
+    expect(input).toHaveAttribute('aria-errormessage', 'test-both-error');
     expect(helptext).toHaveAttribute('id', 'test-both-helptext');
     expect(errorMessage).toHaveAttribute('id', 'test-both-error');
+  });
+
+  test('error のみでも aria-invalid が設定される', () => {
+    const { getByRole } = render(<Textfield name="test" error />);
+
+    const input = getByRole('textbox');
+
+    expect(input).toHaveAttribute('aria-invalid', 'true');
   });
 });

@@ -106,6 +106,8 @@ export const Textfield = forwardRef<
         ...(errorMessageIds.length > 0 ? errorMessageIds : []),
         ...(helptextId ? [helptextId] : []),
       ].join(' ') || undefined;
+    const ariaErrorMessage = errorMessageIds.join(' ') || undefined;
+    const ariaInvalid = error || errorMessageIds.length > 0;
 
     return (
       <div className={classes}>
@@ -123,7 +125,8 @@ export const Textfield = forwardRef<
             required={required}
             disabled={disabled}
             aria-describedby={ariaDescribedBy}
-            aria-invalid={!!errorMessages}
+            aria-errormessage={ariaErrorMessage}
+            aria-invalid={ariaInvalid}
             {...rest}
             {...slotProps?.input}
             className={classNames(
@@ -140,7 +143,8 @@ export const Textfield = forwardRef<
             disabled={disabled}
             rows={multiline}
             aria-describedby={ariaDescribedBy}
-            aria-invalid={!!errorMessages}
+            aria-errormessage={ariaErrorMessage}
+            aria-invalid={ariaInvalid}
             {...rest}
             {...slotProps?.textarea}
             className={classNames(
