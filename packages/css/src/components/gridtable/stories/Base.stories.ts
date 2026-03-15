@@ -43,7 +43,7 @@ export const Base: Story = {
         <div class="ab-GridTable-row" role="row">
           <div class="ab-GridTable-cell" role="cell">
             <div class=" ab-flex ab-flex-items-center">
-              <img src="${GifteeBox}" class="ab-mr-2" style="height: 56px;" />
+              <img src="${GifteeBox}" alt="giftee Box" class="ab-mr-2" style="height: 56px;" />
               <div class="ab-flex ab-flex-column">
                 <span class="ab-text-body-xs ab-text-secondary">ギフティ</span>
                 <span class="ab-text-body-s">giftee Box</span>
@@ -63,11 +63,11 @@ export const Base: Story = {
             <div class="ab-flex ab-flex-items-center">
               <div class="ab-Checkbox-wrapper ab-mr-2">
                 <div class="ab-Checkbox">
-                  <input type="checkbox" class="ab-Checkbox-input" />
+                  <input type="checkbox" class="ab-Checkbox-input" aria-label="giftee Box を選択" />
                   <span class="ab-Checkbox-box"></span>
                 </div>
               </div>
-              <img src="${GifteeBox}" class="ab-mx-2" style="height: 56px;" />
+              <img src="${GifteeBox}" alt="giftee Box" class="ab-mx-2" style="height: 56px;" />
               <div class="ab-flex ab-flex-column">
                 <span class="ab-text-body-xs ab-text-secondary">ギフティ</span>
                 <span class="ab-text-body-s">giftee Box</span>
@@ -120,7 +120,7 @@ export const Base: Story = {
         <div class="ab-GridTable-row" role="row">
           <div class="ab-GridTable-cell" role="cell">
             <div class="ab-flex ab-flex-items-center">
-              <img src="${GifteeBox}" class="ab-mx-2" style="height: 56px;" />
+              <img src="${GifteeBox}" alt="giftee Box" class="ab-mx-2" style="height: 56px;" />
               <div class="ab-flex ab-flex-column">
                 <span class="ab-text-body-xs ab-text-secondary">ギフティ</span>
                 <span class="ab-text-body-s">giftee Box</span>
