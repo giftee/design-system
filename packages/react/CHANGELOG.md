@@ -1,5 +1,18 @@
 # @giftee/abukuma-react
 
+## 4.5.1
+
+### Patch Changes
+
+- [#1016](https://github.com/giftee/design-system/pull/1016) [`5db50b6`](https://github.com/giftee/design-system/commit/5db50b64346257f63393af841e12d9ecfda37655) Thanks [@egurinko](https://github.com/egurinko)! - [enhancement] Textfield,Datepicker,Datetimepicker,Select で helptext, error-message を input にアクセシビリティ的に紐づける
+
+- [#1008](https://github.com/giftee/design-system/pull/1008) [`0c0ca9c`](https://github.com/giftee/design-system/commit/0c0ca9c9ce869cecc7fdc571c903e4cb856361a2) Thanks [@egurinko](https://github.com/egurinko)! - [Chore]Checkbox, Radio, Textfield, Select から is-disabled クラスを削除
+
+- [#1012](https://github.com/giftee/design-system/pull/1012) [`c27b16f`](https://github.com/giftee/design-system/commit/c27b16f92ff7003994a0bc79bfc4f5add48357f0) Thanks [@egurinko](https://github.com/egurinko)! - [enhancement:Menu] role の廃止と、aria-expanded,aria-current,aria-disabled の付与
+
+- Updated dependencies [[`93488c4`](https://github.com/giftee/design-system/commit/93488c4bff5da574b68576c0346d10271b5a7a42)]:
+  - @giftee/abukuma-css@3.2.0
+
 ## 4.5.0
 
 ### Minor Changes
