@@ -27,10 +27,10 @@ export const State: Story = {
         <a id="focus" href="#" class="ab-Menu-item-link">Focus</a>
       </li>
       <li class="ab-Menu-item is-selected">
-        <a href="#" class="ab-Menu-item-link">Selected</a>
+        <a href="#" class="ab-Menu-item-link" aria-current="page">Selected</a>
       </li>
       <li class="ab-Menu-item is-disabled">
-        <span class="ab-Menu-item-label">Disabled</span>
+        <span class="ab-Menu-item-label" aria-disabled="true">Disabled</span>
       </li>
       </ul>
     </nav>
@@ -67,14 +67,14 @@ export const State: Story = {
           </a>
         </li>
         <li class="ab-Menu-item is-selected">
-          <a href="#" class="ab-Menu-item-link">
+          <a href="#" class="ab-Menu-item-link" aria-current="page">
             ${user('ab-Icon ab-mr-2')}
             Selected
             ${angleRight('ab-Icon ab-ml-auto')}
           </a>
         </li>
         <li class="ab-Menu-item is-disabled">
-          <span class="ab-Menu-item-label">
+          <span class="ab-Menu-item-label" aria-disabled="true">
             ${user('ab-Icon ab-mr-2')}
             Disabled
             ${angleRight('ab-Icon ab-ml-auto')}
