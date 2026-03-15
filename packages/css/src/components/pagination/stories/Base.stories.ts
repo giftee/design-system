@@ -11,7 +11,11 @@ export const Base: Story = {
   render: (_args) => {
     return `
 <nav class="ab-Pagination">
-  <a href="#" class="ab-IconButton-outlined ab-Pagination-prevButton">
+  <a
+    href="#"
+    aria-label="前のページ"
+    class="ab-IconButton-outlined ab-Pagination-prevButton"
+  >
     ${angleLeft('ab-Icon')}
   </a>
   <a href="#" class="ab-IconButton-text ab-IconButton-small">1</a>
@@ -22,7 +26,11 @@ export const Base: Story = {
   <a href="#" class="ab-IconButton-text ab-IconButton-small">6</a>
   <a href="#" class="ab-IconButton-text ab-IconButton-small">...</a>
   <a href="#" class="ab-IconButton-text ab-IconButton-small">24</a>
-  <a href="#" class="ab-IconButton-outlined ab-Pagination-nextButton">
+  <a
+    href="#"
+    aria-label="次のページ"
+    class="ab-IconButton-outlined ab-Pagination-nextButton"
+  >
     ${angleRight('ab-Icon')}
   </a>
 </nav>
