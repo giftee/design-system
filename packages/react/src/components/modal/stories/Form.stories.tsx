@@ -33,8 +33,13 @@ export const Form: Story = {
         <Button onClick={handleOpen}>Open Modal{open}</Button>
         <Modal.Root onClose={handleClose} onCancel={handleCancel} open={open}>
           <Modal.Header>
-            <IconButton variant="neutral" size="small" className="ab-mr-2">
-              X
+            <IconButton
+              aria-label="モーダルを閉じる"
+              variant="neutral"
+              size="small"
+              className="ab-mr-2"
+            >
+              <span aria-hidden="true">X</span>
             </IconButton>
             <Typography
               variant="body-m"
