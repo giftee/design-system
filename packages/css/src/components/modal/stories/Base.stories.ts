@@ -10,11 +10,15 @@ export const Base: Story = {
   render: (_args) => {
     return `
 <div>
-  <button id="showButton" class="ab-Button">モーダルを開く</button>
+  <button id="showButton" type="button" class="ab-Button">モーダルを開く</button>
   <dialog id="modal" class="ab-Modal" style="width: 800px">
     <form method="dialog">
       <div class="ab-Modal-header">
-        <button class="ab-IconButton-text ab-IconButton-small ab-mr-2">
+        <button
+          type="button"
+          aria-label="モーダルを閉じる"
+          class="ab-IconButton-text ab-IconButton-small ab-mr-2"
+        >
           X
         </button>
         <span class="ab-font-bold">モーダル Header</span>
@@ -25,8 +29,8 @@ export const Base: Story = {
       </div>
       <hr class="ab-Divider" />
       <div class="ab-Modal-footer">
-        <button class="ab-Button-neutral">Cancel</button>
-        <button class="ab-Button">OK</button>
+        <button type="submit" class="ab-Button-neutral">Cancel</button>
+        <button type="submit" class="ab-Button">OK</button>
       </div>
     </form>
   </dialog>
@@ -38,6 +42,9 @@ export const Base: Story = {
 
   showButton.addEventListener('click', () => {
     modal.showModal();
+  });
+  modal.querySelector('[aria-label="モーダルを閉じる"]').addEventListener('click', () => {
+    modal.close();
   });
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
