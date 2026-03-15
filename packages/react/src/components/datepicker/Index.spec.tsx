@@ -76,6 +76,102 @@ describe('DatePicker', () => {
     expect(helptext).toHaveClass('ab-Textfield-helptext');
   });
 
+  test('エラーメッセージのアクセシビリティ属性が正しく設定される（単一）', () => {
+    const { container, getByText } = render(
+      <DatePicker
+        id="test-single-error"
+        name="test"
+        error
+        errorMessages="エラーメッセージ"
+      />,
+    );
+
+    const input = container.querySelector('input[type="date"]');
+    const errorMessage = getByText('エラーメッセージ');
+
+    expect(input).toHaveAttribute(
+      'aria-describedby',
+      'test-single-error-error',
+    );
+    expect(input).toHaveAttribute(
+      'aria-errormessage',
+      'test-single-error-error',
+    );
+    expect(input).toHaveAttribute('aria-invalid', 'true');
+    expect(errorMessage).toHaveAttribute('id', 'test-single-error-error');
+    expect(errorMessage).toHaveAttribute('role', 'alert');
+  });
+
+  test('エラーメッセージのアクセシビリティ属性が正しく設定される（複数）', () => {
+    const { container, getByText } = render(
+      <DatePicker
+        id="test-multi-error"
+        name="test"
+        error
+        errorMessages={['エラー1', 'エラー2']}
+      />,
+    );
+
+    const input = container.querySelector('input[type="date"]');
+    const errorMessage1 = getByText('エラー1');
+    const errorMessage2 = getByText('エラー2');
+
+    expect(input).toHaveAttribute(
+      'aria-describedby',
+      'test-multi-error-error-0 test-multi-error-error-1',
+    );
+    expect(input).toHaveAttribute(
+      'aria-errormessage',
+      'test-multi-error-error-0 test-multi-error-error-1',
+    );
+    expect(input).toHaveAttribute('aria-invalid', 'true');
+    expect(errorMessage1).toHaveAttribute('id', 'test-multi-error-error-0');
+    expect(errorMessage2).toHaveAttribute('id', 'test-multi-error-error-1');
+  });
+
+  test('ヘルプテキストのアクセシビリティ属性が正しく設定される', () => {
+    const { container, getByText } = render(
+      <DatePicker
+        id="test-helptext-field"
+        name="test"
+        helptext="ヘルプテキスト"
+      />,
+    );
+
+    const input = container.querySelector('input[type="date"]');
+    const helptext = getByText('ヘルプテキスト');
+
+    expect(input).toHaveAttribute(
+      'aria-describedby',
+      'test-helptext-field-helptext',
+    );
+    expect(helptext).toHaveAttribute('id', 'test-helptext-field-helptext');
+  });
+
+  test('ヘルプテキストとエラーメッセージの両方がある場合のアクセシビリティ属性', () => {
+    const { container, getByText } = render(
+      <DatePicker
+        id="test-both"
+        name="test"
+        helptext="ヘルプテキスト"
+        error
+        errorMessages="エラーメッセージ"
+      />,
+    );
+
+    const input = container.querySelector('input[type="date"]');
+    const helptext = getByText('ヘルプテキスト');
+    const errorMessage = getByText('エラーメッセージ');
+
+    expect(input).toHaveAttribute(
+      'aria-describedby',
+      'test-both-error test-both-helptext',
+    );
+    expect(input).toHaveAttribute('aria-errormessage', 'test-both-error');
+    expect(helptext).toHaveAttribute('id', 'test-both-helptext');
+    expect(errorMessage).toHaveAttribute('id', 'test-both-error');
+  });
+
   test('classNameプロパティが追加で指定できる', () => {
     const { container } = render(
       <DatePicker name="test" className="custom-class" />,
