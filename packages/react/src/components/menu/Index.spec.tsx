@@ -26,7 +26,7 @@ describe('Menu', () => {
 
     const menu = container.querySelector('.ab-Menu');
     expect(menu).toBeInTheDocument();
-    expect(menu).toHaveAttribute('role', 'menu');
+    expect(menu).not.toHaveAttribute('role');
   });
 
   test('サイズプロパティが正しくCSSクラスに反映される', () => {
@@ -53,7 +53,7 @@ describe('Menu', () => {
 
     const menuItem = getByText('メニュー項目').closest('.ab-Menu-item');
     expect(menuItem).toBeInTheDocument();
-    expect(menuItem).toHaveAttribute('role', 'menuitem');
+    expect(menuItem).not.toHaveAttribute('role');
   });
 
   test('メニュー項目のラベルが正しくレンダリングされる', () => {
@@ -85,8 +85,43 @@ describe('Menu', () => {
     expect(menuItemLink.closest('a')).toHaveAttribute('href', '/test');
   });
 
-  test('折りたたみメニュー項目が正しくレンダリングされる', () => {
+  test('選択状態のメニューリンクに aria-current が付与される', () => {
     const { getByText } = render(
+      <Root>
+        <Item selected>
+          <ItemLink href="/current">現在のページ</ItemLink>
+        </Item>
+      </Root>,
+    );
+
+    const menuItemLink = getByText('現在のページ').closest('a');
+    expect(menuItemLink).toHaveAttribute('aria-current', 'page');
+  });
+
+  test('無効状態のメニューリンクに aria-disabled と tabIndex が付与される', async () => {
+    const user = userEvent.setup();
+    const handleClick = vi.fn();
+    const { getByText } = render(
+      <Root>
+        <Item disabled>
+          <ItemLink href="/disabled" onClick={handleClick}>
+            無効なページ
+          </ItemLink>
+        </Item>
+      </Root>,
+    );
+
+    const menuItemLink = getByText('無効なページ').closest('a');
+    expect(menuItemLink).toHaveAttribute('aria-disabled', 'true');
+    expect(menuItemLink).toHaveAttribute('tabindex', '-1');
+
+    await user.click(menuItemLink as HTMLElement);
+
+    expect(handleClick).not.toHaveBeenCalled();
+  });
+
+  test('折りたたみメニュー項目が正しくレンダリングされる', () => {
+    const { getByRole, getByText } = render(
       <Root>
         <CollapseItem label="折りたたみメニュー">
           <SubMenu>
@@ -99,8 +134,14 @@ describe('Menu', () => {
     );
 
     const collapseSummary = getByText('折りたたみメニュー');
+    const collapseButton = getByRole('button', { name: '折りたたみメニュー' });
     expect(collapseSummary).toBeInTheDocument();
     expect(collapseSummary.closest('.ab-Menu-item')).toBeInTheDocument();
+    expect(collapseButton).toHaveAttribute('aria-expanded', 'true');
+    expect(collapseButton).toHaveAttribute(
+      'aria-controls',
+      collapseButton.getAttribute('aria-controls'),
+    );
   });
 
   test('アイコン付き折りたたみメニュー項目が正しくレンダリングされる', () => {
@@ -145,6 +186,37 @@ describe('Menu', () => {
 
     const subMenu = container.querySelector('.ab-Menu-sub-menu');
     expect(subMenu).toBeInTheDocument();
+    expect(subMenu).not.toHaveAttribute('role');
+  });
+
+  test('折りたたみメニューの開閉状態が属性に反映される', async () => {
+    const user = userEvent.setup();
+    const { getByRole, container } = render(
+      <Root>
+        <CollapseItem label="折りたたみメニュー" defaultOpen={false}>
+          <SubMenu>
+            <Item>
+              <ItemLabel>サブ項目</ItemLabel>
+            </Item>
+          </SubMenu>
+        </CollapseItem>
+      </Root>,
+    );
+
+    const collapseButton = getByRole('button', { name: '折りたたみメニュー' });
+    const subMenu = container.querySelector('.ab-Menu-sub-menu');
+
+    expect(collapseButton).toHaveAttribute('aria-expanded', 'false');
+    expect(subMenu).toHaveAttribute(
+      'id',
+      collapseButton.getAttribute('aria-controls'),
+    );
+    expect(subMenu).toHaveAttribute('hidden');
+
+    await user.click(collapseButton);
+
+    expect(collapseButton).toHaveAttribute('aria-expanded', 'true');
+    expect(subMenu).not.toHaveAttribute('hidden');
   });
 
   test('クリックイベントが正しく処理される', async () => {
