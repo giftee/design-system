@@ -26,7 +26,7 @@ describe('Menu', () => {
 
     const menu = container.querySelector('.ab-Menu');
     expect(menu).toBeInTheDocument();
-    expect(menu).toHaveAttribute('role', 'menu');
+    expect(menu).not.toHaveAttribute('role');
   });
 
   test('サイズプロパティが正しくCSSクラスに反映される', () => {
@@ -53,7 +53,7 @@ describe('Menu', () => {
 
     const menuItem = getByText('メニュー項目').closest('.ab-Menu-item');
     expect(menuItem).toBeInTheDocument();
-    expect(menuItem).toHaveAttribute('role', 'menuitem');
+    expect(menuItem).not.toHaveAttribute('role');
   });
 
   test('メニュー項目のラベルが正しくレンダリングされる', () => {

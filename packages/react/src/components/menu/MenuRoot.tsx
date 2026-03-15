@@ -25,7 +25,7 @@ export const MenuRoot = forwardRef<ElementRef<'ul'>, MenuRootProps>(
     const classes = classNames('ab-Menu', `ab-Menu-${size}`, className);
 
     return (
-      <ul ref={forwardedRef} className={classes} role="menu" {...rest}>
+      <ul ref={forwardedRef} className={classes} {...rest}>
         {children}
       </ul>
     );

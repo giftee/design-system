@@ -28,7 +28,7 @@ export const MenuItem = forwardRef<ElementRef<'li'>, MenuItemProps>(
     );
 
     return (
-      <li ref={forwardedRef} className={classes} role="menuitem" {...rest}>
+      <li ref={forwardedRef} className={classes} {...rest}>
         {children}
       </li>
     );

@@ -9,7 +9,7 @@ export const MenuSubMenu = forwardRef<ElementRef<'ul'>, MenuSubMenuProps>(
     const classes = classNames('ab-Menu-sub-menu', className);
 
     return (
-      <ul ref={forwardedRef} className={classes} role="menu" {...rest}>
+      <ul ref={forwardedRef} className={classes} {...rest}>
         {children}
       </ul>
     );
