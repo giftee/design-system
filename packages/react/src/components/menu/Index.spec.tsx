@@ -86,7 +86,7 @@ describe('Menu', () => {
   });
 
   test('折りたたみメニュー項目が正しくレンダリングされる', () => {
-    const { getByText } = render(
+    const { getByRole, getByText } = render(
       <Root>
         <CollapseItem label="折りたたみメニュー">
           <SubMenu>
@@ -99,8 +99,14 @@ describe('Menu', () => {
     );
 
     const collapseSummary = getByText('折りたたみメニュー');
+    const collapseButton = getByRole('button', { name: '折りたたみメニュー' });
     expect(collapseSummary).toBeInTheDocument();
     expect(collapseSummary.closest('.ab-Menu-item')).toBeInTheDocument();
+    expect(collapseButton).toHaveAttribute('aria-expanded', 'true');
+    expect(collapseButton).toHaveAttribute(
+      'aria-controls',
+      collapseButton.getAttribute('aria-controls'),
+    );
   });
 
   test('アイコン付き折りたたみメニュー項目が正しくレンダリングされる', () => {
@@ -145,6 +151,37 @@ describe('Menu', () => {
 
     const subMenu = container.querySelector('.ab-Menu-sub-menu');
     expect(subMenu).toBeInTheDocument();
+    expect(subMenu).not.toHaveAttribute('role');
+  });
+
+  test('折りたたみメニューの開閉状態が属性に反映される', async () => {
+    const user = userEvent.setup();
+    const { getByRole, container } = render(
+      <Root>
+        <CollapseItem label="折りたたみメニュー" defaultOpen={false}>
+          <SubMenu>
+            <Item>
+              <ItemLabel>サブ項目</ItemLabel>
+            </Item>
+          </SubMenu>
+        </CollapseItem>
+      </Root>,
+    );
+
+    const collapseButton = getByRole('button', { name: '折りたたみメニュー' });
+    const subMenu = container.querySelector('.ab-Menu-sub-menu');
+
+    expect(collapseButton).toHaveAttribute('aria-expanded', 'false');
+    expect(subMenu).toHaveAttribute(
+      'id',
+      collapseButton.getAttribute('aria-controls'),
+    );
+    expect(subMenu).toHaveAttribute('hidden');
+
+    await user.click(collapseButton);
+
+    expect(collapseButton).toHaveAttribute('aria-expanded', 'true');
+    expect(subMenu).not.toHaveAttribute('hidden');
   });
 
   test('クリックイベントが正しく処理される', async () => {

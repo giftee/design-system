@@ -1,12 +1,21 @@
-import { forwardRef, useState } from 'react';
+import { Children, cloneElement, forwardRef, useId, useState } from 'react';
 import { classNames } from '@/utils/classNames';
-import type { ComponentPropsWithoutRef, ElementRef, ReactNode } from 'react';
+import type {
+  ComponentPropsWithoutRef,
+  ElementRef,
+  ReactNode,
+  ReactElement,
+} from 'react';
 
 export type MenuCollapseItemProps = ComponentPropsWithoutRef<'li'> & {
   /**
    * サブメニューラベル
    */
   label: ReactNode;
+  /**
+   * サブメニュー
+   */
+  children: ReactElement<ComponentPropsWithoutRef<'ul'>>;
   /**
    * サブメニューのデフォルト開閉状態
    */
@@ -22,11 +31,24 @@ export const MenuCollapseItem = forwardRef<
     forwardedRef,
   ) => {
     const [open, setOpen] = useState(defaultOpen);
+    const fallbackSubmenuId = useId();
     const classes = classNames('ab-Menu-item', open && 'is-open', className);
+    const submenuChild = Children.only(children);
+    const controlledSubmenuId = submenuChild.props.id ?? fallbackSubmenuId;
+    const submenu = cloneElement(submenuChild, {
+      id: controlledSubmenuId,
+      hidden: submenuChild.props.hidden ?? !open,
+    });
 
     return (
-      <li ref={forwardedRef} className={classes} role="menuitem" {...rest}>
-        <button className="ab-Menu-button" onClick={() => setOpen(!open)}>
+      <li ref={forwardedRef} className={classes} {...rest}>
+        <button
+          className="ab-Menu-button"
+          type="button"
+          aria-expanded={open}
+          aria-controls={controlledSubmenuId}
+          onClick={() => setOpen(!open)}
+        >
           {label}
           {open ? (
             <svg
@@ -46,7 +68,7 @@ export const MenuCollapseItem = forwardRef<
             </svg>
           )}
         </button>
-        {children}
+        {submenu}
       </li>
     );
   },
