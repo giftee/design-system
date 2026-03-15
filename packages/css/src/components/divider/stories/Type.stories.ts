@@ -14,9 +14,9 @@ export const Type: Story = {
 </div>
 <div class="ab-mb-8">
 <div style="display: flex">
-  <button class="ab-IconButton ab-mr-8">X</button>
+  <button type="button" aria-label="左側の操作" class="ab-IconButton ab-mr-8">X</button>
   ${createComponent({ ...args, type: 'vertical' })}
-  <button class="ab-IconButton ab-ml-8">X</button>
+  <button type="button" aria-label="右側の操作" class="ab-IconButton ab-ml-8">X</button>
 </div>
   `;
   },
