@@ -12,15 +12,19 @@ export const Required: Story = {
 <div class="ab-Textfield ab-mb-8">
   <label for="text" class="ab-Textfield-label">
     テキスト
-    <div class="ab-StatusLabel">必須</div>
+    <span class="ab-StatusLabel">必須</span>
   </label>
   <input
     id="text"
     placeholder="text"
     name="field"
     class="ab-Textfield-input"
+    required
+    aria-describedby="text-helptext"
   />
-  <div class="ab-Textfield-helptext">type=text の Textfield</div>
+  <div id="text-helptext" class="ab-Textfield-helptext">
+    type=text の Textfield
+  </div>
 </div>
   `;
   },
