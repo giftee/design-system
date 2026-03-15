@@ -12,72 +12,76 @@ export const State: Story = {
     return `
 <div class="ab-flex ab-gap-4">
   <div class="ab-p-2" style="width: 250px;">
-    <ul class="ab-Menu" role="menu">
-      <li class="ab-Menu-item" role="menuitem">
+    <nav aria-label="サイドメニューサンプル">
+      <ul class="ab-Menu">
+      <li class="ab-Menu-item">
         <a href="#" class="ab-Menu-item-link">Default</a>
       </li>
-      <li id="hover" class="ab-Menu-item" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">Hover</a>
+      <li class="ab-Menu-item">
+        <a id="hover" href="#" class="ab-Menu-item-link">Hover</a>
       </li>
-      <li class="ab-Menu-item" role="menuitem">
+      <li class="ab-Menu-item">
         <a id="active" href="#" class="ab-Menu-item-link">Active</a>
       </li>
-      <li id="focus" class="ab-Menu-item" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">Focus</a>
+      <li class="ab-Menu-item">
+        <a id="focus" href="#" class="ab-Menu-item-link">Focus</a>
       </li>
-      <li class="ab-Menu-item is-selected" role="menuitem">
+      <li class="ab-Menu-item is-selected">
         <a href="#" class="ab-Menu-item-link">Selected</a>
       </li>
-      <li class="ab-Menu-item is-disabled" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">Disabled</a>
+      <li class="ab-Menu-item is-disabled">
+        <span class="ab-Menu-item-label">Disabled</span>
       </li>
-    </ul>
+      </ul>
+    </nav>
   </div>
   <div class="ab-p-2" style="width: 250px;">
-    <ul class="ab-Menu" role="menu">
-      <li class="ab-Menu-item" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">
-          ${user('ab-Icon ab-mr-2')}
-          Default
-          ${angleRight('ab-Icon ab-ml-auto')}
-        </a>
-      </li>
-      <li id="hover" class="ab-Menu-item" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">
-          ${user('ab-Icon ab-mr-2')}
-          Hover
-          ${angleRight('ab-Icon ab-ml-auto')}
-        </a>
-      </li>
-      <li class="ab-Menu-item" role="menuitem">
-        <a id="active" href="#" class="ab-Menu-item-link">
-          ${user('ab-Icon ab-mr-2')}
-          Active
-          ${angleRight('ab-Icon ab-ml-auto')}
-        </a>
-      </li>
-      <li id="focus" class="ab-Menu-item" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">
-          ${user('ab-Icon ab-mr-2')}
-          Focus
-          ${angleRight('ab-Icon ab-ml-auto')}
-        </a>
-      </li>
-      <li class="ab-Menu-item is-selected" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">
-          ${user('ab-Icon ab-mr-2')}
-          Selected
-          ${angleRight('ab-Icon ab-ml-auto')}
-        </a>
-      </li>
-      <li class="ab-Menu-item is-disabled" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">
-          ${user('ab-Icon ab-mr-2')}
-          Disabled
-          ${angleRight('ab-Icon ab-ml-auto')}
-        </a>
-      </li>
-    </ul>
+    <nav aria-label="アイコン付きサイドメニューサンプル">
+      <ul class="ab-Menu">
+        <li class="ab-Menu-item">
+          <a href="#" class="ab-Menu-item-link">
+            ${user('ab-Icon ab-mr-2')}
+            Default
+            ${angleRight('ab-Icon ab-ml-auto')}
+          </a>
+        </li>
+        <li class="ab-Menu-item">
+          <a id="hover-icon" href="#" class="ab-Menu-item-link">
+            ${user('ab-Icon ab-mr-2')}
+            Hover
+            ${angleRight('ab-Icon ab-ml-auto')}
+          </a>
+        </li>
+        <li class="ab-Menu-item">
+          <a id="active-icon" href="#" class="ab-Menu-item-link">
+            ${user('ab-Icon ab-mr-2')}
+            Active
+            ${angleRight('ab-Icon ab-ml-auto')}
+          </a>
+        </li>
+        <li class="ab-Menu-item">
+          <a id="focus-icon" href="#" class="ab-Menu-item-link">
+            ${user('ab-Icon ab-mr-2')}
+            Focus
+            ${angleRight('ab-Icon ab-ml-auto')}
+          </a>
+        </li>
+        <li class="ab-Menu-item is-selected">
+          <a href="#" class="ab-Menu-item-link">
+            ${user('ab-Icon ab-mr-2')}
+            Selected
+            ${angleRight('ab-Icon ab-ml-auto')}
+          </a>
+        </li>
+        <li class="ab-Menu-item is-disabled">
+          <span class="ab-Menu-item-label">
+            ${user('ab-Icon ab-mr-2')}
+            Disabled
+            ${angleRight('ab-Icon ab-ml-auto')}
+          </span>
+        </li>
+      </ul>
+    </nav>
   </div>
 </div>
   `;

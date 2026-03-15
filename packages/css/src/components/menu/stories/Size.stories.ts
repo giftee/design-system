@@ -11,30 +11,34 @@ export const Size: Story = {
     return `
 <div class="ab-flex ab-gap-4">
   <div class="ab-p-2" style="width: 250px;">
-    <ul class="ab-Menu ab-Menu-medium" role="menu">
-      <li class="ab-Menu-item" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">Mediumメニュー</a>
-      </li>
-      <li class="ab-Menu-item" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">メニュー</a>
-      </li>
-      <li class="ab-Menu-item" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">メニュー</a>
-      </li>
-    </ul>
+    <nav aria-label="中サイズのサイドメニュー">
+      <ul class="ab-Menu ab-Menu-medium">
+        <li class="ab-Menu-item">
+          <a href="#" class="ab-Menu-item-link">Mediumメニュー</a>
+        </li>
+        <li class="ab-Menu-item">
+          <a href="#" class="ab-Menu-item-link">メニュー</a>
+        </li>
+        <li class="ab-Menu-item">
+          <a href="#" class="ab-Menu-item-link">メニュー</a>
+        </li>
+      </ul>
+    </nav>
   </div>
   <div class="ab-p-2" style="width: 250px;">
-    <ul class="ab-Menu ab-Menu-small" role="menu">
-      <li class="ab-Menu-item" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">Smallメニュー</a>
-      </li>
-      <li class="ab-Menu-item" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">メニュー</a>
-      </li>
-      <li class="ab-Menu-item" role="menuitem">
-        <a href="#" class="ab-Menu-item-link">メニュー</a>
-      </li>
-    </ul>
+    <nav aria-label="小サイズのサイドメニュー">
+      <ul class="ab-Menu ab-Menu-small">
+        <li class="ab-Menu-item">
+          <a href="#" class="ab-Menu-item-link">Smallメニュー</a>
+        </li>
+        <li class="ab-Menu-item">
+          <a href="#" class="ab-Menu-item-link">メニュー</a>
+        </li>
+        <li class="ab-Menu-item">
+          <a href="#" class="ab-Menu-item-link">メニュー</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </div>
   `;
