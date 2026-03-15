@@ -128,6 +128,106 @@ describe('Select', () => {
     expect(helptext).toHaveClass('ab-Textfield-helptext');
   });
 
+  test('エラーメッセージのアクセシビリティ属性が正しく設定される（単一）', () => {
+    const { getByRole, getByText } = render(
+      <Select
+        id="test-single-error"
+        name="test"
+        options={stringOptions}
+        error
+        errorMessages="エラーメッセージ"
+      />,
+    );
+
+    const select = getByRole('combobox');
+    const errorMessage = getByText('エラーメッセージ');
+
+    expect(select).toHaveAttribute(
+      'aria-describedby',
+      'test-single-error-error',
+    );
+    expect(select).toHaveAttribute(
+      'aria-errormessage',
+      'test-single-error-error',
+    );
+    expect(select).toHaveAttribute('aria-invalid', 'true');
+    expect(errorMessage).toHaveAttribute('id', 'test-single-error-error');
+    expect(errorMessage).toHaveAttribute('role', 'alert');
+  });
+
+  test('エラーメッセージのアクセシビリティ属性が正しく設定される（複数）', () => {
+    const { getByRole, getByText } = render(
+      <Select
+        id="test-multi-error"
+        name="test"
+        options={stringOptions}
+        error
+        errorMessages={['エラー1', 'エラー2']}
+      />,
+    );
+
+    const select = getByRole('combobox');
+    const errorMessage1 = getByText('エラー1');
+    const errorMessage2 = getByText('エラー2');
+
+    expect(select).toHaveAttribute(
+      'aria-describedby',
+      'test-multi-error-error-0 test-multi-error-error-1',
+    );
+    expect(select).toHaveAttribute(
+      'aria-errormessage',
+      'test-multi-error-error-0 test-multi-error-error-1',
+    );
+    expect(select).toHaveAttribute('aria-invalid', 'true');
+    expect(errorMessage1).toHaveAttribute('id', 'test-multi-error-error-0');
+    expect(errorMessage2).toHaveAttribute('id', 'test-multi-error-error-1');
+  });
+
+  test('ヘルプテキストのアクセシビリティ属性が正しく設定される', () => {
+    const { getByRole, getByText } = render(
+      <Select
+        id="test-helptext-field"
+        name="test"
+        options={stringOptions}
+        helptext="ヘルプテキスト"
+      />,
+    );
+
+    const select = getByRole('combobox');
+    const helptext = getByText('ヘルプテキスト');
+
+    expect(select).toHaveAttribute(
+      'aria-describedby',
+      'test-helptext-field-helptext',
+    );
+    expect(helptext).toHaveAttribute('id', 'test-helptext-field-helptext');
+  });
+
+  test('ヘルプテキストとエラーメッセージの両方がある場合のアクセシビリティ属性', () => {
+    const { getByRole, getByText } = render(
+      <Select
+        id="test-both"
+        name="test"
+        options={stringOptions}
+        helptext="ヘルプテキスト"
+        error
+        errorMessages="エラーメッセージ"
+      />,
+    );
+
+    const select = getByRole('combobox');
+    const helptext = getByText('ヘルプテキスト');
+    const errorMessage = getByText('エラーメッセージ');
+
+    expect(select).toHaveAttribute(
+      'aria-describedby',
+      'test-both-error test-both-helptext',
+    );
+    expect(select).toHaveAttribute('aria-errormessage', 'test-both-error');
+    expect(helptext).toHaveAttribute('id', 'test-both-helptext');
+    expect(errorMessage).toHaveAttribute('id', 'test-both-error');
+  });
+
   test('無効化状態が select 要素に正しく反映される', () => {
     const { getByRole } = render(
       <Select name="test" options={stringOptions} disabled />,

@@ -52,8 +52,20 @@ export const DateTimePicker = forwardRef<
   ) => {
     const autoId = useId();
     const id = idProp ?? autoId;
-
     const classes = classNames('ab-Textfield', error && 'is-error', className);
+    const errorMessageIds = errorMessages
+      ? Array.isArray(errorMessages)
+        ? errorMessages.map((_, index) => `${id}-error-${index}`)
+        : [`${id}-error`]
+      : [];
+    const helptextId = helptext ? `${id}-helptext` : undefined;
+    const ariaDescribedBy =
+      [
+        ...(errorMessageIds.length > 0 ? errorMessageIds : []),
+        ...(helptextId ? [helptextId] : []),
+      ].join(' ') || undefined;
+    const ariaErrorMessage = errorMessageIds.join(' ') || undefined;
+    const ariaInvalid = error || errorMessageIds.length > 0;
 
     return (
       <div className={classes}>
@@ -71,19 +83,38 @@ export const DateTimePicker = forwardRef<
             className="ab-DateTimePicker-input"
             ref={forwardedRef}
             required={required}
+            aria-describedby={ariaDescribedBy}
+            aria-errormessage={ariaErrorMessage}
+            aria-invalid={ariaInvalid}
             {...rest}
           />
         </span>
         {!errorMessages ? null : typeof errorMessages === 'string' ? (
-          <div className="ab-Textfield-error-message">{errorMessages}</div>
+          <div
+            id={`${id}-error`}
+            className="ab-Textfield-error-message"
+            role="alert"
+          >
+            {errorMessages}
+          </div>
         ) : (
-          errorMessages.map((errorMessage) => (
-            <div key={errorMessage} className="ab-Textfield-error-message">
-              {errorMessage}
-            </div>
-          ))
+          <div role="alert">
+            {errorMessages.map((errorMessage, index) => (
+              <div
+                key={errorMessage}
+                id={`${id}-error-${index}`}
+                className="ab-Textfield-error-message"
+              >
+                {errorMessage}
+              </div>
+            ))}
+          </div>
         )}
-        {!!helptext && <div className="ab-Textfield-helptext">{helptext}</div>}
+        {!!helptext && (
+          <div id={helptextId} className="ab-Textfield-helptext">
+            {helptext}
+          </div>
+        )}
       </div>
     );
   },
