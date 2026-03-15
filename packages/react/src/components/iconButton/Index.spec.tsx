@@ -7,33 +7,43 @@ import { IconButton } from './Index';
 
 describe('IconButton', () => {
   test('アイコンボタンをレンダリングする', () => {
-    const { container } = render(<IconButton>🔍</IconButton>);
+    const { getByRole } = render(<IconButton aria-label="検索">🔍</IconButton>);
 
-    const button = container.querySelector('button');
+    const button = getByRole('button', { name: '検索' });
     expect(button).toBeInTheDocument();
     expect(button).toHaveClass('ab-IconButton');
   });
 
   test('バリアントプロパティが正しくCSSクラスに反映される', () => {
-    const { container } = render(
-      <IconButton variant="outlined">🔍</IconButton>,
+    const { getByRole } = render(
+      <IconButton variant="outlined" aria-label="検索">
+        🔍
+      </IconButton>,
     );
 
-    const button = container.querySelector('button');
+    const button = getByRole('button', { name: '検索' });
     expect(button).toHaveClass('ab-IconButton-outlined');
   });
 
   test('サイズプロパティが正しくCSSクラスに反映される', () => {
-    const { container } = render(<IconButton size="small">🔍</IconButton>);
+    const { getByRole } = render(
+      <IconButton size="small" aria-label="検索">
+        🔍
+      </IconButton>,
+    );
 
-    const button = container.querySelector('button');
+    const button = getByRole('button', { name: '検索' });
     expect(button).toHaveClass('ab-IconButton-small');
   });
 
   test('無効化状態が正しく設定される', () => {
-    const { container } = render(<IconButton disabled>🔍</IconButton>);
+    const { getByRole } = render(
+      <IconButton disabled aria-label="検索">
+        🔍
+      </IconButton>,
+    );
 
-    const button = container.querySelector('button');
+    const button = getByRole('button', { name: '検索' });
     expect(button).toBeDisabled();
   });
 
@@ -41,11 +51,13 @@ describe('IconButton', () => {
     const user = userEvent.setup();
     const handleClick = vi.fn();
 
-    const { container } = render(
-      <IconButton onClick={handleClick}>🔍</IconButton>,
+    const { getByRole } = render(
+      <IconButton onClick={handleClick} aria-label="検索">
+        🔍
+      </IconButton>,
     );
 
-    const button = container.querySelector('button');
+    const button = getByRole('button', { name: '検索' });
     await user.click(button as HTMLElement);
 
     expect(handleClick).toHaveBeenCalledOnce();
@@ -55,31 +67,47 @@ describe('IconButton', () => {
     const user = userEvent.setup();
     const handleClick = vi.fn();
 
-    const { container } = render(
-      <IconButton disabled onClick={handleClick}>
+    const { getByRole } = render(
+      <IconButton disabled onClick={handleClick} aria-label="検索">
         🔍
       </IconButton>,
     );
 
-    const button = container.querySelector('button');
+    const button = getByRole('button', { name: '検索' });
     await user.click(button as HTMLElement);
 
     expect(handleClick).not.toHaveBeenCalled();
   });
 
   test('classNameプロパティが追加で指定できる', () => {
-    const { container } = render(
-      <IconButton className="custom-class">🔍</IconButton>,
+    const { getByRole } = render(
+      <IconButton className="custom-class" aria-label="検索">
+        🔍
+      </IconButton>,
     );
 
-    const button = container.querySelector('button');
+    const button = getByRole('button', { name: '検索' });
     expect(button).toHaveClass('ab-IconButton', 'custom-class');
   });
 
   test('typeプロパティが正しく設定される', () => {
-    const { container } = render(<IconButton type="submit">🔍</IconButton>);
+    const { getByRole } = render(
+      <IconButton type="submit" aria-label="検索">
+        🔍
+      </IconButton>,
+    );
 
-    const button = container.querySelector('button');
+    const button = getByRole('button', { name: '検索' });
     expect(button).toHaveAttribute('type', 'submit');
+  });
+
+  test('aria-labelがアクセシブルネームとして利用される', () => {
+    const { getByRole } = render(
+      <IconButton aria-label="閉じる">
+        <span aria-hidden="true">X</span>
+      </IconButton>,
+    );
+
+    expect(getByRole('button', { name: '閉じる' })).toBeInTheDocument();
   });
 });
