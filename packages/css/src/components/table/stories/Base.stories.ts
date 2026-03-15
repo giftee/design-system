@@ -14,19 +14,19 @@ export const Base: Story = {
   <table class="ab-Table ab-mb-12">
     <thead class="ab-Table-head">
       <tr>
-        <th class="ab-Table-head-cell" aria-sort="descending" tabindex="0">
+        <th class="ab-Table-head-cell" scope="col" aria-sort="descending">
           商品情報
         </th>
-        <th class="ab-Table-head-cell" aria-sort="descending">
+        <th class="ab-Table-head-cell" scope="col">
           価格
         </th>
-        <th class="ab-Table-head-cell">
+        <th class="ab-Table-head-cell" scope="col">
           ギフト利用審査
         </th>
-        <th class="ab-Table-head-cell">
+        <th class="ab-Table-head-cell" scope="col">
           最低発注数有無
         </th>
-        <th class="ab-Table-head-cell">
+        <th class="ab-Table-head-cell" scope="col">
           有効期限
         </th>
       </tr>
@@ -47,7 +47,7 @@ export const Base: Story = {
       <tr class="ab-Table-body-row">
         <td class="ab-Table-cell">
           <div class=" ab-flex ab-flex-items-center">
-            <img src="${GifteeBox}" class="ab-mr-2" style="height: 56px;" />
+            <img src="${GifteeBox}" alt="giftee Box" class="ab-mr-2" style="height: 56px;" />
             <div class="ab-flex ab-flex-column">
               <span class="ab-text-body-xs ab-text-secondary">ギフティ</span>
               <span class="ab-text-body-s">giftee Box</span>
@@ -64,11 +64,11 @@ export const Base: Story = {
           <div class="ab-flex ab-flex-items-center">
             <div class="ab-Checkbox-wrapper ab-mr-2">
               <div class="ab-Checkbox">
-                <input type="checkbox" class="ab-Checkbox-input" />
+                <input type="checkbox" class="ab-Checkbox-input" aria-label="giftee Box を選択" />
                 <span class="ab-Checkbox-box"></span>
               </div>
             </div>
-            <img src="${GifteeBox}" class="ab-mx-2" style="height: 56px;" />
+            <img src="${GifteeBox}" alt="giftee Box" class="ab-mx-2" style="height: 56px;" />
             <div class="ab-flex ab-flex-column">
               <span class="ab-text-body-xs ab-text-secondary">ギフティ</span>
               <span class="ab-text-body-s">giftee Box</span>
@@ -85,16 +85,16 @@ export const Base: Story = {
   <table class="ab-Table">
     <thead class="ab-Table-head">
       <tr>
-        <th class="ab-Table-head-cell" aria-sort="descending" tabindex="0">
+        <th class="ab-Table-head-cell" scope="col" aria-sort="descending">
           商品情報
         </th>
-        <th class="ab-Table-head-cell" aria-sort="descending">
+        <th class="ab-Table-head-cell" scope="col">
           価格
         </th>
-        <th class="ab-Table-head-cell">
+        <th class="ab-Table-head-cell" scope="col">
           数量
         </th>
-        <th class="ab-Table-head-cell">
+        <th class="ab-Table-head-cell" scope="col">
           小計
         </th>
       </tr>
@@ -119,7 +119,7 @@ export const Base: Story = {
       <tr class="ab-Table-body-row">
         <td class="ab-Table-cell">
           <div class="ab-flex ab-flex-items-center">
-            <img src="${GifteeBox}" class="ab-mx-2" style="height: 56px;" />
+            <img src="${GifteeBox}" alt="giftee Box" class="ab-mx-2" style="height: 56px;" />
             <div class="ab-flex ab-flex-column">
               <span class="ab-text-body-xs ab-text-secondary">ギフティ</span>
               <span class="ab-text-body-s">giftee Box</span>
