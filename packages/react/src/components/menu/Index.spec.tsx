@@ -85,6 +85,41 @@ describe('Menu', () => {
     expect(menuItemLink.closest('a')).toHaveAttribute('href', '/test');
   });
 
+  test('選択状態のメニューリンクに aria-current が付与される', () => {
+    const { getByText } = render(
+      <Root>
+        <Item selected>
+          <ItemLink href="/current">現在のページ</ItemLink>
+        </Item>
+      </Root>,
+    );
+
+    const menuItemLink = getByText('現在のページ').closest('a');
+    expect(menuItemLink).toHaveAttribute('aria-current', 'page');
+  });
+
+  test('無効状態のメニューリンクに aria-disabled と tabIndex が付与される', async () => {
+    const user = userEvent.setup();
+    const handleClick = vi.fn();
+    const { getByText } = render(
+      <Root>
+        <Item disabled>
+          <ItemLink href="/disabled" onClick={handleClick}>
+            無効なページ
+          </ItemLink>
+        </Item>
+      </Root>,
+    );
+
+    const menuItemLink = getByText('無効なページ').closest('a');
+    expect(menuItemLink).toHaveAttribute('aria-disabled', 'true');
+    expect(menuItemLink).toHaveAttribute('tabindex', '-1');
+
+    await user.click(menuItemLink as HTMLElement);
+
+    expect(handleClick).not.toHaveBeenCalled();
+  });
+
   test('折りたたみメニュー項目が正しくレンダリングされる', () => {
     const { getByRole, getByText } = render(
       <Root>
