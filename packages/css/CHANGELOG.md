@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.2.0
+
+### Minor Changes
+
+- [#1007](https://github.com/giftee/design-system/pull/1007) [`93488c4`](https://github.com/giftee/design-system/commit/93488c4bff5da574b68576c0346d10271b5a7a42) Thanks [@egurinko](https://github.com/egurinko)! - [Change] Checkbox, Radio, Textfield, Select から is-disabled クラスを削除し、disabled attribute 利用に統一
+
 ## 3.1.9
 
 ### Patch Changes
