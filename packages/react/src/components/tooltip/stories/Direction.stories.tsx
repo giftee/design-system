@@ -7,15 +7,7 @@ export default {
 
 export const Direction: Story = {
   render: ({ ...args }: TooltipProps) => (
-    <div
-      style={{
-        display: 'flex',
-        gap: '80px',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '80px',
-      }}
-    >
+    <div className="ab-flex ab-justify-center ab-items-center ab-gap-30 ab-p-30">
       <Tooltip {...args} position="top" content="¥1,000">
         Top
       </Tooltip>
