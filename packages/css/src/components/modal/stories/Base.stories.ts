@@ -10,8 +10,22 @@ export const Base: Story = {
   render: (_args) => {
     return `
 <div>
-  <button id="showButton" type="button" class="ab-Button">モーダルを開く</button>
-  <dialog id="modal" class="ab-Modal" style="width: 800px">
+  <button
+    id="showButton"
+    type="button"
+    class="ab-Button"
+    aria-haspopup="dialog"
+    aria-controls="modal"
+  >
+    モーダルを開く
+  </button>
+  <dialog
+    id="modal"
+    class="ab-Modal"
+    style="width: 800px"
+    aria-labelledby="modal-title"
+    aria-describedby="modal-description"
+  >
     <form method="dialog">
       <div class="ab-Modal-header">
         <button
@@ -21,10 +35,10 @@ export const Base: Story = {
         >
           X
         </button>
-        <span class="ab-font-bold">モーダル Header</span>
+        <h2 id="modal-title" class="ab-font-bold">モーダル Header</h2>
       </div>
       <hr class="ab-Divider" />
-      <div class="ab-Modal-body">
+      <div id="modal-description" class="ab-Modal-body">
         モーダル Body
       </div>
       <hr class="ab-Divider" />
