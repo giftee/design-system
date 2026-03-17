@@ -1,17 +1,10 @@
-import * as React from 'react';
-import type { TooltipProps } from '@/index';
 import { Tooltip } from '@/index';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-export { React, Tooltip };
-export type { TooltipProps };
+export { Tooltip };
 
 export const meta = {
-  component: Tooltip,
-  args: {
-    position: 'top',
-    content: 'ツールチップ',
-  },
+  component: Tooltip.Root,
   argTypes: {
     position: {
       control: { type: 'select' },
@@ -26,19 +19,7 @@ export const meta = {
       },
       description: 'ツールチップの表示位置',
     },
-    content: {
-      control: { type: 'text' },
-      table: {
-        defaultValue: {
-          summary: 'undefined',
-        },
-        type: {
-          summary: 'ReactNode',
-        },
-      },
-      description: 'ツールチップに表示するテキスト',
-    },
   },
-} satisfies Meta<typeof Tooltip>;
+} satisfies Meta<Tooltip.RootProps>;
 
 export type Story = StoryObj<typeof meta>;

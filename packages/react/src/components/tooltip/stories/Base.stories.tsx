@@ -1,4 +1,4 @@
-import { meta, Tooltip, type TooltipProps, type Story } from './shared';
+import { meta, Tooltip, type Story } from './shared';
 
 export default {
   ...meta,
@@ -6,7 +6,10 @@ export default {
 };
 
 export const Base: Story = {
-  render: ({ ...args }: TooltipProps) => (
-    <Tooltip {...args}>ホバーしてください</Tooltip>
+  render: ({ ...args }: Tooltip.RootProps) => (
+    <Tooltip.Root {...args}>
+      <Tooltip.Trigger>ホバーしてください</Tooltip.Trigger>
+      <Tooltip.Content>ツールチップ</Tooltip.Content>
+    </Tooltip.Root>
   ),
 };

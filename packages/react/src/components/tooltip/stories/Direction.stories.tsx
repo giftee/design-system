@@ -1,4 +1,4 @@
-import { meta, Tooltip, type TooltipProps, type Story } from './shared';
+import { meta, Tooltip, type Story } from './shared';
 
 export default {
   ...meta,
@@ -6,24 +6,26 @@ export default {
 };
 
 export const Direction: Story = {
-  render: ({ ...args }: TooltipProps) => (
+  render: ({ ...args }: Tooltip.RootProps) => (
     <div className="ab-flex ab-justify-center ab-items-center ab-gap-30 ab-p-30">
-      <Tooltip {...args} position="top" content="¥1,000">
-        Top
-      </Tooltip>
-      <Tooltip
-        {...args}
-        position="right"
-        content="長い文章の場合折り返されるようになっております。"
-      >
-        Right（長い文章）
-      </Tooltip>
-      <Tooltip {...args} position="bottom" content="Bottom">
-        Bottom
-      </Tooltip>
-      <Tooltip {...args} position="left" content="Left">
-        Left
-      </Tooltip>
+      <Tooltip.Root {...args} position="top">
+        <Tooltip.Trigger>Top</Tooltip.Trigger>
+        <Tooltip.Content>¥1,000</Tooltip.Content>
+      </Tooltip.Root>
+      <Tooltip.Root {...args} position="right">
+        <Tooltip.Trigger>Right（長い文章）</Tooltip.Trigger>
+        <Tooltip.Content>
+          長い文章の場合折り返されるようになっております。
+        </Tooltip.Content>
+      </Tooltip.Root>
+      <Tooltip.Root {...args} position="bottom">
+        <Tooltip.Trigger>Bottom</Tooltip.Trigger>
+        <Tooltip.Content>Bottom</Tooltip.Content>
+      </Tooltip.Root>
+      <Tooltip.Root {...args} position="left">
+        <Tooltip.Trigger>Left</Tooltip.Trigger>
+        <Tooltip.Content>Left</Tooltip.Content>
+      </Tooltip.Root>
     </div>
   ),
 };
