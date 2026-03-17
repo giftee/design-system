@@ -119,7 +119,8 @@ describe('Table', () => {
 
     const headerCell = getByText('ヘッダーセル');
     expect(headerCell).toBeInTheDocument();
-    expect(headerCell.closest('td')).toHaveClass('ab-Table-head-cell');
+    expect(headerCell.closest('th')).toHaveClass('ab-Table-head-cell');
+    expect(headerCell.closest('th')).toHaveAttribute('scope', 'col');
   });
 
   test('ボディが正しくレンダリングされる', () => {
@@ -226,11 +227,26 @@ describe('Table', () => {
       </Root>,
     );
 
-    const headerCell = getByText('カスタムヘッダー').closest('td');
+    const headerCell = getByText('カスタムヘッダー').closest('th');
     expect(headerCell).toHaveClass(
       'ab-Table-head-cell',
       'custom-header-cell-class',
     );
+  });
+
+  test('scopeプロパティを上書きできる', () => {
+    const { getByText } = render(
+      <Root>
+        <Header>
+          <HeaderRow>
+            <HeaderCell scope="row">行ヘッダー</HeaderCell>
+          </HeaderRow>
+        </Header>
+      </Root>,
+    );
+
+    const headerCell = getByText('行ヘッダー').closest('th');
+    expect(headerCell).toHaveAttribute('scope', 'row');
   });
 
   test('classNameプロパティが追加で指定できる（Body）', () => {
