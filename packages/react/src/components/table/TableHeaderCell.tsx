@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
-export type TableHeaderCellProps = ComponentPropsWithoutRef<'td'> & {
+export type TableHeaderCellProps = ComponentPropsWithoutRef<'th'> & {
   /**
    * セル内のテキスト配置
    * @default 'left'
@@ -11,9 +11,9 @@ export type TableHeaderCellProps = ComponentPropsWithoutRef<'td'> & {
 };
 
 export const TableHeaderCell = forwardRef<
-  ElementRef<'td'>,
+  ElementRef<'th'>,
   TableHeaderCellProps
->(({ align, children, className, ...rest }, forwardedRef) => {
+>(({ align, children, className, scope, ...rest }, forwardedRef) => {
   const classes = classNames(
     'ab-Table-head-cell',
     align && `ab-text-${align}`,
@@ -21,9 +21,9 @@ export const TableHeaderCell = forwardRef<
   );
 
   return (
-    <td ref={forwardedRef} className={classes} {...rest}>
+    <th ref={forwardedRef} className={classes} scope={scope ?? 'col'} {...rest}>
       {children}
-    </td>
+    </th>
   );
 });
 
