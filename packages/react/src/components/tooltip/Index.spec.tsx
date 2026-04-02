@@ -1,14 +1,13 @@
 import { render } from '@testing-library/react';
-import React from 'react';
 import { describe, test, expect } from 'vitest';
 
-import { Root, Trigger, Content } from './Index';
+import { Root, Content } from './Index';
 
 describe('Tooltip', () => {
   test('Tooltipをレンダリングする', () => {
     const { getByText } = render(
       <Root>
-        <Trigger>トリガー</Trigger>
+        トリガー
         <Content>ツールチップ</Content>
       </Root>,
     );
@@ -20,7 +19,7 @@ describe('Tooltip', () => {
   test('Rootに ab-Tooltip クラスが付与される', () => {
     const { container } = render(
       <Root>
-        <Trigger>トリガー</Trigger>
+        トリガー
         <Content>ツールチップ</Content>
       </Root>,
     );
@@ -32,7 +31,7 @@ describe('Tooltip', () => {
   test('Contentに ab-Tooltip-description クラスが付与される', () => {
     const { getByText } = render(
       <Root>
-        <Trigger>トリガー</Trigger>
+        トリガー
         <Content>ツールチップテキスト</Content>
       </Root>,
     );
@@ -45,7 +44,7 @@ describe('Tooltip', () => {
   test('デフォルトのpositionはtopである', () => {
     const { container } = render(
       <Root>
-        <Trigger>トリガー</Trigger>
+        トリガー
         <Content>ツールチップ</Content>
       </Root>,
     );
@@ -57,7 +56,7 @@ describe('Tooltip', () => {
   test('positionプロパティが正しくCSSクラスに反映される', () => {
     const { container: rightContainer } = render(
       <Root position="right">
-        <Trigger>右トリガー</Trigger>
+        右トリガー
         <Content>右</Content>
       </Root>,
     );
@@ -67,7 +66,7 @@ describe('Tooltip', () => {
 
     const { container: bottomContainer } = render(
       <Root position="bottom">
-        <Trigger>下トリガー</Trigger>
+        下トリガー
         <Content>下</Content>
       </Root>,
     );
@@ -77,7 +76,7 @@ describe('Tooltip', () => {
 
     const { container: leftContainer } = render(
       <Root position="left">
-        <Trigger>左トリガー</Trigger>
+        左トリガー
         <Content>左</Content>
       </Root>,
     );
@@ -89,7 +88,7 @@ describe('Tooltip', () => {
   test('classNameプロパティが追加で指定できる（Root）', () => {
     const { container } = render(
       <Root className="custom-class">
-        <Trigger>トリガー</Trigger>
+        トリガー
         <Content>ツールチップ</Content>
       </Root>,
     );
@@ -101,7 +100,7 @@ describe('Tooltip', () => {
   test('classNameプロパティが追加で指定できる（Content）', () => {
     const { getByText } = render(
       <Root>
-        <Trigger>トリガー</Trigger>
+        トリガー
         <Content className="custom-content-class">ツールチップ</Content>
       </Root>,
     );

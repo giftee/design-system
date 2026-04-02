@@ -8,7 +8,7 @@ export default {
 export const Base: Story = {
   render: ({ ...args }: Tooltip.RootProps) => (
     <Tooltip.Root {...args}>
-      <Tooltip.Trigger>ホバーしてください</Tooltip.Trigger>
+      ホバーしてください
       <Tooltip.Content>ツールチップ</Tooltip.Content>
     </Tooltip.Root>
   ),

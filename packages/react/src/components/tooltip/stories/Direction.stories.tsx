@@ -9,21 +9,21 @@ export const Direction: Story = {
   render: ({ ...args }: Tooltip.RootProps) => (
     <div className="ab-flex ab-justify-center ab-items-center ab-gap-30 ab-p-30">
       <Tooltip.Root {...args} position="top">
-        <Tooltip.Trigger>Top</Tooltip.Trigger>
+        Top
         <Tooltip.Content>¥1,000</Tooltip.Content>
       </Tooltip.Root>
       <Tooltip.Root {...args} position="right">
-        <Tooltip.Trigger>Right（長い文章）</Tooltip.Trigger>
+        Right（長い文章）
         <Tooltip.Content>
           長い文章の場合折り返されるようになっております。
         </Tooltip.Content>
       </Tooltip.Root>
       <Tooltip.Root {...args} position="bottom">
-        <Tooltip.Trigger>Bottom</Tooltip.Trigger>
+        Bottom
         <Tooltip.Content>Bottom</Tooltip.Content>
       </Tooltip.Root>
       <Tooltip.Root {...args} position="left">
-        <Tooltip.Trigger>Left</Tooltip.Trigger>
+        Left
         <Tooltip.Content>Left</Tooltip.Content>
       </Tooltip.Root>
     </div>
