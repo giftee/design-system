@@ -97,6 +97,20 @@ describe('Tooltip', () => {
     expect(tooltip).toHaveClass('ab-Tooltip', 'custom-class');
   });
 
+  test('Contentにtooltipロールとidが付与され、Rootのaria-describedbyと一致する', () => {
+    const { getByRole, container } = render(
+      <Root>
+        トリガー
+        <Content>ツールチップ</Content>
+      </Root>,
+    );
+
+    const tooltip = getByRole('tooltip');
+    const root = container.querySelector('.ab-Tooltip');
+    expect(tooltip).toHaveAttribute('id');
+    expect(root).toHaveAttribute('aria-describedby', tooltip.id);
+  });
+
   test('classNameプロパティが追加で指定できる（Content）', () => {
     const { getByText } = render(
       <Root>
