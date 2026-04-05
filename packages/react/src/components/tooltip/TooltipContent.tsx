@@ -1,5 +1,6 @@
 import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
+import { useTooltipContext } from './TooltipContext';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type TooltipContentProps = ComponentPropsWithoutRef<'span'>;
@@ -18,10 +19,17 @@ export const TooltipContent = forwardRef<
   ElementRef<'span'>,
   TooltipContentProps
 >(({ children, className, ...rest }, forwardedRef) => {
+  const { contentId } = useTooltipContext();
   const classes = classNames('ab-Tooltip-description', className);
 
   return (
-    <span ref={forwardedRef} className={classes} {...rest}>
+    <span
+      ref={forwardedRef}
+      className={classes}
+      role="tooltip"
+      id={contentId}
+      {...rest}
+    >
       {children}
     </span>
   );
