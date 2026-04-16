@@ -1,5 +1,14 @@
 # @giftee/abukuma-react
 
+## 4.5.2
+
+### Patch Changes
+
+- [#1020](https://github.com/giftee/design-system/pull/1020) [`6e662ee`](https://github.com/giftee/design-system/commit/6e662eef9b8a66eededb83eb5504f09e9f282e08) Thanks [@egurinko](https://github.com/egurinko)! - [fix:Table] TableHeader の Cell を td から th に変更
+
+- Updated dependencies [[`b26f1d4`](https://github.com/giftee/design-system/commit/b26f1d423293ebbc8f72aae5232517c76ccab634)]:
+  - @giftee/abukuma-css@3.2.1
+
 ## 4.5.1
 
 ### Patch Changes

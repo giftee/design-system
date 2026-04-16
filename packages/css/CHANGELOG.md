@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.2.1
+
+### Patch Changes
+
+- [#1064](https://github.com/giftee/design-system/pull/1064) [`b26f1d4`](https://github.com/giftee/design-system/commit/b26f1d423293ebbc8f72aae5232517c76ccab634) Thanks [@aidyak](https://github.com/aidyak)! - [fix: Accordion] 開閉アイコンを黒色からブランドカラーに変更
+
 ## 3.2.0
 
 ### Minor Changes
