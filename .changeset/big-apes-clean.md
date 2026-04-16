@@ -2,4 +2,4 @@
 "@giftee/abukuma-css": patch
 ---
 
-colorプロパティをbackground-colorプロパティに変更した
+[fix: Accordion] 開閉アイコンを黒色からブランドカラーに変更
