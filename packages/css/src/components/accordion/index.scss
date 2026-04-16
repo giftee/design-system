@@ -67,14 +67,14 @@ $minus-url: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvM
 
     &::before {
       content: '';
-      background-image: url($plus-url);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
+      mask-image: url($plus-url);
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: var(--accordion-summary-icon-color);
       width: 16px;
       height: 16px;
       font-size: var(--accordion-summary-icon-size);
-      color: var(--accordion-summary-icon-color);
       position: absolute;
       right: var(--ab-semantic-spacing-4);
       top: 50%;
@@ -85,12 +85,10 @@ $minus-url: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvM
   &[open] {
     .ab-Accordion-summary::before {
       content: '';
-      background-image: url($minus-url);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 16px;
-      height: 16px;
+      mask-image: url($minus-url);
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
     }
   }
 
@@ -99,7 +97,7 @@ $minus-url: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvM
 
     .ab-Accordion-summary {
       &::before {
-        color: var(--accordion-hover-summary-icon-color);
+        background-color: var(--accordion-hover-summary-icon-color);
       }
     }
   }
@@ -109,7 +107,7 @@ $minus-url: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvM
 
     .ab-Accordion-summary {
       &::before {
-        color: var(--accordion-focus-visible-summary-icon-color);
+        background-color: var(--accordion-focus-visible-summary-icon-color);
       }
     }
   }
@@ -119,7 +117,7 @@ $minus-url: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvM
 
     .ab-Accordion-summary {
       &::before {
-        color: var(--accordion-active-summary-icon-color);
+        background-color: var(--accordion-active-summary-icon-color);
       }
     }
   }
@@ -152,7 +150,7 @@ $minus-url: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvM
     border-radius: var(--ab-semantic-border-radius-lg);
 
     &::before {
-      color: var(--accordion-disabled-summary-icon-color);
+      background-color: var(--accordion-disabled-summary-icon-color);
     }
   }
 }
