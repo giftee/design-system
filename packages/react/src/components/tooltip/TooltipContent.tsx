@@ -19,8 +19,10 @@ export const TooltipContent = forwardRef<
   ElementRef<'span'>,
   TooltipContentProps
 >(({ children, className, ...rest }, forwardedRef) => {
-  const { contentId } = useTooltipContext();
+  const { contentId, open } = useTooltipContext();
   const classes = classNames('ab-Tooltip-description', className);
+
+  if (!open) return null;
 
   return (
     <span

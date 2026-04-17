@@ -2,6 +2,8 @@ import { createContext, useContext } from 'react';
 
 interface TooltipContextValue {
   contentId: string;
+  open: boolean;
+  setOpen: (open: boolean) => void;
 }
 
 export const TooltipContext = createContext<TooltipContextValue | null>(null);

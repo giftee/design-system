@@ -1,4 +1,4 @@
-import { forwardRef, useId } from 'react';
+import { forwardRef, useId, useState } from 'react';
 import { classNames } from '@/utils/classNames';
 import { TooltipContext } from './TooltipContext';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
@@ -24,20 +24,17 @@ export type TooltipRootProps = ComponentPropsWithoutRef<'span'> & {
 export const TooltipRoot = forwardRef<ElementRef<'span'>, TooltipRootProps>(
   ({ position = 'top', children, className, ...rest }, forwardedRef) => {
     const contentId = useId();
+    const [open, setOpen] = useState(false);
     const classes = classNames(
       'ab-Tooltip',
       `ab-Tooltip-${position}`,
+      open && 'ab-Tooltip--open',
       className,
     );
 
     return (
-      <TooltipContext.Provider value={{ contentId }}>
-        <span
-          ref={forwardedRef}
-          className={classes}
-          aria-describedby={contentId}
-          {...rest}
-        >
+      <TooltipContext.Provider value={{ contentId, open, setOpen }}>
+        <span ref={forwardedRef} className={classes} {...rest}>
           {children}
         </span>
       </TooltipContext.Provider>
