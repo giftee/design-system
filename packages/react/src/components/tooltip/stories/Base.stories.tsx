@@ -6,9 +6,15 @@ export default {
 };
 
 export const Base: Story = {
+  args: {
+    position: 'top',
+  },
+
   render: ({ ...args }: Tooltip.RootProps) => (
     <Tooltip.Root {...args}>
-      ホバーしてください
+      <Tooltip.Trigger>
+        {(props) => <span {...props}>ホバーしてください</span>}
+      </Tooltip.Trigger>
       <Tooltip.Content>ツールチップ</Tooltip.Content>
     </Tooltip.Root>
   ),
