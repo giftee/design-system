@@ -1,0 +1,44 @@
+---
+sidebar_position: 12
+---
+
+import { StorybookIframe } from '@site/src/components/ReactStorybookIframe';
+import {
+  GuidelinesSummary,
+  SizeGuidelines,
+} from '@site/src/components/Guidelines';
+import guidelines from '../_data/accordion.json';
+
+# Accordion
+
+<GuidelinesSummary data={guidelines} />
+
+## 基本
+
+<StorybookIframe docId="accordion-base--docs" />
+
+## 無効
+
+<StorybookIframe docId="accordion-disabled--docs" />
+
+## サイズ
+
+<SizeGuidelines sizes={guidelines.sizes} />
+
+<StorybookIframe docId="accordion-size--docs" />
+
+## Props
+
+### Accordion.Root
+
+| Prop       | 型                    | デフォルト | 説明                                |
+| ---------- | --------------------- | ---------- | ----------------------------------- |
+| `size`     | `'small' \| 'medium'` | `'medium'` | アコーディオンのサイズ              |
+| `disabled` | `boolean`             | `false`    | 無効状態                            |
+| `open`     | `boolean`             | -          | 開閉状態（HTML details 要素の属性） |
+
+標準的な `<details>` 要素の属性も使用できます。
+
+### Accordion.Summary / Accordion.Content
+
+それぞれ標準的な `<summary>`, `<div>` 要素の属性が使用できます。
