@@ -34,7 +34,9 @@ describe('Tooltip', () => {
       </Root>,
     );
 
-    expect(getByText('ツールチップテキスト')).toHaveClass('ab-Tooltip-description');
+    expect(getByText('ツールチップテキスト')).toHaveClass(
+      'ab-Tooltip-description',
+    );
   });
 
   test('デフォルトのpositionはtopである', () => {
@@ -45,7 +47,9 @@ describe('Tooltip', () => {
       </Root>,
     );
 
-    expect(container.querySelector('.ab-Tooltip')).toHaveClass('ab-Tooltip-top');
+    expect(container.querySelector('.ab-Tooltip')).toHaveClass(
+      'ab-Tooltip-top',
+    );
   });
 
   test('positionプロパティが正しくCSSクラスに反映される', () => {
@@ -55,7 +59,9 @@ describe('Tooltip', () => {
         <Content>右</Content>
       </Root>,
     );
-    expect(rightContainer.querySelector('.ab-Tooltip')).toHaveClass('ab-Tooltip-right');
+    expect(rightContainer.querySelector('.ab-Tooltip')).toHaveClass(
+      'ab-Tooltip-right',
+    );
 
     const { container: bottomContainer } = render(
       <Root position="bottom">
@@ -63,7 +69,9 @@ describe('Tooltip', () => {
         <Content>下</Content>
       </Root>,
     );
-    expect(bottomContainer.querySelector('.ab-Tooltip')).toHaveClass('ab-Tooltip-bottom');
+    expect(bottomContainer.querySelector('.ab-Tooltip')).toHaveClass(
+      'ab-Tooltip-bottom',
+    );
 
     const { container: leftContainer } = render(
       <Root position="left">
@@ -71,7 +79,9 @@ describe('Tooltip', () => {
         <Content>左</Content>
       </Root>,
     );
-    expect(leftContainer.querySelector('.ab-Tooltip')).toHaveClass('ab-Tooltip-left');
+    expect(leftContainer.querySelector('.ab-Tooltip')).toHaveClass(
+      'ab-Tooltip-left',
+    );
   });
 
   test('classNameプロパティが追加で指定できる（Root）', () => {
@@ -82,7 +92,10 @@ describe('Tooltip', () => {
       </Root>,
     );
 
-    expect(container.querySelector('.ab-Tooltip')).toHaveClass('ab-Tooltip', 'custom-class');
+    expect(container.querySelector('.ab-Tooltip')).toHaveClass(
+      'ab-Tooltip',
+      'custom-class',
+    );
   });
 
   test('Contentにtooltipロールとidが付与され、Triggerのaria-describedbyと一致する', () => {
@@ -108,7 +121,10 @@ describe('Tooltip', () => {
       </Root>,
     );
 
-    expect(getByText('ツールチップ')).toHaveClass('ab-Tooltip-description', 'custom-content-class');
+    expect(getByText('ツールチップ')).toHaveClass(
+      'ab-Tooltip-description',
+      'custom-content-class',
+    );
   });
 
   test('フォーカス時にContentのインラインスタイルで表示状態になる', () => {

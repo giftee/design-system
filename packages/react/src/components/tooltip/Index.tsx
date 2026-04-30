@@ -1,9 +1,9 @@
 import { TooltipContent } from './TooltipContent';
-import { TooltipTrigger } from './TooltipTrigger';
 import { TooltipRoot } from './TooltipRoot';
+import { TooltipTrigger } from './TooltipTrigger';
 import type { TooltipContentProps } from './TooltipContent';
-import type { TooltipTriggerProps } from './TooltipTrigger';
 import type { TooltipRootProps } from './TooltipRoot';
+import type { TooltipTriggerProps } from './TooltipTrigger';
 
 export {
   TooltipRoot as Root,

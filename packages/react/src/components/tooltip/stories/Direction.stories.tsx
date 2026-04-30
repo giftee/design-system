@@ -62,6 +62,7 @@ export const Direction: Story = {
       <Tooltip.Root {...args} position="top">
         <Tooltip.Trigger>
           {(props) => (
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
             <span tabIndex={0} {...props}>
               Top
             </span>
@@ -72,6 +73,7 @@ export const Direction: Story = {
       <Tooltip.Root {...args} position="right">
         <Tooltip.Trigger>
           {(props) => (
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
             <span tabIndex={0} {...props}>
               Right（長い文章）
             </span>
@@ -84,6 +86,7 @@ export const Direction: Story = {
       <Tooltip.Root {...args} position="bottom">
         <Tooltip.Trigger>
           {(props) => (
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
             <span tabIndex={0} {...props}>
               Bottom
             </span>
@@ -94,6 +97,7 @@ export const Direction: Story = {
       <Tooltip.Root {...args} position="left">
         <Tooltip.Trigger>
           {(props) => (
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
             <span tabIndex={0} {...props}>
               Left
             </span>
