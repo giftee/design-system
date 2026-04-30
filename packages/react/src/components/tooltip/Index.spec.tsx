@@ -128,4 +128,38 @@ describe('Tooltip', () => {
     fireEvent.blur(trigger);
     expect(tooltip).not.toHaveStyle({ opacity: 1, visibility: 'visible' });
   });
+
+  test('Escapeキー押下でフォーカス由来の表示状態が解除される', () => {
+    const { getByRole } = render(
+      <Root>
+        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Content>ツールチップ</Content>
+      </Root>,
+    );
+
+    const trigger = getByRole('button');
+    const tooltip = getByRole('tooltip');
+
+    fireEvent.focus(trigger);
+    expect(tooltip).toHaveStyle({ opacity: 1, visibility: 'visible' });
+
+    fireEvent.keyDown(trigger, { key: 'Escape' });
+    expect(tooltip).not.toHaveStyle({ opacity: 1, visibility: 'visible' });
+  });
+
+  test('Escape以外のキーでは表示状態が維持される', () => {
+    const { getByRole } = render(
+      <Root>
+        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Content>ツールチップ</Content>
+      </Root>,
+    );
+
+    const trigger = getByRole('button');
+    const tooltip = getByRole('tooltip');
+
+    fireEvent.focus(trigger);
+    fireEvent.keyDown(trigger, { key: 'Enter' });
+    expect(tooltip).toHaveStyle({ opacity: 1, visibility: 'visible' });
+  });
 });

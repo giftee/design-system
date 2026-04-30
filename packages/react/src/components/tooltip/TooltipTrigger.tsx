@@ -1,5 +1,5 @@
 import { useTooltipContext } from './TooltipContext';
-import type { ReactElement } from 'react';
+import type { KeyboardEvent, ReactElement } from 'react';
 
 interface TriggerProps {
   'aria-describedby': string;
@@ -7,6 +7,7 @@ interface TriggerProps {
   onMouseLeave: () => void;
   onFocus: () => void;
   onBlur: () => void;
+  onKeyDown: (event: KeyboardEvent) => void;
 }
 
 export type TooltipTriggerProps = {
@@ -22,6 +23,9 @@ export const TooltipTrigger = ({ children }: TooltipTriggerProps) => {
     onMouseLeave: () => setOpen(false),
     onFocus: () => setOpen(true),
     onBlur: () => setOpen(false),
+    onKeyDown: (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpen(false);
+    },
   });
 };
 
