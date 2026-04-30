@@ -13,7 +13,11 @@ export const Base: Story = {
   render: ({ ...args }: Tooltip.RootProps) => (
     <Tooltip.Root {...args}>
       <Tooltip.Trigger>
-        {(props) => <span {...props}>ホバーしてください</span>}
+        {(props) => (
+          <span tabIndex={0} {...props}>
+            ホバーしてください
+          </span>
+        )}
       </Tooltip.Trigger>
       <Tooltip.Content>ツールチップ</Tooltip.Content>
     </Tooltip.Root>
