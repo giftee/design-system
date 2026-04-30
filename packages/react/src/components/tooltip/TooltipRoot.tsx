@@ -28,7 +28,6 @@ export const TooltipRoot = forwardRef<ElementRef<'span'>, TooltipRootProps>(
     const classes = classNames(
       'ab-Tooltip',
       `ab-Tooltip-${position}`,
-      open && 'ab-Tooltip--open',
       className,
     );
 

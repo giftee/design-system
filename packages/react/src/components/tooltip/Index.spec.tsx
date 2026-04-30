@@ -26,15 +26,14 @@ describe('Tooltip', () => {
     expect(container.querySelector('.ab-Tooltip')).toBeInTheDocument();
   });
 
-  test('Contentに ab-Tooltip-description クラスが付与される', () => {
-    const { getByRole, getByText } = render(
+  test('Contentは常にDOMにレンダリングされ ab-Tooltip-description クラスが付与される', () => {
+    const { getByText } = render(
       <Root>
         <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
         <Content>ツールチップテキスト</Content>
       </Root>,
     );
 
-    fireEvent.mouseEnter(getByRole('button'));
     expect(getByText('ツールチップテキスト')).toHaveClass('ab-Tooltip-description');
   });
 
@@ -94,23 +93,39 @@ describe('Tooltip', () => {
       </Root>,
     );
 
-    const trigger = getByRole('button', { name: 'トリガー' });
-    fireEvent.mouseEnter(trigger);
-
     const tooltip = getByRole('tooltip');
+    const trigger = getByRole('button', { name: 'トリガー' });
+
     expect(tooltip).toHaveAttribute('id');
     expect(trigger).toHaveAttribute('aria-describedby', tooltip.id);
   });
 
   test('classNameプロパティが追加で指定できる（Content）', () => {
-    const { getByRole, getByText } = render(
+    const { getByText } = render(
       <Root>
         <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
         <Content className="custom-content-class">ツールチップ</Content>
       </Root>,
     );
 
-    fireEvent.mouseEnter(getByRole('button'));
     expect(getByText('ツールチップ')).toHaveClass('ab-Tooltip-description', 'custom-content-class');
+  });
+
+  test('フォーカス時にContentのインラインスタイルで表示状態になる', () => {
+    const { getByRole } = render(
+      <Root>
+        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Content>ツールチップ</Content>
+      </Root>,
+    );
+
+    const trigger = getByRole('button');
+    const tooltip = getByRole('tooltip');
+
+    fireEvent.focus(trigger);
+    expect(tooltip).toHaveStyle({ opacity: 1, visibility: 'visible' });
+
+    fireEvent.blur(trigger);
+    expect(tooltip).not.toHaveStyle({ opacity: 1, visibility: 'visible' });
   });
 });
