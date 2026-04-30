@@ -68,7 +68,7 @@ export const Direction: Story = {
     <div>
       {groups.map((group) => (
         <section key={group.heading}>
-          <h4 className="ab-text-headline-m ab-mb-30">{group.heading}</h4>
+          <h2 className="ab-text-headline-m ab-mb-30">{group.heading}</h2>
           <div className="ab-flex ab-flex-justify-around">
             {group.variants.map((variant) => (
               <Demo
