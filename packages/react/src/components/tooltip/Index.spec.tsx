@@ -162,4 +162,22 @@ describe('Tooltip', () => {
     fireEvent.keyDown(trigger, { key: 'Enter' });
     expect(tooltip).toHaveStyle({ opacity: 1, visibility: 'visible' });
   });
+
+  test('ホバー中にdocument経由のEscapeでも非表示になる', () => {
+    const { getByRole } = render(
+      <Root>
+        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Content>ツールチップ</Content>
+      </Root>,
+    );
+
+    const trigger = getByRole('button');
+    const tooltip = getByRole('tooltip');
+
+    fireEvent.mouseEnter(trigger);
+    expect(tooltip).toHaveStyle({ opacity: 1, visibility: 'visible' });
+
+    fireEvent.keyDown(document, { key: 'Escape' });
+    expect(tooltip).toHaveStyle({ opacity: 0, visibility: 'hidden' });
+  });
 });

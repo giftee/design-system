@@ -1,4 +1,4 @@
-import { forwardRef, useId, useState } from 'react';
+import { forwardRef, useEffect, useId, useState } from 'react';
 import { classNames } from '@/utils/classNames';
 import { TooltipContext } from './TooltipContext';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
@@ -26,6 +26,16 @@ export const TooltipRoot = forwardRef<ElementRef<'span'>, TooltipRootProps>(
     const contentId = useId();
     const [open, setOpen] = useState(false);
     const [dismissed, setDismissed] = useState(false);
+
+    useEffect(() => {
+      if (!open) return;
+      const handler = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') setDismissed(true);
+      };
+      document.addEventListener('keydown', handler);
+      return () => document.removeEventListener('keydown', handler);
+    }, [open]);
+
     const classes = classNames(
       'ab-Tooltip',
       `ab-Tooltip-${position}`,
