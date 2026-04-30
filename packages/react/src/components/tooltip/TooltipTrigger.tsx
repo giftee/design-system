@@ -15,16 +15,28 @@ export type TooltipTriggerProps = {
 };
 
 export const TooltipTrigger = ({ children }: TooltipTriggerProps) => {
-  const { contentId, setOpen } = useTooltipContext();
+  const { contentId, setOpen, setDismissed } = useTooltipContext();
 
   return children({
     'aria-describedby': contentId,
-    onMouseEnter: () => setOpen(true),
-    onMouseLeave: () => setOpen(false),
-    onFocus: () => setOpen(true),
-    onBlur: () => setOpen(false),
+    onMouseEnter: () => {
+      setOpen(true);
+      setDismissed(false);
+    },
+    onMouseLeave: () => {
+      setOpen(false);
+      setDismissed(false);
+    },
+    onFocus: () => {
+      setOpen(true);
+      setDismissed(false);
+    },
+    onBlur: () => {
+      setOpen(false);
+      setDismissed(false);
+    },
     onKeyDown: (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setOpen(false);
+      if (event.key === 'Escape') setDismissed(true);
     },
   });
 };

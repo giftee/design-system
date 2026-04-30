@@ -4,6 +4,8 @@ interface TooltipContextValue {
   contentId: string;
   open: boolean;
   setOpen: (open: boolean) => void;
+  dismissed: boolean;
+  setDismissed: (dismissed: boolean) => void;
 }
 
 export const TooltipContext = createContext<TooltipContextValue | null>(null);

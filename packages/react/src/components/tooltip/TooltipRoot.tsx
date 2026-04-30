@@ -25,6 +25,7 @@ export const TooltipRoot = forwardRef<ElementRef<'span'>, TooltipRootProps>(
   ({ position = 'top', children, className, ...rest }, forwardedRef) => {
     const contentId = useId();
     const [open, setOpen] = useState(false);
+    const [dismissed, setDismissed] = useState(false);
     const classes = classNames(
       'ab-Tooltip',
       `ab-Tooltip-${position}`,
@@ -32,7 +33,9 @@ export const TooltipRoot = forwardRef<ElementRef<'span'>, TooltipRootProps>(
     );
 
     return (
-      <TooltipContext.Provider value={{ contentId, open, setOpen }}>
+      <TooltipContext.Provider
+        value={{ contentId, open, setOpen, dismissed, setDismissed }}
+      >
         <span ref={forwardedRef} className={classes} {...rest}>
           {children}
         </span>

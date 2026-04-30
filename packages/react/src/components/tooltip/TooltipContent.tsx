@@ -19,7 +19,7 @@ export const TooltipContent = forwardRef<
   ElementRef<'span'>,
   TooltipContentProps
 >(({ children, className, style, ...rest }, forwardedRef) => {
-  const { contentId, open } = useTooltipContext();
+  const { contentId, open, dismissed } = useTooltipContext();
   const classes = classNames('ab-Tooltip-description', className);
 
   return (
@@ -28,7 +28,13 @@ export const TooltipContent = forwardRef<
       className={classes}
       role="tooltip"
       id={contentId}
-      style={open ? { opacity: 1, visibility: 'visible', ...style } : style}
+      style={
+        dismissed
+          ? { opacity: 0, visibility: 'hidden', ...style }
+          : open
+            ? { opacity: 1, visibility: 'visible', ...style }
+            : style
+      }
       {...rest}
     >
       {children}
