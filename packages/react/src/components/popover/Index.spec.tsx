@@ -84,4 +84,39 @@ describe('PopOver', () => {
     const popover = container.querySelector('.ab-Popover');
     expect(popover).toHaveClass('ab-Popover', 'custom-class');
   });
+
+  test('PopOver.RootとしてRootコンポーネントを参照できる', () => {
+    const { container } = render(<PopOver.Root>content</PopOver.Root>);
+
+    expect(container.firstChild).toHaveClass(
+      'ab-position-relative',
+      'ab-inline-block',
+    );
+  });
+
+  test('PopOver.TriggerとしてTriggerコンポーネントを参照できる', () => {
+    const { getByRole } = render(
+      <PopOver.Root>
+        <PopOver.Trigger>trigger</PopOver.Trigger>
+      </PopOver.Root>,
+    );
+
+    expect(getByRole('button', { name: 'trigger' })).toHaveAttribute(
+      'aria-expanded',
+      'false',
+    );
+  });
+
+  test('PopOver.ContentとしてContentコンポーネントを参照できる', () => {
+    const { container } = render(
+      <PopOver.Root defaultOpen>
+        <PopOver.Content>content</PopOver.Content>
+      </PopOver.Root>,
+    );
+
+    const content = container.querySelector('.ab-Popover');
+
+    expect(content).toHaveClass('is-open');
+    expect(content).not.toHaveAttribute('hidden');
+  });
 });

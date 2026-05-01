@@ -1,24 +1,11 @@
-import { forwardRef } from 'react';
-import { classNames } from '@/utils/classNames';
-import type { ComponentPropsWithoutRef, ElementRef } from 'react';
+import { PopOverContent } from './PopOverContent';
+import { PopOverRoot } from './PopOverRoot';
+import { PopOverTrigger } from './PopOverTrigger';
+import type { PopOverContentProps } from './PopOverContent';
+import type { PopOverRootProps } from './PopOverRoot';
+import type { PopOverTriggerProps } from './PopOverTrigger';
 
-export type PopOverProps = ComponentPropsWithoutRef<'div'> & {
-  /**
-   * トリガー要素を基準とした表示位置
-   * @default 'top'
-   */
-  placement?: 'top' | 'bottom' | 'left' | 'right';
-  /**
-   * トリガー要素の主軸方向に対する整列
-   * @default 'center'
-   */
-  align?: 'center' | 'start' | 'end';
-  /**
-   * 開閉状態。true のとき is-open クラスが付与され、hidden 属性が外れる。
-   * @default false
-   */
-  open?: boolean;
-};
+export type PopOverProps = PopOverContentProps;
 
 /**
  *
@@ -30,35 +17,20 @@ export type PopOverProps = ComponentPropsWithoutRef<'div'> & {
  *
  * - [PopOver](https://github.com/giftee/design-system/tree/main/packages/react/src/components/popover)
  */
-export const PopOver = forwardRef<ElementRef<'div'>, PopOverProps>(
-  (
-    {
-      placement = 'top',
-      align = 'center',
-      open = false,
-      children,
-      className,
-      ...rest
-    },
-    forwardedRef,
-  ) => {
-    const positionClass =
-      align === 'center'
-        ? `ab-Popover-${placement}`
-        : `ab-Popover-${placement}-${align}`;
-    const classes = classNames(
-      'ab-Popover',
-      positionClass,
-      open && 'is-open',
-      className,
-    );
+export const PopOver = Object.assign(PopOverContent, {
+  Root: PopOverRoot,
+  Trigger: PopOverTrigger,
+  Content: PopOverContent,
+});
 
-    return (
-      <div ref={forwardedRef} hidden={!open} className={classes} {...rest}>
-        {children}
-      </div>
-    );
-  },
-);
+export {
+  PopOverContent as Content,
+  PopOverRoot as Root,
+  PopOverTrigger as Trigger,
+};
 
-PopOver.displayName = 'PopOver';
+export type {
+  PopOverContentProps as ContentProps,
+  PopOverRootProps as RootProps,
+  PopOverTriggerProps as TriggerProps,
+};

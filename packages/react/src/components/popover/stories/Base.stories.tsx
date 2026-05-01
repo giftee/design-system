@@ -1,5 +1,5 @@
 import { useId, useState } from 'react';
-import { meta, PopOver, Button, PopOverMenu, type Story } from './shared';
+import { meta, PopOver, PopOverMenu, type Story } from './shared';
 
 export default {
   ...meta,
@@ -17,18 +17,12 @@ export const Base: Story = {
     const popoverId = useId();
 
     return (
-      <div className="ab-position-relative ab-inline-block">
-        <Button
-          aria-expanded={open}
-          aria-controls={popoverId}
-          onClick={() => setOpen((value) => !value)}
-        >
-          Popover Source
-        </Button>
-        <PopOver {...args} id={popoverId} open={open}>
+      <PopOver.Root open={open} onOpenChange={setOpen} popoverId={popoverId}>
+        <PopOver.Trigger className="ab-Button">Popover Source</PopOver.Trigger>
+        <PopOver.Content {...args} open={open}>
           {PopOverMenu}
-        </PopOver>
-      </div>
+        </PopOver.Content>
+      </PopOver.Root>
     );
   },
 };
