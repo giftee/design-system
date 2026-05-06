@@ -1,4 +1,3 @@
-import { useId } from 'react';
 import { meta, PopOver, PopOverMenu, type Story } from './shared';
 import type { ComponentProps } from 'react';
 
@@ -48,13 +47,11 @@ const groups: { heading: string; variants: Variant[] }[] = [
 ];
 
 const Demo = ({ placement, align }: Variant) => {
-  const popoverId = useId();
   const label = align === 'center' ? placement : `${placement}-${align}`;
 
   return (
     <PopOver.Root
       className="ab-m-30"
-      popoverId={popoverId}
       defaultOpen
     >
       <PopOver.Trigger className="ab-Button">{label}</PopOver.Trigger>
