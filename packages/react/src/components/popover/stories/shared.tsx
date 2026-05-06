@@ -4,9 +4,8 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 export { PopOver, Menu, Button };
 
 export const meta = {
-  component: PopOver,
+  component: PopOver.Content,
   args: {
-    open: true,
     placement: 'top',
     align: 'center',
   },
@@ -27,15 +26,8 @@ export const meta = {
       },
       description: 'トリガー要素の主軸方向に対する整列',
     },
-    open: {
-      control: { type: 'boolean' },
-      table: {
-        defaultValue: { summary: 'false' },
-      },
-      description: '開閉状態',
-    },
   },
-} satisfies Meta<typeof PopOver>;
+} satisfies Meta<typeof PopOver.Content>;
 
 export type Story = StoryObj<typeof meta>;
 

@@ -35,9 +35,6 @@ export const usePopOverRootContext = () => {
   return context;
 };
 
-export const useOptionalPopOverRootContext = () =>
-  useContext(PopOverRootContext);
-
 export type PopOverRootProps = ComponentPropsWithoutRef<'div'> & {
   /**
    * 開閉状態。指定した場合は controlled component として動作する。
@@ -72,6 +69,16 @@ export type PopOverRootProps = ComponentPropsWithoutRef<'div'> & {
   closeOnOutsideClick?: boolean;
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [Popover](https://abukuma.netlify.app/react/component/popover)
+ *
+ * GitHub:
+ *
+ * - [PopOver](https://github.com/giftee/design-system/tree/main/packages/react/src/components/popover)
+ */
 export const PopOverRoot = forwardRef<ElementRef<'div'>, PopOverRootProps>(
   (
     {

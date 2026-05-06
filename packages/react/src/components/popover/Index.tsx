@@ -5,23 +5,11 @@ import type { PopOverContentProps } from './PopOverContent';
 import type { PopOverRootProps } from './PopOverRoot';
 import type { PopOverTriggerProps } from './PopOverTrigger';
 
-export type PopOverProps = PopOverContentProps;
-
-/**
- *
- * Docs:
- *
- * - [Popover](https://abukuma.netlify.app/react/component/popover)
- *
- * GitHub:
- *
- * - [PopOver](https://github.com/giftee/design-system/tree/main/packages/react/src/components/popover)
- */
-export const PopOver = Object.assign(PopOverContent, {
+export const PopOver = {
   Root: PopOverRoot,
   Trigger: PopOverTrigger,
   Content: PopOverContent,
-});
+} as const;
 
 export {
   PopOverContent as Content,
