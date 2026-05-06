@@ -11,12 +11,6 @@ export const PopOver = {
   Content: PopOverContent,
 } as const;
 
-export {
-  PopOverContent as Content,
-  PopOverRoot as Root,
-  PopOverTrigger as Trigger,
-};
-
 export type {
   PopOverContentProps as ContentProps,
   PopOverRootProps as RootProps,

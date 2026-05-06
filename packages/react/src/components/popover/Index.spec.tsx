@@ -57,7 +57,9 @@ describe('PopOver', () => {
     await user.click(getByRole('button', { name: 'trigger' }));
 
     expect(container.querySelector('.ab-Popover')).toHaveClass('is-open');
-    expect(container.querySelector('.ab-Popover')).not.toHaveAttribute('hidden');
+    expect(container.querySelector('.ab-Popover')).not.toHaveAttribute(
+      'hidden',
+    );
   });
 
   test('開いている状態でTriggerをクリックすると閉じる', async () => {

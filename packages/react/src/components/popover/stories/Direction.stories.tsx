@@ -50,10 +50,7 @@ const Demo = ({ placement, align }: Variant) => {
   const label = align === 'center' ? placement : `${placement}-${align}`;
 
   return (
-    <PopOver.Root
-      className="ab-m-30"
-      defaultOpen
-    >
+    <PopOver.Root className="ab-m-30" defaultOpen>
       <PopOver.Trigger className="ab-Button">{label}</PopOver.Trigger>
       <PopOver.Content placement={placement} align={align}>
         {PopOverMenu}

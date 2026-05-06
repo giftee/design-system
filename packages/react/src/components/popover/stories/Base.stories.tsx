@@ -10,12 +10,10 @@ export const Base: Story = {
     placement: 'bottom',
   },
 
-  render: (args) => {
-    return (
-      <PopOver.Root>
-        <PopOver.Trigger className="ab-Button">Popover Source</PopOver.Trigger>
-        <PopOver.Content {...args}>{PopOverMenu}</PopOver.Content>
-      </PopOver.Root>
-    );
-  },
+  render: (args) => (
+    <PopOver.Root>
+      <PopOver.Trigger className="ab-Button">Popover Source</PopOver.Trigger>
+      <PopOver.Content {...args}>{PopOverMenu}</PopOver.Content>
+    </PopOver.Root>
+  ),
 };
