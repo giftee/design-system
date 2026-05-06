@@ -92,7 +92,7 @@ describe('PopOver', () => {
 
   test('Root外をクリックすると閉じる', async () => {
     const user = userEvent.setup();
-    const { container } = render(
+    const { container, getByRole } = render(
       <div>
         <PopOver.Root defaultOpen>
           <PopOver.Trigger>trigger</PopOver.Trigger>
@@ -102,7 +102,7 @@ describe('PopOver', () => {
       </div>,
     );
 
-    await user.click(container.querySelector('button[type="button"] ~ button') ?? document.body);
+    await user.click(getByRole('button', { name: 'outside' }));
 
     expect(container.querySelector('.ab-Popover')).not.toHaveClass('is-open');
   });
