@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import { meta, PopOver, Button, PopOverMenu, type Story } from './shared';
+import { meta, PopOver, PopOverMenu, type Story } from './shared';
 import type { ComponentProps } from 'react';
 
 export default {
@@ -8,8 +8,8 @@ export default {
 };
 
 type Variant = {
-  placement: NonNullable<ComponentProps<typeof PopOver>['placement']>;
-  align: NonNullable<ComponentProps<typeof PopOver>['align']>;
+  placement: NonNullable<ComponentProps<typeof PopOver.Content>['placement']>;
+  align: NonNullable<ComponentProps<typeof PopOver.Content>['align']>;
 };
 
 const groups: { heading: string; variants: Variant[] }[] = [
@@ -52,14 +52,16 @@ const Demo = ({ placement, align }: Variant) => {
   const label = align === 'center' ? placement : `${placement}-${align}`;
 
   return (
-    <div className="ab-position-relative ab-inline-block ab-m-30">
-      <Button aria-expanded aria-controls={popoverId}>
-        {label}
-      </Button>
-      <PopOver id={popoverId} placement={placement} align={align} open>
+    <PopOver.Root
+      className="ab-m-30"
+      popoverId={popoverId}
+      defaultOpen
+    >
+      <PopOver.Trigger className="ab-Button">{label}</PopOver.Trigger>
+      <PopOver.Content placement={placement} align={align}>
         {PopOverMenu}
-      </PopOver>
-    </div>
+      </PopOver.Content>
+    </PopOver.Root>
   );
 };
 
