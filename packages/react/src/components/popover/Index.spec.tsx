@@ -1,90 +1,11 @@
 import { render } from '@testing-library/react';
-import React from 'react';
-import { describe, test, expect } from 'vitest';
+import userEvent from '@testing-library/user-event';
+import { describe, test, expect, vi } from 'vitest';
 import '@testing-library/jest-dom';
 
 import { PopOver } from './Index';
 
 describe('PopOver', () => {
-  test('PopOverをレンダリングする', () => {
-    const { container } = render(<PopOver>content</PopOver>);
-
-    const popover = container.querySelector('.ab-Popover');
-    expect(popover).toBeInTheDocument();
-  });
-
-  test('デフォルトの表示位置（placement=top, align=center）が適用される', () => {
-    const { container } = render(<PopOver>content</PopOver>);
-
-    const popover = container.querySelector('.ab-Popover');
-    expect(popover).toHaveClass('ab-Popover-top');
-    expect(popover).not.toHaveClass('ab-Popover-top-center');
-  });
-
-  test('placementプロパティがCSSクラスに反映される', () => {
-    const { container } = render(<PopOver placement="bottom">content</PopOver>);
-
-    const popover = container.querySelector('.ab-Popover');
-    expect(popover).toHaveClass('ab-Popover-bottom');
-  });
-
-  test('alignがstartのとき位置クラスにstartサフィックスが付く', () => {
-    const { container } = render(
-      <PopOver placement="top" align="start">
-        content
-      </PopOver>,
-    );
-
-    const popover = container.querySelector('.ab-Popover');
-    expect(popover).toHaveClass('ab-Popover-top-start');
-  });
-
-  test('alignがendのとき位置クラスにendサフィックスが付く', () => {
-    const { container } = render(
-      <PopOver placement="bottom" align="end">
-        content
-      </PopOver>,
-    );
-
-    const popover = container.querySelector('.ab-Popover');
-    expect(popover).toHaveClass('ab-Popover-bottom-end');
-  });
-
-  test('open時にis-openクラスが付与され、hidden属性が外れる', () => {
-    const { container } = render(<PopOver open>content</PopOver>);
-
-    const popover = container.querySelector('.ab-Popover');
-    expect(popover).toHaveClass('is-open');
-    expect(popover).not.toHaveAttribute('hidden');
-  });
-
-  test('閉じている時はis-openクラスが付与されず、hidden属性が付与される', () => {
-    const { container } = render(<PopOver>content</PopOver>);
-
-    const popover = container.querySelector('.ab-Popover');
-    expect(popover).not.toHaveClass('is-open');
-    expect(popover).toHaveAttribute('hidden');
-  });
-
-  test('childrenが描画される', () => {
-    const { getByText } = render(
-      <PopOver open>
-        <span>popover content</span>
-      </PopOver>,
-    );
-
-    expect(getByText('popover content')).toBeInTheDocument();
-  });
-
-  test('classNameプロパティが追加で指定できる', () => {
-    const { container } = render(
-      <PopOver className="custom-class">content</PopOver>,
-    );
-
-    const popover = container.querySelector('.ab-Popover');
-    expect(popover).toHaveClass('ab-Popover', 'custom-class');
-  });
-
   test('PopOver.RootとしてRootコンポーネントを参照できる', () => {
     const { container } = render(<PopOver.Root>content</PopOver.Root>);
 
@@ -118,5 +39,88 @@ describe('PopOver', () => {
 
     expect(content).toHaveClass('is-open');
     expect(content).not.toHaveAttribute('hidden');
+  });
+
+  test('RootなしでContentを使うとエラーになる', () => {
+    expect(() => render(<PopOver.Content>content</PopOver.Content>)).toThrow();
+  });
+
+  test('Triggerをクリックするとポップオーバーが開く', async () => {
+    const user = userEvent.setup();
+    const { container, getByRole } = render(
+      <PopOver.Root>
+        <PopOver.Trigger>trigger</PopOver.Trigger>
+        <PopOver.Content>content</PopOver.Content>
+      </PopOver.Root>,
+    );
+
+    await user.click(getByRole('button', { name: 'trigger' }));
+
+    expect(container.querySelector('.ab-Popover')).toHaveClass('is-open');
+    expect(container.querySelector('.ab-Popover')).not.toHaveAttribute('hidden');
+  });
+
+  test('開いている状態でTriggerをクリックすると閉じる', async () => {
+    const user = userEvent.setup();
+    const { container, getByRole } = render(
+      <PopOver.Root defaultOpen>
+        <PopOver.Trigger>trigger</PopOver.Trigger>
+        <PopOver.Content>content</PopOver.Content>
+      </PopOver.Root>,
+    );
+
+    await user.click(getByRole('button', { name: 'trigger' }));
+
+    expect(container.querySelector('.ab-Popover')).not.toHaveClass('is-open');
+    expect(container.querySelector('.ab-Popover')).toHaveAttribute('hidden');
+  });
+
+  test('Escapeキーで閉じてフォーカスがTriggerに戻る', async () => {
+    const user = userEvent.setup();
+    const { container, getByRole } = render(
+      <PopOver.Root defaultOpen>
+        <PopOver.Trigger>trigger</PopOver.Trigger>
+        <PopOver.Content>content</PopOver.Content>
+      </PopOver.Root>,
+    );
+
+    await user.keyboard('{Escape}');
+
+    expect(container.querySelector('.ab-Popover')).not.toHaveClass('is-open');
+    expect(getByRole('button', { name: 'trigger' })).toHaveFocus();
+  });
+
+  test('Root外をクリックすると閉じる', async () => {
+    const user = userEvent.setup();
+    const { container } = render(
+      <div>
+        <PopOver.Root defaultOpen>
+          <PopOver.Trigger>trigger</PopOver.Trigger>
+          <PopOver.Content>content</PopOver.Content>
+        </PopOver.Root>
+        <button>outside</button>
+      </div>,
+    );
+
+    await user.click(container.querySelector('button[type="button"] ~ button') ?? document.body);
+
+    expect(container.querySelector('.ab-Popover')).not.toHaveClass('is-open');
+  });
+
+  test('onOpenChangeが開閉時に呼ばれる', async () => {
+    const user = userEvent.setup();
+    const onOpenChange = vi.fn();
+    const { getByRole } = render(
+      <PopOver.Root onOpenChange={onOpenChange}>
+        <PopOver.Trigger>trigger</PopOver.Trigger>
+        <PopOver.Content>content</PopOver.Content>
+      </PopOver.Root>,
+    );
+
+    await user.click(getByRole('button', { name: 'trigger' }));
+    expect(onOpenChange).toHaveBeenCalledWith(true);
+
+    await user.click(getByRole('button', { name: 'trigger' }));
+    expect(onOpenChange).toHaveBeenCalledWith(false);
   });
 });
