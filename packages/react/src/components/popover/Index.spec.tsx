@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { describe, test, expect, vi } from 'vitest';
 import '@testing-library/jest-dom';
 
-import { PopOver } from './Index';
+import * as PopOver from './Index';
 
 describe('PopOver', () => {
   test('PopOver.RootとしてRootコンポーネントを参照できる', () => {

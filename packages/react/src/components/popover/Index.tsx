@@ -5,11 +5,11 @@ import type { PopOverContentProps } from './PopOverContent';
 import type { PopOverRootProps } from './PopOverRoot';
 import type { PopOverTriggerProps } from './PopOverTrigger';
 
-export const PopOver = {
-  Root: PopOverRoot,
-  Trigger: PopOverTrigger,
-  Content: PopOverContent,
-} as const;
+export {
+  PopOverRoot as Root,
+  PopOverTrigger as Trigger,
+  PopOverContent as Content,
+};
 
 export type {
   PopOverContentProps as ContentProps,
