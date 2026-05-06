@@ -9,6 +9,16 @@ import type {
 
 export type PopOverTriggerProps = ComponentPropsWithoutRef<'button'>;
 
+/**
+ *
+ * Docs:
+ *
+ * - [Popover](https://abukuma.netlify.app/react/component/popover)
+ *
+ * GitHub:
+ *
+ * - [PopOver](https://github.com/giftee/design-system/tree/main/packages/react/src/components/popover)
+ */
 export const PopOverTrigger = forwardRef<
   ElementRef<'button'>,
   PopOverTriggerProps
@@ -38,6 +48,7 @@ export const PopOverTrigger = forwardRef<
         disabled={disabled}
         aria-expanded={open}
         aria-controls={popoverId}
+        aria-haspopup="true"
         onClick={handleClick}
       >
         {children}

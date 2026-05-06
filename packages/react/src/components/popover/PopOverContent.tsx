@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
-import { useOptionalPopOverRootContext } from './PopOverRoot';
+import { usePopOverRootContext } from './PopOverRoot';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
 export type PopOverContentProps = ComponentPropsWithoutRef<'div'> & {
@@ -14,33 +14,27 @@ export type PopOverContentProps = ComponentPropsWithoutRef<'div'> & {
    * @default 'center'
    */
   align?: 'center' | 'start' | 'end';
-  /**
-   * 開閉状態。true のとき is-open クラスが付与され、hidden 属性が外れる。
-   * PopOver.Root 配下では Root の開閉状態が使われる。
-   * @default false
-   */
-  open?: boolean;
 };
 
+/**
+ *
+ * Docs:
+ *
+ * - [Popover](https://abukuma.netlify.app/react/component/popover)
+ *
+ * GitHub:
+ *
+ * - [PopOver](https://github.com/giftee/design-system/tree/main/packages/react/src/components/popover)
+ */
 export const PopOverContent = forwardRef<
   ElementRef<'div'>,
   PopOverContentProps
 >(
   (
-    {
-      placement = 'top',
-      align = 'center',
-      open: controlledOpen,
-      id,
-      children,
-      className,
-      ...rest
-    },
+    { placement = 'top', align = 'center', children, className, ...rest },
     forwardedRef,
   ) => {
-    const context = useOptionalPopOverRootContext();
-    const open = controlledOpen ?? context?.open ?? false;
-    const popoverId = id ?? context?.popoverId;
+    const { open, popoverId } = usePopOverRootContext();
     const positionClass =
       align === 'center'
         ? `ab-Popover-${placement}`
@@ -55,10 +49,10 @@ export const PopOverContent = forwardRef<
     return (
       <div
         ref={forwardedRef}
+        {...rest}
         id={popoverId}
         hidden={!open}
         className={classes}
-        {...rest}
       >
         {children}
       </div>
