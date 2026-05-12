@@ -1,6 +1,6 @@
 import { meta } from './shared';
 import type { Story } from './shared';
-import { downToBracket } from '../../../../story_assets/inlines';
+import { upFromBracket } from '../../../../story_assets/inlines';
 
 export default {
   ...meta,
@@ -12,7 +12,7 @@ export const Size: Story = {
     return `
     <div class="ab-Dropzone ab-Dropzone-small ab-mb-10">
       <div class="ab-Dropzone-input">
-        ${downToBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
+        ${upFromBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
         <div>
           <p class="ab-text-body-s ab-font-bold">
             ファイルをドラッグしてアップロード
@@ -47,7 +47,7 @@ export const Size: Story = {
 
     <div class="ab-Dropzone ab-Dropzone-small is-dragging ab-mb-10">
       <div class="ab-Dropzone-input">
-        ${downToBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
+        ${upFromBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
         <div>
           <p class="ab-text-body-s ab-font-bold">
             ファイルをドラッグしてアップロード
@@ -82,7 +82,7 @@ export const Size: Story = {
 
     <div class="ab-Dropzone ab-Dropzone-small is-uploading ab-mb-10">
       <div class="ab-Dropzone-input">
-        ${downToBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
+        ${upFromBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
         <div>
           <p class="ab-text-body-s ab-font-bold">
             ファイルをドラッグしてアップロード
@@ -117,7 +117,7 @@ export const Size: Story = {
 
     <div class="ab-Dropzone ab-Dropzone-small is-error ab-mb-10">
       <div class="ab-Dropzone-input">
-        ${downToBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
+        ${upFromBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
         <div>
           <p class="ab-text-body-s ab-font-bold">
             ファイルをドラッグしてアップロード
@@ -152,7 +152,7 @@ export const Size: Story = {
 
     <div class="ab-Dropzone ab-Dropzone-small is-success ab-mb-10">
       <div class="ab-Dropzone-input">
-        ${downToBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
+        ${upFromBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
         <div>
           <p class="ab-text-body-s ab-font-bold">
             ファイルをドラッグしてアップロード

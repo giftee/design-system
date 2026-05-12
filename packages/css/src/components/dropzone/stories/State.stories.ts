@@ -1,6 +1,6 @@
 import { meta } from './shared';
 import type { Story } from './shared';
-import { downToBracket } from '../../../../story_assets/inlines';
+import { upFromBracket } from '../../../../story_assets/inlines';
 
 export default {
   ...meta,
@@ -12,7 +12,7 @@ export const State: Story = {
     return `
 <div class="ab-Dropzone ab-mb-10">
   <div class="ab-Dropzone-input">
-    ${downToBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
+    ${upFromBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
     <div>
       <p class="ab-font-bold">
         ファイルをドラッグしてアップロード
@@ -49,7 +49,7 @@ export const State: Story = {
 
 <div class="ab-Dropzone is-dragging ab-mb-10">
   <div class="ab-Dropzone-input">
-    ${downToBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
+    ${upFromBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
     <div>
       <p class="ab-font-bold">
         ファイルをドラッグしてアップロード
@@ -86,7 +86,7 @@ export const State: Story = {
 
 <div class="ab-Dropzone is-uploading ab-mb-10">
   <div class="ab-Dropzone-input">
-    ${downToBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
+    ${upFromBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
     <div>
       <p class="ab-font-bold">
         ファイルをドラッグしてアップロード
@@ -123,7 +123,7 @@ export const State: Story = {
 
 <div class="ab-Dropzone is-error ab-mb-10">
   <div class="ab-Dropzone-input">
-    ${downToBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
+    ${upFromBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
     <div>
       <p class="ab-font-bold">
         ファイルをドラッグしてアップロード
@@ -160,7 +160,7 @@ export const State: Story = {
 
 <div class="ab-Dropzone is-success ab-mb-10">
   <div class="ab-Dropzone-input">
-    ${downToBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
+    ${upFromBracket('ab-Icon ab-Icon-primary ab-Icon-medium')}
     <div>
       <p class="ab-font-bold">
         ファイルをドラッグしてアップロード
