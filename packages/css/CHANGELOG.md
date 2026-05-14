@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.3.0
+
+### Minor Changes
+
+- [#1111](https://github.com/giftee/design-system/pull/1111) [`dc72a07`](https://github.com/giftee/design-system/commit/dc72a0708cba4294dde5a161f258c25da0cf89d0) Thanks [@aidyak](https://github.com/aidyak)! - [fix: Select] ドロップダウンの色をブランドカラーから灰色に変更
+
 ## 3.2.1
 
 ### Patch Changes
