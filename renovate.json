@@ -33,6 +33,10 @@
         "@testing-library/"
       ],
       "automerge": true
+    },
+    {
+      "matchManagers": ["npm"],
+      "minimumReleaseAge": "7 days"
     }
   ],
   "lockFileMaintenance": {
