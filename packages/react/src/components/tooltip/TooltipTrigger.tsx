@@ -10,6 +10,7 @@ export const TooltipTrigger = ({ children }: TooltipTriggerProps) => {
 
   return (
     <button
+      type="button"
       aria-describedby={contentId}
       onMouseEnter={() => {
         setOpen(true);
