@@ -7,7 +7,7 @@ describe('Tooltip', () => {
   test('Tooltipをレンダリングする', () => {
     const { getByRole } = render(
       <Root>
-        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Trigger>トリガー</Trigger>
         <Content>ツールチップ</Content>
       </Root>,
     );
@@ -18,7 +18,7 @@ describe('Tooltip', () => {
   test('Rootに ab-Tooltip クラスが付与される', () => {
     const { container } = render(
       <Root>
-        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Trigger>トリガー</Trigger>
         <Content>ツールチップ</Content>
       </Root>,
     );
@@ -29,7 +29,7 @@ describe('Tooltip', () => {
   test('Contentは常にDOMにレンダリングされ ab-Tooltip-description クラスが付与される', () => {
     const { getByText } = render(
       <Root>
-        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Trigger>トリガー</Trigger>
         <Content>ツールチップテキスト</Content>
       </Root>,
     );
@@ -42,7 +42,7 @@ describe('Tooltip', () => {
   test('デフォルトのpositionはtopである', () => {
     const { container } = render(
       <Root>
-        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Trigger>トリガー</Trigger>
         <Content>ツールチップ</Content>
       </Root>,
     );
@@ -55,7 +55,7 @@ describe('Tooltip', () => {
   test('positionプロパティが正しくCSSクラスに反映される', () => {
     const { container: rightContainer } = render(
       <Root position="right">
-        <Trigger>{(props) => <button {...props}>右トリガー</button>}</Trigger>
+        <Trigger>右トリガー</Trigger>
         <Content>右</Content>
       </Root>,
     );
@@ -65,7 +65,7 @@ describe('Tooltip', () => {
 
     const { container: bottomContainer } = render(
       <Root position="bottom">
-        <Trigger>{(props) => <button {...props}>下トリガー</button>}</Trigger>
+        <Trigger>下トリガー</Trigger>
         <Content>下</Content>
       </Root>,
     );
@@ -75,7 +75,7 @@ describe('Tooltip', () => {
 
     const { container: leftContainer } = render(
       <Root position="left">
-        <Trigger>{(props) => <button {...props}>左トリガー</button>}</Trigger>
+        <Trigger>左トリガー</Trigger>
         <Content>左</Content>
       </Root>,
     );
@@ -87,7 +87,7 @@ describe('Tooltip', () => {
   test('classNameプロパティが追加で指定できる（Root）', () => {
     const { container } = render(
       <Root className="custom-class">
-        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Trigger>トリガー</Trigger>
         <Content>ツールチップ</Content>
       </Root>,
     );
@@ -101,7 +101,7 @@ describe('Tooltip', () => {
   test('Contentにtooltipロールとidが付与され、Triggerのaria-describedbyと一致する', () => {
     const { getByRole } = render(
       <Root>
-        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Trigger>トリガー</Trigger>
         <Content>ツールチップ</Content>
       </Root>,
     );
@@ -116,7 +116,7 @@ describe('Tooltip', () => {
   test('classNameプロパティが追加で指定できる（Content）', () => {
     const { getByText } = render(
       <Root>
-        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Trigger>トリガー</Trigger>
         <Content className="custom-content-class">ツールチップ</Content>
       </Root>,
     );
@@ -130,7 +130,7 @@ describe('Tooltip', () => {
   test('フォーカス時にContentのインラインスタイルで表示状態になる', () => {
     const { getByRole } = render(
       <Root>
-        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Trigger>トリガー</Trigger>
         <Content>ツールチップ</Content>
       </Root>,
     );
@@ -148,7 +148,7 @@ describe('Tooltip', () => {
   test('Escapeキー押下でフォーカス由来の表示状態が解除される', () => {
     const { getByRole } = render(
       <Root>
-        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Trigger>トリガー</Trigger>
         <Content>ツールチップ</Content>
       </Root>,
     );
@@ -166,7 +166,7 @@ describe('Tooltip', () => {
   test('Escape以外のキーでは表示状態が維持される', () => {
     const { getByRole } = render(
       <Root>
-        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Trigger>トリガー</Trigger>
         <Content>ツールチップ</Content>
       </Root>,
     );
@@ -182,7 +182,7 @@ describe('Tooltip', () => {
   test('ホバー中にdocument経由のEscapeでも非表示になる', () => {
     const { getByRole } = render(
       <Root>
-        <Trigger>{(props) => <button {...props}>トリガー</button>}</Trigger>
+        <Trigger>トリガー</Trigger>
         <Content>ツールチップ</Content>
       </Root>,
     );
