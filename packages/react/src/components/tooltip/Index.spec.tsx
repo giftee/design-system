@@ -114,6 +114,21 @@ describe('Tooltip', () => {
     expect(trigger).toHaveAttribute('aria-describedby', tooltip.id);
   });
 
+  test('Contentにidが指定されても生成されたidでTriggerと紐づく', () => {
+    const { getByRole } = render(
+      <Root>
+        <Trigger>トリガー</Trigger>
+        <Content id="custom-tooltip-id">ツールチップ</Content>
+      </Root>,
+    );
+
+    const tooltip = getByRole('tooltip');
+    const trigger = getByRole('button', { name: 'トリガー' });
+
+    expect(tooltip).not.toHaveAttribute('id', 'custom-tooltip-id');
+    expect(trigger).toHaveAttribute('aria-describedby', tooltip.id);
+  });
+
   test('classNameプロパティが追加で指定できる（Content）', () => {
     const { getByText } = render(
       <Root>
@@ -146,6 +161,23 @@ describe('Tooltip', () => {
     expect(tooltip).not.toHaveStyle({ opacity: 1, visibility: 'visible' });
   });
 
+  test('Contentのstyleにopacityとvisibilityが指定されてもフォーカス時は表示状態になる', () => {
+    const { getByRole, getByText } = render(
+      <Root>
+        <Trigger>トリガー</Trigger>
+        <Content style={{ opacity: 0, visibility: 'hidden' }}>
+          ツールチップ
+        </Content>
+      </Root>,
+    );
+
+    const trigger = getByRole('button');
+    const tooltip = getByText('ツールチップ');
+
+    fireEvent.focus(trigger);
+    expect(tooltip).toHaveStyle({ opacity: 1, visibility: 'visible' });
+  });
+
   test('Escapeキー押下でフォーカス由来の表示状態が解除される', () => {
     const { getByRole } = render(
       <Root>
@@ -162,6 +194,24 @@ describe('Tooltip', () => {
 
     fireEvent.keyDown(trigger, { key: 'Escape' });
     expect(tooltip).not.toHaveStyle({ opacity: 1, visibility: 'visible' });
+  });
+
+  test('Contentのstyleにopacityとvisibilityが指定されてもEscapeキー押下で非表示になる', () => {
+    const { getByRole } = render(
+      <Root>
+        <Trigger>トリガー</Trigger>
+        <Content style={{ opacity: 1, visibility: 'visible' }}>
+          ツールチップ
+        </Content>
+      </Root>,
+    );
+
+    const trigger = getByRole('button');
+    const tooltip = getByRole('tooltip');
+
+    fireEvent.focus(trigger);
+    fireEvent.keyDown(trigger, { key: 'Escape' });
+    expect(tooltip).toHaveStyle({ opacity: 0, visibility: 'hidden' });
   });
 
   test('Escape以外のキーでは表示状態が維持される', () => {

@@ -24,18 +24,18 @@ export const TooltipContent = forwardRef<
 
   return (
     <span
+      {...rest}
       ref={forwardedRef}
       className={classes}
       role="tooltip"
       id={contentId}
       style={
         dismissed
-          ? { opacity: 0, visibility: 'hidden', ...style }
+          ? { ...style, opacity: 0, visibility: 'hidden' }
           : open
-            ? { opacity: 1, visibility: 'visible', ...style }
+            ? { ...style, opacity: 1, visibility: 'visible' }
             : style
       }
-      {...rest}
     >
       {children}
     </span>
