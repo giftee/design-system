@@ -1,4 +1,5 @@
 import { render, fireEvent } from '@testing-library/react';
+import { createRef } from 'react';
 import { describe, test, expect } from 'vitest';
 
 import { Root, Content, Trigger } from './Index';
@@ -177,6 +178,18 @@ describe('Tooltip', () => {
     fireEvent.focus(trigger);
     fireEvent.keyDown(trigger, { key: 'Enter' });
     expect(tooltip).toHaveStyle({ opacity: 1, visibility: 'visible' });
+  });
+
+  test('Triggerにrefが転送される', () => {
+    const ref = createRef<HTMLButtonElement>();
+    const { getByRole } = render(
+      <Root>
+        <Trigger ref={ref}>トリガー</Trigger>
+        <Content>ツールチップ</Content>
+      </Root>,
+    );
+
+    expect(ref.current).toBe(getByRole('button', { name: 'トリガー' }));
   });
 
   test('ホバー中にdocument経由のEscapeでも非表示になる', () => {
