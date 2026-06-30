@@ -378,11 +378,11 @@
         "$value": 9999
       },
       "percent-50": {
-        "$type": "fontFamily",
+        "$type": "string",
         "$value": "50%"
       },
       "percent-100": {
-        "$type": "fontFamily",
+        "$type": "string",
         "$value": "100%"
       }
     },
@@ -394,7 +394,7 @@
         },
         "en": {
           "$type": "fontFamily",
-          "$value": "Noto Sans JP"
+          "$value": "Avenir"
         }
       },
       "size": {
