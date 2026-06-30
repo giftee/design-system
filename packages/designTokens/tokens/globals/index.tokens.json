@@ -3,19 +3,19 @@
     "color": {
       "white": {
         "50": {
-          "$value": "rgba(255, 255, 255, 0.05)",
+          "$value": "#ffffff0d",
           "$type": "color"
         },
         "200": {
-          "$value": "rgba(255, 255, 255, 0.25)",
+          "$value": "#ffffff40",
           "$type": "color"
         },
         "400": {
-          "$value": "rgba(255, 255, 255, 0.50)",
+          "$value": "#ffffff80",
           "$type": "color"
         },
         "600": {
-          "$value": "rgba(255, 255, 255, 0.75)",
+          "$value": "#ffffffbf",
           "$type": "color"
         },
         "800": {
@@ -215,36 +215,6 @@
           "$type": "color"
         }
       },
-      "blue": {
-        "50": {
-          "$value": "#ebf5ff",
-          "$type": "color"
-        },
-        "100": {
-          "$value": "#cce7ff",
-          "$type": "color"
-        },
-        "200": {
-          "$value": "#b4dcff",
-          "$type": "color"
-        },
-        "400": {
-          "$value": "#69b4ff",
-          "$type": "color"
-        },
-        "600": {
-          "$value": "#1e90ff",
-          "$type": "color"
-        },
-        "800": {
-          "$value": "#0050a0",
-          "$type": "color"
-        },
-        "900": {
-          "$value": "#003c78",
-          "$type": "color"
-        }
-      },
       "green": {
         "50": {
           "$value": "#f0faf0",
@@ -275,18 +245,48 @@
           "$type": "color"
         }
       },
+      "blue": {
+        "50": {
+          "$value": "#ebf5ff",
+          "$type": "color"
+        },
+        "100": {
+          "$value": "#cce7ff",
+          "$type": "color"
+        },
+        "200": {
+          "$value": "#b4dcff",
+          "$type": "color"
+        },
+        "400": {
+          "$value": "#69b4ff",
+          "$type": "color"
+        },
+        "600": {
+          "$value": "#1e90ff",
+          "$type": "color"
+        },
+        "800": {
+          "$value": "#0050a0",
+          "$type": "color"
+        },
+        "900": {
+          "$value": "#003c78",
+          "$type": "color"
+        }
+      },
       "transparency": {
         "slate": {
           "10": {
-            "$value": "rgba(35, 35, 35, 0.1)",
+            "$value": "#2323231a",
             "$type": "color"
           },
           "20": {
-            "$value": "rgba(35, 35, 35, 0.2)",
+            "$value": "#23232333",
             "$type": "color"
           },
           "70": {
-            "$value": "rgba(35, 35, 35, 0.70)",
+            "$value": "#232323b3",
             "$type": "color"
           }
         }
