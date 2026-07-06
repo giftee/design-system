@@ -1,5 +1,15 @@
 # @giftee/abukuma-design-tokens
 
+## 3.0.0
+
+### Major Changes
+
+- [#1160](https://github.com/giftee/design-system/pull/1160) [`6ea6ec4`](https://github.com/giftee/design-system/commit/6ea6ec4864d52d3ac1b6f0f9fa0c6ef5fe3293aa) Thanks [@aidyak](https://github.com/aidyak)! - [add:theme]skeleton-dark を追加
+
+### Patch Changes
+
+- [#1158](https://github.com/giftee/design-system/pull/1158) [`fe72c1d`](https://github.com/giftee/design-system/commit/fe72c1df0552c4da815f80b0bdd6917016d16295) Thanks [@aidyak](https://github.com/aidyak)! - [fix: format] Figma export プラグイン変更に合わせてデザイントークンを W3C Design Tokens 形式に移行
+
 ## 2.1.0
 
 ### Minor Changes
