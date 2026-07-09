@@ -36,10 +36,6 @@
           "$value": "{semantic.color.brand.lightest}",
           "$type": "color"
         },
-        "disabled": {
-          "$value": "{global.color.slate.100}",
-          "$type": "color"
-        },
         "base": {
           "$value": "{global.color.steel.50}",
           "$type": "color"
@@ -58,6 +54,14 @@
         },
         "rest-accent": {
           "$value": "{semantic.color.background.brand-secondary}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{global.color.slate.200}",
+          "$type": "color"
+        },
+        "disabled-secondary": {
+          "$value": "{global.color.slate.100}",
           "$type": "color"
         },
         "positive-primary": {
