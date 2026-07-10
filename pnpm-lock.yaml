@@ -49,7 +49,7 @@ importers:
         specifier: ^8.5.16
         version: 8.5.16
       prettier:
-        specifier: ^3.9.1
+        specifier: ^3.9.4
         version: 3.9.4
       react:
         specifier: ^19.2.6
@@ -98,7 +98,7 @@ importers:
         version: 5.5.0(tslib@2.8.1)
     devDependencies:
       prettier:
-        specifier: ^3.9.1
+        specifier: ^3.9.4
         version: 3.9.4
 
   packages/react:
@@ -185,7 +185,7 @@ importers:
         specifier: ^4.14.1
         version: 4.18.3(typescript@5.9.3)
       prettier:
-        specifier: ^3.9.1
+        specifier: ^3.9.4
         version: 3.9.4
       react:
         specifier: ^19.2.6
