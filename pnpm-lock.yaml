@@ -46,7 +46,7 @@ importers:
         specifier: ^10.1.1
         version: 10.1.1(@babel/core@8.0.1)
       postcss:
-        specifier: ^8.5.17
+        specifier: ^8.5.19
         version: 8.5.19
       prettier:
         specifier: ^3.9.5
