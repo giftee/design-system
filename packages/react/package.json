@@ -47,7 +47,7 @@
     "happy-dom": "^20.10.6",
     "markuplint": "^4.14.1",
     "prettier": "^3.9.5",
-    "react": "^19.2.6",
+    "react": "^19.2.7",
     "react-dom": "^19.2.6",
     "storybook": "10.3.1",
     "typescript": "^5.9.3",
