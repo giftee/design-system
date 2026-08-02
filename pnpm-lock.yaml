@@ -67,7 +67,7 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1(rolldown@1.1.5)
       sass:
-        specifier: ^1.101.3
+        specifier: ^1.102.0
         version: 1.102.0
       storybook:
         specifier: 10.3.1
@@ -5373,7 +5373,7 @@ snapshots:
     dependencies:
       '@types/estree': 1.0.9
       estree-walker: 2.0.2
-      picomatch: 4.0.4
+      picomatch: 4.0.5
 
   '@rtsao/scc@1.1.0': {}
 
