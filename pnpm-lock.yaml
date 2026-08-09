@@ -176,7 +176,7 @@ importers:
         specifier: 10.3.1
         version: 10.3.1(eslint@10.8.0)(storybook@10.3.1(@testing-library/dom@10.4.1)(prettier@3.9.6)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(typescript@5.9.3)
       globals:
-        specifier: ^17.8.0
+        specifier: ^17.9.0
         version: 17.9.0
       happy-dom:
         specifier: ^20.11.1
