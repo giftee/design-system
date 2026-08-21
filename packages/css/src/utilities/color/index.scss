@@ -35,11 +35,7 @@ $background-colors: (
 }
 
 // Hover Background
-$hover-background-colors: (
-  'on-neutral',
-  'on-brand',
-  'on-negative'
-);
+$hover-background-colors: ('on-neutral', 'on-brand', 'on-negative');
 
 @each $hover-background-color in $hover-background-colors {
   .ab-hover-bg-#{$hover-background-color} {
