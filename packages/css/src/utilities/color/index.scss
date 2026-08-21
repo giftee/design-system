@@ -1,3 +1,5 @@
+@use '../../mixins' as mixins;
+
 $colors: (
   'default',
   'secondary',
@@ -29,5 +31,18 @@ $background-colors: (
 @each $background-color in $background-colors {
   .ab-bg-#{$background-color} {
     background-color: var(--ab-semantic-color-background-#{$background-color});
+  }
+}
+
+// Hover Background
+$hover-background-colors: ('on-neutral', 'on-brand', 'on-negative');
+
+@each $hover-background-color in $hover-background-colors {
+  .ab-hover-bg-#{$hover-background-color} {
+    @include mixins.hover {
+      background-color: var(
+        --ab-semantic-color-background-hover-#{$hover-background-color}
+      );
+    }
   }
 }
