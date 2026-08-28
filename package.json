@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.0",
-    "@changesets/cli": "^3.0.0"
+    "@changesets/cli": "^3.0.1"
   },
   "engines": {
     "node": ">=18.0.0 <25",
