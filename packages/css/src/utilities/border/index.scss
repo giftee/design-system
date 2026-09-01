@@ -62,3 +62,21 @@
     border-bottom-left-radius: #{$radiusValue};
   }
 }
+
+$border-colors: (
+  'brand',
+  'bold',
+  'light',
+  'info',
+  'notice',
+  'positive',
+  'negative',
+  'neutral',
+  'disable'
+);
+
+@each $border-color in $border-colors {
+  .ab-border-color-#{$border-color} {
+    border-color: var(--ab-semantic-color-border-#{$border-color});
+  }
+}
