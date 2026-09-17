@@ -63,13 +63,15 @@
   }
 }
 
+// 公開名 → 現行トークン（Figma で light→default / bold→strong 後に揃える）
 $border-colors: (
-  'brand',
-  'default'
+  'brand': 'brand',
+  'default': 'light',
+  'strong': 'bold',
 );
 
-@each $border-color in $border-colors {
-  .ab-border-color-#{$border-color} {
-    border-color: var(--ab-semantic-color-border-#{$border-color});
+@each $class-name, $token-name in $border-colors {
+  .ab-border-color-#{$class-name} {
+    border-color: var(--ab-semantic-color-border-#{$token-name});
   }
 }
