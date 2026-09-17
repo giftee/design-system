@@ -65,14 +65,7 @@
 
 $border-colors: (
   'brand',
-  'bold',
-  'light',
-  'info',
-  'notice',
-  'positive',
-  'negative',
-  'neutral',
-  'disable'
+  'default'
 );
 
 @each $border-color in $border-colors {
