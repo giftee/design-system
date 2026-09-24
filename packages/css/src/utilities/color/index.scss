@@ -1,3 +1,5 @@
+@use '../../mixins' as mixins;
+
 $colors: (
   'default',
   'secondary',
@@ -29,5 +31,31 @@ $background-colors: (
 @each $background-color in $background-colors {
   .ab-bg-#{$background-color} {
     background-color: var(--ab-semantic-color-background-#{$background-color});
+  }
+}
+
+// Hover Background
+// rest は Button と同じ。neutral は乗せるまで色を変えない。
+$hover-background-colors: (
+  'on-neutral': null,
+  'on-brand': 'brand-primary',
+  'on-negative': 'rest-primary',
+);
+
+@each $hover-background-color,
+  $rest-background-color in $hover-background-colors
+{
+  .ab-hover-bg-#{$hover-background-color} {
+    @if $rest-background-color {
+      background-color: var(
+        --ab-semantic-color-background-#{$rest-background-color}
+      );
+    }
+
+    @include mixins.hover {
+      background-color: var(
+        --ab-semantic-color-background-hover-#{$hover-background-color}
+      );
+    }
   }
 }
