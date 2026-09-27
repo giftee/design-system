@@ -203,8 +203,8 @@ importers:
         specifier: ^8.3.0
         version: 8.3.0(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.104.1)(yaml@2.9.0)
       vite-plugin-dts:
-        specifier: ^5.1.0
-        version: 5.1.0(esbuild@0.27.7)(rolldown@1.2.6)(typescript@5.9.3)(vite@8.3.0(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.104.1)(yaml@2.9.0))
+        specifier: ^5.1.1
+        version: 5.1.1(esbuild@0.27.7)(rolldown@1.2.6)(typescript@5.9.3)(vite@8.3.0(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.104.1)(yaml@2.9.0))
       vitest:
         specifier: ^4.1.11
         version: 4.1.11(@types/node@25.6.2)(happy-dom@20.14.5)(vite@8.3.0(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.104.1)(yaml@2.9.0))
@@ -3936,8 +3936,8 @@ packages:
   unist-util-visit@5.1.0:
     resolution: {integrity: sha512-m+vIdyeCOpdr/QeQCu2EzxX/ohgS8KbnPDgFni4dQsfSCtpz8UqDyY5GjRru8PDKuYn7Fq19j1CQ+nJSsGKOzg==}
 
-  unplugin-dts@1.1.0:
-    resolution: {integrity: sha512-KZJ+qk+lmd9dJY/PJvDRFL9BUtVubKDiX7Ai/X6mlkCArcQNzwmupKjVqHbRA42uqO5ZfFRFc+o8/OCbQ1GonQ==}
+  unplugin-dts@1.1.1:
+    resolution: {integrity: sha512-Z2VcabC0hjYuzF62oWmZXVoxagkM8bUWgqUy+dotoJTPnooR5mNaxbpv63JCmcaxdGCW2Bb75omK6FOryOYCRg==}
     peerDependencies:
       '@microsoft/api-extractor': '>=7'
       '@rspack/core': ^1
@@ -4011,8 +4011,8 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite-plugin-dts@5.1.0:
-    resolution: {integrity: sha512-MfLc2G+mXPUDGGxpHQeYbdunavFP9UpT9yxiAsTgUXRxfEd3HqysSAM4E72jhz5eIz3OOexCHkqiVlQq8ok9/A==}
+  vite-plugin-dts@5.1.1:
+    resolution: {integrity: sha512-U5dyX3DPFvHB+gaJIULn90kKGsXNYllyJ3vn491Y+LGu2nL5Fb8z7YgurN/Pi6ZFlnGljh2wSM0ZbFogSh4yAg==}
     peerDependencies:
       '@microsoft/api-extractor': '>=7'
       rollup: '>=3'
@@ -8536,7 +8536,7 @@ snapshots:
       unist-util-is: 6.0.1
       unist-util-visit-parents: 6.0.2
 
-  unplugin-dts@1.1.0(esbuild@0.27.7)(rolldown@1.2.6)(typescript@5.9.3)(vite@8.3.0(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.104.1)(yaml@2.9.0)):
+  unplugin-dts@1.1.1(esbuild@0.27.7)(rolldown@1.2.6)(typescript@5.9.3)(vite@8.3.0(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.104.1)(yaml@2.9.0)):
     dependencies:
       '@rollup/pluginutils': 5.3.0
       '@volar/typescript': 2.4.28
@@ -8609,9 +8609,9 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite-plugin-dts@5.1.0(esbuild@0.27.7)(rolldown@1.2.6)(typescript@5.9.3)(vite@8.3.0(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.104.1)(yaml@2.9.0)):
+  vite-plugin-dts@5.1.1(esbuild@0.27.7)(rolldown@1.2.6)(typescript@5.9.3)(vite@8.3.0(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.104.1)(yaml@2.9.0)):
     dependencies:
-      unplugin-dts: 1.1.0(esbuild@0.27.7)(rolldown@1.2.6)(typescript@5.9.3)(vite@8.3.0(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.104.1)(yaml@2.9.0))
+      unplugin-dts: 1.1.1(esbuild@0.27.7)(rolldown@1.2.6)(typescript@5.9.3)(vite@8.3.0(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.104.1)(yaml@2.9.0))
     optionalDependencies:
       vite: 8.3.0(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.104.1)(yaml@2.9.0)
     transitivePeerDependencies:
