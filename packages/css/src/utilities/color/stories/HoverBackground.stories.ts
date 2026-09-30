@@ -21,25 +21,13 @@ export const HoverBackground: Story = {
       </div>
     </div>
   </div>
-
-  <div class="ab-flex ab-flex-column ab-gap-2">
-    <p class="ab-text-body-s ab-text-secondary">ab-hover-bg-on-brand</p>
-    <div class="ab-flex ab-gap-4">
-      <div class="ab-hover-bg-on-brand ab-p-4 ab-border">
-        <h1 class="ab-text-headline-l ab-text-contrast">Default</h1>
-      </div>
-      <div id="hover-on-brand" class="ab-hover-bg-on-brand ab-p-4 ab-border">
-        <h1 class="ab-text-headline-l ab-text-contrast">Hover</h1>
-      </div>
-    </div>
-  </div>
 </div>
 `;
   },
   args: {},
   parameters: {
     pseudo: {
-      hover: ['#hover-on-neutral', '#hover-on-brand'],
+      hover: '#hover-on-neutral',
     },
   },
 };
