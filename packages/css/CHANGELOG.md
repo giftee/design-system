@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.4.0
+
+### Minor Changes
+
+- [#1231](https://github.com/giftee/design-system/pull/1231) [`50ba842`](https://github.com/giftee/design-system/commit/50ba84213eb3626ccce95d2d1e88dc4bcb69d987) Thanks [@aidyak](https://github.com/aidyak)! - [add:utility]hover-backgroundを追加
+
 ## 3.3.1
 
 ### Patch Changes
