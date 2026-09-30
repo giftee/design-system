@@ -33,25 +33,13 @@ export const HoverBackground: Story = {
       </div>
     </div>
   </div>
-
-  <div class="ab-flex ab-flex-column ab-gap-2">
-    <p class="ab-text-body-s ab-text-secondary">ab-hover-bg-on-negative</p>
-    <div class="ab-flex ab-gap-4">
-      <div class="ab-hover-bg-on-negative ab-p-4 ab-border">
-        <h1 class="ab-text-headline-l ab-text-negative">Default</h1>
-      </div>
-      <div id="hover-on-negative" class="ab-hover-bg-on-negative ab-p-4 ab-border">
-        <h1 class="ab-text-headline-l ab-text-negative">Hover</h1>
-      </div>
-    </div>
-  </div>
 </div>
 `;
   },
   args: {},
   parameters: {
     pseudo: {
-      hover: ['#hover-on-neutral', '#hover-on-brand', '#hover-on-negative'],
+      hover: ['#hover-on-neutral', '#hover-on-brand'],
     },
   },
 };

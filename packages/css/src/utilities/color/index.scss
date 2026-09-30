@@ -39,7 +39,6 @@ $background-colors: (
 $hover-background-colors: (
   'on-neutral': null,
   'on-brand': 'brand-primary',
-  'on-negative': 'rest-primary',
 );
 
 @each $hover-background-color,
