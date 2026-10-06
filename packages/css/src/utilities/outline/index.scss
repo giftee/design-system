@@ -1,0 +1,12 @@
+$focus-visible-outline-colors: ('brand');
+
+@each $focus-visible-outline-color in $focus-visible-outline-colors {
+  .ab-focus-visible-outline-#{$focus-visible-outline-color} {
+    &:focus-visible {
+      outline: solid
+        var(--ab-semantic-color-border-#{$focus-visible-outline-color})
+        2px;
+      outline-offset: 2px;
+    }
+  }
+}
