@@ -46,3 +46,29 @@ $hover-background-colors: ('on-neutral');
     }
   }
 }
+
+// Focus Visible Background
+$focus-visible-background-colors: ('on-neutral');
+
+@each $focus-visible-background-color in $focus-visible-background-colors {
+  .ab-focus-visible-bg-#{$focus-visible-background-color} {
+    &:focus-visible {
+      background-color: var(
+        --ab-semantic-color-background-focus-#{$focus-visible-background-color}
+      );
+    }
+  }
+}
+
+// Active Background
+$active-background-colors: ('on-neutral');
+
+@each $active-background-color in $active-background-colors {
+  .ab-active-bg-#{$active-background-color} {
+    &:active {
+      background-color: var(
+        --ab-semantic-color-background-pressed-#{$active-background-color}
+      );
+    }
+  }
+}
