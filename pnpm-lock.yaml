@@ -67,7 +67,7 @@ importers:
         specifier: ^7.1.1
         version: 7.1.1(rolldown@1.2.12)
       sass:
-        specifier: ^1.105.0
+        specifier: ^1.105.1
         version: 1.105.1
       storybook:
         specifier: 10.3.1
