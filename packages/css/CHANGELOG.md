@@ -1,5 +1,11 @@
 # @giftee/abukuma-css
 
+## 3.5.0
+
+### Minor Changes
+
+- [#1290](https://github.com/giftee/design-system/pull/1290) [`cc8d64d`](https://github.com/giftee/design-system/commit/cc8d64d09b94d5fb4280868e8f83d875ca712e3f) Thanks [@takumi-gb](https://github.com/takumi-gb)! - [add:utility]active-background / focus-visible-background / focus-visible-outlineを追加
+
 ## 3.4.0
 
 ### Minor Changes
