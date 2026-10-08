@@ -88,7 +88,7 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       vite:
-        specifier: ^8.3.1
+        specifier: ^8.3.2
         version: 8.3.2(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.105.1)(yaml@2.9.0)
 
   packages/designTokens:
@@ -200,7 +200,7 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       vite:
-        specifier: ^8.3.1
+        specifier: ^8.3.2
         version: 8.3.2(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.105.1)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: ^5.1.1
@@ -5228,7 +5228,7 @@ snapshots:
     dependencies:
       '@types/estree': 1.0.9
       estree-walker: 2.0.2
-      picomatch: 4.0.5
+      picomatch: 4.0.7
 
   '@rtsao/scc@1.1.0': {}
 
