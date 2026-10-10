@@ -1,2 +1,5 @@
 packages:
   - "packages/**"
+
+# cooldown 期間の設定。公開から 3 日(4320 分)経過したもののみをインストールの対象とする
+minimumReleaseAge: 4320
