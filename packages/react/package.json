@@ -45,7 +45,7 @@
     "eslint-plugin-storybook": "10.6.1",
     "globals": "^17.13.0",
     "happy-dom": "^20.14.6",
-    "markuplint": "^4.14.1",
+    "markuplint": "^5.1.1",
     "prettier": "^3.9.9",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
