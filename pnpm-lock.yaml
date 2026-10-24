@@ -179,7 +179,7 @@ importers:
         specifier: ^17.13.0
         version: 17.13.0
       happy-dom:
-        specifier: ^21.0.1
+        specifier: ^21.0.3
         version: 21.0.3
       markuplint:
         specifier: ^4.18.3
