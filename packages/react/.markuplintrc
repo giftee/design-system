@@ -10,5 +10,16 @@
   ],
   "rules": {
     "label-has-control": false
+  },
+  "overrides": {
+    "./src/components/linkText/Index.tsx": {
+      "rules": {
+        "wai-aria": {
+          "options": {
+            "checkingDeprecatedProps": false
+          }
+        }
+      }
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { createContext, forwardRef, useContext } from 'react';
 import { classNames } from '@/utils/classNames';
 import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 
@@ -9,11 +9,21 @@ export type AccordionRootProps = ComponentPropsWithoutRef<'details'> & {
    */
   size?: 'small' | 'medium';
   /**
-   * 無効状態かどうか
+   * 無効状態かどうか。Summary に `aria-disabled` を付与し、フォーカス順序から外し、開閉を抑止する
    * @default false
    */
   disabled?: boolean;
 };
+
+type AccordionContextValue = {
+  disabled: boolean;
+};
+
+const AccordionContext = createContext<AccordionContextValue>({
+  disabled: false,
+});
+
+export const useAccordionContext = () => useContext(AccordionContext);
 
 /**
  *
@@ -41,9 +51,11 @@ export const AccordionRoot = forwardRef<
     );
 
     return (
-      <details ref={forwardedRef} className={classes} {...rest}>
-        {children}
-      </details>
+      <AccordionContext.Provider value={{ disabled }}>
+        <details ref={forwardedRef} className={classes} {...rest}>
+          {children}
+        </details>
+      </AccordionContext.Provider>
     );
   },
 );

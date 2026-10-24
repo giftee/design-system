@@ -64,7 +64,7 @@ describe('LinkText', () => {
   });
 
   test('無効化状態ではclickイベントが発火しない', async () => {
-    const user = userEvent.setup();
+    const user = userEvent.setup({ pointerEventsCheck: 0 });
     const handleClick = vi.fn();
 
     const { getByText } = render(
@@ -76,7 +76,9 @@ describe('LinkText', () => {
     const link = getByText('無効化リンク');
     await user.click(link);
 
-    expect(handleClick).toHaveBeenCalledOnce();
+    expect(handleClick).not.toHaveBeenCalled();
+    expect(link).toHaveAttribute('aria-disabled', 'true');
+    expect(link).toHaveAttribute('tabindex', '-1');
   });
 
   test('classNameプロパティが追加で指定できる', () => {
