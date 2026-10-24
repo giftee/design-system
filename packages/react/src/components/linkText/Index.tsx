@@ -1,20 +1,18 @@
 import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
-import type { ComponentPropsWithoutRef, ElementRef } from 'react';
+import type { ComponentPropsWithoutRef, ElementRef, MouseEvent } from 'react';
 
 export type LinkTextProps = ComponentPropsWithoutRef<'a'> & {
   /**
-   * リンクのバリアント
-   * @default default
+   * 種類
    */
   variant?: 'default' | 'brand';
   /**
-   * 無効状態かどうか
+   * 非活性。`aria-disabled` を付与し、フォーカス順序から外し、クリックと href の遷移を抑止する
    */
   disabled?: boolean;
   /**
-   * 下線を表示するかどうか
-   * @default true
+   * 下線
    */
   underline?: boolean;
 };
@@ -37,6 +35,9 @@ export const LinkText = forwardRef<ElementRef<'a'>, LinkTextProps>(
       underline = true,
       children,
       className,
+      href,
+      tabIndex,
+      onClick,
       ...rest
     },
     forwardedRef,
@@ -49,8 +50,24 @@ export const LinkText = forwardRef<ElementRef<'a'>, LinkTextProps>(
       className,
     );
 
+    const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+      if (disabled) {
+        event.preventDefault();
+        return;
+      }
+      onClick?.(event);
+    };
+
     return (
-      <a ref={forwardedRef} className={classes} {...rest}>
+      <a
+        ref={forwardedRef}
+        href={href}
+        className={classes}
+        aria-disabled={disabled || undefined}
+        tabIndex={disabled ? -1 : tabIndex}
+        onClick={handleClick}
+        {...rest}
+      >
         {children}
       </a>
     );

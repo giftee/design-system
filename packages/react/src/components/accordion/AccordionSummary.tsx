@@ -1,6 +1,7 @@
 import { forwardRef } from 'react';
 import { classNames } from '@/utils/classNames';
-import type { ComponentPropsWithoutRef, ElementRef } from 'react';
+import { useAccordionContext } from './AccordionRoot';
+import type { ComponentPropsWithoutRef, ElementRef, MouseEvent } from 'react';
 
 export type AccordionSummaryProps = ComponentPropsWithoutRef<'summary'>;
 
@@ -17,11 +18,28 @@ export type AccordionSummaryProps = ComponentPropsWithoutRef<'summary'>;
 export const AccordionSummary = forwardRef<
   ElementRef<'summary'>,
   AccordionSummaryProps
->(({ children, className, ...rest }, forwardedRef) => {
+>(({ children, className, tabIndex, onClick, ...rest }, forwardedRef) => {
+  const { disabled } = useAccordionContext();
   const classes = classNames('ab-Accordion-summary', className);
 
+  const handleClick = (event: MouseEvent<HTMLElement>) => {
+    if (disabled) {
+      // summary の click をキャンセルすると details の開閉（キーボード操作含む）が抑止される
+      event.preventDefault();
+      return;
+    }
+    onClick?.(event);
+  };
+
   return (
-    <summary ref={forwardedRef} className={classes} {...rest}>
+    <summary
+      ref={forwardedRef}
+      className={classes}
+      aria-disabled={disabled || undefined}
+      tabIndex={disabled ? -1 : tabIndex}
+      onClick={handleClick}
+      {...rest}
+    >
       {children}
     </summary>
   );
