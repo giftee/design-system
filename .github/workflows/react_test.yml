@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - packages/react/**
+      - packages/css/**
+      - packages/designTokens/**
       - ".github/workflows/react_test.yml"
     branches:
       - main
@@ -58,6 +60,14 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
-      - name: Test
-        run: pnpm test
+      - name: Build dependencies (design tokens, CSS)
+        run: pnpm --filter @giftee/abukuma-design-tokens --filter @giftee/abukuma-css build
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install chromium --with-deps
+        working-directory: ./packages/react
+      - name: Unit test
+        run: pnpm test:unit
+        working-directory: ./packages/react
+      - name: Storybook test (interaction + a11y)
+        run: pnpm test:storybook
         working-directory: ./packages/react

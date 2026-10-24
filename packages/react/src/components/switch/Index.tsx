@@ -37,6 +37,7 @@ export const Switch = forwardRef<ElementRef<'input'>, SwitchProps>(
         <span className="ab-Switch">
           <input
             type="checkbox"
+            name={name}
             className="ab-Switch-input"
             ref={forwardedRef}
             {...rest}

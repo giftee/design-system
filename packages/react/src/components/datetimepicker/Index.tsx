@@ -53,19 +53,13 @@ export const DateTimePicker = forwardRef<
     const autoId = useId();
     const id = idProp ?? autoId;
     const classes = classNames('ab-Textfield', error && 'is-error', className);
-    const errorMessageIds = errorMessages
-      ? Array.isArray(errorMessages)
-        ? errorMessages.map((_, index) => `${id}-error-${index}`)
-        : [`${id}-error`]
-      : [];
+    // aria-errormessage は単一の id のみ参照できる（複数 id は支援技術の対応が不十分）
+    const errorMessageId = errorMessages ? `${id}-error` : undefined;
     const helptextId = helptext ? `${id}-helptext` : undefined;
     const ariaDescribedBy =
-      [
-        ...(errorMessageIds.length > 0 ? errorMessageIds : []),
-        ...(helptextId ? [helptextId] : []),
-      ].join(' ') || undefined;
-    const ariaErrorMessage = errorMessageIds.join(' ') || undefined;
-    const ariaInvalid = error || errorMessageIds.length > 0;
+      [errorMessageId, helptextId].filter(Boolean).join(' ') || undefined;
+    const ariaErrorMessage = errorMessageId;
+    const ariaInvalid = error || !!errorMessageId;
 
     return (
       <div className={classes}>
@@ -98,7 +92,7 @@ export const DateTimePicker = forwardRef<
             {errorMessages}
           </div>
         ) : (
-          <div role="alert">
+          <div id={`${id}-error`} role="alert">
             {errorMessages.map((errorMessage, index) => (
               <div
                 key={errorMessage}

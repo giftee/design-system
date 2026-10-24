@@ -71,7 +71,7 @@ describe('Modal', () => {
     expect(modal).not.toBeInTheDocument();
   });
 
-  test('onCloseコールバックが呼び出される', () => {
+  test('onCloseコールバックが呼び出される', async () => {
     const handleClose = vi.fn();
 
     const { container } = render(
@@ -84,10 +84,10 @@ describe('Modal', () => {
     const form = container.querySelector('form');
     fireEvent.submit(form as HTMLFormElement);
 
-    expect(handleClose).toHaveBeenCalledOnce();
+    await vi.waitFor(() => expect(handleClose).toHaveBeenCalledOnce());
   });
 
-  test('ダイアログの外側をクリックするとonCloseが呼び出される', () => {
+  test('ダイアログの外側をクリックするとonCloseが呼び出される', async () => {
     const handleClose = vi.fn();
 
     const { container } = render(
@@ -100,7 +100,7 @@ describe('Modal', () => {
     const dialog = container.querySelector('dialog');
     fireEvent.click(dialog as HTMLDialogElement);
 
-    expect(handleClose).toHaveBeenCalledOnce();
+    await vi.waitFor(() => expect(handleClose).toHaveBeenCalledOnce());
   });
 
   test('classNameプロパティが追加で指定できる（Root）', () => {

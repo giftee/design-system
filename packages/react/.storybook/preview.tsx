@@ -12,6 +12,17 @@ const preview: Preview = {
     }
   },
   parameters: {
+    // 全ストーリーで axe による自動アクセシビリティ検査を行い、違反はテスト失敗として扱う
+    a11y: {
+      test: 'error',
+      config: {
+        rules: [
+          // color-text-secondary (#899295) など一部のトークンが WCAG AA (4.5:1) を満たしていない。
+          // トークン側の修正が必要なため、コントラスト比は失敗ではなく「要確認」として報告する
+          { id: 'color-contrast', reviewOnFail: true },
+        ],
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,

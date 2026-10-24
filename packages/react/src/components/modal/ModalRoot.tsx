@@ -36,18 +36,17 @@ export const ModalRoot = forwardRef<ElementRef<'dialog'>, ModalRootProps>(
     const dialogElement = useRef<HTMLDialogElement>(null);
     const mergeRefs = useMergeRefs(dialogElement, forwardedRef);
 
+    // onClose はネイティブの close イベント経由でのみ呼ぶ。
+    // submit / 背景クリックで onClose を直接呼ぶと、親が open=false にした後の
+    // dialog.close() で close イベントが発火し、onClose が 2 回呼ばれてしまう。
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      if (onClose) {
-        onClose(event);
-      }
+      dialogElement.current?.close();
     };
 
     const handleDialogClick = (event: MouseEvent<HTMLDialogElement>) => {
       if (event.target === dialogElement.current) {
-        if (onClose) {
-          onClose(event);
-        }
+        dialogElement.current.close();
       }
     };
 

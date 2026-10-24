@@ -33,7 +33,8 @@ export const GridTableRowGroup = forwardRef<
       <div
         ref={forwardedRef}
         className={classes}
-        role="rowgroup"
+        // Body (role="rowgroup") の中で行をまとめるレイアウト用ラッパー。rowgroup の入れ子は ARIA で許可されない
+        role="presentation"
         style={{ ...columnStartStyle, ...columnEndStyle, ...style }}
         {...rest}
       >

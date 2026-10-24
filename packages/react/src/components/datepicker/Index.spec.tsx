@@ -116,13 +116,10 @@ describe('DatePicker', () => {
     const errorMessage1 = getByText('エラー1');
     const errorMessage2 = getByText('エラー2');
 
-    expect(input).toHaveAttribute(
-      'aria-describedby',
-      'test-multi-error-error-0 test-multi-error-error-1',
-    );
+    expect(input).toHaveAttribute('aria-describedby', 'test-multi-error-error');
     expect(input).toHaveAttribute(
       'aria-errormessage',
-      'test-multi-error-error-0 test-multi-error-error-1',
+      'test-multi-error-error',
     );
     expect(input).toHaveAttribute('aria-invalid', 'true');
     expect(errorMessage1).toHaveAttribute('id', 'test-multi-error-error-0');

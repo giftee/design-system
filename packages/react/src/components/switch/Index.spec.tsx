@@ -8,6 +8,7 @@ import { Switch } from './Index';
 describe('Switch', () => {
   test('スイッチをレンダリングする', () => {
     const { getByRole } = render(<Switch name="test">テストスイッチ</Switch>);
+    expect(getByRole('checkbox')).toHaveAttribute('name', 'test');
 
     const checkbox = getByRole('checkbox');
     expect(checkbox).toBeInTheDocument();

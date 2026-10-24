@@ -28,7 +28,14 @@ export const Divider = forwardRef<ElementRef<'hr'>, DividerProps>(
       className,
     );
 
-    return <hr ref={forwardedRef} className={classes} {...rest}></hr>;
+    return (
+      <hr
+        ref={forwardedRef}
+        className={classes}
+        aria-orientation={direction === 'vertical' ? 'vertical' : undefined}
+        {...rest}
+      ></hr>
+    );
   },
 );
 

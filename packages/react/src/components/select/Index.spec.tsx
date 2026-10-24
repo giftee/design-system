@@ -172,11 +172,11 @@ describe('Select', () => {
 
     expect(select).toHaveAttribute(
       'aria-describedby',
-      'test-multi-error-error-0 test-multi-error-error-1',
+      'test-multi-error-error',
     );
     expect(select).toHaveAttribute(
       'aria-errormessage',
-      'test-multi-error-error-0 test-multi-error-error-1',
+      'test-multi-error-error',
     );
     expect(select).toHaveAttribute('aria-invalid', 'true');
     expect(errorMessage1).toHaveAttribute('id', 'test-multi-error-error-0');
