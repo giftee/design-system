@@ -4,7 +4,7 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-pnpmfileChecksum: sha256-AOYArb4wwh/Yu+JLseQsGrUDe6Pz/jeWWQxnjA1VdZs=
+pnpmfileChecksum: sha256-pbGvBsOAk6w/+CYx6vWHrF+yC0lzZycIz3b7tkVpfQY=
 
 importers:
 
@@ -9125,6 +9125,7 @@ snapshots:
   unplugin-dts@1.1.2(esbuild@0.27.7)(rolldown@1.2.12)(typescript@7.0.2)(vite@8.3.4(@types/node@25.6.2)(esbuild@0.27.7)(sass@1.106.1)(yaml@2.9.0)):
     dependencies:
       '@rollup/pluginutils': 5.3.0
+      '@typescript/typescript6': 6.0.2
       '@volar/typescript': 2.4.28
       compare-versions: 6.1.1
       debug: 4.4.3
