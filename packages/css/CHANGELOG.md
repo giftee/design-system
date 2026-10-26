@@ -1,5 +1,16 @@
 # @giftee/abukuma-css
 
+## 4.0.0
+
+### Major Changes
+
+- [#1326](https://github.com/giftee/design-system/pull/1326) [`ba55f36`](https://github.com/giftee/design-system/commit/ba55f36b8c348f4344ed906530f5508eb79ef9ec) Thanks [@egurinko](https://github.com/egurinko)! - [breaking]対応する Node.js のバージョンを >=20 に変更（Node.js 18 のサポートを終了）
+
+### Patch Changes
+
+- Updated dependencies [[`ba55f36`](https://github.com/giftee/design-system/commit/ba55f36b8c348f4344ed906530f5508eb79ef9ec)]:
+  - @giftee/abukuma-design-tokens@4.0.0
+
 ## 3.5.0
 
 ### Minor Changes
