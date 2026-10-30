@@ -119,8 +119,8 @@ importers:
         specifier: ^4.18.3
         version: 4.18.3(typescript@5.9.3)
       '@markuplint/react-spec':
-        specifier: ^4.18.0
-        version: 4.18.0
+        specifier: ^4.18.4
+        version: 4.18.4
       '@storybook/addon-a11y':
         specifier: 10.6.2
         version: 10.6.2(storybook@10.6.2(@types/react@19.3.0)(prettier@3.9.10)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
@@ -941,8 +941,8 @@ packages:
   '@markuplint/parser-utils@4.18.4':
     resolution: {integrity: sha512-ax6utA3rtFkOWpg7+6LJ/yxN4Oaal7LfbCU2HXwWBO8XV5UiaMHUn31ld6WocesnIa1vFysflVq3cvfbebxkjg==}
 
-  '@markuplint/react-spec@4.18.0':
-    resolution: {integrity: sha512-ecQGaLEzXnZ+Es7TPkHFdwWv0PMxE0K9Sz+Xvt0LZyZFLkIm4o/UJAUGA/rvXNFPCnfgErPjvAClXpoIo7W40Q==}
+  '@markuplint/react-spec@4.18.4':
+    resolution: {integrity: sha512-3sSzra66bOwg09qrcua9n7lHncT9b1dl/wGZrTAKPBqgjVhnYqQxqXfsQo1hsvvd4YL3OUBTCMpNH/Qf570lYw==}
 
   '@markuplint/rules@4.18.4':
     resolution: {integrity: sha512-bmP1rzsPNXmNUSTq7NrP8GeTV3+7r+j4TwEV+L4gyeCv2xNkLQPRupnnkVj10WN8PbGh/h9cTVhzVHFppn8xOQ==}
@@ -5405,9 +5405,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@markuplint/react-spec@4.18.0':
+  '@markuplint/react-spec@4.18.4':
     dependencies:
-      '@markuplint/ml-spec': 4.18.0
+      '@markuplint/ml-spec': 4.18.4
     transitivePeerDependencies:
       - supports-color
 
@@ -8881,7 +8881,7 @@ snapshots:
   stylelint-scss@7.0.0(stylelint@17.16.0(typescript@5.9.3)):
     dependencies:
       css-tree: 3.2.1
-      is-plain-object: 5.0.0
+      is-plain-object: 5.1.0
       known-css-properties: 0.37.0
       mdn-data: 2.28.1
       postcss-media-query-parser: 0.2.3
