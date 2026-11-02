@@ -6,3 +6,7 @@ minimumReleaseAge: 4320
 minimumReleaseAgeExclude:
   # Renovate security update: happy-dom@21.0.4
   - happy-dom@21.0.4
+
+overrides:
+  # Dependabot alert #15 (esbuild < 0.28.1)
+  esbuild: ^0.28.1
