@@ -1,5 +1,11 @@
 # @giftee/abukuma-react
 
+## 5.0.1
+
+### Patch Changes
+
+- [#1349](https://github.com/giftee/design-system/pull/1349) [`732bb0f`](https://github.com/giftee/design-system/commit/732bb0f1e32e129247bc660349b7b209477ad96b) Thanks [@egurinko](https://github.com/egurinko)! - 依存パッケージの脆弱性対応（Dependabot alert）として、`esbuild`・`glob`・`minimatch` の override バージョンを更新
+
 ## 5.0.0
 
 ### Major Changes
