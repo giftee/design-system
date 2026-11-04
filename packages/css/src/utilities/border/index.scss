@@ -62,3 +62,16 @@
     border-bottom-left-radius: #{$radiusValue};
   }
 }
+
+// 公開名 → 現行トークン（Figma で light→default / bold→strong 後に揃える）
+$border-colors: (
+  'brand': 'brand',
+  'default': 'light',
+  'strong': 'bold',
+);
+
+@each $class-name, $token-name in $border-colors {
+  .ab-border-color-#{$class-name} {
+    border-color: var(--ab-semantic-color-border-#{$token-name});
+  }
+}
