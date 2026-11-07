@@ -16,7 +16,7 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
-    "@babel/core": "^8.0.9",
+    "@babel/core": "^8.0.10",
     "@storybook/addon-a11y": "10.6.3",
     "@storybook/addon-docs": "10.6.3",
     "@storybook/html-vite": "10.6.3",
