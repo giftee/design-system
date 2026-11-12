@@ -39,7 +39,7 @@
     "prettier": "^3.9.10"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=26.13.0"
   },
   "dependencies": {
     "style-dictionary": "^5.7.1"
