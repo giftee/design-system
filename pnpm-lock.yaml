@@ -27,7 +27,7 @@ importers:
         version: link:../designTokens
     devDependencies:
       '@babel/core':
-        specifier: ^8.0.10
+        specifier: ^8.1.0
         version: 8.1.0
       '@storybook/addon-a11y':
         specifier: 10.6.3
