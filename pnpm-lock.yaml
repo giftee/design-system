@@ -187,8 +187,8 @@ importers:
         specifier: ^21.0.4
         version: 21.0.4
       markuplint:
-        specifier: ^4.18.4
-        version: 4.18.4(typescript@5.9.3)
+        specifier: ^4.18.5
+        version: 4.18.5(typescript@5.9.3)
       prettier:
         specifier: ^3.9.10
         version: 3.9.10
@@ -907,8 +907,8 @@ packages:
   '@markuplint/config-presets@4.18.0':
     resolution: {integrity: sha512-ZJjb0+7w0c4grYkfOdN+6R6UayIsLgBVs/FLYW2haHdDn8+7IUZkJBr3i6oZPmVsNoARoWrgqEmMAHDtv+na4w==}
 
-  '@markuplint/file-resolver@4.18.4':
-    resolution: {integrity: sha512-J7JajNvWcHL06t04ZReYMIL0GIka1WpK2SCa6qDUVk/sqGZHwTVi5AOHQd6B05AcMBwKAX2XqvYL5AQSWE/2bA==}
+  '@markuplint/file-resolver@4.18.5':
+    resolution: {integrity: sha512-N221W94FehQoa69l/+1uzLcs0EOCpwYyqUPZSJIXdQESnWEVpIe2kp/xFIhOUkHbUiBfa+JAs5de2AHfIeMOmg==}
 
   '@markuplint/html-parser@4.18.4':
     resolution: {integrity: sha512-2yLKw9rZJBI4ccUkRsKfcXGTNqbQ4ITaDPNQzcjivEGVlzBIJhf4tgUq8Yf2GpRSq4brZUCAQqHrAhmFVikbiA==}
@@ -3230,8 +3230,8 @@ packages:
   markdown-table@3.0.4:
     resolution: {integrity: sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==}
 
-  markuplint@4.18.4:
-    resolution: {integrity: sha512-7dGY0IUNSLQOJCXzoFszx3sVbRmWdpxMK8J7a8+Ako8oaE+RsEBlOnmELvBJZdVXP874Tnpo/u3CuGpbGM6nOw==}
+  markuplint@4.18.5:
+    resolution: {integrity: sha512-Be6nKR7EQ/GhGIaq1Mi2Grh7kh6DBVloE7WqWaX1x24v/GUlVKArQdqDQPUlmXVqmQsdcoMZSlfcCArKrZsRig==}
     hasBin: true
 
   math-intrinsics@1.1.0:
@@ -5237,7 +5237,7 @@ snapshots:
 
   '@markuplint/config-presets@4.18.0': {}
 
-  '@markuplint/file-resolver@4.18.4(typescript@5.9.3)':
+  '@markuplint/file-resolver@4.18.5(typescript@5.9.3)':
     dependencies:
       '@markuplint/html-parser': 4.18.4
       '@markuplint/ml-ast': 4.18.4
@@ -7641,10 +7641,10 @@ snapshots:
 
   markdown-table@3.0.4: {}
 
-  markuplint@4.18.4(typescript@5.9.3):
+  markuplint@4.18.5(typescript@5.9.3):
     dependencies:
       '@markuplint/cli-utils': 4.18.0
-      '@markuplint/file-resolver': 4.18.4(typescript@5.9.3)
+      '@markuplint/file-resolver': 4.18.5(typescript@5.9.3)
       '@markuplint/html-parser': 4.18.4
       '@markuplint/html-spec': 4.18.4
       '@markuplint/i18n': 4.18.0
