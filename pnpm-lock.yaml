@@ -124,8 +124,8 @@ importers:
         specifier: ^4.18.4
         version: 4.18.4(typescript@5.9.3)
       '@markuplint/react-spec':
-        specifier: ^5.3.0
-        version: 5.3.0
+        specifier: ^5.4.0
+        version: 5.4.0
       '@storybook/addon-a11y':
         specifier: 10.6.3
         version: 10.6.3(storybook@10.6.3(@types/react@19.3.0)(prettier@3.9.10)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
@@ -938,15 +938,15 @@ packages:
   '@markuplint/ml-spec@4.18.4':
     resolution: {integrity: sha512-L4yADA/+5lsC3sZnF6nnsY2xA8mTvwQt33KSv6WeGBQcz0lp2q+XlaM41Ic+gS8HAgS9opdSeJ8L3g5/VWdUnQ==}
 
-  '@markuplint/ml-spec@5.3.0':
-    resolution: {integrity: sha512-h3lL0ROO4Gi916ZuNMhPZv7Z8CegE8D1VOGtHVOg+frJnELKLoRmU9vzofyprFGxJQP2KBUX8AiK3L49LWF+mg==}
+  '@markuplint/ml-spec@5.4.0':
+    resolution: {integrity: sha512-KKJe32rKupQqQWczlhru0rGy3DvZA2RXBK1c/mTigrrDPylCdndn6GXYYJdbEnQOn4wqJ1fH2Ev84djRDXZgmg==}
     engines: {node: '>=24'}
 
   '@markuplint/parser-utils@4.18.4':
     resolution: {integrity: sha512-ax6utA3rtFkOWpg7+6LJ/yxN4Oaal7LfbCU2HXwWBO8XV5UiaMHUn31ld6WocesnIa1vFysflVq3cvfbebxkjg==}
 
-  '@markuplint/react-spec@5.3.0':
-    resolution: {integrity: sha512-BgT7TTP9n6PEzqg4WDuoX8oM4IQCOG7bEfE/pV5ZT9cp7On4z31ZWwHFJN6or6+ULX7D7eGYgfZADtrheD+72Q==}
+  '@markuplint/react-spec@5.4.0':
+    resolution: {integrity: sha512-SUbykqqsqM3GacFWn+Ug5gq8F+qo68Pe7dE8DDgQLCJGurPYh6nuTVGV5zdpJSdzhntoh0eSHy9GBhQqDHS+zw==}
     engines: {node: '>=24'}
 
   '@markuplint/rules@4.18.4':
@@ -958,15 +958,15 @@ packages:
   '@markuplint/shared@4.18.0':
     resolution: {integrity: sha512-srF15il/HObuqx43hEXehutktOk62X0oHLIVtCuqwSXl8B0L6eu9kQ7ltxvhtN5wIEZu1IySBRBgFXavR7mojg==}
 
-  '@markuplint/shared@5.3.0':
-    resolution: {integrity: sha512-hwgc46Sh5eqOywso/r5WSowN1CMfCaJn5ZNDDB5kpGzl5YCjpRECHKmJDRJkZGIo9S32PksjFQG2Rly7nAziVA==}
+  '@markuplint/shared@5.4.0':
+    resolution: {integrity: sha512-fS3r0dxu8hes4ln1wHekCIURjBOom4ByebMeLPI+3PXtXcCZql35RYkfXyFTU1vtGs0B+UG2KydcbjwclbnWXQ==}
     engines: {node: '>=24'}
 
   '@markuplint/types@4.18.4':
     resolution: {integrity: sha512-mY0UIxNwVrfK6i/I10pjH1CXuSfhZV8Y5VlcDGOWaRZaKYkGN0VwNHsGpQrTgI3226URLOIJfUTgJxYm3itTpQ==}
 
-  '@markuplint/types@5.3.0':
-    resolution: {integrity: sha512-IozzL5GPAt5lH2GoImvjjLBIAPMrf/NPEyEvesiqCZmrVYfnzaReTfC/RhZVEQEFXA6DyH8mEUYK8liXoIDJvQ==}
+  '@markuplint/types@5.4.0':
+    resolution: {integrity: sha512-R6sVWC6pLjHZ5exoQGtYtrgswtHKiUT+NSMac3AOUH3ia2HX6JgOCpRfw5vLaN81sH/jDfqCDBZbT/rTUAe+sw==}
     engines: {node: '>=24'}
 
   '@mdx-js/react@3.1.1':
@@ -5333,10 +5333,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@markuplint/ml-spec@5.3.0':
+  '@markuplint/ml-spec@5.4.0':
     dependencies:
       '@markuplint/ml-ast': 5.3.0
-      '@markuplint/types': 5.3.0
+      '@markuplint/types': 5.4.0
       is-plain-object: 5.1.0
       type-fest: 5.10.0
     transitivePeerDependencies:
@@ -5355,9 +5355,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@markuplint/react-spec@5.3.0':
+  '@markuplint/react-spec@5.4.0':
     dependencies:
-      '@markuplint/ml-spec': 5.3.0
+      '@markuplint/ml-spec': 5.4.0
     transitivePeerDependencies:
       - supports-color
 
@@ -5392,7 +5392,7 @@ snapshots:
     dependencies:
       html-entities: 2.6.0
 
-  '@markuplint/shared@5.3.0':
+  '@markuplint/shared@5.4.0':
     dependencies:
       html-entities: 2.6.0
 
@@ -5411,9 +5411,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@markuplint/types@5.3.0':
+  '@markuplint/types@5.4.0':
     dependencies:
-      '@markuplint/shared': 5.3.0
+      '@markuplint/shared': 5.4.0
       '@types/css-tree': 3.2.0
       '@types/debug': 4.1.13
       bcp-47: 2.1.1
