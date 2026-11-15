@@ -30,7 +30,10 @@
         "global",
         "@types/",
         "happy-dom",
-        "@testing-library/"
+        "@testing-library/",
+        "autoprefixer",
+        "esbuild",
+        "markuplint"
       ],
       "automerge": true
     },
