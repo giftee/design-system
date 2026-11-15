@@ -11,6 +11,6 @@ overrides:
   # Dependabot alert #15 (esbuild < 0.28.1)
   esbuild: ^0.28.1
   # Dependabot alert #55 (glob >= 9.0.0, <= 14.0.1)
-  glob@13: ^14.0.2
+  glob@13: ^14.0.4
   # Dependabot alert #56 (minimatch < 11.0.1)
   minimatch@10: ^11.0.1
