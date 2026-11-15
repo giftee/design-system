@@ -14,3 +14,9 @@ overrides:
   glob@13: ^14.0.4
   # Dependabot alert #56 (minimatch < 11.0.1)
   minimatch@10: ^11.0.5
+
+# pnpm 12 ではビルドスクリプトの扱いを明示する必要がある。
+# .npmrc で ignore-scripts=true としているため、いずれも実行しない
+allowBuilds:
+  "@parcel/watcher": false
+  esbuild: false
