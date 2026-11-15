@@ -9,6 +9,7 @@
     "markuplint:recommended"
   ],
   "rules": {
-    "label-has-control": false
+    "label-has-control": false,
+    "placeholder-label-option": false
   }
 }
