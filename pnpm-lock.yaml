@@ -260,7 +260,7 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       vite:
-        specifier: ^8.3.6
+        specifier: ^8.3.7
         version: 8.3.8(@types/node@26.6.5)(esbuild@0.28.2)(sass@1.108.2)(yaml@2.9.0)
 
   packages/designTokens:
@@ -372,7 +372,7 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       vite:
-        specifier: ^8.3.6
+        specifier: ^8.3.7
         version: 8.3.8(@types/node@26.6.5)(esbuild@0.28.2)(sass@1.108.2)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: ^5.1.2
