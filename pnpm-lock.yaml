@@ -174,7 +174,7 @@ settings:
 overrides:
   esbuild: ^0.28.2
   glob@13: ^14.0.4
-  minimatch@10: ^11.0.5
+  minimatch@10: ^11.0.8
 
 importers:
 
@@ -1989,6 +1989,11 @@ packages:
 
   '@volar/typescript@2.4.28':
     resolution: {integrity: sha512-Ja6yvWrbis2QtN4ClAKreeUZPVYMARDYZl9LMEv1iQ1QdepB6wn0jTRxA9MftYmYa4DQ4k/DaSZpFPUfxl8giw==}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@webcontainer/env@1.1.1':
     resolution: {integrity: sha512-6aN99yL695Hi9SuIk1oC88l9o0gmxL1nGWWQ/kNy81HigJ0FoaoTXpytCj6ItzgyCEwA9kF1wixsTuv5cjsgng==}
@@ -6281,11 +6286,13 @@ snapshots:
 
   '@volar/source-map@2.4.28': {}
 
-  '@volar/typescript@2.4.28':
+  '@volar/typescript@2.4.28(typescript@5.9.3)':
     dependencies:
       '@volar/language-core': 2.4.28
       path-browserify: 1.0.1
       vscode-uri: 3.1.0
+    optionalDependencies:
+      typescript: 5.9.3
 
   '@webcontainer/env@1.1.1': {}
 
@@ -9108,7 +9115,7 @@ snapshots:
   unplugin-dts@1.1.2(esbuild@0.28.2)(rolldown@1.2.19)(supports-color@10.2.2)(typescript@5.9.3)(vite@8.3.8(@types/node@26.6.5)(esbuild@0.28.2)(sass@1.108.2)(yaml@2.9.0)):
     dependencies:
       '@rollup/pluginutils': 5.3.0
-      '@volar/typescript': 2.4.28
+      '@volar/typescript': 2.4.28(typescript@5.9.3)
       compare-versions: 6.1.1
       debug: 4.4.3(supports-color@10.2.2)
       glob-to-regexp: 0.4.1
