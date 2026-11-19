@@ -72,3 +72,11 @@
     }
   }
 }
+
+.ab-Table-overflow-visible {
+  & .ab-Table-body {
+    & .ab-Table-cell {
+      overflow: visible;
+    }
+  }
+}
