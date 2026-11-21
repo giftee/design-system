@@ -11,7 +11,7 @@
     "@changesets/cli": "^3.0.3"
   },
   "engines": {
-    "node": ">=20",
+    "node": ">=20.20.2",
     "pnpm": ">=12.21.0"
   },
   "packageManager": "pnpm@12.21.0"
